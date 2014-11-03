@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class CreatedPreliminaryController: UIViewController {
+class InitiateQRViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,8 +10,17 @@
 		973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DC1A07FF6C007E8726 /* MainViewController.swift */; };
 		973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */; };
+		973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E21A082A5B007E8726 /* InitiateViewController.swift */; };
+		973B77E51A082A9A007E8726 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */; };
+		973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */; };
+		973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */; };
+		973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
+		973B77ED1A082C7C007E8726 /* CreateRegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */; };
+		973B77EF1A082CB5007E8726 /* ConfirmRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */; };
+		973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F01A082D04007E8726 /* SettingsViewController.swift */; };
+		973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F21A082D41007E8726 /* NotificationsViewController.swift */; };
+		973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F41A082DF7007E8726 /* NewContactViewController.swift */; };
 		973F5DE91A048839007DAC82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DE81A048839007DAC82 /* AppDelegate.swift */; };
-		973F5DEB1A048839007DAC82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DEA1A048839007DAC82 /* ViewController.swift */; };
 		973F5DEE1A048839007DAC82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		973F5DF01A048839007DAC82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEF1A048839007DAC82 /* Images.xcassets */; };
 		973F5DF31A048839007DAC82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
@@ -32,10 +41,19 @@
 		973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 		973B77DC1A07FF6C007E8726 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedPreliminaryViewController.swift; sourceTree = "<group>"; };
+		973B77E21A082A5B007E8726 /* InitiateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateViewController.swift; sourceTree = "<group>"; };
+		973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewController.swift; sourceTree = "<group>"; };
+		973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewController.swift; sourceTree = "<group>"; };
+		973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePreliminaryViewController.swift; sourceTree = "<group>"; };
+		973B77EA1A082C0D007E8726 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRegisteredViewController.swift; sourceTree = "<group>"; };
+		973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmRegistrationViewController.swift; sourceTree = "<group>"; };
+		973B77F01A082D04007E8726 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		973B77F21A082D41007E8726 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		973B77F41A082DF7007E8726 /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		973F5DE31A048839007DAC82 /* TrustMe4Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrustMe4Good.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		973F5DE71A048839007DAC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973F5DE81A048839007DAC82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		973F5DEA1A048839007DAC82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		973F5DED1A048839007DAC82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		973F5DEF1A048839007DAC82 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		973F5DF21A048839007DAC82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -84,11 +102,20 @@
 			isa = PBXGroup;
 			children = (
 				973F5DE81A048839007DAC82 /* AppDelegate.swift */,
-				973F5DEA1A048839007DAC82 /* ViewController.swift */,
 				973F5DEC1A048839007DAC82 /* Main.storyboard */,
 				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
+				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
+				973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */,
 				973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */,
+				973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */,
+				973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */,
 				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
+				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
+				973B77F21A082D41007E8726 /* NotificationsViewController.swift */,
+				973B77E21A082A5B007E8726 /* InitiateViewController.swift */,
+				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
+				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
+				973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */,
 				973F5DEF1A048839007DAC82 /* Images.xcassets */,
 				973F5DF11A048839007DAC82 /* LaunchScreen.xib */,
 				973F5DE61A048839007DAC82 /* Supporting Files */,
@@ -221,11 +248,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
-				973F5DEB1A048839007DAC82 /* ViewController.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
+				973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */,
+				973B77EF1A082CB5007E8726 /* ConfirmRegistrationViewController.swift in Sources */,
+				973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */,
 				973F5DE91A048839007DAC82 /* AppDelegate.swift in Sources */,
+				973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */,
+				973B77ED1A082C7C007E8726 /* CreateRegisteredViewController.swift in Sources */,
+				973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */,
+				973B77E51A082A9A007E8726 /* ReciprocateViewController.swift in Sources */,
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
+				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
+				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
