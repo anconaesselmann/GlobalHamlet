@@ -80,6 +80,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		971382D21A0843E3008A39FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
+				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
+				973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */,
+				973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */,
+				973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */,
+				973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */,
+				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
+				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
+				973B77F21A082D41007E8726 /* NotificationsViewController.swift */,
+				973B77E21A082A5B007E8726 /* InitiateViewController.swift */,
+				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
+				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
+				973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */,
+				971382D31A08442E008A39FD /* Model */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		971382D31A08442E008A39FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		971382D41A084454008A39FD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				973F5DEC1A048839007DAC82 /* Main.storyboard */,
+				973F5DF11A048839007DAC82 /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		973F5DDA1A048839007DAC82 = {
 			isa = PBXGroup;
 			children = (
@@ -102,22 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				973F5DE81A048839007DAC82 /* AppDelegate.swift */,
-				973F5DEC1A048839007DAC82 /* Main.storyboard */,
-				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
-				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
-				973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */,
-				973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */,
-				973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */,
-				973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */,
-				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
-				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
-				973B77F21A082D41007E8726 /* NotificationsViewController.swift */,
-				973B77E21A082A5B007E8726 /* InitiateViewController.swift */,
-				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
-				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
-				973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */,
+				971382D21A0843E3008A39FD /* ViewControllers */,
 				973F5DEF1A048839007DAC82 /* Images.xcassets */,
-				973F5DF11A048839007DAC82 /* LaunchScreen.xib */,
+				971382D41A084454008A39FD /* UI */,
 				973F5DE61A048839007DAC82 /* Supporting Files */,
 			);
 			path = TrustMe4Good;
