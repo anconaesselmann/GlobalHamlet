@@ -8,7 +8,7 @@
         <!--FirstLaunchViewController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="FirstLaunchViewController" id="vXZ-lx-hvc" customClass="FristLauchViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstLaunchViewController" title="FirstLaunchViewController" id="vXZ-lx-hvc" customClass="FirstLaunchViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -23,6 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="signIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CYs-f7-a3E"/>
                                     <segue destination="msF-Zk-Tgx" kind="show" id="2xV-Ix-J28"/>
                                 </connections>
                             </button>
@@ -69,6 +70,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="quT-JP-6ps"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="signInButton" destination="gDz-wp-AaE" id="Keu-I8-Rfi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -723,8 +727,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qZJ-nS-URL"/>
-        <segue reference="Pg8-Xv-LME"/>
+        <segue reference="aSc-PQ-esI"/>
         <segue reference="qm9-Wy-UX4"/>
+        <segue reference="Pg8-Xv-LME"/>
     </inferredMetricsTieBreakers>
 </document>

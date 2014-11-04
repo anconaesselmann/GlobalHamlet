@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		971382D61A0844AA008A39FD /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
+		971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */; };
 		973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DC1A07FF6C007E8726 /* MainViewController.swift */; };
 		973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */; };
@@ -25,6 +27,23 @@
 		973F5DF01A048839007DAC82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEF1A048839007DAC82 /* Images.xcassets */; };
 		973F5DF31A048839007DAC82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
 		973F5DFF1A048839007DAC82 /* TrustMe4GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */; };
+		97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
+		97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
+		97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
+		97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */; };
+		97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */; };
+		97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */; };
+		97D7C6821A0873B7000F6BA5 /* ConfirmRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */; };
+		97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DC1A07FF6C007E8726 /* MainViewController.swift */; };
+		97D7C6841A0873BC000F6BA5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F01A082D04007E8726 /* SettingsViewController.swift */; };
+		97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F21A082D41007E8726 /* NotificationsViewController.swift */; };
+		97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E21A082A5B007E8726 /* InitiateViewController.swift */; };
+		97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */; };
+		97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F41A082DF7007E8726 /* NewContactViewController.swift */; };
+		97D7C6891A0873CA000F6BA5 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */; };
+		97D7C68A1A0873D0000F6BA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
+		97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
+		97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DE81A048839007DAC82 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		971382D51A0844AA008A39FD /* Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
+		971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewControllerTests.swift; sourceTree = "<group>"; };
 		973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 		973B77DC1A07FF6C007E8726 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedPreliminaryViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +117,6 @@
 				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
 				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
 				973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */,
-				971382D31A08442E008A39FD /* Model */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -104,6 +124,7 @@
 		971382D31A08442E008A39FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				971382D51A0844AA008A39FD /* Web.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -115,6 +136,14 @@
 				973F5DF11A048839007DAC82 /* LaunchScreen.xib */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		971382D71A0858CA008A39FD /* ViewControllersTests */ = {
+			isa = PBXGroup;
+			children = (
+				971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */,
+			);
+			name = ViewControllersTests;
 			sourceTree = "<group>";
 		};
 		973F5DDA1A048839007DAC82 = {
@@ -139,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				973F5DE81A048839007DAC82 /* AppDelegate.swift */,
+				971382D31A08442E008A39FD /* Model */,
 				971382D21A0843E3008A39FD /* ViewControllers */,
 				973F5DEF1A048839007DAC82 /* Images.xcassets */,
 				971382D41A084454008A39FD /* UI */,
@@ -158,6 +188,7 @@
 		973F5DFB1A048839007DAC82 /* TrustMe4GoodTests */ = {
 			isa = PBXGroup;
 			children = (
+				971382D71A0858CA008A39FD /* ViewControllersTests */,
 				973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */,
 				973F5DFC1A048839007DAC82 /* Supporting Files */,
 			);
@@ -262,6 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D7C68A1A0873D0000F6BA5 /* LaunchScreen.xib in Resources */,
+				97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +308,7 @@
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
+				971382D61A0844AA008A39FD /* Web.swift in Sources */,
 				973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */,
 				973B77EF1A082CB5007E8726 /* ConfirmRegistrationViewController.swift in Sources */,
 				973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */,
@@ -293,7 +327,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */,
+				97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */,
+				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
+				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
+				97D7C6821A0873B7000F6BA5 /* ConfirmRegistrationViewController.swift in Sources */,
+				97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */,
+				97D7C6841A0873BC000F6BA5 /* SettingsViewController.swift in Sources */,
+				971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */,
+				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
+				97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */,
+				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
+				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,
 				973F5DFF1A048839007DAC82 /* TrustMe4GoodTests.swift in Sources */,
+				97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */,
+				97D7C6891A0873CA000F6BA5 /* ReciprocateViewController.swift in Sources */,
+				97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */,
+				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

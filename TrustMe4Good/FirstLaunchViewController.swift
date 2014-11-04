@@ -1,11 +1,26 @@
 import Foundation
 import UIKit
 
-class FristLauchViewController: UIViewController {
+class FirstLaunchViewController: UIViewController {
     
+    @IBOutlet weak var signInButton: UIButton!
+    
+    @IBAction func signIn(sender: AnyObject) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        /*let d = self.postRequst("http://www.api.anconaesselmann.dev/login") as NSDictionary;
+        println(d["response"] as Bool)
+        println(d["errorCode"] as Int)
+        
+        if d["response"] as Bool == true {
+            //self.navigationController?.pushViewController(LoginViewController(), animated: true)
+            
+            let loginViewController:LoginViewController = LoginViewController()
+            self.presentViewController(loginViewController, animated: true, completion: nil)
+        }*/
     }
     
     override func didReceiveMemoryWarning() {
