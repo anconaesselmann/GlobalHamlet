@@ -5,17 +5,38 @@
 //  Created by Axel Ancona Esselmann on 10/31/14.
 //  Copyright (c) 2014 Axel Ancona Esselmann. All rights reserved.
 //
-
+import CoreData
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, ViewControllerWithContext {
+    var context: NSManagedObjectContext!
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var candidateViewControllerWithContext: ViewControllerWithContext?
+        
+        // If the initial view controller is a Navigation Controller...
+        if let navigationController = self.window!.rootViewController as? UINavigationController {
+            
+            candidateViewControllerWithContext = navigationController.viewControllers[0] as? ViewControllerWithContext
+        }
+            
+            // If is NOT a Navigation Controller...
+        else {
+            
+            candidateViewControllerWithContext = self.window!.rootViewController as? ViewControllerWithContext
+        }
+        
+        // If we got a ViewControllerWithContext...
+        if candidateViewControllerWithContext != nil {
+            
+            candidateViewControllerWithContext!.context = self.context
+        }
+        
         return true
     }
 

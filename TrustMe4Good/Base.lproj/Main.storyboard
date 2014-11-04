@@ -670,10 +670,10 @@
             </objects>
             <point key="canvasLocation" x="2306" y="510"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="97o-Kk-AdS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4tk-f0-kuA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4tk-f0-kuA" customClass="InitialViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YcH-lm-D6b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -728,7 +728,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="aSc-PQ-esI"/>
-        <segue reference="qm9-Wy-UX4"/>
         <segue reference="Pg8-Xv-LME"/>
+        <segue reference="Suy-Vg-taA"/>
     </inferredMetricsTieBreakers>
 </document>

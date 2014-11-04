@@ -1,7 +1,10 @@
+import CoreData
 import Foundation
 import UIKit
 
-class FirstLaunchViewController: UIViewController {
+class FirstLaunchViewController: UIViewController, ViewControllerWithContext {
+    var context: NSManagedObjectContext!
+    //let _web: Web!
     
     @IBOutlet weak var signInButton: UIButton!
     
@@ -34,6 +37,9 @@ class FirstLaunchViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillDisappear(animated)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        println("works1")
     }
 }
 
