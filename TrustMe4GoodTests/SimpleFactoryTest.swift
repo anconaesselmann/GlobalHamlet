@@ -12,6 +12,27 @@ import Foundation
     }
     override var description : String {return "MockObject_11_04_2014"}
 }
+@objc(MockObject_B_11_04_2014) class MockObject_B_11_04_2014: NSObject, InitArgsInterface, CanSayHello {
+    
+    var _var1:String!
+    var _var2:Int32!
+    
+    
+    func initWithArgs(args:NSArray) {
+        _var1 = args[0] as? String
+        _var2 = Int32(args[1] as NSInteger)
+
+    }
+
+    
+    func sayHello() -> String {
+        if _var1 != nil && _var2 != nil {
+            return "\(_var1! as String) \(_var2)"
+        } else {
+            return "FAIL!!"
+        }
+    }
+}
 
 class SimpleFactoryTest: XCTestCase {
     var sut:SimpleFactory!
@@ -33,6 +54,14 @@ class SimpleFactoryTest: XCTestCase {
     func test_build() {
         if let obj = sut.build("MockObject_11_04_2014") as? CanSayHello {
             XCTAssertEqual("Hello", obj.sayHello(), "Funcion call does not return Hello.")
+        } else {
+            XCTFail("Object could not be instanciated.")
+        }
+    }
+    func test_build_with_args() {
+        let args = ["aString", 123] as NSArray
+        if let obj = sut.buildWithArgs("MockObject_B_11_04_2014", args: args) as? CanSayHello {
+            XCTAssertEqual("aString 123", obj.sayHello(), "Funcion call does not return aString 123.")
         } else {
             XCTFail("Object could not be instanciated.")
         }

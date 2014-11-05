@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>testObject3</key>
+	<dict>
+		<key>class</key>
+		<string>MockObject_C_11_04_2014</string>
+		<key>args</key>
+		<array>
+			<dict>
+				<key>dep</key>
+				<string>testObject</string>
+			</dict>
+		</array>
+	</dict>
+	<key>testObject2</key>
+	<dict>
+		<key>class</key>
+		<string>MockObject_B_11_04_2014</string>
+		<key>args</key>
+		<array>
+			<string>aString</string>
+			<integer>123</integer>
+		</array>
+	</dict>
+	<key>testObject</key>
+	<dict>
+		<key>args</key>
+		<array/>
+		<key>class</key>
+		<string>MockObject_11_04_2014</string>
+	</dict>
+</dict>
+</plist>

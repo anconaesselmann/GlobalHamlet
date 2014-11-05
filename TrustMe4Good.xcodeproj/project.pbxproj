@@ -32,7 +32,7 @@
 		973F5DFF1A048839007DAC82 /* TrustMe4GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */; };
 		974C06BE1A08D01300192CCB /* ViewControllerWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* ViewControllerWithContext.swift */; };
 		974C06BF1A08D16300192CCB /* ViewControllerWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* ViewControllerWithContext.swift */; };
-		974C06C11A093AAD00192CCB /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 974C06C01A093AAD00192CCB /* config.plist */; };
+		974C06C11A093AAD00192CCB /* configTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 974C06C01A093AAD00192CCB /* configTest.plist */; };
 		974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
 		974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */; };
 		974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
@@ -94,7 +94,7 @@
 		973F5DFD1A048839007DAC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustMe4GoodTests.swift; sourceTree = "<group>"; };
 		974C06BD1A08D01300192CCB /* ViewControllerWithContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWithContext.swift; sourceTree = "<group>"; };
-		974C06C01A093AAD00192CCB /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		974C06C01A093AAD00192CCB /* configTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configTest.plist; path = ../TrustMe4Good/configTest.plist; sourceTree = "<group>"; };
 		974C06C31A093BDD00192CCB /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactory.swift; sourceTree = "<group>"; };
 		974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactoryTest.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -168,10 +168,19 @@
 		972EF6531A09766600BEE2C1 /* aae */ = {
 			isa = PBXGroup;
 			children = (
+				972EF65A1A097A0700BEE2C1 /* SimpleFactoryTestData */,
 				974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */,
 				972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */,
 			);
 			name = aae;
+			sourceTree = "<group>";
+		};
+		972EF65A1A097A0700BEE2C1 /* SimpleFactoryTestData */ = {
+			isa = PBXGroup;
+			children = (
+				974C06C01A093AAD00192CCB /* configTest.plist */,
+			);
+			name = SimpleFactoryTestData;
 			sourceTree = "<group>";
 		};
 		973F5DDA1A048839007DAC82 = {
@@ -210,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				973F5DE71A048839007DAC82 /* Info.plist */,
-				974C06C01A093AAD00192CCB /* config.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -323,7 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				974C06C11A093AAD00192CCB /* config.plist in Resources */,
+				974C06C11A093AAD00192CCB /* configTest.plist in Resources */,
 				973F5DEE1A048839007DAC82 /* Main.storyboard in Resources */,
 				973F5DF31A048839007DAC82 /* LaunchScreen.xib in Resources */,
 				973F5DF01A048839007DAC82 /* Images.xcassets in Resources */,
