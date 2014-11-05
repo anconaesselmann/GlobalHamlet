@@ -3,18 +3,15 @@ import XCTest
 import Foundation
 
 
-@objc(MockObject_C_11_04_2014) class MockObject_C_11_04_2014: NSObject, CanSayHello {
-    var _var1:String?
-    var _var2:Int32?
-    var _var3:MockObject_11_04_2014?
+@objc(MockObject_C_11_04_2014) class MockObject_C_11_04_2014: NSObject, CanSayHello, InitArgsInterface {
+    var _var1:MockObject_11_04_2014!
     
     func initWithArgs(args:NSArray) {
-        _var1 = args[0] as? String
-        _var2 = Int32(args[1] as NSInteger)
+        _var1 = args[0] as? MockObject_11_04_2014
     }
     func sayHello() -> String {
-        if _var1 != nil && _var2 != nil {
-            return "\(_var1! as String) \(_var2)"
+        if _var1 != nil {
+            return "From C: \(_var1.sayHello())"
         } else {
             return "FAIL!!"
         }
@@ -53,6 +50,13 @@ class DIFactoryTest: XCTestCase {
     func test_build_with_constructor_args() {
         if let obj = sut.build("testObject2") as? CanSayHello {
             XCTAssertEqual("aString 123", obj.sayHello(), "Funcion call does not return aString 123.")
+        } else {
+            XCTFail("Object could not be instanciated.")
+        }
+    }
+    func test_build_with_dependency_constructor_arg() {
+        if let obj = sut.build("testObject3") as? CanSayHello {
+            XCTAssertEqual("From C: Hello", obj.sayHello(), "Funcion call does not return From C: Hello.")
         } else {
             XCTFail("Object could not be instanciated.")
         }
