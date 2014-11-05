@@ -46,6 +46,8 @@
 		974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
 		974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */; };
 		974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
+		9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
+		9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
@@ -114,6 +116,7 @@
 		974C06C01A093AAD00192CCB /* configTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configTest.plist; path = ../TrustMe4Good/configTest.plist; sourceTree = "<group>"; };
 		974C06C31A093BDD00192CCB /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactory.swift; sourceTree = "<group>"; };
 		974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactoryTest.swift; sourceTree = "<group>"; };
+		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +274,7 @@
 				971004B31A0AC2280088D66B /* DICViewController.swift */,
 				971004B61A0AC3750088D66B /* DICNavigationController.swift */,
 				971004BA1A0AC5580088D66B /* DICTabBarController.swift */,
+				9760915C1A0AD28400C49248 /* DICAppDelegate.swift */,
 			);
 			name = aae;
 			sourceTree = "<group>";
@@ -382,6 +386,7 @@
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
+				9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */,
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
 				971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
@@ -414,6 +419,7 @@
 				97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */,
 				971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */,
 				97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */,
+				9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */,
 				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
 				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
 				97D7C6821A0873B7000F6BA5 /* ConfirmRegistrationViewController.swift in Sources */,
