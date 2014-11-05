@@ -18,7 +18,7 @@ import Foundation
     var _var2:Int32!
     
     
-    func initWithArgs(args:NSArray) {
+    func initWithArgs(args:[AnyObject]) {
         _var1 = args[0] as? String
         _var2 = Int32(args[1] as NSInteger)
 

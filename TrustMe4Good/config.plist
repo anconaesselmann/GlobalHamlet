@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FirstLaunchViewController</key>
+	<dict>
+		<key>class</key>
+		<string>FirstLaunchViewController</string>
+		<key>args</key>
+		<array>
+			<dict>
+				<key>dep</key>
+				<string>web</string>
+			</dict>
+		</array>
+	</dict>
+	<key>web</key>
+	<dict>
+		<key>class</key>
+		<string>Web</string>
+		<key>args</key>
+		<array/>
+	</dict>
+</dict>
+</plist>

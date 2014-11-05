@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		971004AC1A09CDC10088D66B /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004AB1A09CDC10088D66B /* DICProtocol.swift */; };
+		971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004AB1A09CDC10088D66B /* DICProtocol.swift */; };
+		971004AF1A09D20D0088D66B /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 971004AE1A09D20D0088D66B /* config.plist */; };
+		971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B01A09D42D0088D66B /* WebProtocol.swift */; };
+		971004B21A09D6140088D66B /* WebProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B01A09D42D0088D66B /* WebProtocol.swift */; };
+		971004B41A0AC2280088D66B /* DICViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B31A0AC2280088D66B /* DICViewController.swift */; };
+		971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B31A0AC2280088D66B /* DICViewController.swift */; };
+		971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B61A0AC3750088D66B /* DICNavigationController.swift */; };
+		971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B81A0AC5000088D66B /* MainTabBarController.swift */; };
+		971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004BA1A0AC5580088D66B /* DICTabBarController.swift */; };
 		971382D61A0844AA008A39FD /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */; };
 		972EF6551A0976B100BEE2C1 /* DIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EF6541A0976B100BEE2C1 /* DIFactory.swift */; };
@@ -30,8 +40,8 @@
 		973F5DF01A048839007DAC82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEF1A048839007DAC82 /* Images.xcassets */; };
 		973F5DF31A048839007DAC82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
 		973F5DFF1A048839007DAC82 /* TrustMe4GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */; };
-		974C06BE1A08D01300192CCB /* ViewControllerWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* ViewControllerWithContext.swift */; };
-		974C06BF1A08D16300192CCB /* ViewControllerWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* ViewControllerWithContext.swift */; };
+		974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */; };
+		974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */; };
 		974C06C11A093AAD00192CCB /* configTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 974C06C01A093AAD00192CCB /* configTest.plist */; };
 		974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
 		974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */; };
@@ -67,6 +77,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		971004AB1A09CDC10088D66B /* DICProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICProtocol.swift; sourceTree = "<group>"; };
+		971004AE1A09D20D0088D66B /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		971004B01A09D42D0088D66B /* WebProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebProtocol.swift; sourceTree = "<group>"; };
+		971004B31A0AC2280088D66B /* DICViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICViewController.swift; sourceTree = "<group>"; };
+		971004B61A0AC3750088D66B /* DICNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICNavigationController.swift; sourceTree = "<group>"; };
+		971004B81A0AC5000088D66B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		971004BA1A0AC5580088D66B /* DICTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTabBarController.swift; sourceTree = "<group>"; };
 		971382D51A0844AA008A39FD /* Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewControllerTests.swift; sourceTree = "<group>"; };
 		972EF6541A0976B100BEE2C1 /* DIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIFactory.swift; sourceTree = "<group>"; };
@@ -93,7 +110,7 @@
 		973F5DF81A048839007DAC82 /* TrustMe4GoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrustMe4GoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		973F5DFD1A048839007DAC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustMe4GoodTests.swift; sourceTree = "<group>"; };
-		974C06BD1A08D01300192CCB /* ViewControllerWithContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWithContext.swift; sourceTree = "<group>"; };
+		974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICControllerProtocol.swift; sourceTree = "<group>"; };
 		974C06C01A093AAD00192CCB /* configTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configTest.plist; path = ../TrustMe4Good/configTest.plist; sourceTree = "<group>"; };
 		974C06C31A093BDD00192CCB /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactory.swift; sourceTree = "<group>"; };
 		974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactoryTest.swift; sourceTree = "<group>"; };
@@ -121,7 +138,6 @@
 		971382D21A0843E3008A39FD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				974C06BD1A08D01300192CCB /* ViewControllerWithContext.swift */,
 				97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */,
 				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
 				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
@@ -129,6 +145,7 @@
 				973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */,
 				973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */,
 				973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */,
+				971004B81A0AC5000088D66B /* MainTabBarController.swift */,
 				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
 				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
 				973B77F21A082D41007E8726 /* NotificationsViewController.swift */,
@@ -144,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				971382D51A0844AA008A39FD /* Web.swift */,
+				971004B01A09D42D0088D66B /* WebProtocol.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,19 +186,19 @@
 		972EF6531A09766600BEE2C1 /* aae */ = {
 			isa = PBXGroup;
 			children = (
-				972EF65A1A097A0700BEE2C1 /* SimpleFactoryTestData */,
 				974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */,
 				972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */,
+				972EF65A1A097A0700BEE2C1 /* DIFactoryTestData */,
 			);
 			name = aae;
 			sourceTree = "<group>";
 		};
-		972EF65A1A097A0700BEE2C1 /* SimpleFactoryTestData */ = {
+		972EF65A1A097A0700BEE2C1 /* DIFactoryTestData */ = {
 			isa = PBXGroup;
 			children = (
 				974C06C01A093AAD00192CCB /* configTest.plist */,
 			);
-			name = SimpleFactoryTestData;
+			name = DIFactoryTestData;
 			sourceTree = "<group>";
 		};
 		973F5DDA1A048839007DAC82 = {
@@ -219,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				973F5DE71A048839007DAC82 /* Info.plist */,
+				971004AE1A09D20D0088D66B /* config.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -247,6 +266,11 @@
 			children = (
 				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
 				972EF6541A0976B100BEE2C1 /* DIFactory.swift */,
+				971004AB1A09CDC10088D66B /* DICProtocol.swift */,
+				974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */,
+				971004B31A0AC2280088D66B /* DICViewController.swift */,
+				971004B61A0AC3750088D66B /* DICNavigationController.swift */,
+				971004BA1A0AC5580088D66B /* DICTabBarController.swift */,
 			);
 			name = aae;
 			sourceTree = "<group>";
@@ -335,6 +359,7 @@
 				973F5DEE1A048839007DAC82 /* Main.storyboard in Resources */,
 				973F5DF31A048839007DAC82 /* LaunchScreen.xib in Resources */,
 				973F5DF01A048839007DAC82 /* Images.xcassets in Resources */,
+				971004AF1A09D20D0088D66B /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,12 +379,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				974C06BE1A08D01300192CCB /* ViewControllerWithContext.swift in Sources */,
+				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
+				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
+				971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
 				971382D61A0844AA008A39FD /* Web.swift in Sources */,
 				973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */,
+				971004AC1A09CDC10088D66B /* DICProtocol.swift in Sources */,
 				973B77EF1A082CB5007E8726 /* ConfirmRegistrationViewController.swift in Sources */,
 				973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */,
 				972EF6551A0976B100BEE2C1 /* DIFactory.swift in Sources */,
@@ -369,10 +397,13 @@
 				973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */,
 				974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */,
 				973B77E51A082A9A007E8726 /* ReciprocateViewController.swift in Sources */,
+				971004B41A0AC2280088D66B /* DICViewController.swift in Sources */,
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
 				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
 				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
+				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
+				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */,
+				971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */,
 				97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */,
 				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
 				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
@@ -389,9 +421,11 @@
 				97D7C6841A0873BC000F6BA5 /* SettingsViewController.swift in Sources */,
 				974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */,
 				971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */,
+				971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */,
 				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
 				97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */,
-				974C06BF1A08D16300192CCB /* ViewControllerWithContext.swift in Sources */,
+				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
+				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

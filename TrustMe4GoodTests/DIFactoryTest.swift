@@ -6,7 +6,7 @@ import Foundation
 @objc(MockObject_C_11_04_2014) class MockObject_C_11_04_2014: NSObject, CanSayHello, InitArgsInterface {
     var _var1:MockObject_11_04_2014!
     
-    func initWithArgs(args:NSArray) {
+    func initWithArgs(args:[AnyObject]) {
         _var1 = args[0] as? MockObject_11_04_2014
     }
     func sayHello() -> String {
@@ -23,7 +23,7 @@ class DIFactoryTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = DIFactory()
+        sut = DIFactory(fileName: "configTest")
     }
     
     override func tearDown() {
@@ -32,7 +32,7 @@ class DIFactoryTest: XCTestCase {
     }
     
     func test_init() {
-        let sut = DIFactory()
+        let sut = DIFactory(fileName: "configTest")
     }
     
     func test_getClassName() {
@@ -60,5 +60,11 @@ class DIFactoryTest: XCTestCase {
         } else {
             XCTFail("Object could not be instanciated.")
         }
+    }
+    func test_decorate() {
+        var obj = MockObject_B_11_04_2014()
+        XCTAssertEqual("FAIL!!", obj.sayHello(), "Funcion call does not return aString 123.")
+        sut.decorate(obj, idString: "testObject2")
+        XCTAssertEqual("aString 123", obj.sayHello(), "Funcion call does not return aString 123.")
     }
 }

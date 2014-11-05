@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class ConfirmRegistrationViewController: UIViewController {
+class ConfirmRegistrationViewController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

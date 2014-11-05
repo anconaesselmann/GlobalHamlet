@@ -1,7 +1,7 @@
 import Foundation
 
 @objc public protocol InitArgsInterface {
-    func initWithArgs(args:NSArray)
+    func initWithArgs(args:[AnyObject])
 }
 
 public class SimpleFactory {
@@ -11,7 +11,7 @@ public class SimpleFactory {
         }
         return nil
     }
-    public func buildWithArgs(className: String, args: NSArray) -> AnyObject! {
+    public func buildWithArgs(className: String, args: [AnyObject]) -> AnyObject! {
         if let aClass = NSClassFromString(className) as? NSObject.Type {
             if var instance = aClass() as? InitArgsInterface {
                 instance.initWithArgs(args)
@@ -19,5 +19,8 @@ public class SimpleFactory {
             }
         }
         return nil
+    }
+    public func decorate(obj: InitArgsInterface, args:[AnyObject]) {
+        obj.initWithArgs(args)
     }
 }

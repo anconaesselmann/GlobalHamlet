@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class CreateRegisteredViewController: UIViewController {
+class CreateRegisteredViewController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class Web {
+@objc(Web) class Web: NSObject, WebProtocol {
     var uuid = UIDevice().identifierForVendor.UUIDString;
     
     func postRequst(urlString: String, arguments: Dictionary<String, String>?) -> NSDictionary {
@@ -47,40 +47,40 @@ class Web {
         //out.text = dict["response"] as NSString;
         //return true;
     }
-    /*func postRequst(urlString: String) -> NSDictionary {
-    let url            = NSURL(string: urlString);
-    let cachePolicy    = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
-    var request        = NSMutableURLRequest(URL: url!, cachePolicy: cachePolicy, timeoutInterval: 2.0)
-    request.HTTPMethod = "POST"
+    func postRequst(urlString: String) -> NSDictionary {
+        let url            = NSURL(string: urlString);
+        let cachePolicy    = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
+        var request        = NSMutableURLRequest(URL: url!, cachePolicy: cachePolicy, timeoutInterval: 2.0)
+        request.HTTPMethod = "POST"
     
-    // set Content-Type in HTTP header
-    let boundaryConstant = "----------V2ymHFg03esomerandomstuffhbqgZCaKO6jy";
-    let contentType      = "multipart/form-data; boundary=" + boundaryConstant
-    NSURLProtocol.setProperty(contentType, forKey: "Content-Type", inRequest: request)
+        // set Content-Type in HTTP header
+        let boundaryConstant = "----------V2ymHFg03esomerandomstuffhbqgZCaKO6jy";
+        let contentType      = "multipart/form-data; boundary=" + boundaryConstant
+        NSURLProtocol.setProperty(contentType, forKey: "Content-Type", inRequest: request)
     
-    // set data
-    var dataString: String = "";
+        // set data
+        var dataString: String = "";
     
-    println(dataString);
-    let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-    request.HTTPBody    = requestBodyData
+        println(dataString);
+        let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody    = requestBodyData
     
-    // set content length
-    NSURLProtocol.setProperty(requestBodyData!.length, forKey: "Content-Length", inRequest: request)
+        // set content length
+        NSURLProtocol.setProperty(requestBodyData!.length, forKey: "Content-Length", inRequest: request)
     
-    var response: NSURLResponse? = nil
-    var error:    NSError?       = nil
-    let reply                    = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&error)
+        var response: NSURLResponse? = nil
+        var error:    NSError?       = nil
+        let reply                    = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&error)
     
-    //let results = NSString(data:reply!, encoding:NSUTF8StringEncoding);
+        //let results = NSString(data:reply!, encoding:NSUTF8StringEncoding);
     
-    let jsonData: NSData = reply!;
+        let jsonData: NSData = reply!;
     
-    let json:AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error);
-    if json is NSDictionary {
-    return json as NSDictionary;
+        let json:AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error);
+        if json is NSDictionary {
+            return json as NSDictionary;
+        }
+        return ["response": false, "errorCode": -1];
     }
-    return ["response": false, "errorCode": -1];
-    }*/
     
 }

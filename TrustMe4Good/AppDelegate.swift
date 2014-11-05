@@ -9,32 +9,25 @@ import CoreData
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, ViewControllerWithContext {
-    var context: NSManagedObjectContext!
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var dic: DICProtocol!
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
-        var candidateViewControllerWithContext: ViewControllerWithContext?
+        dic = DIFactory(fileName: "config")
         
-        // If the initial view controller is a Navigation Controller...
-        if let navigationController = self.window!.rootViewController as? UINavigationController {
-            
-            candidateViewControllerWithContext = navigationController.viewControllers[0] as? ViewControllerWithContext
+        var candidateDICViewController: DICControllerProtocol?
+        
+        if let navigationController = window!.rootViewController as? UINavigationController {
+            candidateDICViewController = navigationController.viewControllers[0] as? DICControllerProtocol
+        } else {
+            candidateDICViewController = window!.rootViewController as? DICControllerProtocol
         }
-            
-            // If is NOT a Navigation Controller...
-        else {
-            
-            candidateViewControllerWithContext = self.window!.rootViewController as? ViewControllerWithContext
-        }
-        
-        // If we got a ViewControllerWithContext...
-        if candidateViewControllerWithContext != nil {
-            
-            candidateViewControllerWithContext!.context = self.context
+        if candidateDICViewController != nil {
+            candidateDICViewController!.dic = dic
+            dic.decorate(candidateDICViewController!)
         }
         
         return true

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class ReciprocateViewController: UIViewController {
+class ReciprocateViewController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

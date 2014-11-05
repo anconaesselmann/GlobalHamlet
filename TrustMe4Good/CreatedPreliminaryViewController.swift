@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class CreatedPreliminaryController: UIViewController {
+class CreatedPreliminaryController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

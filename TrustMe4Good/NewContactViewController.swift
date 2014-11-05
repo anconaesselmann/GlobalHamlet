@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class NewContactViewController: UIViewController {
+class NewContactViewController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

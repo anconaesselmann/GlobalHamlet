@@ -1,17 +1,18 @@
 import Foundation
 
-public class DIFactory {
+public class DIFactory: DICProtocol {
     var _dict: Dictionary<String, AnyObject>!
     var _factory: SimpleFactory!
     
-    init () {
-        _loadConfig()
+    init (fileName:String) {
+        _loadConfig(fileName)
     }
     
-    func _loadConfig() {
-        if let path = NSBundle.mainBundle().pathForResource("configTest", ofType: "plist") {
+    func _loadConfig(fileName:String) {
+        if let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "plist") {
             _dict = NSDictionary(contentsOfFile: path) as Dictionary<String, AnyObject>
         }
+        assert(_dict != nil)
         _factory = SimpleFactory()
     }
     
@@ -33,7 +34,7 @@ public class DIFactory {
                 }
             }
         }
-        return nil
+        return []
     }
     public func build(idString: String) -> AnyObject! {
         if let className = getClassName(idString) as String? {
@@ -52,5 +53,23 @@ public class DIFactory {
             }
         }
         return nil
+    }
+    public func decorate(obj:InitArgsInterface, idString: String) {
+        var args:[AnyObject] = getConstArgs(idString)
+        if args.count > 0 {
+            for (index, arg) in enumerate(args) {
+                if let dict = arg as? [String:String] {
+                    if let dep = dict["dep"] {
+                        args[index] = build(dep)
+                    }
+                }
+            }
+            _factory.decorate(obj, args: args)
+        }
+    }
+    public func decorate(obj:InitArgsInterface) {
+        let name = _stdlib_getDemangledTypeName(obj)
+        let components = name.componentsSeparatedByString(".")
+        decorate(obj, idString: components.last!)
     }
 }

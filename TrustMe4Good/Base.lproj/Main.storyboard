@@ -24,7 +24,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CYs-f7-a3E"/>
-                                    <segue destination="msF-Zk-Tgx" kind="show" id="2xV-Ix-J28"/>
+                                    <segue destination="msF-Zk-Tgx" kind="show" identifier="segueToLoginView" id="2xV-Ix-J28"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb8-0u-Ycl">
@@ -72,6 +72,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="signInButton" destination="gDz-wp-AaE" id="Keu-I8-Rfi"/>
+                        <segue destination="Qt0-PN-BgX" kind="presentation" identifier="isLoggedInSegueToMain" id="otQ-hv-0YW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -297,7 +298,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="FP6-7j-bhc">
             <objects>
-                <tabBarController id="Qt0-PN-BgX" sceneMemberID="viewController">
+                <tabBarController id="Qt0-PN-BgX" customClass="DICTabBarController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="f5D-l9-8aa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -312,7 +313,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c31-8C-U50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4710" y="510"/>
+            <point key="canvasLocation" x="5322" y="599"/>
         </scene>
         <!--Notificaitons View Controller-->
         <scene sceneID="Qpt-dc-fkb">
@@ -648,7 +649,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qt0-PN-BgX" kind="presentation" id="Pcw-pr-hO2"/>
+                                    <segue destination="Qt0-PN-BgX" kind="presentation" identifier="segueToMainView" id="Pcw-pr-hO2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -691,7 +692,7 @@
         <!--Navigation Controller-->
         <scene sceneID="KJv-ae-o9g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ccR-Nk-pFs" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ccR-Nk-pFs" customClass="DICNavigationController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="M7O-Ge-OcD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -709,7 +710,7 @@
         <!--me-->
         <scene sceneID="ljg-lD-aDB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O1h-25-lUQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O1h-25-lUQ" customClass="DICNavigationController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="me" id="gR6-UL-Ljn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lK4-X9-mop">
@@ -727,8 +728,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aSc-PQ-esI"/>
+        <segue reference="qm9-Wy-UX4"/>
+        <segue reference="qZJ-nS-URL"/>
         <segue reference="Pg8-Xv-LME"/>
-        <segue reference="Suy-Vg-taA"/>
     </inferredMetricsTieBreakers>
 </document>

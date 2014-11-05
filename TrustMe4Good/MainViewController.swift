@@ -1,7 +1,8 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: DICViewController {
+    override func initWithArgs(args:[AnyObject]) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()

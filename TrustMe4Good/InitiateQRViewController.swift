@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class InitiateQRViewController: UIViewController {
+class InitiateQRViewController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
