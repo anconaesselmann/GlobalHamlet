@@ -2,26 +2,28 @@ import CoreData
 import UIKit
 
 class DICAppDelegate: UIResponder, UIApplicationDelegate {
-    var dic: DICProtocol!
+    var dic: DICProtocol = DIFactory(fileName: "config")
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        dic = DIFactory(fileName: "config")
         
         var candidateDICViewController: DICControllerProtocol?
         
         if let navigationController = window!.rootViewController as? UINavigationController {
             candidateDICViewController = navigationController.viewControllers[0] as? DICControllerProtocol
-        } else {
-            candidateDICViewController = window!.rootViewController as? DICControllerProtocol
+            _diSetup(candidateDICViewController)
         }
-        if candidateDICViewController != nil {
-            candidateDICViewController!.dic = dic
-            dic.decorate(candidateDICViewController!)
-        }
+        candidateDICViewController = window!.rootViewController as? DICControllerProtocol
+        _diSetup(candidateDICViewController)
+        
         
         return true
+    }
+    func _diSetup(diCandidated: DICControllerProtocol?) {
+        if diCandidated != nil {
+            diCandidated!.dic = dic
+            dic.decorate(diCandidated!)
+        }
     }
 }
 

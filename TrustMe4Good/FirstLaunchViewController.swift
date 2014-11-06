@@ -16,13 +16,6 @@ class FirstLaunchViewController: DICViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let response = _web.postRequst("http://www.api.anconaesselmann.dev/login") as NSDictionary;
-        println(response["response"] as Bool)
-        println(response["errorCode"] as Int)
-        
-        if response["response"] as Bool != true {
-            self.performSegueWithIdentifier("isLoggedInSegueToMain", sender: self)
-        }
     }
     
     override func didReceiveMemoryWarning() {

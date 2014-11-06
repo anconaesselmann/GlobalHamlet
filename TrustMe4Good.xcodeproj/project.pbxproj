@@ -48,6 +48,8 @@
 		974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
 		9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
+		976091621A0AE71800C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
+		976091631A0AE84000C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
@@ -117,6 +119,7 @@
 		974C06C31A093BDD00192CCB /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactory.swift; sourceTree = "<group>"; };
 		974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactoryTest.swift; sourceTree = "<group>"; };
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
+		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,16 +270,33 @@
 		974C06C21A093B5500192CCB /* aae */ = {
 			isa = PBXGroup;
 			children = (
-				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
+				976091601A0AD41000C49248 /* std */,
+				9760915F1A0AD3FD00C49248 /* di */,
+			);
+			name = aae;
+			sourceTree = "<group>";
+		};
+		9760915F1A0AD3FD00C49248 /* di */ = {
+			isa = PBXGroup;
+			children = (
 				972EF6541A0976B100BEE2C1 /* DIFactory.swift */,
 				971004AB1A09CDC10088D66B /* DICProtocol.swift */,
+				976091611A0AE71800C49248 /* DIHelper.swift */,
 				974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */,
 				971004B31A0AC2280088D66B /* DICViewController.swift */,
 				971004B61A0AC3750088D66B /* DICNavigationController.swift */,
 				971004BA1A0AC5580088D66B /* DICTabBarController.swift */,
 				9760915C1A0AD28400C49248 /* DICAppDelegate.swift */,
 			);
-			name = aae;
+			name = di;
+			sourceTree = "<group>";
+		};
+		976091601A0AD41000C49248 /* std */ = {
+			isa = PBXGroup;
+			children = (
+				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
+			);
+			name = std;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +426,7 @@
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
 				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
 				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
+				976091621A0AE71800C49248 /* DIHelper.swift in Sources */,
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
@@ -439,6 +460,7 @@
 				973F5DFF1A048839007DAC82 /* TrustMe4GoodTests.swift in Sources */,
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */,
+				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
 				97D7C6891A0873CA000F6BA5 /* ReciprocateViewController.swift in Sources */,
 				97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */,
 				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,

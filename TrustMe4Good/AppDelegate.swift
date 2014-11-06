@@ -12,8 +12,28 @@ import UIKit
 class AppDelegate: DICAppDelegate, UIApplicationDelegate {
 
     override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        super.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyBoardId: String = (self._isLoggedIn()) ? "MainTabBarController" : "InitialViewController"
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier(storyBoardId) as? UIViewController
+        window!.rootViewController = viewController
+        window!.makeKeyAndVisible()
 
+        
+        super.application(application, didFinishLaunchingWithOptions: launchOptions)
+        return true
+    }
+    
+    func _isLoggedIn() -> Bool {
+        /*let response = _web.postRequst("http://www.api.anconaesselmann.dev/login") as NSDictionary;
+        println(response["response"] as Bool)
+        println(response["errorCode"] as Int)
+
+        if response["response"] as Bool != true {
+            //self.performSegueWithIdentifier("isLoggedInSegueToMain", sender: self)
+            return true
+        }*/
         return true
     }
 
