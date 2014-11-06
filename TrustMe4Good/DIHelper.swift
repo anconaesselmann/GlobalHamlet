@@ -11,7 +11,7 @@ class DIHelper {
                 println(_stdlib_getDemangledTypeName(segue.destinationViewController) + " is not a DICController\n\n")
             }
         } else {
-            println(_stdlib_getDemangledTypeName(self) + " has no dic\n\n")
+            println(_stdlib_getDemangledTypeName(segue.destinationViewController) + " has no dic\n\n")
         }
     }
     
@@ -26,7 +26,7 @@ class DIHelper {
                 println(_stdlib_getDemangledTypeName(controller.childViewControllers[0]) + " is not a DICController\n\n")
             }
         } else {
-            println(_stdlib_getDemangledTypeName(self) + " has no dic\n\n")
+            println(_stdlib_getDemangledTypeName(controller) + " has no dic\n\n")
         }
     }
 }

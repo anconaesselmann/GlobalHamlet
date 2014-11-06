@@ -60,8 +60,7 @@ import UIKit
     
         // set data
         var dataString: String = "";
-    
-        println(dataString);
+        
         let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody    = requestBodyData
     
