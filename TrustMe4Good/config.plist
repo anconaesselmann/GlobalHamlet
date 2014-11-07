@@ -2,6 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>url</key>
+	<string>http://www.api.anconaesselmann.dev</string>
+	<key>LoginViewController</key>
+	<dict>
+		<key>class</key>
+		<string>LoginViewController</string>
+		<key>args</key>
+		<array>
+			<dict>
+				<key>dep</key>
+				<string>web</string>
+			</dict>
+			<dict>
+				<key>const</key>
+				<string>url</string>
+			</dict>
+		</array>
+	</dict>
 	<key>FirstLaunchViewController</key>
 	<dict>
 		<key>class</key>

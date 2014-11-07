@@ -623,7 +623,7 @@
         <!--Login View Controller-->
         <scene sceneID="zHC-ov-CVv">
             <objects>
-                <viewController id="msF-Zk-Tgx" customClass="LoginViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="msF-Zk-Tgx" customClass="LoginViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gBH-N4-99t"/>
                         <viewControllerLayoutGuide type="bottom" id="oTp-D8-Nhd"/>
@@ -632,12 +632,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Omu-ak-f1v">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Omu-ak-f1v">
                                 <rect key="frame" x="16" y="100" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDT-5A-c52">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDT-5A-c52">
                                 <rect key="frame" x="16" y="150" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -648,7 +648,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qt0-PN-BgX" kind="presentation" identifier="segueToMainView" id="Pcw-pr-hO2"/>
+                                    <action selector="signInAction:" destination="msF-Zk-Tgx" eventType="touchUpInside" id="gu1-cw-eV9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -665,6 +665,12 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Omu-ak-f1v" id="5iZ-ga-e7a"/>
+                        <outlet property="passwordTextField" destination="EDT-5A-c52" id="SkP-hQ-kSm"/>
+                        <outlet property="signInButton" destination="Goy-UG-Wbi" id="j9e-st-gcu"/>
+                        <segue destination="Qt0-PN-BgX" kind="presentation" identifier="SegueToMain" animates="NO" id="iEk-oT-O4h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dm5-Q5-Yuh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -728,7 +734,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CG3-lc-6gc"/>
+        <segue reference="iEk-oT-O4h"/>
         <segue reference="Suy-Vg-taA"/>
         <segue reference="Pg8-Xv-LME"/>
     </inferredMetricsTieBreakers>

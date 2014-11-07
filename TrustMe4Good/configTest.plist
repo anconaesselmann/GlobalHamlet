@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>testObject4</key>
+	<dict>
+		<key>args</key>
+		<array>
+			<dict>
+				<key>const</key>
+				<string>aString</string>
+			</dict>
+		</array>
+		<key>class</key>
+		<string>MockObject_D_11_04_2014</string>
+	</dict>
+	<key>aString</key>
+	<string>Success!!!</string>
 	<key>testObject3</key>
 	<dict>
 		<key>class</key>

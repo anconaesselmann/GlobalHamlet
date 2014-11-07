@@ -1,7 +1,7 @@
 import UIKit
 import XCTest
 
-class FirstLaunchViewControllerTests: XCTestCase {
+/*class FirstLaunchViewControllerTests: XCTestCase {
     var sut : FirstLaunchViewController!
     
     override func setUp() {
@@ -31,4 +31,4 @@ class FirstLaunchViewControllerTests: XCTestCase {
             XCTFail("No TouchUpInside events exists.")
         }
     }
-}
+}*/

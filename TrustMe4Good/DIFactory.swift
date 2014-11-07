@@ -44,6 +44,8 @@ public class DIFactory: DICProtocol {
                     if let dict = arg as? [String:String] {
                         if let dep = dict["dep"] {
                             args[index] = build(dep)
+                        } else if let const = dict["const"] {
+                            args[index] = get(const)
                         }
                     }
                 }
@@ -61,6 +63,8 @@ public class DIFactory: DICProtocol {
                 if let dict = arg as? [String:String] {
                     if let dep = dict["dep"] {
                         args[index] = build(dep)
+                    } else if let const = dict["const"] {
+                        args[index] = get(const)
                     }
                 }
             }
@@ -71,5 +75,13 @@ public class DIFactory: DICProtocol {
         let name = _stdlib_getDemangledTypeName(obj)
         let components = name.componentsSeparatedByString(".")
         decorate(obj, idString: components.last!)
+    }
+    public func get(idString: String) -> AnyObject! {
+        if _dict != nil {
+            if let varVal: AnyObject = _dict[idString] {
+                return varVal
+            }
+        }
+        return nil
     }
 }

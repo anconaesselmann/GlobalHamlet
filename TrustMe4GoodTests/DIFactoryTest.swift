@@ -17,6 +17,20 @@ import Foundation
         }
     }
 }
+@objc(MockObject_D_11_04_2014) class MockObject_D_11_04_2014: NSObject, CanSayHello, InitArgsInterface {
+    var _var1:String!
+    
+    func initWithArgs(args:[AnyObject]) {
+        _var1 = args[0] as? String
+    }
+    func sayHello() -> String {
+        if _var1 != nil {
+            return _var1
+        } else {
+            return "FAIL!!"
+        }
+    }
+}
 
 class DIFactoryTest: XCTestCase {
     var sut:DIFactory!
@@ -66,5 +80,19 @@ class DIFactoryTest: XCTestCase {
         XCTAssertEqual("FAIL!!", obj.sayHello(), "Funcion call does not return aString 123.")
         sut.decorate(obj, idString: "testObject2")
         XCTAssertEqual("aString 123", obj.sayHello(), "Funcion call does not return aString 123.")
+    }
+    func test_get() {
+        if let result = sut.get("aString") as? String {
+            XCTAssertEqual("Success!!!", result, "Could not get string.")
+        } else {
+            XCTFail("Object could not be instanciated.")
+        }
+    }
+    func test_build_with_const_constructor_arg() {
+        if let obj = sut.build("testObject4") as? CanSayHello {
+            XCTAssertEqual("Success!!!", obj.sayHello(), "Funcion call does not return Success!!!")
+        } else {
+            XCTFail("Object could not be instanciated.")
+        }
     }
 }

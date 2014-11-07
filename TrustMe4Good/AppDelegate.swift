@@ -6,19 +6,24 @@ class AppDelegate: DICAppDelegate, UIApplicationDelegate {
 
     override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+
         let storyBoardId: String = (self._isLoggedIn()) ? "MainTabBarController" : "InitialViewController"
         setRootViewController(storyBoardId)
-        
+
         return true
     }
-    
-    func _isLoggedIn() -> Bool {
-        let response = (dic.build("web") as Web).postRequst("http://www.api.anconaesselmann.dev/login") as NSDictionary;
-        println(response["response"]  as Bool)
-        println(response["errorCode"] as Int)
 
-        return response["response"] as Bool
+    func _isLoggedIn() -> Bool {
+        if let url = (dic.get("url") as? String) {
+            if let web = (dic.build("web") as? Web) {
+                let response = web.postRequst(url + "/login") as NSDictionary
+                println(response["response"]  as Bool)
+                println(response["errorCode"] as Int)
+
+                return response["response"] as Bool
+            }
+        }
+        return false
     }
 
     func applicationWillResignActive(application: UIApplication) {
