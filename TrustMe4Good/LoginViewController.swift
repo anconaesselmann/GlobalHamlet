@@ -8,6 +8,7 @@ class LoginViewController: DICViewController {
     @IBOutlet weak var signInButton:  UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var infoLabel: UILabel!
     
     
     override func initWithArgs(args:[AnyObject]) {
@@ -31,11 +32,13 @@ class LoginViewController: DICViewController {
         println(d["errorCode"] as Int)
         if let response = d["response"] as? Bool {
             loggedIn = response
-            if loggedIn {
-                performSegueWithIdentifier("SegueToMain", sender: self)
-            }
+        }
+        if loggedIn {
+            performSegueWithIdentifier("SegueToMain", sender: self)
         } else {
             loggedIn = false
+            infoLabel!.text = "Error signing in."
+            println("Error signing in.")
         }
         
         web.postRequst(url, arguments: args)

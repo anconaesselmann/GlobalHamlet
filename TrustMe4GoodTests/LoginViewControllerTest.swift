@@ -50,6 +50,10 @@ class LoginViewControllerTests: XCTestCase {
         sut.web = mock
         sut.signInAction(UIButton());
         XCTAssertFalse(sut.loggedIn, "signInAction should set loggedIn to false when supplied with incorrect login information.")
+        XCTAssertEqual("Error signing in.", sut.infoLabel.text!, "A failed login action should update the info label.")
+    }
+    func test_infoLabel_should_be_connected() {
+        XCTAssertNotNil(sut.infoLabel, "Info label not connected")
     }
 }
 

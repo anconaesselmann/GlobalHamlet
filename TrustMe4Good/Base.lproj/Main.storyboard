@@ -258,7 +258,7 @@
                                 <items>
                                     <barButtonItem title="logout" id="q9y-7k-mPc">
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="presentation" id="qm9-Wy-UX4"/>
+                                            <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SegueToFirstLaunchView" id="Vzi-Rl-ksT"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="complete" id="f5C-lP-VFV">
@@ -651,6 +651,12 @@
                                     <action selector="signInAction:" destination="msF-Zk-Tgx" eventType="touchUpInside" id="gu1-cw-eV9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter you login credentials" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-7t-9h9">
+                                <rect key="frame" x="16" y="72" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -659,14 +665,17 @@
                             <constraint firstItem="EDT-5A-c52" firstAttribute="trailing" secondItem="jl6-7Q-5nF" secondAttribute="trailingMargin" id="6ko-8D-sPD"/>
                             <constraint firstItem="Omu-ak-f1v" firstAttribute="trailing" secondItem="jl6-7Q-5nF" secondAttribute="trailingMargin" id="RT8-Ez-S6e"/>
                             <constraint firstItem="Goy-UG-Wbi" firstAttribute="trailing" secondItem="jl6-7Q-5nF" secondAttribute="trailingMargin" id="YEj-CD-BBf"/>
+                            <constraint firstItem="5fW-7t-9h9" firstAttribute="top" secondItem="gBH-N4-99t" secondAttribute="bottom" constant="8" id="bMw-RS-wCy"/>
                             <constraint firstItem="Omu-ak-f1v" firstAttribute="top" secondItem="gBH-N4-99t" secondAttribute="bottom" constant="36" id="ba6-9U-fDs"/>
                             <constraint firstItem="Goy-UG-Wbi" firstAttribute="top" secondItem="EDT-5A-c52" secondAttribute="bottom" constant="20" id="lP1-RT-h9s"/>
                             <constraint firstItem="EDT-5A-c52" firstAttribute="leading" secondItem="jl6-7Q-5nF" secondAttribute="leadingMargin" id="ww1-AC-FQ9"/>
+                            <constraint firstItem="5fW-7t-9h9" firstAttribute="leading" secondItem="jl6-7Q-5nF" secondAttribute="leadingMargin" id="yJZ-Z2-FpN"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailTextField" destination="Omu-ak-f1v" id="5iZ-ga-e7a"/>
+                        <outlet property="infoLabel" destination="5fW-7t-9h9" id="Z2u-fq-xvN"/>
                         <outlet property="passwordTextField" destination="EDT-5A-c52" id="SkP-hQ-kSm"/>
                         <outlet property="signInButton" destination="Goy-UG-Wbi" id="j9e-st-gcu"/>
                         <segue destination="Qt0-PN-BgX" kind="presentation" identifier="SegueToMain" animates="NO" id="iEk-oT-O4h"/>
@@ -735,7 +744,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iEk-oT-O4h"/>
-        <segue reference="Suy-Vg-taA"/>
+        <segue reference="Vzi-Rl-ksT"/>
         <segue reference="Pg8-Xv-LME"/>
     </inferredMetricsTieBreakers>
 </document>
