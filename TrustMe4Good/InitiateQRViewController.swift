@@ -1,10 +1,17 @@
 import UIKit
 
 class InitiateQRViewController: DICViewController {
+    var contractId: Int?
+    var plainCode:  String?
+    
+    @IBOutlet weak var contractIdLabel: UILabel!
+    @IBOutlet weak var plainCodeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        contractIdLabel!.text = String(contractId!)
+        plainCodeLabel!.text = plainCode
     }
     
     override func didReceiveMemoryWarning() {
@@ -12,4 +19,3 @@ class InitiateQRViewController: DICViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-

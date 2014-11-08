@@ -17,6 +17,7 @@
 		971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B61A0AC3750088D66B /* DICNavigationController.swift */; };
 		971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B81A0AC5000088D66B /* MainTabBarController.swift */; };
 		971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004BA1A0AC5580088D66B /* DICTabBarController.swift */; };
+		971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */; };
 		971382D61A0844AA008A39FD /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */; };
 		972EF6551A0976B100BEE2C1 /* DIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EF6541A0976B100BEE2C1 /* DIFactory.swift */; };
@@ -89,6 +90,7 @@
 		971004B61A0AC3750088D66B /* DICNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICNavigationController.swift; sourceTree = "<group>"; };
 		971004B81A0AC5000088D66B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		971004BA1A0AC5580088D66B /* DICTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTabBarController.swift; sourceTree = "<group>"; };
+		971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateViewControllerTest.swift; sourceTree = "<group>"; };
 		971382D51A0844AA008A39FD /* Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewControllerTests.swift; sourceTree = "<group>"; };
 		972EF6541A0976B100BEE2C1 /* DIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIFactory.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */,
 				976091641A0C461500C49248 /* LoginViewControllerTest.swift */,
+				971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */,
 			);
 			name = ViewControllersTests;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
 				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
+				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,

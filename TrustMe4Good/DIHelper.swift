@@ -19,11 +19,13 @@ class DIHelper {
         var candidateDICViewController: DICControllerProtocol?
         
         if  dic != nil {
-            if let destinationViewController = controller.childViewControllers[0] as? DICControllerProtocol {
-                destinationViewController.dic = dic
-                dic!.decorate(destinationViewController)
-            } else {
-                println(_stdlib_getDemangledTypeName(controller.childViewControllers[0]) + " is not a DICController\n\n")
+            for index in 0...(controller.childViewControllers.count - 1) {
+                if let destinationViewController = controller.childViewControllers[index] as? DICControllerProtocol {
+                    destinationViewController.dic = dic
+                    dic!.decorate(destinationViewController)
+                } else {
+                    println(_stdlib_getDemangledTypeName(controller.childViewControllers[index]) + " is not a DICController\n\n")
+                }
             }
         } else {
             println(_stdlib_getDemangledTypeName(controller) + " has no dic\n\n")

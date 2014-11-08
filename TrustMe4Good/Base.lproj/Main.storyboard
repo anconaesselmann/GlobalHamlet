@@ -81,7 +81,7 @@
         <!--initiate-->
         <scene sceneID="k1T-m8-OJO">
             <objects>
-                <viewController id="b7h-2p-SVe" customClass="InitiateViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitiateViewController" id="b7h-2p-SVe" customClass="InitiateViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EtQ-Vy-Qmo"/>
                         <viewControllerLayoutGuide type="bottom" id="czw-Ov-rsP"/>
@@ -101,7 +101,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Kj3-hy-Qr7"/>
                                     <barButtonItem systemItem="save" id="9QL-42-7ha">
                                         <connections>
-                                            <segue destination="om7-QS-Tpp" kind="show" id="pFN-OY-7ka"/>
+                                            <segue destination="om7-QS-Tpp" kind="presentation" identifier="InitiateQRSegue" id="hvu-X9-42K"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -167,14 +167,48 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbm-fE-gHy">
+                                <rect key="frame" x="16" y="80" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5u8-KQ-bkH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i0-6H-aDe">
+                                <rect key="frame" x="16" y="109" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1qC-GI-uLE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5i0-6H-aDe" firstAttribute="trailing" secondItem="uxN-jb-byT" secondAttribute="trailingMargin" id="3S8-JS-IF6"/>
+                            <constraint firstItem="hbm-fE-gHy" firstAttribute="top" secondItem="TY9-Cx-7th" secondAttribute="bottom" constant="8" id="4Ce-AB-d1e"/>
                             <constraint firstItem="TY9-Cx-7th" firstAttribute="top" secondItem="P84-2j-KOr" secondAttribute="bottom" constant="8" id="5I9-vZ-OaF"/>
+                            <constraint firstItem="5i0-6H-aDe" firstAttribute="leading" secondItem="uxN-jb-byT" secondAttribute="leadingMargin" id="80c-ZO-UNw"/>
+                            <constraint firstItem="hbm-fE-gHy" firstAttribute="trailing" secondItem="uxN-jb-byT" secondAttribute="trailingMargin" id="aGy-qr-Uwk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TY9-Cx-7th" secondAttribute="trailing" constant="-16" id="beM-od-1Ah"/>
+                            <constraint firstItem="5i0-6H-aDe" firstAttribute="top" secondItem="hbm-fE-gHy" secondAttribute="bottom" constant="8" id="cMO-gl-vNg"/>
+                            <constraint firstItem="hbm-fE-gHy" firstAttribute="top" secondItem="TY9-Cx-7th" secondAttribute="bottom" constant="8" id="eX7-7N-YbG"/>
+                            <constraint firstItem="hbm-fE-gHy" firstAttribute="leading" secondItem="uxN-jb-byT" secondAttribute="leadingMargin" id="eg2-Rt-vxJ"/>
                             <constraint firstItem="TY9-Cx-7th" firstAttribute="leading" secondItem="uxN-jb-byT" secondAttribute="leadingMargin" constant="-16" id="oLQ-pj-w6a"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4Ce-AB-d1e"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="contractIdLabel" destination="hbm-fE-gHy" id="c6L-No-lzs"/>
+                        <outlet property="plainCodeLabel" destination="5i0-6H-aDe" id="8kL-4n-D1j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nu-UD-vqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -743,8 +777,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iEk-oT-O4h"/>
-        <segue reference="Vzi-Rl-ksT"/>
+        <segue reference="hEm-9t-fXB"/>
         <segue reference="Pg8-Xv-LME"/>
+        <segue reference="Vzi-Rl-ksT"/>
     </inferredMetricsTieBreakers>
 </document>
