@@ -102,4 +102,25 @@ import UIKit
         }
         return response
     }
+    func getResponseWithError(url:String, arguments: Dictionary<String, String>, error:Error) -> AnyObject? {
+        var response: AnyObject?
+        if let request = postRequst(url, arguments: arguments) as? [String:AnyObject] {
+            if let errorCode = request["errorCode"] as? Int {
+                error.errorCode = errorCode
+            } else {
+                error.errorMessage = "error code could not be unwrapped"
+                error.errorCode    = 1108141309
+            }
+            if let _response:AnyObject = request["response"] {
+                response = _response
+            } else {
+                error.errorMessage = "Request did not have a response."
+                error.errorCode    = 1108141310
+            }
+        } else {
+            error.errorMessage = "Web request unsuccessful."
+            error.errorCode    = 1108141308
+        }
+        return response
+    }
 }

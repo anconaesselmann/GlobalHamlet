@@ -276,7 +276,7 @@
         <!--reciprocate-->
         <scene sceneID="XuA-ed-dpF">
             <objects>
-                <viewController id="3cU-re-hot" customClass="ReciprocateViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReciprocateViewController" id="3cU-re-hot" customClass="ReciprocateViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OQx-2Q-cPS"/>
                         <viewControllerLayoutGuide type="bottom" id="cqf-yF-XV0"/>
@@ -284,10 +284,52 @@
                     <view key="view" contentMode="scaleToFill" id="FQq-Ub-1bQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vb8-6F-PX3">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ovQ-YA-0zL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ4-ez-tgN">
+                                <rect key="frame" x="16" y="66" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VLd-uZ-nMV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB8-3k-l4P">
+                                <rect key="frame" x="535" y="104" width="49" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitPressed:" destination="3cU-re-hot" eventType="touchUpInside" id="2fZ-X9-xSF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZJ4-ez-tgN" firstAttribute="leading" secondItem="FQq-Ub-1bQ" secondAttribute="leadingMargin" id="6bX-Wj-aW9"/>
+                            <constraint firstItem="vB8-3k-l4P" firstAttribute="trailing" secondItem="FQq-Ub-1bQ" secondAttribute="trailingMargin" id="BwD-Vz-sgi"/>
+                            <constraint firstItem="vb8-6F-PX3" firstAttribute="leading" secondItem="FQq-Ub-1bQ" secondAttribute="leadingMargin" id="Edv-Nb-aOP"/>
+                            <constraint firstItem="vb8-6F-PX3" firstAttribute="top" secondItem="OQx-2Q-cPS" secondAttribute="bottom" constant="8" id="Gzq-nY-4uw"/>
+                            <constraint firstItem="vb8-6F-PX3" firstAttribute="trailing" secondItem="FQq-Ub-1bQ" secondAttribute="trailingMargin" id="J21-Lt-9px"/>
+                            <constraint firstItem="ZJ4-ez-tgN" firstAttribute="top" secondItem="vb8-6F-PX3" secondAttribute="bottom" constant="8" id="Jmb-AF-AgD"/>
+                            <constraint firstItem="vB8-3k-l4P" firstAttribute="top" secondItem="ZJ4-ez-tgN" secondAttribute="bottom" constant="8" id="Me0-tb-3oQ"/>
+                            <constraint firstItem="ZJ4-ez-tgN" firstAttribute="trailing" secondItem="FQq-Ub-1bQ" secondAttribute="trailingMargin" id="jgh-Vb-31p"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="reciprocate" id="jl3-z6-STS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="codeTextField" destination="ZJ4-ez-tgN" id="NcP-da-AQR"/>
+                        <outlet property="idTextField" destination="vb8-6F-PX3" id="UFg-jF-DQP"/>
+                        <outlet property="submitButton" destination="vB8-3k-l4P" id="XdW-jr-JuB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nU9-z2-1FB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,7 +31,6 @@
 		973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DC1A07FF6C007E8726 /* MainViewController.swift */; };
 		973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */; };
 		973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E21A082A5B007E8726 /* InitiateViewController.swift */; };
-		973B77E51A082A9A007E8726 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */; };
 		973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */; };
 		973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */; };
 		973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
@@ -60,6 +59,9 @@
 		97B3D49D1A0EE9F50019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
 		97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
 		97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */; };
+		97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
+		97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
+		97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */; };
 		97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
@@ -73,7 +75,6 @@
 		97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E21A082A5B007E8726 /* InitiateViewController.swift */; };
 		97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */; };
 		97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F41A082DF7007E8726 /* NewContactViewController.swift */; };
-		97D7C6891A0873CA000F6BA5 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */; };
 		97D7C68A1A0873D0000F6BA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
 		97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DE81A048839007DAC82 /* AppDelegate.swift */; };
@@ -109,7 +110,6 @@
 		973B77DC1A07FF6C007E8726 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedPreliminaryViewController.swift; sourceTree = "<group>"; };
 		973B77E21A082A5B007E8726 /* InitiateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateViewController.swift; sourceTree = "<group>"; };
-		973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewController.swift; sourceTree = "<group>"; };
 		973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewController.swift; sourceTree = "<group>"; };
 		973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePreliminaryViewController.swift; sourceTree = "<group>"; };
 		973B77EA1A082C0D007E8726 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +137,8 @@
 		97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewControllerTest.swift; sourceTree = "<group>"; };
 		97B3D49C1A0EE9F50019628B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTest.swift; sourceTree = "<group>"; };
+		97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewController.swift; sourceTree = "<group>"; };
+		97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewControllerTest.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +177,7 @@
 				973B77E21A082A5B007E8726 /* InitiateViewController.swift */,
 				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
 				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
-				973B77E41A082A9A007E8726 /* ReciprocateViewController.swift */,
+				97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 				97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */,
 				971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */,
 				97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */,
+				97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */,
 			);
 			name = ViewControllersTests;
 			sourceTree = "<group>";
@@ -454,7 +457,6 @@
 				973B77ED1A082C7C007E8726 /* CreateRegisteredViewController.swift in Sources */,
 				973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */,
 				974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */,
-				973B77E51A082A9A007E8726 /* ReciprocateViewController.swift in Sources */,
 				971004B41A0AC2280088D66B /* DICViewController.swift in Sources */,
 				972E35B51A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
@@ -464,6 +466,7 @@
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				97B3D49D1A0EE9F50019628B /* Error.swift in Sources */,
+				97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +489,7 @@
 				971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */,
 				971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */,
 				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
+				97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */,
 				97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */,
 				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
@@ -501,8 +505,8 @@
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */,
 				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
-				97D7C6891A0873CA000F6BA5 /* ReciprocateViewController.swift in Sources */,
 				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
+				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,
 				97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */,
 				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,
 				97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */,

@@ -69,4 +69,7 @@ class Web_Mock_11_06_14: WebProtocol {
     func getResponseWithError(url:String, error:Error) -> AnyObject? {
         return ""
     }
+    func getResponseWithError(url:String, arguments: Dictionary<String, String>, error:Error) -> AnyObject? {
+        return ""
+    }
 }

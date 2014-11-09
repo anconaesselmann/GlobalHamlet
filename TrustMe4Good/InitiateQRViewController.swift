@@ -53,15 +53,12 @@ class InitiateQRViewController: DICViewController {
         if error.errorCode != 0 {
             return
         }
-        if let contractDetail = web?.postRequst(url + "/contract/deleteinitiated") {
-            if let errorCode = contractDetail["errorCode"] as? Int {
-                if errorCode != 0 {
-                    //segue.destinationViewController.errorCode = errorCode
-                }
-            }
-            if let response = contractDetail["response"] as? Bool {
-                println(response)
-            }
+        let response: Bool? = web!.getResponseWithError(
+            url + "/contract/deleteinitiated",
+            error: error
+        ) as? Bool
+        if error.errorCode == 0 && response != nil && response == true {
+            println(response!)
         } else {
             println("Web request unsuccessful.")
         }

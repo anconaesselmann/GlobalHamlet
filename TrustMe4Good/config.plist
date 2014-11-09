@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ReciprocateViewController</key>
+	<dict>
+		<key>args</key>
+		<array>
+			<dict>
+				<key>dep</key>
+				<string>web</string>
+			</dict>
+			<dict>
+				<key>const</key>
+				<string>url</string>
+			</dict>
+		</array>
+		<key>class</key>
+		<string>ReciprocateViewController</string>
+	</dict>
 	<key>qr</key>
 	<dict>
 		<key>class</key>
