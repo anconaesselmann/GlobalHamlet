@@ -20,6 +20,10 @@
 		971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */; };
 		971382D61A0844AA008A39FD /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */; };
+		972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */; };
+		972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */; };
+		972E35B51A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */; };
+		972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */; };
 		972EF6551A0976B100BEE2C1 /* DIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EF6541A0976B100BEE2C1 /* DIFactory.swift */; };
 		972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EF6541A0976B100BEE2C1 /* DIFactory.swift */; };
 		972EF6591A0976C400BEE2C1 /* DIFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */; };
@@ -40,7 +44,6 @@
 		973F5DEE1A048839007DAC82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		973F5DF01A048839007DAC82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEF1A048839007DAC82 /* Images.xcassets */; };
 		973F5DF31A048839007DAC82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
-		973F5DFF1A048839007DAC82 /* TrustMe4GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */; };
 		974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */; };
 		974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */; };
 		974C06C11A093AAD00192CCB /* configTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 974C06C01A093AAD00192CCB /* configTest.plist */; };
@@ -52,6 +55,11 @@
 		976091621A0AE71800C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091631A0AE84000C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091641A0C461500C49248 /* LoginViewControllerTest.swift */; };
+		97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D4981A0EAE7F0019628B /* UIMocks.swift */; };
+		97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */; };
+		97B3D49D1A0EE9F50019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
+		97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
+		97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */; };
 		97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
@@ -93,6 +101,8 @@
 		971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateViewControllerTest.swift; sourceTree = "<group>"; };
 		971382D51A0844AA008A39FD /* Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewControllerTests.swift; sourceTree = "<group>"; };
+		972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeGenerator.swift; sourceTree = "<group>"; };
+		972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeGeneratorProtocol.swift; sourceTree = "<group>"; };
 		972EF6541A0976B100BEE2C1 /* DIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIFactory.swift; sourceTree = "<group>"; };
 		972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIFactoryTest.swift; sourceTree = "<group>"; };
 		973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +126,6 @@
 		973F5DF21A048839007DAC82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		973F5DF81A048839007DAC82 /* TrustMe4GoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrustMe4GoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		973F5DFD1A048839007DAC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustMe4GoodTests.swift; sourceTree = "<group>"; };
 		974C06BD1A08D01300192CCB /* DICControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICControllerProtocol.swift; sourceTree = "<group>"; };
 		974C06C01A093AAD00192CCB /* configTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configTest.plist; path = ../TrustMe4Good/configTest.plist; sourceTree = "<group>"; };
 		974C06C31A093BDD00192CCB /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactory.swift; sourceTree = "<group>"; };
@@ -124,6 +133,10 @@
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		97B3D4981A0EAE7F0019628B /* UIMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMocks.swift; sourceTree = "<group>"; };
+		97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewControllerTest.swift; sourceTree = "<group>"; };
+		97B3D49C1A0EE9F50019628B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTest.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				971382D51A0844AA008A39FD /* Web.swift */,
+				972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */,
+				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
 				971004B01A09D42D0088D66B /* WebProtocol.swift */,
 			);
 			name = Model;
@@ -190,7 +205,9 @@
 			children = (
 				971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */,
 				976091641A0C461500C49248 /* LoginViewControllerTest.swift */,
+				97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */,
 				971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */,
+				97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */,
 			);
 			name = ViewControllersTests;
 			sourceTree = "<group>";
@@ -257,9 +274,9 @@
 		973F5DFB1A048839007DAC82 /* TrustMe4GoodTests */ = {
 			isa = PBXGroup;
 			children = (
+				97B3D4971A0EAE5B0019628B /* Mocks */,
 				972EF6531A09766600BEE2C1 /* aae */,
 				971382D71A0858CA008A39FD /* ViewControllersTests */,
-				973F5DFE1A048839007DAC82 /* TrustMe4GoodTests.swift */,
 				973F5DFC1A048839007DAC82 /* Supporting Files */,
 			);
 			path = TrustMe4GoodTests;
@@ -301,8 +318,17 @@
 			isa = PBXGroup;
 			children = (
 				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
+				97B3D49C1A0EE9F50019628B /* Error.swift */,
 			);
 			name = std;
+			sourceTree = "<group>";
+		};
+		97B3D4971A0EAE5B0019628B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				97B3D4981A0EAE7F0019628B /* UIMocks.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
+				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
 				9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */,
@@ -429,12 +456,14 @@
 				974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */,
 				973B77E51A082A9A007E8726 /* ReciprocateViewController.swift in Sources */,
 				971004B41A0AC2280088D66B /* DICViewController.swift in Sources */,
+				972E35B51A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
 				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
 				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
 				976091621A0AE71800C49248 /* DIHelper.swift in Sources */,
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
+				97B3D49D1A0EE9F50019628B /* Error.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +475,7 @@
 				97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */,
 				971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */,
 				97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */,
+				97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */,
 				9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */,
 				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
 				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
@@ -456,6 +486,7 @@
 				971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */,
 				971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */,
 				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
+				97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */,
 				97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */,
 				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
 				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
@@ -465,13 +496,16 @@
 				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,
 				972EF6591A0976C400BEE2C1 /* DIFactoryTest.swift in Sources */,
-				973F5DFF1A048839007DAC82 /* TrustMe4GoodTests.swift in Sources */,
+				972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
+				97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */,
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */,
 				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
 				97D7C6891A0873CA000F6BA5 /* ReciprocateViewController.swift in Sources */,
+				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */,
 				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,
+				97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

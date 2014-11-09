@@ -66,4 +66,7 @@ class Web_Mock_11_06_14: WebProtocol {
     func postRequst(urlString: String) -> NSDictionary {
         return NSDictionary(dictionary: ["response": loggedIn, "errorCode": 0])
     }
+    func getResponseWithError(url:String, error:Error) -> AnyObject? {
+        return ""
+    }
 }

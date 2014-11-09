@@ -136,7 +136,7 @@
         <!--InitiateQR View Controller-->
         <scene sceneID="8na-Xa-Wua">
             <objects>
-                <viewController id="om7-QS-Tpp" customClass="InitiateQRViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitiateQRViewController" id="om7-QS-Tpp" customClass="InitiateQRViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P84-2j-KOr"/>
                         <viewControllerLayoutGuide type="bottom" id="vQZ-cb-o0X"/>
@@ -150,7 +150,7 @@
                                 <items>
                                     <barButtonItem systemItem="trash" id="5dG-Q4-QVU">
                                         <connections>
-                                            <segue destination="Qt0-PN-BgX" kind="presentation" id="TGB-Xv-xQb"/>
+                                            <segue destination="Qt0-PN-BgX" kind="presentation" identifier="DeleteInitContractsSegue" id="TGB-Xv-xQb"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eLS-cH-Jvl"/>
@@ -185,6 +185,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZXw-XZ-qEy">
+                                <rect key="frame" x="140" y="138" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="9CH-eJ-QoP"/>
+                                    <constraint firstAttribute="height" constant="391" id="DiY-Co-8mf"/>
+                                    <constraint firstAttribute="width" priority="320" constant="320" id="gZm-HF-TV8"/>
+                                    <constraint firstAttribute="width" constant="500" id="t8B-2U-POi"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DiY-Co-8mf"/>
+                                        <exclude reference="t8B-2U-POi"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -197,7 +212,9 @@
                             <constraint firstItem="5i0-6H-aDe" firstAttribute="top" secondItem="hbm-fE-gHy" secondAttribute="bottom" constant="8" id="cMO-gl-vNg"/>
                             <constraint firstItem="hbm-fE-gHy" firstAttribute="top" secondItem="TY9-Cx-7th" secondAttribute="bottom" constant="8" id="eX7-7N-YbG"/>
                             <constraint firstItem="hbm-fE-gHy" firstAttribute="leading" secondItem="uxN-jb-byT" secondAttribute="leadingMargin" id="eg2-Rt-vxJ"/>
+                            <constraint firstItem="ZXw-XZ-qEy" firstAttribute="top" secondItem="5i0-6H-aDe" secondAttribute="bottom" constant="8" id="nzn-cU-e4t"/>
                             <constraint firstItem="TY9-Cx-7th" firstAttribute="leading" secondItem="uxN-jb-byT" secondAttribute="leadingMargin" constant="-16" id="oLQ-pj-w6a"/>
+                            <constraint firstAttribute="centerX" secondItem="ZXw-XZ-qEy" secondAttribute="centerX" id="yNP-3M-ilh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -208,6 +225,7 @@
                     <connections>
                         <outlet property="contractIdLabel" destination="hbm-fE-gHy" id="c6L-No-lzs"/>
                         <outlet property="plainCodeLabel" destination="5i0-6H-aDe" id="8kL-4n-D1j"/>
+                        <outlet property="qrCodeImage" destination="ZXw-XZ-qEy" id="0B8-Uz-fHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nu-UD-vqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -278,7 +296,7 @@
         <!--Main View Controller-->
         <scene sceneID="Z8y-My-0O6">
             <objects>
-                <viewController id="Jtl-4V-07K" customClass="MainViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="Jtl-4V-07K" customClass="MainViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zgN-bR-AdE"/>
                         <viewControllerLayoutGuide type="bottom" id="3xP-hw-ctM"/>
@@ -777,8 +795,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hEm-9t-fXB"/>
-        <segue reference="Pg8-Xv-LME"/>
         <segue reference="Vzi-Rl-ksT"/>
+        <segue reference="TGB-Xv-xQb"/>
+        <segue reference="Pg8-Xv-LME"/>
     </inferredMetricsTieBreakers>
 </document>

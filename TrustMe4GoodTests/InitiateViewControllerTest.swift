@@ -16,7 +16,43 @@ class InitiateViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_sign_in_button_should_be_connected() {
-        //XCTAssertNotNil(sut.signInButton, "Sign In button not connected")
+    func test_prepareForSegue() {
+        let destination = Mock_DiViewController_11_08_14_Destination()
+        let contractId  = 1
+        let plainCode   = "plain1234"
+        var segue = Mock_Segue(
+            identifier: "InitiateQRSegue",
+            source: sut,
+            destination: destination
+        )
+        let web = Web_Mock()
+        web.urlCallResult = [
+            "contractId": contractId,
+            "plainCode": plainCode
+        ]
+        sut.web = web as WebProtocol
+        sut.url = "test.dev"
+        sut.prepareForSegue(segue, sender: nil)
+        
+        XCTAssertEqual("test.dev/contract/initiate", web.urlCalled)
+        XCTAssertEqual(contractId, destination.contractId!)
+        XCTAssertEqual(plainCode, destination.plainCode!)
+    }
+    func test_prepareForSegue_sets_error_code() {
+        sut.error.errorCode = 123
+        let destination     = Mock_DiViewController_11_08_14_Destination()
+        var segue = Mock_Segue(
+            identifier: "InitiateQRSegue",
+            source: sut,
+            destination: destination
+        )
+        let web = Web_Mock()
+        sut.web = web as WebProtocol
+        sut.url = "test.dev"
+        sut.prepareForSegue(segue, sender: nil)
+        
+        XCTAssertEqual("test.dev/contract/initiate", web.urlCalled)
+        XCTAssertEqual(123, destination.error.errorCode)
     }
 }
+class Mock_DiViewController_11_08_14_Destination: InitiateQRViewController {}

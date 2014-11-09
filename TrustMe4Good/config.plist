@@ -2,6 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>qr</key>
+	<dict>
+		<key>class</key>
+		<string>QrCodeGenerator</string>
+		<key>args</key>
+		<array/>
+	</dict>
+	<key>InitiateQRViewController</key>
+	<dict>
+		<key>class</key>
+		<string>InitiateQRViewController</string>
+		<key>args</key>
+		<array>
+			<dict>
+				<key>dep</key>
+				<string>qr</string>
+			</dict>
+			<dict>
+				<key>dep</key>
+				<string>web</string>
+			</dict>
+			<dict>
+				<key>const</key>
+				<string>url</string>
+			</dict>
+		</array>
+	</dict>
 	<key>InitiateViewController</key>
 	<dict>
 		<key>args</key>
