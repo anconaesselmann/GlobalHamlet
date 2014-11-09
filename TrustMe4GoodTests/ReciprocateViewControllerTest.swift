@@ -29,4 +29,14 @@ class ReciprocateViewControllerTest: XCTestCase {
         XCTAssertEqual("test.dev/contract/reciprocate", web.urlCalled, "url not called.")
         XCTAssertEqual(["contractId": "123", "plainCode": "code345"], web.argsPassed, "Args not passed.")
     }
+    
+    func test_getIdAndCodeFromString() {
+        let codeString = "abcdefghijklmnopqrst12345"
+        
+        let result:(id: Int, code: String) = sut.getIdAndCodeFromString(codeString)
+        
+        let expected = (id: 12345, code: "abcdefghijklmnopqrst")
+        XCTAssertEqual(expected.id, result.id)
+        XCTAssertEqual(expected.code, result.code)
+    }
 }

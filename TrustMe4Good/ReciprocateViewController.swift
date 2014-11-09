@@ -19,9 +19,10 @@ class ReciprocateViewController: DICViewController {
     }
     
     @IBAction func submitPressed(sender: AnyObject) {
-        let id: Int?      = idTextField?.text.toInt()
-        let code: String? = codeTextField?.text
-        sendCode(id, code: code)
+        // TODO: get codeAndId from qr-code reader
+        let codeAndId = codeTextField!.text + idTextField!.text
+        let codeAndIdTuple = getIdAndCodeFromString(codeAndId)
+        sendCode(codeAndIdTuple.id, code: codeAndIdTuple.code)
     }
     
     override func viewDidLoad() {
@@ -53,6 +54,15 @@ class ReciprocateViewController: DICViewController {
             }
         }
         return false
+    }
+    
+    func getIdAndCodeFromString(codeString: String) -> (id: Int, code: String) {
+        let code: String = (codeString as NSString).substringToIndex(20)
+        var id: Int? = (codeString as NSString).substringFromIndex(20).toInt()
+        if id == nil {
+            id = -1
+        }
+        return (id: id!, code: code)
     }
 }
 
