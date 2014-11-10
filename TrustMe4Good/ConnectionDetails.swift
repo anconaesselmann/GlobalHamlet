@@ -16,11 +16,25 @@ import Foundation
     func setSetting(key: String, value: Bool) {
         settings[key] = value
     }
+    func getSetting(key: String) -> Bool {
+        return settings[key]!
+    }
     func getSwitchSettings() -> [Bool] {
         var switches = [Bool]()
         switches.append(settings["show_user_name"]!)
         switches.append(settings["show_real_name"]!)
         switches.append(settings["show_alias"]!)
         return switches
+    }
+    func getIdentitySwitchSettings() -> [Bool] {
+        var switches = [Bool]()
+        switches.append(settings["show_user_name"]!)
+        switches.append(settings["show_real_name"]!)
+        switches.append(settings["show_alias"]!)
+        return switches
+    }
+    func getJson() -> String {
+        let json = JSON()
+        return json.toString(["settings":settings, "alias":alias])
     }
 }

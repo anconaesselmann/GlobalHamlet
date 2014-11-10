@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707AB791A113B2300935F33 /* InitiateNavigationController.swift */; };
+		9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707AB7B1A1162AB00935F33 /* JSON.swift */; };
+		9707AB7D1A11632400935F33 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707AB7B1A1162AB00935F33 /* JSON.swift */; };
 		971004AC1A09CDC10088D66B /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004AB1A09CDC10088D66B /* DICProtocol.swift */; };
 		971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004AB1A09CDC10088D66B /* DICProtocol.swift */; };
 		971004AF1A09D20D0088D66B /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 971004AE1A09D20D0088D66B /* config.plist */; };
@@ -66,6 +69,8 @@
 		97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02901A109E810045F3D1 /* DICTableViewController.swift */; };
 		97BD02941A1129710045F3D1 /* ConnectionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02931A1129710045F3D1 /* ConnectionDetails.swift */; };
 		97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02931A1129710045F3D1 /* ConnectionDetails.swift */; };
+		97BD02971A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02961A1136EA0045F3D1 /* IdentitySharingViewController.swift */; };
+		97BD02981A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02961A1136EA0045F3D1 /* IdentitySharingViewController.swift */; };
 		97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
@@ -96,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9707AB791A113B2300935F33 /* InitiateNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateNavigationController.swift; sourceTree = "<group>"; };
+		9707AB7B1A1162AB00935F33 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		971004AB1A09CDC10088D66B /* DICProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICProtocol.swift; sourceTree = "<group>"; };
 		971004AE1A09D20D0088D66B /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		971004B01A09D42D0088D66B /* WebProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebProtocol.swift; sourceTree = "<group>"; };
@@ -145,6 +152,7 @@
 		97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewControllerTest.swift; sourceTree = "<group>"; };
 		97BD02901A109E810045F3D1 /* DICTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTableViewController.swift; sourceTree = "<group>"; };
 		97BD02931A1129710045F3D1 /* ConnectionDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDetails.swift; sourceTree = "<group>"; };
+		97BD02961A1136EA0045F3D1 /* IdentitySharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewController.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,7 +188,9 @@
 				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
 				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
 				973B77F21A082D41007E8726 /* NotificationsViewController.swift */,
+				9707AB791A113B2300935F33 /* InitiateNavigationController.swift */,
 				973B77E21A082A5B007E8726 /* InitiateViewController.swift */,
+				97BD02961A1136EA0045F3D1 /* IdentitySharingViewController.swift */,
 				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
 				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
 				97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */,
@@ -196,6 +206,7 @@
 				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
 				971004B01A09D42D0088D66B /* WebProtocol.swift */,
 				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
+				9707AB7B1A1162AB00935F33 /* JSON.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -447,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
+				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
@@ -475,8 +487,10 @@
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				97BD02911A109E810045F3D1 /* DICTableViewController.swift in Sources */,
+				97BD02971A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */,
 				97B3D49D1A0EE9F50019628B /* Error.swift in Sources */,
 				97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
+				9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +510,7 @@
 				97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */,
 				97D7C6841A0873BC000F6BA5 /* SettingsViewController.swift in Sources */,
 				974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */,
+				97BD02981A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */,
 				971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */,
 				971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */,
 				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
@@ -511,6 +526,7 @@
 				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,
 				972EF6591A0976C400BEE2C1 /* DIFactoryTest.swift in Sources */,
+				9707AB7D1A11632400935F33 /* JSON.swift in Sources */,
 				972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */,
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,

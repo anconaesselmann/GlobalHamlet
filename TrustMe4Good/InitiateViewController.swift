@@ -4,10 +4,18 @@ class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
-    var connectionDetails = ConnectionDetails()
+    var connectionDetails:ConnectionDetails!
     
-    @IBOutlet var switches: [UISwitch]!
+    @IBOutlet weak var identityTextField: UITextField!
+    @IBAction func aliasUdatedAction(sender: AnyObject) {
+        if connectionDetails.getSetting("show_alias") {
+            connectionDetails.alias = identityTextField.text
+        }
+    }
 
+    @IBOutlet var switches: [UISwitch]!
+    @IBOutlet weak var categorySelector: UISegmentedControl!
+    
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
         assert(args[0] is WebProtocol)
@@ -16,35 +24,45 @@ class InitiateViewController: DICTableViewController {
         url = args[1] as String
     }
     
-    @IBOutlet weak var categorySelector: UISegmentedControl!
     @IBAction func categorySelectorValueChangedAction(sender: AnyObject) {
+        initSwitches(true)
         setSwitches(true)
     }
     
-    func setSwitches(animated: Bool) {
+    func initSwitches(animated: Bool) {
         switch categorySelector.selectedSegmentIndex {
-        case 0:
-            connectionDetails.setRestricted()
-        case 1:
-            connectionDetails.setCasual()
-            
-        case 2:
-            connectionDetails.setFriend()
-            
+        case 0: connectionDetails.setRestricted()
+        case 1: connectionDetails.setCasual()
+        case 2: connectionDetails.setFriend()
         default: break
         }
+        setSwitches(animated)
+    }
+    
+    func setSwitches(animated: Bool) {
         let switchPositions:[Bool] = connectionDetails.getSwitchSettings()
         for index in 0...(switches.count - 1) {
             switches[index].setOn(switchPositions[index], animated: animated)
         }
+        if connectionDetails.getSetting("show_alias") {
+            identityTextField.text = connectionDetails.alias
+            identityTextField.enabled = true
+            identityTextField.borderStyle = UITextBorderStyle.RoundedRect
+        } else if connectionDetails.getSetting("show_user_name") {
+            identityTextField.text = "user name"
+            identityTextField.enabled = false
+            identityTextField.borderStyle = UITextBorderStyle.None
+        } else if connectionDetails.getSetting("show_real_name") {
+            identityTextField.text = "real name"
+            identityTextField.enabled = false
+            identityTextField.borderStyle = UITextBorderStyle.None
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setSwitches(false)
-        // Do any additional setup after loading the view, typically from a nib.
+        connectionDetails = ConnectionDetails()
+        initSwitches(false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,8 +74,19 @@ class InitiateViewController: DICTableViewController {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier? == "InitiateQRSegue" {
             _initiateQRSegue(segue)
-        } else {
+            println(connectionDetails.getJson())
+        } else if segue.identifier?  == "IdentitySharingSegue" {
+            _identitySharingSegue(segue)
+        }else {
             println("unknown segue: \(segue.identifier?)")
+        }
+    }
+    
+    func _identitySharingSegue(segue: UIStoryboardSegue) {
+        let vc:IdentitySharingViewController? = segue.destinationViewController as? IdentitySharingViewController
+        if vc != nil {
+            vc!.selectedCategory = categorySelector.selectedSegmentIndex
+            vc!.delegate = self
         }
     }
     
@@ -85,6 +114,16 @@ class InitiateViewController: DICTableViewController {
             vc!.error = error
         }
         println(error.errorMessage)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
     }
 }
 
