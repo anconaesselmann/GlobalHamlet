@@ -1,6 +1,6 @@
 import UIKit
 
-class NotificaitonsViewController: UITableViewController {
+class NotificaitonsViewController: DICTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
