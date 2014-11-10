@@ -42,6 +42,11 @@ class InitiateViewController: DICTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let switchPositions:[Bool] = [false,false,true]
+        for index in 0...(switches.count - 1) {
+            switches[index].setOn(switchPositions[index], animated: false)
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
