@@ -13,6 +13,32 @@ class InitiateViewController: DICTableViewController {
         url = args[1] as String
     }
     
+    @IBOutlet weak var categorySelector: UISegmentedControl!
+    @IBAction func categorySelectorValueChangedAction(sender: AnyObject) {
+        switch sender.selectedSegmentIndex {
+            case 0:
+                showUserNameSwitch!.setOn(false, animated: true)
+                showRealNameSwitch!.setOn(false, animated: true)
+                useAliasSwitch!.setOn(true, animated: true)
+            
+        case 1:
+            showUserNameSwitch!.setOn(true, animated: true)
+            showRealNameSwitch!.setOn(false, animated: true)
+            useAliasSwitch!.setOn(false, animated: true)
+            
+        case 2:
+            showUserNameSwitch!.setOn(false, animated: true)
+            showRealNameSwitch!.setOn(true, animated: true)
+            useAliasSwitch!.setOn(false, animated: true)
+            
+        default: break
+        }
+        println(sender.selectedSegmentIndex)
+    }
+    @IBOutlet weak var showUserNameSwitch: UISwitch!
+    @IBOutlet weak var showRealNameSwitch: UISwitch!
+    @IBOutlet weak var useAliasSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

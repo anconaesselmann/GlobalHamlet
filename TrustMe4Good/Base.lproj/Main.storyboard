@@ -89,7 +89,7 @@
                         <sections>
                             <tableViewSection id="cGB-rC-ubA">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="162" id="dsf-vS-lIt">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="120" id="dsf-vS-lIt">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsf-vS-lIt" id="Q0t-fw-BOG">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -130,6 +130,9 @@
                                                             <exclude reference="tJ0-f1-iCl"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="categorySelectorValueChangedAction:" destination="e8P-B4-mEU" eventType="valueChanged" id="1ii-ME-zQO"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -148,7 +151,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tcz-ck-rHZ" id="n9m-Tk-gli">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3H-0j-FEH">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z3H-0j-FEH">
                                                     <rect key="frame" x="543" y="8" width="51" height="31"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="show username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xY-h3-zaw">
@@ -171,7 +174,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pDj-wp-0rl" id="e8e-bn-X5b">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-EX-gtW">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-EX-gtW">
                                                     <rect key="frame" x="543" y="8" width="51" height="31"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="show real name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlY-qT-Ff4">
@@ -232,6 +235,12 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="lug-Sp-YVG"/>
+                    <connections>
+                        <outlet property="categorySelector" destination="xuC-0c-kf0" id="E8z-5O-SLS"/>
+                        <outlet property="showRealNameSwitch" destination="TPB-EX-gtW" id="O76-qV-a9w"/>
+                        <outlet property="showUserNameSwitch" destination="z3H-0j-FEH" id="dW9-7V-e7t"/>
+                        <outlet property="useAliasSwitch" destination="vrY-d7-vam" id="8Q7-6f-0n6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iu-oV-ZWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
