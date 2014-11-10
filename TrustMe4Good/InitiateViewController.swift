@@ -1,6 +1,6 @@
 import UIKit
 
-class InitiateViewController: DICViewController {
+class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
