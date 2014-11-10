@@ -17,22 +17,26 @@ class InitiateViewController: DICTableViewController {
     
     @IBOutlet weak var categorySelector: UISegmentedControl!
     @IBAction func categorySelectorValueChangedAction(sender: AnyObject) {
-        switch sender.selectedSegmentIndex {
-            case 0:
-                let switchPositions:[Bool] = [false,false,true]
-                for index in 0...(switches.count - 1) {
-                    switches[index].setOn(switchPositions[index], animated: true)
-                }
+        setSwitches(true)
+    }
+    
+    func setSwitches(animated: Bool) {
+        switch categorySelector.selectedSegmentIndex {
+        case 0:
+            let switchPositions:[Bool] = [false,false,true]
+            for index in 0...(switches.count - 1) {
+                switches[index].setOn(switchPositions[index], animated: animated)
+            }
         case 1:
             let switchPositions:[Bool] = [true,false,false]
             for index in 0...(switches.count - 1) {
-                switches[index].setOn(switchPositions[index], animated: true)
+                switches[index].setOn(switchPositions[index], animated: animated)
             }
             
         case 2:
             let switchPositions:[Bool] = [false,true,false]
             for index in 0...(switches.count - 1) {
-                switches[index].setOn(switchPositions[index], animated: true)
+                switches[index].setOn(switchPositions[index], animated: animated)
             }
             
         default: break
@@ -43,10 +47,7 @@ class InitiateViewController: DICTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let switchPositions:[Bool] = [false,false,true]
-        for index in 0...(switches.count - 1) {
-            switches[index].setOn(switchPositions[index], animated: false)
-        }
+        setSwitches(false)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
