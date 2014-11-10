@@ -4,6 +4,9 @@ class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
+    @IBOutlet weak var showUserNameSwitch: UISwitch!
+    @IBOutlet weak var showRealNameSwitch: UISwitch!
+    @IBOutlet weak var useAliasSwitch: UISwitch!
     
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
@@ -15,29 +18,32 @@ class InitiateViewController: DICTableViewController {
     
     @IBOutlet weak var categorySelector: UISegmentedControl!
     @IBAction func categorySelectorValueChangedAction(sender: AnyObject) {
+        let switches:[UISwitch!] = [
+            showUserNameSwitch!,
+            showRealNameSwitch!,
+            useAliasSwitch!]
         switch sender.selectedSegmentIndex {
             case 0:
-                showUserNameSwitch!.setOn(false, animated: true)
-                showRealNameSwitch!.setOn(false, animated: true)
-                useAliasSwitch!.setOn(true, animated: true)
-            
+                let switchPositions:[Bool] = [false,false,true]
+                for index in 0...(switches.count - 1) {
+                    switches[index].setOn(switchPositions[index], animated: true)
+                }
         case 1:
-            showUserNameSwitch!.setOn(true, animated: true)
-            showRealNameSwitch!.setOn(false, animated: true)
-            useAliasSwitch!.setOn(false, animated: true)
+            let switchPositions:[Bool] = [true,false,false]
+            for index in 0...(switches.count - 1) {
+                switches[index].setOn(switchPositions[index], animated: true)
+            }
             
         case 2:
-            showUserNameSwitch!.setOn(false, animated: true)
-            showRealNameSwitch!.setOn(true, animated: true)
-            useAliasSwitch!.setOn(false, animated: true)
+            let switchPositions:[Bool] = [false,true,false]
+            for index in 0...(switches.count - 1) {
+                switches[index].setOn(switchPositions[index], animated: true)
+            }
             
         default: break
         }
-        println(sender.selectedSegmentIndex)
     }
-    @IBOutlet weak var showUserNameSwitch: UISwitch!
-    @IBOutlet weak var showRealNameSwitch: UISwitch!
-    @IBOutlet weak var useAliasSwitch: UISwitch!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
