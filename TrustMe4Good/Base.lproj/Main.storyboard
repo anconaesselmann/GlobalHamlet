@@ -237,9 +237,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="lug-Sp-YVG"/>
                     <connections>
                         <outlet property="categorySelector" destination="xuC-0c-kf0" id="E8z-5O-SLS"/>
-                        <outlet property="showRealNameSwitch" destination="TPB-EX-gtW" id="O76-qV-a9w"/>
-                        <outlet property="showUserNameSwitch" destination="z3H-0j-FEH" id="dW9-7V-e7t"/>
-                        <outlet property="useAliasSwitch" destination="vrY-d7-vam" id="8Q7-6f-0n6"/>
+                        <outletCollection property="switches" destination="z3H-0j-FEH" collectionClass="NSMutableArray" id="9IP-l6-eVT"/>
+                        <outletCollection property="switches" destination="TPB-EX-gtW" collectionClass="NSMutableArray" id="Icq-Xb-Oge"/>
+                        <outletCollection property="switches" destination="vrY-d7-vam" collectionClass="NSMutableArray" id="R0S-uD-Xdt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iu-oV-ZWl" userLabel="First Responder" sceneMemberID="firstResponder"/>

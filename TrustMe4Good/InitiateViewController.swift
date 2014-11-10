@@ -4,10 +4,9 @@ class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
-    @IBOutlet weak var showUserNameSwitch: UISwitch!
-    @IBOutlet weak var showRealNameSwitch: UISwitch!
-    @IBOutlet weak var useAliasSwitch: UISwitch!
     
+    @IBOutlet var switches: [UISwitch]!
+
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
         assert(args[0] is WebProtocol)
@@ -18,10 +17,6 @@ class InitiateViewController: DICTableViewController {
     
     @IBOutlet weak var categorySelector: UISegmentedControl!
     @IBAction func categorySelectorValueChangedAction(sender: AnyObject) {
-        let switches:[UISwitch!] = [
-            showUserNameSwitch!,
-            showRealNameSwitch!,
-            useAliasSwitch!]
         switch sender.selectedSegmentIndex {
             case 0:
                 let switchPositions:[Bool] = [false,false,true]
