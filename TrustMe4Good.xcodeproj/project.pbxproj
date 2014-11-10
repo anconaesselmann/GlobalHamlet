@@ -64,6 +64,8 @@
 		97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */; };
 		97BD02911A109E810045F3D1 /* DICTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02901A109E810045F3D1 /* DICTableViewController.swift */; };
 		97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02901A109E810045F3D1 /* DICTableViewController.swift */; };
+		97BD02941A1129710045F3D1 /* ConnectionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02931A1129710045F3D1 /* ConnectionDetails.swift */; };
+		97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD02931A1129710045F3D1 /* ConnectionDetails.swift */; };
 		97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */; };
 		97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EA1A082C0D007E8726 /* LoginViewController.swift */; };
@@ -142,6 +144,7 @@
 		97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewController.swift; sourceTree = "<group>"; };
 		97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewControllerTest.swift; sourceTree = "<group>"; };
 		97BD02901A109E810045F3D1 /* DICTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTableViewController.swift; sourceTree = "<group>"; };
+		97BD02931A1129710045F3D1 /* ConnectionDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDetails.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +195,7 @@
 				972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */,
 				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
 				971004B01A09D42D0088D66B /* WebProtocol.swift */,
+				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -450,6 +454,7 @@
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
 				971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
+				97BD02941A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
 				971382D61A0844AA008A39FD /* Web.swift in Sources */,
 				973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */,
 				971004AC1A09CDC10088D66B /* DICProtocol.swift in Sources */,
@@ -511,6 +516,7 @@
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */,
 				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
+				97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
 				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,
 				97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */,

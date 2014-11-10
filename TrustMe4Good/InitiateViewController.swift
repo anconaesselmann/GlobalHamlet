@@ -4,6 +4,7 @@ class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
+    var connectionDetails = ConnectionDetails()
     
     @IBOutlet var switches: [UISwitch]!
 
@@ -23,23 +24,18 @@ class InitiateViewController: DICTableViewController {
     func setSwitches(animated: Bool) {
         switch categorySelector.selectedSegmentIndex {
         case 0:
-            let switchPositions:[Bool] = [false,false,true]
-            for index in 0...(switches.count - 1) {
-                switches[index].setOn(switchPositions[index], animated: animated)
-            }
+            connectionDetails.setRestricted()
         case 1:
-            let switchPositions:[Bool] = [true,false,false]
-            for index in 0...(switches.count - 1) {
-                switches[index].setOn(switchPositions[index], animated: animated)
-            }
+            connectionDetails.setCasual()
             
         case 2:
-            let switchPositions:[Bool] = [false,true,false]
-            for index in 0...(switches.count - 1) {
-                switches[index].setOn(switchPositions[index], animated: animated)
-            }
+            connectionDetails.setFriend()
             
         default: break
+        }
+        let switchPositions:[Bool] = connectionDetails.getSwitchSettings()
+        for index in 0...(switches.count - 1) {
+            switches[index].setOn(switchPositions[index], animated: animated)
         }
     }
     
