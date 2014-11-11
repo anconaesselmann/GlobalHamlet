@@ -75,7 +75,9 @@ class InitiateViewController: DICTableViewController {
             println(connectionDetails?.getJson())
         } else if segue.identifier?  == "IdentitySharingSegue" {
             _identitySharingSegue(segue)
-        }else {
+        } else if segue.identifier? == "CommunicationSharingSegue" {
+            _communicationSharingSegue(segue)
+        } else {
             println("unknown segue: \(segue.identifier?)")
         }
     }
@@ -83,10 +85,16 @@ class InitiateViewController: DICTableViewController {
     func _identitySharingSegue(segue: UIStoryboardSegue) {
         let vc:IdentitySharingViewController? = segue.destinationViewController as? IdentitySharingViewController
         if vc != nil {
-            vc!.selectedCategory = categorySelector.selectedSegmentIndex
             vc!.delegate = self
         }
     }
+    func _communicationSharingSegue(segue: UIStoryboardSegue) {
+        let vc:CommunicationSharingViewController? = segue.destinationViewController as? CommunicationSharingViewController
+        if vc != nil {
+            vc!.delegate = self
+        }
+    }
+    
     
     func _initiateQRSegue(segue: UIStoryboardSegue) {
         let response: [String: AnyObject]? = web!.getResponseWithError(

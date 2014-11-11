@@ -1,7 +1,6 @@
 import UIKit
 
 class IdentitySharingViewController: DICTableViewController {
-    var selectedCategory = 0
     var delegate:InitiateViewController?
 
     @IBOutlet weak var aliasTextField: UITextField!
