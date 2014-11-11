@@ -1,5 +1,14 @@
 import Foundation
 
+func += <KeyType, ValueType> (
+    inout left: Dictionary<KeyType, ValueType>,
+    right: Dictionary<KeyType, ValueType>
+) {
+    for (k, v) in right {
+        left.updateValue(v, forKey: k)
+    }
+}
+
 @objc(Settings) class Settings: NSObject {
     var switches:[String: [String:Bool]] = ["main": Dictionary<String, Bool>()]
     var strings: [String: String] = Dictionary<String, String>()
@@ -36,6 +45,11 @@ import Foundation
     }
     func getJson() -> String {
         let json = JSON()
-        return json.toString(["bools":switches, "strings":strings])
+        var dict: [String: AnyObject] = Dictionary<String, AnyObject>()
+        for (key, value) in switches {
+            dict += value
+        }
+        dict += strings
+        return json.toString(dict)
     }
 }

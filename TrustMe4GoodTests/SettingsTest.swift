@@ -52,7 +52,9 @@ class SettingsTest: XCTestCase {
         let key   = "aKey"
         sut.setSwitches(initDict)
         sut.setString(key, value: value)
-        XCTAssertEqual("{\"bools\":{\"main\":{\"s2\":false,\"s1\":true,\"s4\":true,\"s3\":false}},\"strings\":{\"aKey\":\"aString\"}}", sut.getJson())
+        println(sut.getJson())
+        println("\n\n\n\n\n\n\n\n\n")
+        XCTAssertEqual("{\"s2\":false,\"s1\":true,\"s4\":true,\"aKey\":\"aString\",\"s3\":false}", sut.getJson())
     }
     
 }
