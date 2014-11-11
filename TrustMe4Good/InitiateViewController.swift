@@ -13,7 +13,7 @@ class InitiateViewController: DICTableViewController {
         }
     }
 
-    @IBOutlet var switches: [NamedSwitch]!
+    //@IBOutlet var switches: [NamedSwitch]!
     @IBOutlet weak var categorySelector: UISegmentedControl!
     
     override func initWithArgs(args:[AnyObject]) {
@@ -49,13 +49,14 @@ class InitiateViewController: DICTableViewController {
     }
     
     func setSwitches(animated: Bool) {
-        let switchPositions:[String: Bool] = connectionDetails.getSwitches("identity")
+        /*let switchPositions:[String: Bool] = connectionDetails.getSwitches("identity")
         for s in switches {
             s.setOn(switchPositions[s.name]!, animated: animated)
-        }
+        }*/
         if connectionDetails.getSwitch("identity", key: "show_alias") {
             identityTextField.text = connectionDetails.getString("alias")
             identityTextField.enabled = true
+            identityTextField.becomeFirstResponder()
             identityTextField.borderStyle = UITextBorderStyle.RoundedRect
         } else if connectionDetails.getSwitch("identity", key: "show_user_name") {
             identityTextField.text = "user name"
@@ -70,9 +71,9 @@ class InitiateViewController: DICTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        switches[0].name = "show_user_name"
+        /*switches[0].name = "show_user_name"
         switches[1].name = "show_real_name"
-        switches[2].name = "show_alias"
+        switches[2].name = "show_alias"*/
         
         connectionDetails = Settings()
         connectionDetails.setString("alias", value:"")
