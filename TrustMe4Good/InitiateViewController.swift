@@ -7,14 +7,17 @@ class InitiateViewController: DICTableViewController {
     var connectionDetails:Settings!
     
     @IBOutlet weak var identityTextField: UITextField!
+    @IBOutlet weak var categorySelector: UISegmentedControl!
+    
     @IBAction func aliasUdatedAction(sender: AnyObject) {
         if connectionDetails.getSwitch("identity", key: "show_alias") {
             connectionDetails.setString("alias", value: identityTextField.text)
         }
     }
-
-    //@IBOutlet var switches: [NamedSwitch]!
-    @IBOutlet weak var categorySelector: UISegmentedControl!
+    
+    @IBAction func categorySelectorValueChangedAction(sender: AnyObject) {
+        initSwitches(true)
+    }
     
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
@@ -22,11 +25,6 @@ class InitiateViewController: DICTableViewController {
         assert(args[1] is String)
         web = args[0] as WebProtocol
         url = args[1] as String
-    }
-    
-    @IBAction func categorySelectorValueChangedAction(sender: AnyObject) {
-        initSwitches(true)
-        setSwitches(true)
     }
     
     func initSwitches(animated: Bool) {
@@ -45,25 +43,21 @@ class InitiateViewController: DICTableViewController {
             )
         default: break
         }
-        setSwitches(animated)
+        setIdentityTextField()
     }
     
-    func setSwitches(animated: Bool) {
-        /*let switchPositions:[String: Bool] = connectionDetails.getSwitches("identity")
-        for s in switches {
-            s.setOn(switchPositions[s.name]!, animated: animated)
-        }*/
+    func setIdentityTextField() {
         if connectionDetails.getSwitch("identity", key: "show_alias") {
             identityTextField.text = connectionDetails.getString("alias")
             identityTextField.enabled = true
             identityTextField.becomeFirstResponder()
             identityTextField.borderStyle = UITextBorderStyle.RoundedRect
-        } else if connectionDetails.getSwitch("identity", key: "show_user_name") {
-            identityTextField.text = "user name"
-            identityTextField.enabled = false
-            identityTextField.borderStyle = UITextBorderStyle.None
-        } else if connectionDetails.getSwitch("identity", key: "show_real_name") {
-            identityTextField.text = "real name"
+        } else {
+            if connectionDetails.getSwitch("identity", key: "show_user_name") {
+                identityTextField.text = "user name"
+            } else if connectionDetails.getSwitch("identity", key: "show_real_name") {
+                identityTextField.text = "real name"
+            }
             identityTextField.enabled = false
             identityTextField.borderStyle = UITextBorderStyle.None
         }
@@ -71,18 +65,10 @@ class InitiateViewController: DICTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*switches[0].name = "show_user_name"
-        switches[1].name = "show_real_name"
-        switches[2].name = "show_alias"*/
         
-        connectionDetails = Settings()
+        connectionDetails = SharingSettings()
         connectionDetails.setString("alias", value:"")
         initSwitches(false)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
