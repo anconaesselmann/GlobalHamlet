@@ -9,6 +9,9 @@ class IdentitySharingViewController: DICTableViewController {
     
     @IBAction func aliasUdatedAction(sender: AnyObject) {
         delegate!.connectionDetails.setString("alias", value: aliasTextField.text)
+        if delegate!.connectionDetails.getSwitch("identity", key: "show_alias") {
+            delegate!.identityTextField.text = aliasTextField.text
+        }
         println(delegate!.connectionDetails.getString("alias"))
     }
     
