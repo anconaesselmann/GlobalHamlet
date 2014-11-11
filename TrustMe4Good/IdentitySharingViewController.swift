@@ -9,15 +9,14 @@ class IdentitySharingViewController: DICTableViewController {
     
     @IBAction func aliasUdatedAction(sender: AnyObject) {
         delegate!.connectionDetails.setString("alias", value: aliasTextField.text)
-        if delegate!.connectionDetails.getSwitch("identity", key: "show_alias") {
+        if delegate!.connectionDetails.getSwitch("show_alias") {
             delegate!.identityTextField.text = aliasTextField.text
         }
     }
     
     @IBAction func switchValueChangedAction(sender: AnyObject) {
         delegate!.connectionDetails.setSwitch(
-            "identity",
-            key:   (sender as NamedSwitch).name,
+            (sender as NamedSwitch).name,
             value: sender.isOn
         )
         setAliasTextField()
@@ -26,7 +25,7 @@ class IdentitySharingViewController: DICTableViewController {
     
     func setAliasTextField() {
         aliasTextField.text = delegate!.connectionDetails.getString("alias")
-        if delegate!.connectionDetails.getSwitch("identity", key: "show_alias") {
+        if delegate!.connectionDetails.getSwitch("show_alias") {
             aliasTextField.enabled = true
             aliasTextField.becomeFirstResponder()
         } else {

@@ -19,12 +19,6 @@ class SettingsTest: XCTestCase {
         sut.setSwitches(initDict)
         XCTAssertEqual(initDict, sut.getSwitches())
     }
-    func test_initSwitches_with_groupName() {
-        let initDict = ["s1": true, "s2": false, "s3": false, "s4": true]
-        sut.setSwitches("other", dict: initDict)
-        XCTAssertEqual(Dictionary<String, Bool>(), sut.getSwitches())
-        XCTAssertEqual(initDict, sut.getSwitches("other"))
-    }
     func test_setSwitch() {
         let initDict = ["s1": true, "s2": false, "s3": false, "s4": true]
         let expected = ["s1": true, "s2": true, "s3": false, "s4": true]

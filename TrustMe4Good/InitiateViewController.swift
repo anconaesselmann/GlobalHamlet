@@ -10,7 +10,7 @@ class InitiateViewController: DICTableViewController {
     @IBOutlet weak var categorySelector: UISegmentedControl!
     
     @IBAction func aliasUdatedAction(sender: AnyObject) {
-        if connectionDetails.getSwitch("identity", key: "show_alias") {
+        if connectionDetails.getSwitch("show_alias") {
             connectionDetails.setString("alias", value: identityTextField.text)
         }
     }
@@ -30,16 +30,13 @@ class InitiateViewController: DICTableViewController {
     func initSwitches(animated: Bool) {
         switch categorySelector.selectedSegmentIndex {
         case 0: connectionDetails.setSwitches(
-            "identity",
-            dict: SharingSettingsRestricted().getButtons("identity")
+            SharingSettingsRestricted().getButtons("identity")
         )
         case 1: connectionDetails.setSwitches(
-            "identity",
-            dict: SharingSettingsCasual().getButtons("identity")
+            SharingSettingsCasual().getButtons("identity")
             )
         case 2: connectionDetails.setSwitches(
-            "identity",
-            dict: SharingSettingsFriend().getButtons("identity")
+            SharingSettingsFriend().getButtons("identity")
             )
         default: break
         }
@@ -47,15 +44,15 @@ class InitiateViewController: DICTableViewController {
     }
     
     func setIdentityTextField() {
-        if connectionDetails.getSwitch("identity", key: "show_alias") {
+        if connectionDetails.getSwitch("show_alias") {
             identityTextField.text = connectionDetails.getString("alias")
             identityTextField.enabled = true
             identityTextField.becomeFirstResponder()
             identityTextField.borderStyle = UITextBorderStyle.RoundedRect
         } else {
-            if connectionDetails.getSwitch("identity", key: "show_user_name") {
+            if connectionDetails.getSwitch("show_user_name") {
                 identityTextField.text = "user name"
-            } else if connectionDetails.getSwitch("identity", key: "show_real_name") {
+            } else if connectionDetails.getSwitch("show_real_name") {
                 identityTextField.text = "real name"
             }
             identityTextField.enabled = false
