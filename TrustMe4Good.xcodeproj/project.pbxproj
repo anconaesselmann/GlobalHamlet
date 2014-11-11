@@ -57,6 +57,20 @@
 		976091621A0AE71800C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091631A0AE84000C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091641A0C461500C49248 /* LoginViewControllerTest.swift */; };
+		978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */; };
+		978FBBD21A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
+		978FBBD31A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
+		978FBBD71A1181FD0059DA70 /* SettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD51A1181FD0059DA70 /* SettingsTest.swift */; };
+		978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD81A1189080059DA70 /* NamedSwitch.swift */; };
+		978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD81A1189080059DA70 /* NamedSwitch.swift */; };
+		978FBBDE1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBDD1A118BD50059DA70 /* SharingSettingsRestricted.swift */; };
+		978FBBDF1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBDD1A118BD50059DA70 /* SharingSettingsRestricted.swift */; };
+		978FBBE11A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE01A118BF80059DA70 /* SharingSettingsCasual.swift */; };
+		978FBBE21A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE01A118BF80059DA70 /* SharingSettingsCasual.swift */; };
+		978FBBE41A118C040059DA70 /* SharingSettingsFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */; };
+		978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */; };
+		978FBBE71A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */; };
+		978FBBE81A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */; };
 		97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D4981A0EAE7F0019628B /* UIMocks.swift */; };
 		97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */; };
 		97B3D49D1A0EE9F50019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
@@ -144,6 +158,14 @@
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewControllerTest.swift; sourceTree = "<group>"; };
+		978FBBD11A11814B0059DA70 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		978FBBD51A1181FD0059DA70 /* SettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTest.swift; sourceTree = "<group>"; };
+		978FBBD81A1189080059DA70 /* NamedSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedSwitch.swift; sourceTree = "<group>"; };
+		978FBBDD1A118BD50059DA70 /* SharingSettingsRestricted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsRestricted.swift; sourceTree = "<group>"; };
+		978FBBE01A118BF80059DA70 /* SharingSettingsCasual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsCasual.swift; sourceTree = "<group>"; };
+		978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsFriend.swift; sourceTree = "<group>"; };
+		978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsProtocol.swift; sourceTree = "<group>"; };
 		97B3D4981A0EAE7F0019628B /* UIMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMocks.swift; sourceTree = "<group>"; };
 		97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewControllerTest.swift; sourceTree = "<group>"; };
 		97B3D49C1A0EE9F50019628B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -201,12 +223,12 @@
 		971382D31A08442E008A39FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */,
 				971382D51A0844AA008A39FD /* Web.swift */,
 				972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */,
 				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
 				971004B01A09D42D0088D66B /* WebProtocol.swift */,
 				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
-				9707AB7B1A1162AB00935F33 /* JSON.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -227,6 +249,7 @@
 				976091641A0C461500C49248 /* LoginViewControllerTest.swift */,
 				97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */,
 				971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */,
+				978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */,
 				97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */,
 				97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */,
 			);
@@ -236,8 +259,7 @@
 		972EF6531A09766600BEE2C1 /* aae */ = {
 			isa = PBXGroup;
 			children = (
-				974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */,
-				972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */,
+				978FBBD41A1181E80059DA70 /* std */,
 				972EF65A1A097A0700BEE2C1 /* DIFactoryTestData */,
 			);
 			name = aae;
@@ -316,6 +338,7 @@
 			children = (
 				976091601A0AD41000C49248 /* std */,
 				9760915F1A0AD3FD00C49248 /* di */,
+				978FBBDB1A1189130059DA70 /* ui */,
 			);
 			name = aae;
 			sourceTree = "<group>";
@@ -339,10 +362,41 @@
 		976091601A0AD41000C49248 /* std */ = {
 			isa = PBXGroup;
 			children = (
+				9707AB7B1A1162AB00935F33 /* JSON.swift */,
 				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
 				97B3D49C1A0EE9F50019628B /* Error.swift */,
+				978FBBD11A11814B0059DA70 /* Settings.swift */,
 			);
 			name = std;
+			sourceTree = "<group>";
+		};
+		978FBBD41A1181E80059DA70 /* std */ = {
+			isa = PBXGroup;
+			children = (
+				974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */,
+				972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */,
+				978FBBD51A1181FD0059DA70 /* SettingsTest.swift */,
+			);
+			name = std;
+			sourceTree = "<group>";
+		};
+		978FBBDB1A1189130059DA70 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				978FBBD81A1189080059DA70 /* NamedSwitch.swift */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */ = {
+			isa = PBXGroup;
+			children = (
+				978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */,
+				978FBBDD1A118BD50059DA70 /* SharingSettingsRestricted.swift */,
+				978FBBE01A118BF80059DA70 /* SharingSettingsCasual.swift */,
+				978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */,
+			);
+			name = InitiateSharingSettings;
 			sourceTree = "<group>";
 		};
 		97B3D4971A0EAE5B0019628B /* Mocks */ = {
@@ -457,12 +511,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978FBBE71A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */,
+				978FBBDE1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */,
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
 				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
+				978FBBE41A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
 				9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */,
+				978FBBD21A11814B0059DA70 /* Settings.swift in Sources */,
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
 				971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
@@ -488,9 +546,11 @@
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				97BD02911A109E810045F3D1 /* DICTableViewController.swift in Sources */,
 				97BD02971A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */,
+				978FBBE11A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
 				97B3D49D1A0EE9F50019628B /* Error.swift in Sources */,
 				97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */,
+				978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +566,7 @@
 				9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */,
 				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
 				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
+				978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */,
 				97D7C6821A0873B7000F6BA5 /* ConfirmRegistrationViewController.swift in Sources */,
 				97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */,
 				97D7C6841A0873BC000F6BA5 /* SettingsViewController.swift in Sources */,
@@ -517,21 +578,28 @@
 				97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */,
 				97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */,
+				978FBBD31A11814B0059DA70 /* Settings.swift in Sources */,
 				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
 				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
+				978FBBE81A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */,
+				978FBBD71A1181FD0059DA70 /* SettingsTest.swift in Sources */,
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
+				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */,
+				978FBBDF1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */,
 				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,
 				972EF6591A0976C400BEE2C1 /* DIFactoryTest.swift in Sources */,
 				9707AB7D1A11632400935F33 /* JSON.swift in Sources */,
+				978FBBE21A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
 				972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */,
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */,
 				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
+				978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
 				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,

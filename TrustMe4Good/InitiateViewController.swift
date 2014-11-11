@@ -4,16 +4,16 @@ class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
-    var connectionDetails:ConnectionDetails!
+    var connectionDetails:Settings!
     
     @IBOutlet weak var identityTextField: UITextField!
     @IBAction func aliasUdatedAction(sender: AnyObject) {
-        if connectionDetails.getSetting("show_alias") {
-            connectionDetails.alias = identityTextField.text
+        if connectionDetails.getSwitch("identity", key: "show_alias") {
+            connectionDetails.setString("alias", value: identityTextField.text)
         }
     }
 
-    @IBOutlet var switches: [UISwitch]!
+    @IBOutlet var switches: [NamedSwitch]!
     @IBOutlet weak var categorySelector: UISegmentedControl!
     
     override func initWithArgs(args:[AnyObject]) {
@@ -31,28 +31,37 @@ class InitiateViewController: DICTableViewController {
     
     func initSwitches(animated: Bool) {
         switch categorySelector.selectedSegmentIndex {
-        case 0: connectionDetails.setRestricted()
-        case 1: connectionDetails.setCasual()
-        case 2: connectionDetails.setFriend()
+        case 0: connectionDetails.setSwitches(
+            "identity",
+            dict: SharingSettingsRestricted().getButtons("identity")
+        )
+        case 1: connectionDetails.setSwitches(
+            "identity",
+            dict: SharingSettingsCasual().getButtons("identity")
+            )
+        case 2: connectionDetails.setSwitches(
+            "identity",
+            dict: SharingSettingsFriend().getButtons("identity")
+            )
         default: break
         }
         setSwitches(animated)
     }
     
     func setSwitches(animated: Bool) {
-        let switchPositions:[Bool] = connectionDetails.getSwitchSettings()
-        for index in 0...(switches.count - 1) {
-            switches[index].setOn(switchPositions[index], animated: animated)
+        let switchPositions:[String: Bool] = connectionDetails.getSwitches("identity")
+        for s in switches {
+            s.setOn(switchPositions[s.name]!, animated: animated)
         }
-        if connectionDetails.getSetting("show_alias") {
-            identityTextField.text = connectionDetails.alias
+        if connectionDetails.getSwitch("identity", key: "show_alias") {
+            identityTextField.text = connectionDetails.getString("alias")
             identityTextField.enabled = true
             identityTextField.borderStyle = UITextBorderStyle.RoundedRect
-        } else if connectionDetails.getSetting("show_user_name") {
+        } else if connectionDetails.getSwitch("identity", key: "show_user_name") {
             identityTextField.text = "user name"
             identityTextField.enabled = false
             identityTextField.borderStyle = UITextBorderStyle.None
-        } else if connectionDetails.getSetting("show_real_name") {
+        } else if connectionDetails.getSwitch("identity", key: "show_real_name") {
             identityTextField.text = "real name"
             identityTextField.enabled = false
             identityTextField.borderStyle = UITextBorderStyle.None
@@ -61,7 +70,12 @@ class InitiateViewController: DICTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        connectionDetails = ConnectionDetails()
+        switches[0].name = "show_user_name"
+        switches[1].name = "show_real_name"
+        switches[2].name = "show_alias"
+        
+        connectionDetails = Settings()
+        connectionDetails.setString("alias", value:"")
         initSwitches(false)
     }
     
@@ -74,7 +88,7 @@ class InitiateViewController: DICTableViewController {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier? == "InitiateQRSegue" {
             _initiateQRSegue(segue)
-            println(connectionDetails.getJson())
+            println(connectionDetails?.getJson())
         } else if segue.identifier?  == "IdentitySharingSegue" {
             _identitySharingSegue(segue)
         }else {

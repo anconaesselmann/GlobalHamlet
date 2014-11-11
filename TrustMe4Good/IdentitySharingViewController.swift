@@ -5,29 +5,25 @@ class IdentitySharingViewController: DICTableViewController {
     var delegate:InitiateViewController?
 
     @IBOutlet weak var aliasTextField: UITextField!
-    @IBOutlet var switches: [UISwitch]!
+    @IBOutlet var switches: [NamedSwitch]!
     
     @IBAction func aliasUdatedAction(sender: AnyObject) {
-        delegate!.connectionDetails.alias = aliasTextField.text
-        println(delegate!.connectionDetails.alias)
+        delegate!.connectionDetails.setString("alias", value: aliasTextField.text)
+        println(delegate!.connectionDetails.getString("alias"))
     }
     
     @IBAction func switchValueChangedAction(sender: AnyObject) {
-        delegate!.connectionDetails.setSetting("show_user_name", value: false)
-        delegate!.connectionDetails.setSetting("show_real_name", value: false)
-        delegate!.connectionDetails.setSetting("show_alias",     value: false)
+        delegate!.connectionDetails.setSwitch("identity", key: "show_user_name", value: false)
+        delegate!.connectionDetails.setSwitch("identity", key: "show_real_name", value: false)
+        delegate!.connectionDetails.setSwitch("identity", key: "show_alias",     value: false)
+        let switchName = (sender as NamedSwitch).name
         if sender.isOn! == true {
-            switch sender.tag {
-            case 0: delegate!.connectionDetails.setSetting("show_user_name", value: true)
-            case 1: delegate!.connectionDetails.setSetting("show_real_name", value: true)
-            case 2: delegate!.connectionDetails.setSetting("show_alias",     value: true)
-            default: break
-            }
+            delegate!.connectionDetails.setSwitch("identity", key: switchName, value: true)
         } else if sender.isOn! == false {
-            switch sender.tag {
-            case 0: delegate!.connectionDetails.setSetting("show_alias",     value: true)
-            case 1: delegate!.connectionDetails.setSetting("show_alias",     value: true)
-            case 2: delegate!.connectionDetails.setSetting("show_user_name", value: true)
+            switch switchName {
+            case "show_user_name": delegate!.connectionDetails.setSwitch("identity", key: "show_alias",     value: true)
+            case "show_real_name": delegate!.connectionDetails.setSwitch("identity", key: "show_alias",     value: true)
+            case "show_alias":     delegate!.connectionDetails.setSwitch("identity", key: "show_user_name", value: true)
             default: break
             }
         }
@@ -37,17 +33,20 @@ class IdentitySharingViewController: DICTableViewController {
         println(delegate!.connectionDetails.getJson())
     }
     func setSwitches(animated: Bool) {
-        let switchPositions:[Bool] = delegate!.connectionDetails.getIdentitySwitchSettings()
-        for index in 0...(switches.count - 1) {
-            switches[index].setOn(switchPositions[index], animated: animated)
+        let switchPositions:[String: Bool] = delegate!.connectionDetails.getSwitches("identity")
+        for s in switches {
+            s.setOn(switchPositions[s.name]!, animated: animated)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        switches[0].name = "show_user_name"
+        switches[1].name = "show_real_name"
+        switches[2].name = "show_alias"
         
+        aliasTextField.text = delegate!.connectionDetails.getString("alias")
         setSwitches(false)
-        aliasTextField.text = delegate!.connectionDetails.alias
     }
 }
 
