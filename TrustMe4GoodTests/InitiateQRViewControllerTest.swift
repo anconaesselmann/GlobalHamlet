@@ -31,7 +31,7 @@ class InitiateQRViewControllerTest: XCTestCase {
         sut.url = "test.dev"
         sut.prepareForSegue(segue, sender: nil)
         
-        XCTAssertEqual("test.dev/contract/deleteinitiated", web.urlCalled)
+        XCTAssertEqual("test.dev/connection/deleteinitiated", web.urlCalled)
     }
     func test_prepareForSegue_delete_not_called_if_error() {
         let destination = Mock_DiViewController()

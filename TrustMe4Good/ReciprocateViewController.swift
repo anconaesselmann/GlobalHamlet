@@ -42,7 +42,7 @@ class ReciprocateViewController: DICViewController {
         if id != nil && code != nil {
             let arguments:[String: String] = ["contractId": String(id!), "plainCode": code!]
             let response: Bool? = web!.getResponseWithError(
-                url + "/contract/reciprocate",
+                url + "/connection/reciprocate",
                 arguments: arguments,
                 error: error
             ) as? Bool

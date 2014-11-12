@@ -26,7 +26,7 @@ class ReciprocateViewControllerTest: XCTestCase {
         sut.url = "test.dev"
         sut.sendCode(123, code: "code345")
         
-        XCTAssertEqual("test.dev/contract/reciprocate", web.urlCalled, "url not called.")
+        XCTAssertEqual("test.dev/connection/reciprocate", web.urlCalled, "url not called.")
         XCTAssertEqual(["contractId": "123", "plainCode": "code345"], web.argsPassed, "Args not passed.")
     }
     
