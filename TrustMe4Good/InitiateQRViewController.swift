@@ -35,11 +35,6 @@ class InitiateQRViewController: DICViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier? == "DeleteInitContractsSegue" {
@@ -54,7 +49,7 @@ class InitiateQRViewController: DICViewController {
             return
         }
         let response: Bool? = web!.getResponseWithError(
-            url + "/contract/deleteinitiated",
+            url + "/connection/deleteinitiated",
             error: error
         ) as? Bool
         if error.errorCode == 0 && response != nil && response == true {

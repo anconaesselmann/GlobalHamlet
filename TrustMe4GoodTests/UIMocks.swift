@@ -29,3 +29,18 @@ class Web_Mock: WebProtocol {
     }
 }
 class Mock_DiViewController: DICViewController {}
+class Mock_Settings: SettingsProtocol {
+    var switches:[String: Bool] = Dictionary<String, Bool>()
+    var s:Bool = false
+    var string:String = ""
+    var json:String = ""
+    func setSwitches(dict: [String: Bool]) {}
+    func getSwitches() -> [String: Bool] {return switches}
+    func setSwitch(key: String, value: Bool) {}
+    func getSwitch(key: String) -> Bool {return s}
+    func setString(key: String, value: String) {}
+    func getString(key: String) -> String {return string}
+    func getJson() -> String {return json}
+    func linkSwitches(namedSwitches: [NamedSwitch]) {}
+    func updateNamedSwitch(name: String) {}
+}

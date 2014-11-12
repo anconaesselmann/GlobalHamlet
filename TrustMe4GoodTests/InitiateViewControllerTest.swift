@@ -3,11 +3,13 @@ import XCTest
 
 class InitiateViewControllerTests: XCTestCase {
     var sut : InitiateViewController!
+    var settings = Mock_Settings()
     
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
         sut = storyboard.instantiateViewControllerWithIdentifier("InitiateViewController") as InitiateViewController
+        sut.connectionDetails = settings
         sut.loadView()
     }
     
@@ -27,14 +29,14 @@ class InitiateViewControllerTests: XCTestCase {
         )
         let web = Web_Mock()
         web.urlCallResult = [
-            "contractId": contractId,
+            "connectionId": contractId,
             "plainCode": plainCode
         ]
         sut.web = web as WebProtocol
         sut.url = "test.dev"
         sut.prepareForSegue(segue, sender: nil)
         
-        XCTAssertEqual("test.dev/contract/initiate", web.urlCalled)
+        XCTAssertEqual("test.dev/connection/initiate", web.urlCalled)
         XCTAssertEqual(contractId, destination.contractId!)
         XCTAssertEqual(plainCode, destination.plainCode!)
     }
@@ -51,7 +53,7 @@ class InitiateViewControllerTests: XCTestCase {
         sut.url = "test.dev"
         sut.prepareForSegue(segue, sender: nil)
         
-        XCTAssertEqual("test.dev/contract/initiate", web.urlCalled)
+        XCTAssertEqual("test.dev/connection/initiate", web.urlCalled)
         XCTAssertEqual(123, destination.error.errorCode)
     }
 }
