@@ -4,7 +4,7 @@ class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
-    var connectionDetails:Settings!
+    var connectionDetails:SettingsProtocol!
     
     @IBOutlet weak var identityTextField: UITextField!
     @IBOutlet weak var categorySelector: UISegmentedControl!
@@ -97,13 +97,17 @@ class InitiateViewController: DICTableViewController {
     
     
     func _initiateQRSegue(segue: UIStoryboardSegue) {
+        let detailsString:String = connectionDetails!.getJson()
+        println("in segue:\n\n")
+        println(detailsString)
+        let arguments:[String: String] = ["details": detailsString]
         let response: [String: AnyObject]? = web!.getResponseWithError(
-            url + "/contract/initiate",
+            url + "/connection/initiate", arguments: arguments,
             error: error
         ) as? [String: AnyObject]
         let vc:InitiateQRViewController? = segue.destinationViewController as? InitiateQRViewController
         if error.errorCode == 0 {
-            let contractId:Int?   = response?["contractId"] as? Int
+            let contractId:Int?   = response?["connectionId"] as? Int
             let plainCode:String? = response?["plainCode"]  as? String
             if contractId != nil && plainCode != nil && vc != nil {
                 vc!.contractId = contractId
@@ -113,7 +117,7 @@ class InitiateViewController: DICTableViewController {
                 return
             } else {
                 error.errorCode    = 1108141605
-                error.errorMessage = "Contract not a dictionary."
+                error.errorMessage = "Connection not a dictionary."
             }
         }
         if vc != nil {

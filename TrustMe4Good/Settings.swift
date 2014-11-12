@@ -9,7 +9,7 @@ func += <KeyType, ValueType> (
     }
 }
 
-@objc(Settings) class Settings: NSObject {
+@objc(Settings) class Settings: NSObject, SettingsProtocol {
     var switches:[String:Bool]    = Dictionary<String, Bool>()
     var strings: [String: String]           = Dictionary<String, String>()
     var namedSwitches:[String: NamedSwitch] = Dictionary<String, NamedSwitch>()

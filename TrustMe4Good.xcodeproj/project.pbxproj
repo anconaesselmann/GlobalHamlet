@@ -69,8 +69,6 @@
 		978FBBE21A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE01A118BF80059DA70 /* SharingSettingsCasual.swift */; };
 		978FBBE41A118C040059DA70 /* SharingSettingsFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */; };
 		978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */; };
-		978FBBE71A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */; };
-		978FBBE81A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */; };
 		978FBBEA1A11B2FF0059DA70 /* SharingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE91A11B2FF0059DA70 /* SharingSettings.swift */; };
 		978FBBEB1A11B2FF0059DA70 /* SharingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBE91A11B2FF0059DA70 /* SharingSettings.swift */; };
 		978FBBEE1A11B33D0059DA70 /* SharingSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */; };
@@ -81,6 +79,10 @@
 		97B3D49D1A0EE9F50019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
 		97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
 		97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */; };
+		97BA3DBF1A12E08A0063940A /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3DBE1A12E08A0063940A /* SettingsProtocol.swift */; };
+		97BA3DC01A12E08A0063940A /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3DBE1A12E08A0063940A /* SettingsProtocol.swift */; };
+		97BA3DC21A12E1C70063940A /* SharingSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3DC11A12E1C70063940A /* SharingSettingsProtocol.swift */; };
+		97BA3DC31A12E1C70063940A /* SharingSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3DC11A12E1C70063940A /* SharingSettingsProtocol.swift */; };
 		97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
 		97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
 		97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */; };
@@ -170,7 +172,6 @@
 		978FBBDD1A118BD50059DA70 /* SharingSettingsRestricted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsRestricted.swift; sourceTree = "<group>"; };
 		978FBBE01A118BF80059DA70 /* SharingSettingsCasual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsCasual.swift; sourceTree = "<group>"; };
 		978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsFriend.swift; sourceTree = "<group>"; };
-		978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsProtocol.swift; sourceTree = "<group>"; };
 		978FBBE91A11B2FF0059DA70 /* SharingSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettings.swift; sourceTree = "<group>"; };
 		978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsTest.swift; sourceTree = "<group>"; };
 		978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationSharingViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +179,8 @@
 		97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewControllerTest.swift; sourceTree = "<group>"; };
 		97B3D49C1A0EE9F50019628B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		97B3D49F1A0F5D110019628B /* MainViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTest.swift; sourceTree = "<group>"; };
+		97BA3DBE1A12E08A0063940A /* SettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
+		97BA3DC11A12E1C70063940A /* SharingSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsProtocol.swift; sourceTree = "<group>"; };
 		97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewController.swift; sourceTree = "<group>"; };
 		97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewControllerTest.swift; sourceTree = "<group>"; };
 		97BD02901A109E810045F3D1 /* DICTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTableViewController.swift; sourceTree = "<group>"; };
@@ -233,10 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */,
-				971382D51A0844AA008A39FD /* Web.swift */,
-				972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */,
-				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
-				971004B01A09D42D0088D66B /* WebProtocol.swift */,
 				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
 			);
 			name = Model;
@@ -372,9 +371,14 @@
 		976091601A0AD41000C49248 /* std */ = {
 			isa = PBXGroup;
 			children = (
+				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
+				972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */,
+				971004B01A09D42D0088D66B /* WebProtocol.swift */,
+				971382D51A0844AA008A39FD /* Web.swift */,
 				9707AB7B1A1162AB00935F33 /* JSON.swift */,
 				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
 				97B3D49C1A0EE9F50019628B /* Error.swift */,
+				97BA3DBE1A12E08A0063940A /* SettingsProtocol.swift */,
 				978FBBD11A11814B0059DA70 /* Settings.swift */,
 			);
 			name = std;
@@ -401,7 +405,7 @@
 		978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */ = {
 			isa = PBXGroup;
 			children = (
-				978FBBE61A118CF30059DA70 /* SharingSettingsProtocol.swift */,
+				97BA3DC11A12E1C70063940A /* SharingSettingsProtocol.swift */,
 				978FBBDD1A118BD50059DA70 /* SharingSettingsRestricted.swift */,
 				978FBBE01A118BF80059DA70 /* SharingSettingsCasual.swift */,
 				978FBBE31A118C040059DA70 /* SharingSettingsFriend.swift */,
@@ -530,7 +534,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				978FBBE71A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */,
 				978FBBDE1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */,
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
 				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
@@ -538,6 +541,7 @@
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
+				97BA3DC21A12E1C70063940A /* SharingSettingsProtocol.swift in Sources */,
 				9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */,
 				978FBBD21A11814B0059DA70 /* Settings.swift in Sources */,
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
@@ -562,6 +566,7 @@
 				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
 				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
 				976091621A0AE71800C49248 /* DIHelper.swift in Sources */,
+				97BA3DBF1A12E08A0063940A /* SettingsProtocol.swift in Sources */,
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				978FBBEA1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
@@ -590,6 +595,7 @@
 				978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */,
 				97D7C6821A0873B7000F6BA5 /* ConfirmRegistrationViewController.swift in Sources */,
 				97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */,
+				97BA3DC31A12E1C70063940A /* SharingSettingsProtocol.swift in Sources */,
 				97D7C6841A0873BC000F6BA5 /* SettingsViewController.swift in Sources */,
 				974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */,
 				97BD02981A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */,
@@ -602,7 +608,6 @@
 				978FBBD31A11814B0059DA70 /* Settings.swift in Sources */,
 				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
 				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
-				978FBBE81A118CF30059DA70 /* SharingSettingsProtocol.swift in Sources */,
 				978FBBD71A1181FD0059DA70 /* SettingsTest.swift in Sources */,
 				978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */,
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
@@ -610,6 +615,7 @@
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */,
+				97BA3DC01A12E08A0063940A /* SettingsProtocol.swift in Sources */,
 				978FBBDF1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */,
 				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,

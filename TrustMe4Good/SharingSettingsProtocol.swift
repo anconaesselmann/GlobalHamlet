@@ -1,3 +1,3 @@
-protocol SettingsProtocol {
+protocol SharingSettingsProtocol {
     func getButtons(groupName: String) -> [String: Bool]
 }

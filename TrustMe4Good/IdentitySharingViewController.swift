@@ -19,7 +19,7 @@ class IdentitySharingViewController: DICTableViewController {
             value: sender.isOn
         )
         setAliasTextField()
-        println(delegate!.connectionDetails.getJson())
+        //println(delegate!.connectionDetails.getJson())
     }
     
     func setAliasTextField() {
