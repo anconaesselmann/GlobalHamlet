@@ -5,6 +5,7 @@ class InitiateViewController: DICTableViewController {
     var url: String!
     var error = Error()
     var connectionDetails:SettingsProtocol!
+    var delegate: ReciprocateViewController! // TODO: make this more general?
     
     @IBOutlet weak var identityTextField: UITextField!
     @IBOutlet weak var categorySelector: UISegmentedControl!
@@ -12,6 +13,14 @@ class InitiateViewController: DICTableViewController {
     @IBAction func aliasUdatedAction(sender: AnyObject) {
         if connectionDetails.getSwitch("show_alias") {
             connectionDetails.setString("alias", value: identityTextField.text)
+        }
+    }
+
+    @IBAction func saveAction(sender: AnyObject) {
+        if delegate?.codeAndIdTuple? != nil {
+            performSegueWithIdentifier("ViewReciprocationResultSegue", sender: nil)
+        } else {
+            performSegueWithIdentifier("InitiateQRSegue", sender: nil)
         }
     }
     
@@ -73,6 +82,9 @@ class InitiateViewController: DICTableViewController {
         if segue.identifier? == "InitiateQRSegue" {
             _initiateQRSegue(segue)
             println(connectionDetails?.getJson())
+        } else if segue.identifier? == "ViewReciprocationResultSegue" {
+            _submitReciprocate(segue)
+            println(connectionDetails?.getJson())
         } else if segue.identifier?  == "IdentitySharingSegue" {
             _identitySharingSegue(segue)
         } else if segue.identifier? == "CommunicationSharingSegue" {
@@ -93,6 +105,17 @@ class InitiateViewController: DICTableViewController {
         if vc != nil {
             vc!.delegate = self
         }
+    }
+    
+    func _submitReciprocate(segue: UIStoryboardSegue) {
+        let detailsString:String = connectionDetails!.getJson()
+        println("in segue:\n\n")
+        println(detailsString)
+        sendCode(
+            delegate!.codeAndIdTuple.id,
+            code: delegate!.codeAndIdTuple.code,
+            details: detailsString
+        )
     }
     
     
@@ -124,6 +147,27 @@ class InitiateViewController: DICTableViewController {
             vc!.error = error
         }
         println(error.errorMessage)
+    }
+    
+    func sendCode(id:Int?, code:String?, details:String?) -> Bool {
+        if error.errorCode != 0 {
+            return false
+        }
+        if id != nil && code != nil {
+            let arguments:[String: String] = ["connectionId": String(id!), "plainCode": code!, "details": details!]
+            let response: Bool? = web!.getResponseWithError(
+                url + "/connection/reciprocate",
+                arguments: arguments,
+                error: error
+                ) as? Bool
+            if error.errorCode == 0 && response != nil && response == true {
+                println(response!)
+                return true
+            } else {
+                println("Web request unsuccessful.")
+            }
+        }
+        return false
     }
     
     override func viewWillAppear(animated: Bool) {

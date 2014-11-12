@@ -5,6 +5,7 @@ class ReciprocateViewController: DICViewController {
     var web: WebProtocol!
     var url: String!
     var error = Error()
+    var codeAndIdTuple:(id:Int, code:String)!
     
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var codeTextField: UITextField!
@@ -18,11 +19,35 @@ class ReciprocateViewController: DICViewController {
         url = args[1]  as String
     }
     
-    @IBAction func submitPressed(sender: AnyObject) {
+    /*@IBAction func submitPressed(sender: AnyObject) {
         // TODO: get codeAndId from qr-code reader
         let codeAndId = codeTextField!.text + idTextField!.text
         let codeAndIdTuple = getIdAndCodeFromString(codeAndId)
         sendCode(codeAndIdTuple.id, code: codeAndIdTuple.code)
+    }*/
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        super.prepareForSegue(segue, sender: sender)
+        if segue.identifier? == "ReciprocateSharingSegue" {
+            _reciprocateSharingSegue(segue)
+        } else {
+            println("unknown segue: \(segue.identifier?)")
+        }
+    }
+    
+    func _reciprocateSharingSegue(segue: UIStoryboardSegue) {
+        let vc:InitiateViewController? = segue.destinationViewController as? InitiateViewController
+        if vc != nil {
+            vc!.delegate = self
+        }
+        let codeAndId = codeTextField!.text + idTextField!.text
+        codeAndIdTuple = getIdAndCodeFromString(codeAndId)
+
+        
+        /*let vc:IdentitySharingViewController? = segue.destinationViewController as? IdentitySharingViewController
+        if vc != nil {
+            vc!.delegate = self
+        }*/
     }
     
     override func viewDidLoad() {
@@ -35,27 +60,6 @@ class ReciprocateViewController: DICViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func sendCode(id:Int?, code:String?) -> Bool {
-        if error.errorCode != 0 {
-            return false
-        }
-        if id != nil && code != nil {
-            let arguments:[String: String] = ["contractId": String(id!), "plainCode": code!]
-            let response: Bool? = web!.getResponseWithError(
-                url + "/connection/reciprocate",
-                arguments: arguments,
-                error: error
-            ) as? Bool
-            if error.errorCode == 0 && response != nil && response == true {
-                println(response!)
-                return true
-            } else {
-                println("Web request unsuccessful.")
-            }
-        }
-        return false
-    }
-    
     func getIdAndCodeFromString(codeString: String) -> (id: Int, code: String) {
         let code: String = (codeString as NSString).substringToIndex(20)
         var id: Int? = (codeString as NSString).substringFromIndex(20).toInt()
@@ -63,6 +67,15 @@ class ReciprocateViewController: DICViewController {
             id = -1
         }
         return (id: id!, code: code)
+    }
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
     }
 }
 
