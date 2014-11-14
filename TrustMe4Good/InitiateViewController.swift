@@ -121,6 +121,7 @@ class InitiateViewController: DICTableViewController {
             let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
             if vc != nil {
                 vc!.dataJsonString = details
+                vc!.connectionId = delegate!.codeAndIdTuple.id
             }
         }
     }

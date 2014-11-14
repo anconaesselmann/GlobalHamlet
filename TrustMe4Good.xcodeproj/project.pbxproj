@@ -114,6 +114,8 @@
 		97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DE81A048839007DAC82 /* AppDelegate.swift */; };
 		97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */; };
+		97D83DE21A15F60500F008F2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */; };
+		97D83DE31A15F60500F008F2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +197,7 @@
 		97BD02931A1129710045F3D1 /* ConnectionDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDetails.swift; sourceTree = "<group>"; };
 		97BD02961A1136EA0045F3D1 /* IdentitySharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewController.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +242,7 @@
 				97BA3DC41A12E8F10063940A /* ReciprocateNavigationController.swift */,
 				97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */,
 				97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */,
+				97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -588,6 +592,7 @@
 				97BD02971A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */,
 				978FBBE11A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
 				97B3D49D1A0EE9F50019628B /* Error.swift in Sources */,
+				97D83DE21A15F60500F008F2 /* SendMessageViewController.swift in Sources */,
 				97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */,
 				978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */,
@@ -606,6 +611,7 @@
 				9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */,
 				97BA3E3E1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */,
 				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
+				97D83DE31A15F60500F008F2 /* SendMessageViewController.swift in Sources */,
 				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
 				978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */,
 				97D7C6821A0873B7000F6BA5 /* ConfirmRegistrationViewController.swift in Sources */,
