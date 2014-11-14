@@ -111,11 +111,18 @@ class InitiateViewController: DICTableViewController {
         let detailsString:String = connectionDetails!.getJson()
         println("in segue:\n\n")
         println(detailsString)
-        sendCode(
+        let success = sendCode(
             delegate!.codeAndIdTuple.id,
             code: delegate!.codeAndIdTuple.code,
             details: detailsString
         )
+        if success {
+            let details = getOtherDetails(delegate!.codeAndIdTuple.id)
+            let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
+            if vc != nil {
+                vc!.dataJsonString = details
+            }
+        }
     }
     
     
@@ -168,6 +175,21 @@ class InitiateViewController: DICTableViewController {
             }
         }
         return false
+    }
+    func getOtherDetails(id:Int) -> String {
+        let arguments:[String: String] = ["id": String(id)]
+        let response: String? = web!.getResponseWithError(
+            url + "/connection/other_details",
+            arguments: arguments,
+            error: error
+            ) as? String
+        if error.errorCode == 0 && response != nil && response!.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
+            println(response!)
+            return response!
+        } else {
+            println("Web request unsuccessful.")
+        }
+        return ""
     }
     
     override func viewWillAppear(animated: Bool) {

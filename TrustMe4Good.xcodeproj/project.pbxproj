@@ -86,6 +86,8 @@
 		97BA3DC51A12E8F10063940A /* ReciprocateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3DC41A12E8F10063940A /* ReciprocateNavigationController.swift */; };
 		97BA3DC81A12EB030063940A /* CreatorWithSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3DC71A12EB030063940A /* CreatorWithSettingsProtocol.swift */; };
 		97BA3DC91A12EB030063940A /* CreatorWithSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3DC71A12EB030063940A /* CreatorWithSettingsProtocol.swift */; };
+		97BA3E3D1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */; };
+		97BA3E3E1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */; };
 		97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
 		97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
 		97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */; };
@@ -186,6 +188,7 @@
 		97BA3DC11A12E1C70063940A /* SharingSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsProtocol.swift; sourceTree = "<group>"; };
 		97BA3DC41A12E8F10063940A /* ReciprocateNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateNavigationController.swift; sourceTree = "<group>"; };
 		97BA3DC71A12EB030063940A /* CreatorWithSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorWithSettingsProtocol.swift; sourceTree = "<group>"; };
+		97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOtherDetailViewController.swift; sourceTree = "<group>"; };
 		97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewController.swift; sourceTree = "<group>"; };
 		97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewControllerTest.swift; sourceTree = "<group>"; };
 		97BD02901A109E810045F3D1 /* DICTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTableViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +238,7 @@
 				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
 				97BA3DC41A12E8F10063940A /* ReciprocateNavigationController.swift */,
 				97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */,
+				97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -576,6 +580,7 @@
 				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
 				976091621A0AE71800C49248 /* DIHelper.swift in Sources */,
 				97BA3DBF1A12E08A0063940A /* SettingsProtocol.swift in Sources */,
+				97BA3E3D1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */,
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				978FBBEA1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
@@ -599,6 +604,7 @@
 				97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */,
 				97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */,
 				9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */,
+				97BA3E3E1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */,
 				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
 				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
 				978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */,
