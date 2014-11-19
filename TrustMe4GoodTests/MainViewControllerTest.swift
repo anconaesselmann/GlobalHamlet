@@ -17,7 +17,7 @@ class MainViewControllerTest: XCTestCase {
         super.tearDown()
     }
     
-    func test_prepareForSegue() {
+    /*func test_prepareForSegue() {
         let destination = Mock_DiViewController()
         var segue = Mock_Segue(
             identifier: "SegueToFirstLaunchView",
@@ -34,5 +34,5 @@ class MainViewControllerTest: XCTestCase {
             web.urlCalled,
             "web did not call logout."
         )
-    }
+    }*/
 }

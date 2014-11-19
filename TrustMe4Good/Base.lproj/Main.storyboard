@@ -882,7 +882,7 @@
                                 <items>
                                     <barButtonItem title="logout" id="q9y-7k-mPc">
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SegueToFirstLaunchView" animates="NO" id="Vzi-Rl-ksT"/>
+                                            <action selector="logoutAction:" destination="Jtl-4V-07K" id="riq-pD-rOn"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="complete" id="f5C-lP-VFV">
@@ -913,6 +913,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="16z-mi-NBw"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SegueToFirstLaunchView" animates="NO" id="jeH-QX-BGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URg-xa-FX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1459,8 +1462,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CG3-lc-6gc"/>
-        <segue reference="Vzi-Rl-ksT"/>
         <segue reference="Pg8-Xv-LME"/>
+        <segue reference="jeH-QX-BGy"/>
         <segue reference="0fl-5H-azE"/>
     </inferredMetricsTieBreakers>
 </document>
