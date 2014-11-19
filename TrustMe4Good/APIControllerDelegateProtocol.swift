@@ -1,5 +1,5 @@
 import Foundation
 
-@objc protocol APIControllerProtocol {
+@objc protocol APIControllerDelegateProtocol {
     func didReceiveAPIResults(results: NSDictionary)
 }

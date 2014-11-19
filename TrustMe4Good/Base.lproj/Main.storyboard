@@ -1347,6 +1347,40 @@
             </objects>
             <point key="canvasLocation" x="1976" y="-1235"/>
         </scene>
+        <!--Loading Screen View Controller-->
+        <scene sceneID="F3V-wX-1QP">
+            <objects>
+                <viewController id="OzX-2p-but" customClass="LoadingScreenViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nn0-Ue-dAd"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0s-JR-tcG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="191-h5-iVC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCN-MV-Jvy">
+                                <rect key="frame" x="262" y="289" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="bCN-MV-Jvy" secondAttribute="centerY" id="CzR-l1-H6A"/>
+                            <constraint firstAttribute="centerX" secondItem="bCN-MV-Jvy" secondAttribute="centerX" id="gnI-Lf-Wzz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="4tk-f0-kuA" kind="presentation" identifier="LaunchFirstLaunchSegue" id="ZHx-oa-K1w"/>
+                        <segue destination="Qt0-PN-BgX" kind="presentation" identifier="LaunchLoggedInSegue" id="Saj-ek-y7v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ZO-tz-vGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976" y="-2193"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KJv-ae-o9g">
             <objects>
@@ -1424,9 +1458,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Jql-WY-4cj"/>
-        <segue reference="0fl-5H-azE"/>
+        <segue reference="Saj-ek-y7v"/>
+        <segue reference="Suy-Vg-taA"/>
         <segue reference="Pg8-Xv-LME"/>
-        <segue reference="Vzi-Rl-ksT"/>
+        <segue reference="0fl-5H-azE"/>
     </inferredMetricsTieBreakers>
 </document>

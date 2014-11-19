@@ -61,8 +61,8 @@
 		976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091641A0C461500C49248 /* LoginViewControllerTest.swift */; };
 		977B350A1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
 		977B350B1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
-		977B350D1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */; };
-		977B350E1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */; };
+		977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
+		977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
 		978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */; };
 		978FBBD21A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
 		978FBBD31A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
@@ -80,6 +80,8 @@
 		978FBBEE1A11B33D0059DA70 /* SharingSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */; };
 		978FBBF01A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */; };
 		978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */; };
+		97ACFD651A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
+		97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
 		97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D4981A0EAE7F0019628B /* UIMocks.swift */; };
 		97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */; };
 		97B3D49D1A0EE9F50019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
@@ -180,7 +182,7 @@
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		977B35091A17D10200A90F72 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
-		977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiControllerProtocol.swift; sourceTree = "<group>"; };
+		977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIControllerDelegateProtocol.swift; sourceTree = "<group>"; };
 		978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewControllerTest.swift; sourceTree = "<group>"; };
 		978FBBD11A11814B0059DA70 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		978FBBD51A1181FD0059DA70 /* SettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTest.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		978FBBE91A11B2FF0059DA70 /* SharingSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettings.swift; sourceTree = "<group>"; };
 		978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsTest.swift; sourceTree = "<group>"; };
 		978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationSharingViewController.swift; sourceTree = "<group>"; };
+		97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		97B3D4981A0EAE7F0019628B /* UIMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMocks.swift; sourceTree = "<group>"; };
 		97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewControllerTest.swift; sourceTree = "<group>"; };
 		97B3D49C1A0EE9F50019628B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 		971382D21A0843E3008A39FD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */,
 				97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */,
 				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
 				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
@@ -400,7 +404,7 @@
 				974F41B21A1C12C7003226B9 /* QrReader.swift */,
 				971004B01A09D42D0088D66B /* WebProtocol.swift */,
 				971382D51A0844AA008A39FD /* Web.swift */,
-				977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */,
+				977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */,
 				977B35091A17D10200A90F72 /* ApiController.swift */,
 				9707AB7B1A1162AB00935F33 /* JSON.swift */,
 				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
@@ -567,7 +571,7 @@
 				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
 				978FBBE41A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
-				977B350D1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */,
+				977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
 				97BA3DC21A12E1C70063940A /* SharingSettingsProtocol.swift in Sources */,
@@ -593,6 +597,7 @@
 				973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */,
 				974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */,
 				971004B41A0AC2280088D66B /* DICViewController.swift in Sources */,
+				97ACFD651A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */,
 				972E35B51A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
 				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
@@ -619,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */,
 				97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */,
 				971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */,
 				97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */,
@@ -649,7 +655,7 @@
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
 				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
-				977B350E1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */,
+				977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */,
 				97BA3DC01A12E08A0063940A /* SettingsProtocol.swift in Sources */,

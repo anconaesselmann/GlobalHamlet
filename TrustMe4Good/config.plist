@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>api</key>
+	<dict>
+		<key>class</key>
+		<string>ApiController</string>
+		<key>args</key>
+		<dict/>
+	</dict>
 	<key>SendMessageViewController</key>
 	<dict>
 		<key>args</key>
@@ -94,7 +101,7 @@
 		<string>MainViewController</string>
 	</dict>
 	<key>url</key>
-	<string>http://www.api.anconaesselmann.com</string>
+	<string>http://www.api.anconaesselmann.dev</string>
 	<key>LoginViewController</key>
 	<dict>
 		<key>class</key>
