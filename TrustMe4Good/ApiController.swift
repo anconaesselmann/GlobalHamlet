@@ -1,12 +1,11 @@
 import Foundation
 
 @objc(ApiController) class ApiController: NSObject {
-    var delegate: AppDelegate?
-    
+    var delegate: APIControllerDelegateProtocol?
 
-    func getSession() -> NSURLSession {
+    func _getSession() -> NSURLSession {
         let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
-        delegate!.cookies = cookies
+        //delegate!.cookies = cookies
         let configObject = NSURLSessionConfiguration.defaultSessionConfiguration()
         configObject.HTTPCookieStorage = cookies
         configObject.HTTPCookieAcceptPolicy = NSHTTPCookieAcceptPolicy.Always
@@ -17,7 +16,7 @@ import Foundation
         )
         return session
     }
-    func getRequest(urlString:String) -> NSMutableURLRequest {
+    func _getRequestRequest(urlString:String) -> NSMutableURLRequest {
         let url         = NSURL(string: urlString)
         let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
         var request     = NSMutableURLRequest(
@@ -28,7 +27,7 @@ import Foundation
         return request
     }
 
-    func completionHandler(data:NSData?, response:NSURLResponse?, error:NSError?) {
+    func _completionHandler(data:NSData?, response:NSURLResponse?, error:NSError?) {
         println("---- response for: " + response!.URL!.absoluteString! + " ----")
         if(error != nil) {
             NSLog(error!.localizedDescription)
@@ -46,49 +45,58 @@ import Foundation
         //let results: NSArray = jsonResult["response"] as NSArray
         //let errorCode: Int   = jsonResult["errorCode"] as Int
         println(jsonResult!)
+        println("cookies:")
+        let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        println(cookies.cookiesForURL(NSURL(string: response!.URL!.absoluteString!)!)!)
         println("---- end response ----")
         self.delegate?.didReceiveAPIResults(jsonResult!)
     }
     func request(urlString:String) {
-        let session = getSession()
-        let request = getRequest(urlString)
+        let session = _getSession()
+        let request = _getRequestRequest(urlString)
 
         let task = session.dataTaskWithRequest(
             request,
-            completionHandler: completionHandler
+            completionHandler: _completionHandler
         )
         task.resume()
     }
     
-    func postRequest(url:String, searchTerm: String) {
+    func _getPostRequest(urlString:String, arguments: Dictionary<String, String>) -> NSMutableURLRequest {
+        let url         = NSURL(string: urlString)
+        let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
+        var request     = NSMutableURLRequest(
+            URL: url!,
+            cachePolicy: cachePolicy,
+            timeoutInterval: 2.0
+        )
+        request.HTTPMethod = "POST"
         
-        // The iTunes API wants multiple terms separated by + symbols, so replace spaces with + signs
-        let itunesSearchTerm = searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
-        
-        // Now escape anything else that isn't URL-friendly
-        if let escapedSearchTerm = itunesSearchTerm.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
-            let urlPath = "http://itunes.apple.com/search?term=\(escapedSearchTerm)&media=software"
-            let url = NSURL(string: urlPath)
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-                println("Task completed")
-                if(error != nil) {
-                    // If there is an error in the web request, print it to the console
-                    println(error.localizedDescription)
-                }
-                var err: NSError?
-                
-                var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
-                if(err != nil) {
-                    // If there is an error parsing JSON, print it to the console
-                    println("JSON Error \(err!.localizedDescription)")
-                }
-                //let results: NSArray = jsonResult["results"] as NSArray
-                self.delegate?.didReceiveAPIResults(jsonResult)
-            })
-            
-            task.resume()
+        // set data
+        var dataString: String = "";
+        for (index, element) in arguments {
+            if dataString.utf16Count > 0 {
+                dataString += "&";
+            }
+            dataString += index + "=" + element.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
         }
+        println("post data string:")
+        println(dataString);
+        let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody    = requestBodyData
+        
+        return request
+    }
+    
+    func postRequest(urlString:String, arguments: Dictionary<String, String>) {
+        let session = _getSession()
+        let request = _getPostRequest(urlString, arguments: arguments)
+        
+        let task = session.dataTaskWithRequest(
+            request,
+            completionHandler: _completionHandler
+        )
+        task.resume()
     }
     
     /* -(void) httpPostWithCustomDelegate

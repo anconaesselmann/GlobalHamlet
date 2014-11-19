@@ -3,10 +3,6 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: DICAppDelegate, UIApplicationDelegate, APIControllerDelegateProtocol {
-    
-    var cookies:NSHTTPCookieStorage?
-    
-    
 
     override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -21,30 +17,11 @@ class AppDelegate: DICAppDelegate, UIApplicationDelegate, APIControllerDelegateP
         }
         return true
     }
-
-    /*func _isLoggedIn() -> Bool {
-        if let url = (dic.get("url") as? String) {
-            if let web = (dic.build("web") as? Web) {
-                let response = web.postRequst(url + "/login") as NSDictionary
-                println(response["response"]  as Bool)
-                println(response["errorCode"] as Int)
-
-                return response["response"] as Bool
-            }
-        }
-        return false
-    }*/
     
     func didReceiveAPIResults(results: NSDictionary) {
-        println(results)
         let response:Bool? = results["response"] as? Bool
         let errorCode:Int? = results["errorCode"] as? Int
         if response != nil && errorCode != nil {
-            println(response!)
-            println(errorCode!)
-            let url:String? = (dic.get("url") as? String)
-            println(cookies!.cookiesForURL(NSURL(string: url! + "/login")!)!)
-            
             if let vc = window!.rootViewController as? LoadingScreenViewController {
                 vc.perfomrSegue(response!)
             }
