@@ -21,7 +21,7 @@ import UIKit
             if dataString.utf16Count > 0 {
                 dataString += "&";
             }
-            dataString += index + "=" + element;
+            dataString += index + "=" + element.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
         }
         println(dataString);
         let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)

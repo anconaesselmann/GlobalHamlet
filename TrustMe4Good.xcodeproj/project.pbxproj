@@ -52,11 +52,17 @@
 		974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
 		974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */; };
 		974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
+		974F41B31A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
+		974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
 		9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		976091621A0AE71800C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091631A0AE84000C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091641A0C461500C49248 /* LoginViewControllerTest.swift */; };
+		977B350A1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
+		977B350B1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
+		977B350D1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */; };
+		977B350E1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */; };
 		978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */; };
 		978FBBD21A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
 		978FBBD31A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
@@ -169,9 +175,12 @@
 		974C06C01A093AAD00192CCB /* configTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configTest.plist; path = ../TrustMe4Good/configTest.plist; sourceTree = "<group>"; };
 		974C06C31A093BDD00192CCB /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactory.swift; sourceTree = "<group>"; };
 		974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactoryTest.swift; sourceTree = "<group>"; };
+		974F41B21A1C12C7003226B9 /* QrReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrReader.swift; sourceTree = "<group>"; };
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		977B35091A17D10200A90F72 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiControllerProtocol.swift; sourceTree = "<group>"; };
 		978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewControllerTest.swift; sourceTree = "<group>"; };
 		978FBBD11A11814B0059DA70 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		978FBBD51A1181FD0059DA70 /* SettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTest.swift; sourceTree = "<group>"; };
@@ -388,8 +397,11 @@
 			children = (
 				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
 				972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */,
+				974F41B21A1C12C7003226B9 /* QrReader.swift */,
 				971004B01A09D42D0088D66B /* WebProtocol.swift */,
 				971382D51A0844AA008A39FD /* Web.swift */,
+				977B350C1A17D2D500A90F72 /* ApiControllerProtocol.swift */,
+				977B35091A17D10200A90F72 /* ApiController.swift */,
 				9707AB7B1A1162AB00935F33 /* JSON.swift */,
 				974C06C31A093BDD00192CCB /* SimpleFactory.swift */,
 				97B3D49C1A0EE9F50019628B /* Error.swift */,
@@ -555,6 +567,7 @@
 				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
 				978FBBE41A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
+				977B350D1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
 				97BA3DC21A12E1C70063940A /* SharingSettingsProtocol.swift in Sources */,
@@ -564,10 +577,12 @@
 				971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
 				97BD02941A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
+				974F41B31A1C12C7003226B9 /* QrReader.swift in Sources */,
 				97BA3DC81A12EB030063940A /* CreatorWithSettingsProtocol.swift in Sources */,
 				971382D61A0844AA008A39FD /* Web.swift in Sources */,
 				973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */,
 				971004AC1A09CDC10088D66B /* DICProtocol.swift in Sources */,
+				977B350A1A17D10200A90F72 /* ApiController.swift in Sources */,
 				973B77EF1A082CB5007E8726 /* ConfirmRegistrationViewController.swift in Sources */,
 				978FBBF01A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */,
 				973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */,
@@ -634,6 +649,7 @@
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
 				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
+				977B350E1A17D2D500A90F72 /* ApiControllerProtocol.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */,
 				97BA3DC01A12E08A0063940A /* SettingsProtocol.swift in Sources */,
@@ -652,11 +668,13 @@
 				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
 				978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
+				974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */,
 				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,
 				97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */,
 				978FBBEB1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
 				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,
+				977B350B1A17D10200A90F72 /* ApiController.swift in Sources */,
 				97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

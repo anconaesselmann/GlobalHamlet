@@ -7,9 +7,13 @@ class ReciprocateViewController: DICViewController {
     var error = Error()
     var codeAndIdTuple:(id:Int, code:String)!
     
+    var qr:QrReader!
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    
+    @IBOutlet weak var viewPreview: UIView!
     
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
@@ -41,7 +45,7 @@ class ReciprocateViewController: DICViewController {
             vc!.delegate = self
         }
         let codeAndId = codeTextField!.text + idTextField!.text
-        codeAndIdTuple = getIdAndCodeFromString(codeAndId)
+        //codeAndIdTuple = getIdAndCodeFromString(codeAndId)
 
         
         /*let vc:IdentitySharingViewController? = segue.destinationViewController as? IdentitySharingViewController
@@ -53,6 +57,10 @@ class ReciprocateViewController: DICViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // move this to di container
+        qr = QrReader(displayView:viewPreview, callBack: getIdAndCodeFromString)
+        qr!.startReading()
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,13 +68,15 @@ class ReciprocateViewController: DICViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getIdAndCodeFromString(codeString: String) -> (id: Int, code: String) {
+    func getIdAndCodeFromString(codeString: String) {
         let code: String = (codeString as NSString).substringToIndex(20)
         var id: Int? = (codeString as NSString).substringFromIndex(20).toInt()
         if id == nil {
             id = -1
         }
-        return (id: id!, code: code)
+        codeAndIdTuple = (id: id!, code: code)
+        println("id" + String(id!) + " code: " + code)
+        performSegueWithIdentifier("ReciprocateSharingSegue", sender: nil)
     }
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -77,5 +87,6 @@ class ReciprocateViewController: DICViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillDisappear(animated)
     }
+    
 }
 
