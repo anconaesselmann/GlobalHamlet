@@ -1,7 +1,7 @@
 import UIKit
 
-class LoginViewController: DICViewController {
-    var web: WebProtocol!
+class LoginViewController: DICViewController, APIControllerDelegateProtocol {
+    var api: ApiController!
     var loggedIn: Bool = false
     var url: String!
     
@@ -13,9 +13,9 @@ class LoginViewController: DICViewController {
     
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
-        assert(args[0] is WebProtocol)
+        assert(args[0] is ApiController)
         assert(args[1] is String)
-        web = args[0] as WebProtocol
+        api = args[0] as ApiController
         url = args[1] as String
     }
     
@@ -27,35 +27,33 @@ class LoginViewController: DICViewController {
         
         var args = ["userEmail": email!, "userPassword": password!, "apiCaller": "IOS8_" + uuid]
         var url: String  = "\(self.url)/login/submit"
-        let d = web.postRequst(url, arguments: args) as NSDictionary
-        println(d["response"] as Bool)
-        println(d["errorCode"] as Int)
-        if let response = d["response"] as? Bool {
+        
+        api.delegate = self
+        api.postRequest(url, arguments: args)
+    }
+    
+    func didReceiveAPIResults(results: NSDictionary) {
+        if let response = results["response"] as? Bool {
             loggedIn = response
+        } else {
+            NSLog("Login post request came back with non-boolean reaponse")
+            return
         }
         if loggedIn {
+            println("logging in.")
             performSegueWithIdentifier("SegueToMain", sender: self)
         } else {
             loggedIn = false
-            infoLabel!.text = "Error signing in."
-            println("Error signing in.")
+            let errorMessage = "Error signing in."
+            infoLabel!.text = errorMessage
+            
+            if let errorCode = results["errorCode"] as? String {
+                NSLog(errorMessage + errorCode)
+            } else {
+                NSLog(errorMessage)
+            }
         }
-        
-        web.postRequst(url, arguments: args)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        super.prepareForSegue(segue, sender: sender)
-        
-    }
 }
 

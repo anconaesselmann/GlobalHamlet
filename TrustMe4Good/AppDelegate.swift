@@ -7,7 +7,7 @@ class AppDelegate: DICAppDelegate, UIApplicationDelegate, APIControllerDelegateP
     override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        setRootViewController("InitialViewController")
+        setRootViewController("LoadingScreenViewController")
         
         if let url = (dic.get("url") as? String) {
             if let api = (dic.build("api") as? ApiController) {

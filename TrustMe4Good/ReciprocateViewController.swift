@@ -63,11 +63,6 @@ class ReciprocateViewController: DICViewController {
         qr!.startReading()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func getIdAndCodeFromString(codeString: String) {
         let code: String = (codeString as NSString).substringToIndex(20)
         var id: Int? = (codeString as NSString).substringFromIndex(20).toInt()

@@ -3,6 +3,28 @@ import Foundation
 @objc(ApiController) class ApiController: NSObject {
     var delegate: APIControllerDelegateProtocol?
 
+    func request(urlString:String) {
+        let session = _getSession()
+        let request = _getRequestRequest(urlString)
+        
+        let task = session.dataTaskWithRequest(
+            request,
+            completionHandler: _completionHandler
+        )
+        task.resume()
+    }
+    
+    func postRequest(urlString:String, arguments: Dictionary<String, String>) {
+        let session = _getSession()
+        let request = _getPostRequest(urlString, arguments: arguments)
+        
+        let task = session.dataTaskWithRequest(
+            request,
+            completionHandler: _completionHandler
+        )
+        task.resume()
+    }
+    
     func _getSession() -> NSURLSession {
         let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
         //delegate!.cookies = cookies
@@ -28,7 +50,10 @@ import Foundation
     }
 
     func _completionHandler(data:NSData?, response:NSURLResponse?, error:NSError?) {
-        println("---- response for: " + response!.URL!.absoluteString! + " ----")
+        let url:String? = response?.URL?.absoluteString?
+        if url != nil {
+            println("---- response for: " + url! + " ----")
+        }
         if(error != nil) {
             NSLog(error!.localizedDescription)
             self.delegate?.didReceiveAPIResults(["response": false, "errorCode": -1])
@@ -49,17 +74,10 @@ import Foundation
         let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
         println(cookies.cookiesForURL(NSURL(string: response!.URL!.absoluteString!)!)!)
         println("---- end response ----")
+        if delegate == nil {
+            NSLog("ERROR: Delegate is nil.")
+        }
         self.delegate?.didReceiveAPIResults(jsonResult!)
-    }
-    func request(urlString:String) {
-        let session = _getSession()
-        let request = _getRequestRequest(urlString)
-
-        let task = session.dataTaskWithRequest(
-            request,
-            completionHandler: _completionHandler
-        )
-        task.resume()
     }
     
     func _getPostRequest(urlString:String, arguments: Dictionary<String, String>) -> NSMutableURLRequest {
@@ -87,46 +105,5 @@ import Foundation
         
         return request
     }
-    
-    func postRequest(urlString:String, arguments: Dictionary<String, String>) {
-        let session = _getSession()
-        let request = _getPostRequest(urlString, arguments: arguments)
-        
-        let task = session.dataTaskWithRequest(
-            request,
-            completionHandler: _completionHandler
-        )
-        task.resume()
-    }
-    
-    /* -(void) httpPostWithCustomDelegate
-    {
-    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
-    
-    NSURL * url = [NSURL URLWithString:@"http://hayageek.com/examples/jquery/ajax-post/ajax-post.php"];
-    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
-    NSString * params =@"name=Ravi&loc=India&age=31&submit=true";
-    [urlRequest setHTTPMethod:@"POST"];
-    
-    
-    
-    
-    
-    [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
-    completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-    NSLog(@"Response:%@ %@\n", response, error);
-    if(error == nil)
-    {
-    NSString * text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-    NSLog(@"Data = %@",text);
-    }
-    
-    }];
-    [dataTask resume];
-    
-    }*/
     
 }

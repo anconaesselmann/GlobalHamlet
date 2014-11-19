@@ -233,14 +233,8 @@
 		971382D21A0843E3008A39FD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */,
-				97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */,
-				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
-				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
-				973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */,
-				973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */,
-				973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */,
-				973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */,
+				97ACFD681A1D42A9006B55BE /* App initializiation */,
+				97ACFD671A1D4286006B55BE /* Create User */,
 				971004B81A0AC5000088D66B /* MainTabBarController.swift */,
 				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
 				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
@@ -331,7 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				974C06C21A093B5500192CCB /* aae */,
-				973F5DE81A048839007DAC82 /* AppDelegate.swift */,
 				971382D31A08442E008A39FD /* Model */,
 				971382D21A0843E3008A39FD /* ViewControllers */,
 				973F5DEF1A048839007DAC82 /* Images.xcassets */,
@@ -451,6 +444,29 @@
 				978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */,
 			);
 			name = ModelTests;
+			sourceTree = "<group>";
+		};
+		97ACFD671A1D4286006B55BE /* Create User */ = {
+			isa = PBXGroup;
+			children = (
+				973B77E81A082BDC007E8726 /* CreatePreliminaryViewController.swift */,
+				973B77DE1A080218007E8726 /* CreatedPreliminaryViewController.swift */,
+				973B77EC1A082C7C007E8726 /* CreateRegisteredViewController.swift */,
+				973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */,
+			);
+			name = "Create User";
+			sourceTree = "<group>";
+		};
+		97ACFD681A1D42A9006B55BE /* App initializiation */ = {
+			isa = PBXGroup;
+			children = (
+				973F5DE81A048839007DAC82 /* AppDelegate.swift */,
+				97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */,
+				97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */,
+				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
+				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
+			);
+			name = "App initializiation";
 			sourceTree = "<group>";
 		};
 		97B3D4971A0EAE5B0019628B /* Mocks */ = {

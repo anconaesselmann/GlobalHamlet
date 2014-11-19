@@ -7,15 +7,6 @@ class FirstLaunchViewController: DICViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)

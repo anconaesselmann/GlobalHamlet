@@ -882,7 +882,7 @@
                                 <items>
                                     <barButtonItem title="logout" id="q9y-7k-mPc">
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SegueToFirstLaunchView" id="Vzi-Rl-ksT"/>
+                                            <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SegueToFirstLaunchView" animates="NO" id="Vzi-Rl-ksT"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="complete" id="f5C-lP-VFV">
@@ -1350,7 +1350,7 @@
         <!--Loading Screen View Controller-->
         <scene sceneID="F3V-wX-1QP">
             <objects>
-                <viewController id="OzX-2p-but" customClass="LoadingScreenViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadingScreenViewController" id="OzX-2p-but" customClass="LoadingScreenViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nn0-Ue-dAd"/>
                         <viewControllerLayoutGuide type="bottom" id="k0s-JR-tcG"/>
@@ -1373,8 +1373,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="4tk-f0-kuA" kind="presentation" identifier="LaunchFirstLaunchSegue" id="ZHx-oa-K1w"/>
-                        <segue destination="Qt0-PN-BgX" kind="presentation" identifier="LaunchLoggedInSegue" id="Saj-ek-y7v"/>
+                        <segue destination="4tk-f0-kuA" kind="presentation" identifier="LaunchFirstLaunchSegue" animates="NO" id="ZHx-oa-K1w"/>
+                        <segue destination="Qt0-PN-BgX" kind="presentation" identifier="LaunchLoggedInSegue" animates="NO" id="Saj-ek-y7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZO-tz-vGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1458,8 +1458,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Saj-ek-y7v"/>
-        <segue reference="Suy-Vg-taA"/>
+        <segue reference="CG3-lc-6gc"/>
+        <segue reference="Vzi-Rl-ksT"/>
         <segue reference="Pg8-Xv-LME"/>
         <segue reference="0fl-5H-azE"/>
     </inferredMetricsTieBreakers>

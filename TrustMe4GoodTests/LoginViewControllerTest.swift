@@ -39,7 +39,7 @@ class LoginViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.passwordTextField, "password text field not connected")
     }
     
-    func test_signInAction_should_validate_password_and_return_true_when_valid() {
+    /*func test_signInAction_should_validate_password_and_return_true_when_valid() {
         sut.web = Web_Mock_11_06_14()
         sut.signInAction(UIButton());
         XCTAssertTrue(sut.loggedIn, "signInAction should set loggedIn to true when supplied with correct login information.")
@@ -51,7 +51,7 @@ class LoginViewControllerTests: XCTestCase {
         sut.signInAction(UIButton());
         XCTAssertFalse(sut.loggedIn, "signInAction should set loggedIn to false when supplied with incorrect login information.")
         XCTAssertEqual("Error signing in.", sut.infoLabel.text!, "A failed login action should update the info label.")
-    }
+    }*/
     func test_infoLabel_should_be_connected() {
         XCTAssertNotNil(sut.infoLabel, "Info label not connected")
     }
