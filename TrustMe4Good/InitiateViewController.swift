@@ -126,47 +126,20 @@ class InitiateViewController: DICTableViewController {
         } else {
             NSLog("id, code aor vc where nil")
         }
-//        
-//        
-//        
-//        
-//        
-//        
-//        if success {
-//            let details = getOtherDetails(delegate!.codeAndIdTuple.id)
-//            
-//        }
     }
-    
     
     func _initiateQRSegue(segue: UIStoryboardSegue) {
         let detailsString:String = connectionDetails!.getJson()
         println("in segue:\n\n")
         println(detailsString)
         let arguments:[String: String] = ["details": detailsString]
-        let response: [String: AnyObject]? = web!.getResponseWithError(
-            url + "/connection/initiate", arguments: arguments,
-            error: error
-        ) as? [String: AnyObject]
+        
         let vc:InitiateQRViewController? = segue.destinationViewController as? InitiateQRViewController
-        if error.errorCode == 0 {
-            let contractId:Int?   = response?["connectionId"] as? Int
-            let plainCode:String? = response?["plainCode"]  as? String
-            if contractId != nil && plainCode != nil && vc != nil {
-                vc!.contractId = contractId
-                vc!.plainCode  = plainCode
-                println(contractId!)
-                println(plainCode!)
-                return
-            } else {
-                error.errorCode    = 1108141605
-                error.errorMessage = "Connection not a dictionary."
-            }
+        if vc == nil {
+            NSLog("Error getting destination view controller.")
         }
-        if vc != nil {
-            vc!.error = error
-        }
-        println(error.errorMessage)
+        api.delegate = vc!
+        api.postRequest(url + "/connection/initiate", arguments: arguments)
     }
     
     override func viewWillAppear(animated: Bool) {

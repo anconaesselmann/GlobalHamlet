@@ -455,7 +455,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho0-xP-wBS">
-                                <rect key="frame" x="16" y="20" width="568" height="21"/>
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="m4B-j7-kz8"/>
                                 </constraints>
@@ -464,7 +464,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="subject" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-Y9-IGz">
-                                <rect key="frame" x="16" y="79" width="568" height="30"/>
+                                <rect key="frame" x="16" y="101" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EMv-SE-CpR"/>
                                 </constraints>
@@ -483,7 +483,7 @@
                                 </items>
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="message" translatesAutoresizingMaskIntoConstraints="NO" id="UHy-3C-Ug2">
-                                <rect key="frame" x="16" y="117" width="568" height="463"/>
+                                <rect key="frame" x="16" y="139" width="568" height="441"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -497,13 +497,13 @@
                             <constraint firstItem="UHy-3C-Ug2" firstAttribute="trailing" secondItem="BsH-CH-m5m" secondAttribute="trailingMargin" id="JKE-Wf-cLk"/>
                             <constraint firstItem="UHy-3C-Ug2" firstAttribute="top" secondItem="2Qi-Y9-IGz" secondAttribute="bottom" constant="8" id="JLy-Ic-lD9"/>
                             <constraint firstItem="u1H-My-Ofx" firstAttribute="top" secondItem="UHy-3C-Ug2" secondAttribute="bottom" constant="20" id="Kow-cX-CDX"/>
-                            <constraint firstItem="2Qi-Y9-IGz" firstAttribute="top" secondItem="ho0-xP-wBS" secondAttribute="bottom" constant="38" id="OjD-yP-B4w"/>
+                            <constraint firstItem="2Qi-Y9-IGz" firstAttribute="top" secondItem="ho0-xP-wBS" secondAttribute="bottom" constant="8" id="OjD-yP-B4w"/>
                             <constraint firstItem="2Qi-Y9-IGz" firstAttribute="leading" secondItem="BsH-CH-m5m" secondAttribute="leadingMargin" id="SEf-Ca-V9V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eKR-QD-swH" secondAttribute="trailing" constant="-16" id="Tqb-DK-0wr"/>
                             <constraint firstItem="eKR-QD-swH" firstAttribute="top" secondItem="tQh-nX-OPf" secondAttribute="bottom" id="VB8-CQ-3tE"/>
                             <constraint firstItem="ho0-xP-wBS" firstAttribute="top" secondItem="tQh-nX-OPf" secondAttribute="bottom" constant="8" id="dm9-S9-0ji"/>
                             <constraint firstItem="UHy-3C-Ug2" firstAttribute="leading" secondItem="BsH-CH-m5m" secondAttribute="leadingMargin" id="ehA-74-TPT"/>
-                            <constraint firstItem="ho0-xP-wBS" firstAttribute="top" secondItem="tQh-nX-OPf" secondAttribute="bottom" id="fCo-XR-T0A"/>
+                            <constraint firstItem="ho0-xP-wBS" firstAttribute="top" secondItem="tQh-nX-OPf" secondAttribute="bottom" constant="52" id="fCo-XR-T0A"/>
                             <constraint firstItem="2Qi-Y9-IGz" firstAttribute="top" secondItem="ho0-xP-wBS" secondAttribute="bottom" constant="8" id="gIs-OV-AMk"/>
                             <constraint firstItem="eKR-QD-swH" firstAttribute="leading" secondItem="BsH-CH-m5m" secondAttribute="leadingMargin" constant="-16" id="rGO-9U-Nys"/>
                             <constraint firstItem="2Qi-Y9-IGz" firstAttribute="trailing" secondItem="BsH-CH-m5m" secondAttribute="trailingMargin" id="wji-8W-fyu"/>
@@ -529,6 +529,7 @@
                         <outlet property="messageBodyTextView" destination="UHy-3C-Ug2" id="3wZ-r5-thH"/>
                         <outlet property="subjectTextField" destination="2Qi-Y9-IGz" id="UOP-Ch-6ho"/>
                         <outlet property="toLabel" destination="ho0-xP-wBS" id="wH7-bg-I1A"/>
+                        <segue destination="Qt0-PN-BgX" kind="presentation" identifier="EmailToMainSegue" animates="NO" id="Bxd-NR-yQQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhQ-Uu-nlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1461,9 +1462,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CG3-lc-6gc"/>
+        <segue reference="0fl-5H-azE"/>
+        <segue reference="Bxd-NR-yQQ"/>
         <segue reference="Pg8-Xv-LME"/>
         <segue reference="jeH-QX-BGy"/>
-        <segue reference="0fl-5H-azE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,10 +1,10 @@
 import UIKit
 import Foundation
 
-class SendMessageViewController: DICViewController {
+class SendMessageViewController: DICViewController, APIControllerDelegateProtocol {
     var connectionId:Int = 0
     var toString:String = ""
-    var web:WebProtocol!
+    var api:ApiController!
     var url:String!
     var error = Error()
     
@@ -13,7 +13,7 @@ class SendMessageViewController: DICViewController {
     @IBOutlet weak var messageBodyTextView: UITextView!
     
     @IBAction func sendAction(sender: AnyObject) {
-        let success = sendEmail(
+        sendEmail(
             connectionId,
             subject: subjectTextField!.text,
             messageBody: messageBodyTextView.text
@@ -22,9 +22,9 @@ class SendMessageViewController: DICViewController {
     @IBOutlet weak var sendAction: UIBarButtonItem!
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
-        assert(args[0] is WebProtocol)
+        assert(args[0] is ApiController)
         assert(args[1] is String)
-        web = args[0] as WebProtocol
+        api = args[0] as ApiController
         url = args[1] as String
     }
     
@@ -35,20 +35,17 @@ class SendMessageViewController: DICViewController {
     }
     
     func sendEmail(id:Int, subject:String, messageBody:String) -> Bool {
-        if web != nil && url != nil {
+        if api != nil && url != nil {
             let arguments:[String: String] = ["id": String(id), "subject": subject, "body": messageBody]
-            let response: Bool? = web!.getResponseWithError(
-                url + "/message/email",
-                arguments: arguments,
-                error: error
-                ) as? Bool
-            if error.errorCode == 0 && response != nil && response == true {
-                println(response!)
-                return true
-            } else {
-                println("Web request unsuccessful.")
-            }
+            
+            api!.delegate = self
+            api!.postRequest(url + "/message/email", arguments: arguments)
         }
         return false
+    }
+    func didReceiveAPIResults(results: NSDictionary) {
+        println("Email sending response:")
+        println(results)
+        performSegueWithIdentifier("EmailToMainSegue", sender: nil)
     }
 }

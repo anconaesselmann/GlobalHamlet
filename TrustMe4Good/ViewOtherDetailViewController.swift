@@ -46,6 +46,10 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
         let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
         if vc != nil {
             vc!.connectionId = connectionId!
+            vc!.toString = userDetails!.getName()
+            
+            println("connectionId used for email:")
+            println(connectionId!)
         }
     }
     func getOtherData() {
@@ -64,6 +68,7 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
         println(results)
         // TODO: Figure out why it crashes casting to int
         if let id:String = results["response"] as? String {
+            println("Id recieved from api request")
             println(id)
             connectionId = id.toInt()
             getOtherData()

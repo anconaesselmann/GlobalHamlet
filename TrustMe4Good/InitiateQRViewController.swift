@@ -1,6 +1,6 @@
 import UIKit
 
-class InitiateQRViewController: DICViewController {
+class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol {
     var contractId: Int?
     var plainCode:  String?
     var qrCodeGenerator: CodeGeneratorProtocol!
@@ -22,17 +22,28 @@ class InitiateQRViewController: DICViewController {
         url = args[2] as String
     }
     
+    func didReceiveAPIResults(results: NSDictionary) {
+        if results["errorCode"] as Int == 0 {
+            contractId  = results["response"]?["connectionId"] as? Int
+            plainCode   = results["response"]?["plainCode"]    as? String
+            generateQrCode()
+        } else {
+            NSLog("Error creating qr code. The web request responded with error code " + (results["errorCode"] as String))
+        }
+    }
+    
+    func generateQrCode() {
+        if qrCodeImage != nil && plainCode != nil {
+            println("Generating Qr Code with id \(String(contractId!)) and string \(plainCode!)")
+            let qrString      = "\(plainCode!)\(String(contractId!))"
+            qrCodeImage.image = qrCodeGenerator.getImageFromString(qrString)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if error.errorCode == 0 {
-            let qrString = "\(plainCode!)\(String(contractId!))"
-            contractIdLabel.text = String(contractId!)
-            plainCodeLabel.text  = qrString
-            qrCodeImage.image    = qrCodeGenerator.getImageFromString(qrString)
-        } else {
-            // TODO: handle error
-        }
+        generateQrCode()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -51,7 +62,7 @@ class InitiateQRViewController: DICViewController {
         let response: Bool? = web!.getResponseWithError(
             url + "/connection/deleteinitiated",
             error: error
-        ) as? Bool
+            ) as? Bool
         if error.errorCode == 0 && response != nil && response == true {
             println(response!)
         } else {
