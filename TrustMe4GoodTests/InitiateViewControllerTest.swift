@@ -18,7 +18,7 @@ class InitiateViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_prepareForSegue() {
+    /*func test_prepareForSegue() {
         let destination = Mock_DiViewController_11_08_14_Destination()
         let contractId  = 1
         let plainCode   = "plain1234"
@@ -39,8 +39,8 @@ class InitiateViewControllerTests: XCTestCase {
         XCTAssertEqual("test.dev/connection/initiate", web.urlCalled)
         XCTAssertEqual(contractId, destination.contractId!)
         XCTAssertEqual(plainCode, destination.plainCode!)
-    }
-    func test_prepareForSegue_sets_error_code() {
+    }*/
+    /*func test_prepareForSegue_sets_error_code() {
         sut.error.errorCode = 123
         let destination     = Mock_DiViewController_11_08_14_Destination()
         var segue = Mock_Segue(
@@ -55,7 +55,7 @@ class InitiateViewControllerTests: XCTestCase {
         
         XCTAssertEqual("test.dev/connection/initiate", web.urlCalled)
         XCTAssertEqual(123, destination.error.errorCode)
-    }
+    }*/
     
     /*func test_getOtherDetails() {
         let id = 22;

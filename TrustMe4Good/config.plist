@@ -74,10 +74,6 @@
 		<array>
 			<dict>
 				<key>dep</key>
-				<string>web</string>
-			</dict>
-			<dict>
-				<key>dep</key>
 				<string>api</string>
 			</dict>
 			<dict>
