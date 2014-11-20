@@ -8,8 +8,6 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     var url: String!
     var error = Error()
     
-    @IBOutlet weak var contractIdLabel: UILabel!
-    @IBOutlet weak var plainCodeLabel: UILabel!
     @IBOutlet weak var qrCodeImage: UIImageView!
     
     override func initWithArgs(args:[AnyObject]) {
