@@ -82,6 +82,10 @@
 		978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */; };
 		97ACFD651A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
 		97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
+		97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */; };
+		97ACFD721A1D75CD006B55BE /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */; };
+		97ACFD731A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD701A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift */; };
+		97ACFD741A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD701A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift */; };
 		97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D4981A0EAE7F0019628B /* UIMocks.swift */; };
 		97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */; };
 		97B3D49D1A0EE9F50019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
@@ -194,6 +198,8 @@
 		978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsTest.swift; sourceTree = "<group>"; };
 		978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationSharingViewController.swift; sourceTree = "<group>"; };
 		97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
+		97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		97ACFD701A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsDelegateProtocol.swift; sourceTree = "<group>"; };
 		97B3D4981A0EAE7F0019628B /* UIMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMocks.swift; sourceTree = "<group>"; };
 		97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewControllerTest.swift; sourceTree = "<group>"; };
 		97B3D49C1A0EE9F50019628B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -257,6 +263,8 @@
 		971382D31A08442E008A39FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */,
+				97ACFD701A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift */,
 				978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */,
 				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
 			);
@@ -608,6 +616,7 @@
 				973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */,
 				972EF6551A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				973F5DE91A048839007DAC82 /* AppDelegate.swift in Sources */,
+				97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */,
 				973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */,
 				973B77ED1A082C7C007E8726 /* CreateRegisteredViewController.swift in Sources */,
 				973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */,
@@ -630,6 +639,7 @@
 				97B3D49D1A0EE9F50019628B /* Error.swift in Sources */,
 				97D83DE21A15F60500F008F2 /* SendMessageViewController.swift in Sources */,
 				97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
+				97ACFD731A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift in Sources */,
 				9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */,
 				978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
@@ -666,6 +676,7 @@
 				978FBBD31A11814B0059DA70 /* Settings.swift in Sources */,
 				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
 				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
+				97ACFD741A1D75CD006B55BE /* UserDetailsDelegateProtocol.swift in Sources */,
 				978FBBD71A1181FD0059DA70 /* SettingsTest.swift in Sources */,
 				978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */,
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
@@ -695,6 +706,7 @@
 				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,
 				97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */,
 				978FBBEB1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
+				97ACFD721A1D75CD006B55BE /* UserDetails.swift in Sources */,
 				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,
 				977B350B1A17D10200A90F72 /* ApiController.swift in Sources */,
 				97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */,
