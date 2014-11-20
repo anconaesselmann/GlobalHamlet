@@ -10,10 +10,6 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     @IBOutlet weak var qrCodeImage: UIImageView!
     
     override func initWithArgs(args:[AnyObject]) {
-        assert(args.count == 3)
-        assert(args[0] is CodeGeneratorProtocol)
-        assert(args[1] is ApiController)
-        assert(args[2] is String)
         qrCodeGenerator = args[0] as CodeGeneratorProtocol
         api = args[1] as ApiController
         url = args[2] as String
