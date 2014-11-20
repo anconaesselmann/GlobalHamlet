@@ -4,29 +4,9 @@ import Foundation
 class ReciprocateViewController: DICViewController {
     var error = Error()
     var codeAndIdTuple:(id:Int, code:String)!
-    
     var qr:QrReader!
     
-    @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var codeTextField: UITextField!
-    @IBOutlet weak var submitButton: UIButton!
-    
     @IBOutlet weak var viewPreview: UIView!
-    
-    /*override func initWithArgs(args:[AnyObject]) {
-        assert(args.count == 2)
-        assert(args[0] is WebProtocol)
-        assert(args[1] is String)
-        web = args[0]  as WebProtocol
-        url = args[1]  as String
-    }*/
-    
-    /*@IBAction func submitPressed(sender: AnyObject) {
-        // TODO: get codeAndId from qr-code reader
-        let codeAndId = codeTextField!.text + idTextField!.text
-        let codeAndIdTuple = getIdAndCodeFromString(codeAndId)
-        sendCode(codeAndIdTuple.id, code: codeAndIdTuple.code)
-    }*/
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
@@ -46,16 +26,14 @@ class ReciprocateViewController: DICViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        // move this to di container
         qr = QrReader(displayView:viewPreview, callBack: getIdAndCodeFromString)
         qr!.startReading()
     }
     
     func getIdAndCodeFromString(codeString: String) {
-        let code: String = (codeString as NSString).substringToIndex(20)
-        var id: Int? = (codeString as NSString).substringFromIndex(20).toInt()
+        let code:String = (codeString as NSString).substringToIndex(20)
+        var id:Int?     = (codeString as NSString).substringFromIndex(20).toInt()
         if id == nil {
             id = -1
         }

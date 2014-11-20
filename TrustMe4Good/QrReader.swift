@@ -52,11 +52,13 @@ class QrReader: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func stopReading() {
-        captureSession.stopRunning()
-        captureSession = nil;
-        
-        videoPreviewLayer.removeFromSuperlayer()
-        isReading = false
+        if isReading {
+            captureSession.stopRunning()
+            captureSession = nil;
+            
+            videoPreviewLayer.removeFromSuperlayer()
+            isReading = false
+        }
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {

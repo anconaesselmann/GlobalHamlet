@@ -90,13 +90,15 @@ import Foundation
         )
         request.HTTPMethod = "POST"
         
+        var customAllowedSet =  NSCharacterSet(charactersInString:"!*'();:@&=+$,/?%#[]{|}\"<>\\^`").invertedSet
+
         // set data
         var dataString: String = "";
         for (index, element) in arguments {
             if dataString.utf16Count > 0 {
                 dataString += "&";
             }
-            dataString += index + "=" + element.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!;
+            dataString += index + "=" + element.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!;
         }
         println("post data string:")
         println(dataString);
