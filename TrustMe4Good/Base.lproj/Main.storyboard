@@ -1390,11 +1390,11 @@
             </objects>
             <point key="canvasLocation" x="4144" y="1654"/>
         </scene>
-        <!--Item-->
+        <!--initiate-->
         <scene sceneID="Caj-l7-JEd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lJH-3s-qUk" customClass="InitiateNavigationController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lug-Sp-YVG"/>
+                    <tabBarItem key="tabBarItem" title="initiate" id="lug-Sp-YVG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6p-pz-F2t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1430,9 +1430,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0fl-5H-azE"/>
         <segue reference="hEm-9t-fXB"/>
-        <segue reference="Pg8-Xv-LME"/>
+        <segue reference="09m-Uu-0Ij"/>
         <segue reference="jeH-QX-BGy"/>
+        <segue reference="Pg8-Xv-LME"/>
     </inferredMetricsTieBreakers>
 </document>
