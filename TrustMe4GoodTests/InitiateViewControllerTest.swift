@@ -57,7 +57,7 @@ class InitiateViewControllerTests: XCTestCase {
         XCTAssertEqual(123, destination.error.errorCode)
     }
     
-    func test_getOtherDetails() {
+    /*func test_getOtherDetails() {
         let id = 22;
         let web = Web_Mock()
         let args = ["id": String(id)]
@@ -67,6 +67,6 @@ class InitiateViewControllerTests: XCTestCase {
         sut.getOtherDetails(id);
         XCTAssertEqual("test.dev/connection/other_details", web.urlCalled)
         XCTAssertEqual(args, web.argsPassed)
-    }
+    }*/
 }
 class Mock_DiViewController_11_08_14_Destination: InitiateQRViewController {}

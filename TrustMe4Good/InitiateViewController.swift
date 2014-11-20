@@ -114,19 +114,28 @@ class InitiateViewController: DICTableViewController {
         let detailsString:String = connectionDetails!.getJson()
         println("in segue:\n\n")
         println(detailsString)
-        let success = sendCode(
-            delegate!.codeAndIdTuple.id,
-            code: delegate!.codeAndIdTuple.code,
-            details: detailsString
-        )
-        if success {
-            let details = getOtherDetails(delegate!.codeAndIdTuple.id)
-            let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
-            if vc != nil {
-                vc!.dataJsonString = details
-                vc!.connectionId = delegate!.codeAndIdTuple.id
-            }
+        
+        let id:Int?      = delegate!.codeAndIdTuple.id
+        let code:String? = delegate!.codeAndIdTuple.code
+        let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
+        if id != nil && code != nil && vc != nil {
+            let arguments:[String: String] = ["connectionId": String(id!), "plainCode": code!, "details": detailsString]
+            
+            api.delegate = vc!
+            api.postRequest(url + "/connection/reciprocate", arguments: arguments);
+        } else {
+            NSLog("id, code aor vc where nil")
         }
+//        
+//        
+//        
+//        
+//        
+//        
+//        if success {
+//            let details = getOtherDetails(delegate!.codeAndIdTuple.id)
+//            
+//        }
     }
     
     
@@ -158,42 +167,6 @@ class InitiateViewController: DICTableViewController {
             vc!.error = error
         }
         println(error.errorMessage)
-    }
-    
-    func sendCode(id:Int?, code:String?, details:String?) -> Bool {
-        if error.errorCode != 0 {
-            return false
-        }
-        if id != nil && code != nil {
-            let arguments:[String: String] = ["connectionId": String(id!), "plainCode": code!, "details": details!]
-            let response: Bool? = web!.getResponseWithError(
-                url + "/connection/reciprocate",
-                arguments: arguments,
-                error: error
-                ) as? Bool
-            if error.errorCode == 0 && response != nil && response == true {
-                println(response!)
-                return true
-            } else {
-                println("Web request unsuccessful.")
-            }
-        }
-        return false
-    }
-    func getOtherDetails(id:Int) -> String {
-        let arguments:[String: String] = ["id": String(id)]
-        let response: String? = web!.getResponseWithError(
-            url + "/connection/other_details",
-            arguments: arguments,
-            error: error
-            ) as? String
-        if error.errorCode == 0 && response != nil && response!.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
-            println(response!)
-            return response!
-        } else {
-            println("Web request unsuccessful.")
-        }
-        return ""
     }
     
     override func viewWillAppear(animated: Bool) {
