@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class ViewOtherDetailViewController: DICViewController, APIControllerDelegateProtocol, UserDetailsDelegateProtocol {
+class ViewOtherDetailViewController: DICViewController, APIControllerDelegateProtocol, UpdateDelegateProtocol {
     var connectionId:Int?;
     var dataJsonString:String = ""
     var userDetails:UserDetails!
@@ -23,7 +23,7 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
         
         getOtherData()
     }
-    func userDetailsHaveUpdated() {
+    func updateDelegate() {
         viewOtherDataLabel.text = userDetails!.getName()
         
         println("Printing userDetails:")
