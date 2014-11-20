@@ -60,7 +60,7 @@
 			</dict>
 			<dict>
 				<key>dep</key>
-				<string>web</string>
+				<string>api</string>
 			</dict>
 			<dict>
 				<key>const</key>

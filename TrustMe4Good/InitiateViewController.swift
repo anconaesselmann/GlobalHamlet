@@ -3,9 +3,8 @@ import UIKit
 class InitiateViewController: DICTableViewController {
     var api: ApiController!
     var url: String!
-    var error = Error()
     var connectionDetails:SettingsProtocol!
-    var delegate: ReciprocateViewController! // TODO: make this more general?
+    var delegate: ReciprocateViewController! // TODO: Remove this. Remove also from where it is set.
     
     @IBOutlet weak var identityTextField: UITextField!
     @IBOutlet weak var categorySelector: UISegmentedControl!

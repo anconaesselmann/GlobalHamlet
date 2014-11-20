@@ -4,19 +4,18 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     var contractId: Int?
     var plainCode:  String?
     var qrCodeGenerator: CodeGeneratorProtocol!
-    var web: WebProtocol!
+    var api: ApiController!
     var url: String!
-    var error = Error()
     
     @IBOutlet weak var qrCodeImage: UIImageView!
     
     override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 3)
         assert(args[0] is CodeGeneratorProtocol)
-        assert(args[1] is WebProtocol)
+        assert(args[1] is ApiController)
         assert(args[2] is String)
         qrCodeGenerator = args[0] as CodeGeneratorProtocol
-        web = args[1] as WebProtocol
+        api = args[1] as ApiController
         url = args[2] as String
     }
     
@@ -54,17 +53,7 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     }
     
     func _deleteInitContractsSegue(segue: UIStoryboardSegue) {
-        if error.errorCode != 0 {
-            return
-        }
-        let response: Bool? = web!.getResponseWithError(
-            url + "/connection/deleteinitiated",
-            error: error
-            ) as? Bool
-        if error.errorCode == 0 && response != nil && response == true {
-            println(response!)
-        } else {
-            println("Web request unsuccessful.")
-        }
+        //api!.delegae = ?????
+        api!.request(url + "/connection/deleteinitiated")
     }
 }

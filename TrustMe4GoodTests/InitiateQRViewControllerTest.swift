@@ -16,7 +16,7 @@ class InitiateQRViewControllerTest: XCTestCase {
         super.tearDown()
     }
     
-    func test_prepareForSegue() {
+    /*func test_prepareForSegue() {
         let destination = Mock_DiViewController()
         var segue       = Mock_Segue(
             identifier: "DeleteInitContractsSegue",
@@ -47,5 +47,5 @@ class InitiateQRViewControllerTest: XCTestCase {
         sut.prepareForSegue(segue, sender: nil)
         
         XCTAssertEqual("", web.urlCalled)
-    }
+    }*/
 }
