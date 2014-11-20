@@ -2,8 +2,6 @@ import UIKit
 import Foundation
 
 class ReciprocateViewController: DICViewController {
-    var web: WebProtocol!
-    var url: String!
     var error = Error()
     var codeAndIdTuple:(id:Int, code:String)!
     
@@ -15,13 +13,13 @@ class ReciprocateViewController: DICViewController {
     
     @IBOutlet weak var viewPreview: UIView!
     
-    override func initWithArgs(args:[AnyObject]) {
+    /*override func initWithArgs(args:[AnyObject]) {
         assert(args.count == 2)
         assert(args[0] is WebProtocol)
         assert(args[1] is String)
         web = args[0]  as WebProtocol
         url = args[1]  as String
-    }
+    }*/
     
     /*@IBAction func submitPressed(sender: AnyObject) {
         // TODO: get codeAndId from qr-code reader
@@ -44,14 +42,6 @@ class ReciprocateViewController: DICViewController {
         if vc != nil {
             vc!.delegate = self
         }
-        let codeAndId = codeTextField!.text + idTextField!.text
-        //codeAndIdTuple = getIdAndCodeFromString(codeAndId)
-
-        
-        /*let vc:IdentitySharingViewController? = segue.destinationViewController as? IdentitySharingViewController
-        if vc != nil {
-            vc!.delegate = self
-        }*/
     }
     
     override func viewDidLoad() {

@@ -25,22 +25,6 @@
 		<key>class</key>
 		<string>SendMessageViewController</string>
 	</dict>
-	<key>ReciprocateViewController</key>
-	<dict>
-		<key>args</key>
-		<array>
-			<dict>
-				<key>dep</key>
-				<string>web</string>
-			</dict>
-			<dict>
-				<key>const</key>
-				<string>url</string>
-			</dict>
-		</array>
-		<key>class</key>
-		<string>ReciprocateViewController</string>
-	</dict>
 	<key>qr</key>
 	<dict>
 		<key>class</key>
@@ -75,6 +59,10 @@
 			<dict>
 				<key>dep</key>
 				<string>web</string>
+			</dict>
+			<dict>
+				<key>dep</key>
+				<string>api</string>
 			</dict>
 			<dict>
 				<key>const</key>

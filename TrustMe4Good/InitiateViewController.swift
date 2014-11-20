@@ -2,6 +2,7 @@ import UIKit
 
 class InitiateViewController: DICTableViewController {
     var web: WebProtocol!
+    var api: ApiController!
     var url: String!
     var error = Error()
     var connectionDetails:SettingsProtocol!
@@ -29,11 +30,13 @@ class InitiateViewController: DICTableViewController {
     }
     
     override func initWithArgs(args:[AnyObject]) {
-        assert(args.count == 2)
+        assert(args.count == 3)
         assert(args[0] is WebProtocol)
-        assert(args[1] is String)
+        assert(args[1] is ApiController)
+        assert(args[2] is String)
         web = args[0] as WebProtocol
-        url = args[1] as String
+        api = args[1] as ApiController
+        url = args[2] as String
     }
     
     func initSwitches(animated: Bool) {
