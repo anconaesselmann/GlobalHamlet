@@ -57,7 +57,7 @@ class LoginViewControllerTests: XCTestCase {
     }
 }
 
-class Web_Mock_11_06_14: WebProtocol {
+/*class Web_Mock_11_06_14: WebProtocol {
     var loggedIn = true
     func postRequst(urlString: String, arguments: Dictionary<String, String>?) -> NSDictionary {
         return NSDictionary(dictionary: ["response": loggedIn, "errorCode": 0])
@@ -72,4 +72,4 @@ class Web_Mock_11_06_14: WebProtocol {
     func getResponseWithError(url:String, arguments: Dictionary<String, String>, error:Error) -> AnyObject? {
         return ""
     }
-}
+}*/

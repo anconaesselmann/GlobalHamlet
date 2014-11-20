@@ -2,7 +2,7 @@ import UIKit
 
 class Mock_Segue: UIStoryboardSegue {}
 
-class Web_Mock: WebProtocol {
+/*class Web_Mock: WebProtocol {
     var urlCalled: String = ""
     var urlCallResult: [String: AnyObject] = Dictionary<String, AnyObject>()
     var argsPassed: [String: String] = Dictionary<String, String>()
@@ -27,7 +27,7 @@ class Web_Mock: WebProtocol {
         argsPassed = arguments
         return urlCallResult
     }
-}
+}*/
 class Mock_DiViewController: DICViewController {}
 class Mock_Settings: SettingsProtocol {
     var switches:[String: Bool] = Dictionary<String, Bool>()

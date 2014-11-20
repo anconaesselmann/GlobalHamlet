@@ -1,4 +1,4 @@
-import Foundation
+/*import Foundation
 import UIKit
 
 @objc(Web) class Web: NSObject, WebProtocol {
@@ -123,4 +123,4 @@ import UIKit
         }
         return response
     }
-}
+}*/
