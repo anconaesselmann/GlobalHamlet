@@ -118,18 +118,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>FirstLaunchViewController</key>
-	<dict>
-		<key>class</key>
-		<string>FirstLaunchViewController</string>
-		<key>args</key>
-		<array>
-			<dict>
-				<key>dep</key>
-				<string>web</string>
-			</dict>
-		</array>
-	</dict>
 	<key>web</key>
 	<dict>
 		<key>class</key>
