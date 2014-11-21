@@ -18,9 +18,11 @@ class ReciprocateViewController: DICViewController {
     }
     
     func _reciprocateSharingSegue(segue: UIStoryboardSegue) {
-        let vc:InitiateViewController? = segue.destinationViewController as? InitiateViewController
+        let vc:InitiateViewController? = (segue.destinationViewController as? UINavigationController)?.viewControllers[0] as? InitiateViewController
         if vc != nil {
             vc!.delegate = self
+        } else {
+            NSLog("Could not configure Initiate view controller to reciprocate an initiation")
         }
     }
     

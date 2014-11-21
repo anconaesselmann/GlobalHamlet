@@ -134,22 +134,5 @@ class InitiateViewController: DICTableViewController {
         api.delegate = vc!
         api.postRequest(url + "/connection/initiate", arguments: arguments)
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        super.viewWillDisappear(animated)
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch(indexPath.row) {
-            case 0: return 94
-            default: return 44
-        }
-    }
 }
 

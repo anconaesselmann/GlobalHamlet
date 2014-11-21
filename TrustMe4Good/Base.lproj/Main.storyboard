@@ -90,32 +90,13 @@
                         <sections>
                             <tableViewSection id="cGB-rC-ubA">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="94" id="dsf-vS-lIt">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="44" id="dsf-vS-lIt">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsf-vS-lIt" id="Q0t-fw-BOG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOa-ek-Qjb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="Bwd-JR-xSs"/>
-                                                    </constraints>
-                                                    <items>
-                                                        <barButtonItem systemItem="cancel" id="6cm-UF-rFQ">
-                                                            <connections>
-                                                                <segue destination="Qt0-PN-BgX" kind="presentation" id="Jql-WY-4cj"/>
-                                                            </connections>
-                                                        </barButtonItem>
-                                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="uID-t1-8I1"/>
-                                                        <barButtonItem systemItem="save" id="8mn-hk-Vn2">
-                                                            <connections>
-                                                                <action selector="saveAction:" destination="e8P-B4-mEU" id="jPX-dp-NZ4"/>
-                                                            </connections>
-                                                        </barButtonItem>
-                                                    </items>
-                                                </toolbar>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-0c-kf0">
-                                                    <rect key="frame" x="64" y="55" width="472" height="29"/>
+                                                    <rect key="frame" x="64" y="8" width="472" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="WDM-Ks-9u8"/>
                                                         <constraint firstAttribute="width" constant="472" id="tJ0-f1-iCl"/>
@@ -137,12 +118,9 @@
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="xuC-0c-kf0" firstAttribute="top" secondItem="Q0t-fw-BOG" secondAttribute="topMargin" constant="47" id="1bc-Yv-QMc"/>
-                                                <constraint firstItem="vOa-ek-Qjb" firstAttribute="top" secondItem="Q0t-fw-BOG" secondAttribute="topMargin" constant="-8" id="E3r-wG-j9n"/>
+                                                <constraint firstItem="xuC-0c-kf0" firstAttribute="top" secondItem="Q0t-fw-BOG" secondAttribute="topMargin" id="1bc-Yv-QMc"/>
                                                 <constraint firstItem="xuC-0c-kf0" firstAttribute="leading" secondItem="Q0t-fw-BOG" secondAttribute="leadingMargin" constant="56" id="Rzp-cr-mkE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="xuC-0c-kf0" secondAttribute="trailing" constant="56" id="Wyu-zW-gr3"/>
-                                                <constraint firstItem="vOa-ek-Qjb" firstAttribute="leading" secondItem="Q0t-fw-BOG" secondAttribute="leadingMargin" constant="-8" id="YPO-Rm-5fQ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="vOa-ek-Qjb" secondAttribute="trailing" constant="-8" id="oq5-r9-HC0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -243,8 +221,19 @@
                             <outlet property="delegate" destination="e8P-B4-mEU" id="mnk-ui-Yhp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="tAm-6e-hMw"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="tAm-6e-hMw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="EyQ-AQ-Th1">
+                            <connections>
+                                <segue destination="Qt0-PN-BgX" kind="presentation" animates="NO" id="CvU-xV-J9K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="q4f-T8-V9S">
+                            <connections>
+                                <action selector="saveAction:" destination="e8P-B4-mEU" id="StS-aU-xig"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="categorySelector" destination="xuC-0c-kf0" id="E8z-5O-SLS"/>
                         <outlet property="identityTextField" destination="cUT-b9-avi" id="KSI-f1-ESa"/>
@@ -254,7 +243,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iu-oV-ZWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7350" y="1665"/>
+            <point key="canvasLocation" x="7350" y="1961"/>
         </scene>
         <!--Identity Sharing View Controller-->
         <scene sceneID="cVY-34-1HE">
@@ -391,7 +380,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oah-a9-Ke2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8502" y="1347"/>
+            <point key="canvasLocation" x="8154" y="1703"/>
         </scene>
         <!--View Other Detail View Controller-->
         <scene sceneID="zdK-vw-pzC">
@@ -441,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TL2-4y-Mz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5151" y="5311"/>
+            <point key="canvasLocation" x="5531" y="5243"/>
         </scene>
         <!--Send Message View Controller-->
         <scene sceneID="aUS-gN-WIq">
@@ -522,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhQ-Uu-nlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5151" y="6047"/>
+            <point key="canvasLocation" x="5531" y="5979"/>
         </scene>
         <!--Communication Sharing View Controller-->
         <scene sceneID="ZDY-pa-Yor">
@@ -638,7 +627,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVN-dB-4eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8494" y="2115"/>
+            <point key="canvasLocation" x="8154" y="2363"/>
         </scene>
         <!--InitiateQR View Controller-->
         <scene sceneID="8na-Xa-Wua">
@@ -745,7 +734,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="viewPreview" destination="6SH-Bb-EUA" id="Ahg-YE-tA4"/>
-                        <segue destination="e8P-B4-mEU" kind="presentation" identifier="ReciprocateSharingSegue" animates="NO" id="Amr-Ey-9sf"/>
+                        <segue destination="lJH-3s-qUk" kind="presentation" identifier="ReciprocateSharingSegue" animates="NO" id="Yh4-ag-loU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nU9-z2-1FB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -841,7 +830,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8je-vi-Ob9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5151" y="3361"/>
+            <point key="canvasLocation" x="5183" y="4435"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FP6-7j-bhc">
@@ -926,7 +915,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7s-ho-ts1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4493" y="3367"/>
+            <point key="canvasLocation" x="3857" y="4107"/>
         </scene>
         <!--Create Preliminary View Controller-->
         <scene sceneID="cD7-JY-dem">
@@ -1360,7 +1349,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jn9-pd-lXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6538" y="1670"/>
+            <point key="canvasLocation" x="7350" y="1134"/>
         </scene>
         <!--reciprocate-->
         <scene sceneID="p7H-65-lTW">
@@ -1402,10 +1391,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zPE-Kg-AlB"/>
-        <segue reference="ucJ-T1-mPc"/>
-        <segue reference="Amr-Ey-9sf"/>
-        <segue reference="SBw-96-dOE"/>
+        <segue reference="Bxd-NR-yQQ"/>
+        <segue reference="c8s-mr-n8r"/>
+        <segue reference="Yh4-ag-loU"/>
+        <segue reference="bJ7-J8-pbV"/>
         <segue reference="Pg8-Xv-LME"/>
         <segue reference="jeH-QX-BGy"/>
     </inferredMetricsTieBreakers>
