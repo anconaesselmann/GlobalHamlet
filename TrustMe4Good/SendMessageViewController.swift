@@ -8,7 +8,6 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
     var url:String!
     var error = Error()
     
-    @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var messageBodyTextView: UITextView!
     
@@ -28,7 +27,7 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        toLabel.text = toString
+        self.navigationItem.title = toString
     }
     
     func sendEmail(id:Int, subject:String, messageBody:String) -> Bool {

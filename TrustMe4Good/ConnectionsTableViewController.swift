@@ -16,6 +16,7 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "connections"
         loadConnections()
     }
     func loadConnections() {
