@@ -761,25 +761,10 @@
                                             <action selector="logoutAction:" destination="Jtl-4V-07K" id="riq-pD-rOn"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="complete" id="f5C-lP-VFV">
-                                        <connections>
-                                            <segue destination="SLq-zN-6DF" kind="show" id="Pg8-Xv-LME"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FDb-28-WsJ"/>
                                     <barButtonItem systemItem="bookmarks" id="o3A-lm-wUm">
                                         <connections>
                                             <segue destination="P0K-0I-iPS" kind="show" id="cbh-tn-UPP"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="!" id="0pQ-tP-KNE">
-                                        <connections>
-                                            <segue destination="x3k-b4-5gX" kind="show" id="XIi-2r-wrp"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FDb-28-WsJ"/>
-                                    <barButtonItem title="settings" id="kYV-uL-ZZ9">
-                                        <connections>
-                                            <segue destination="dho-DU-6i6" kind="show" id="DwE-mC-JJG"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1395,7 +1380,6 @@
         <segue reference="c8s-mr-n8r"/>
         <segue reference="Yh4-ag-loU"/>
         <segue reference="bJ7-J8-pbV"/>
-        <segue reference="Pg8-Xv-LME"/>
         <segue reference="jeH-QX-BGy"/>
     </inferredMetricsTieBreakers>
 </document>

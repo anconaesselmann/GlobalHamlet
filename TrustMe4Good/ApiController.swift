@@ -59,6 +59,11 @@ import Foundation
             self.delegate?.didReceiveAPIResults(["response": false, "errorCode": -1])
             return
         }
+        if response != nil && (response! as? NSHTTPURLResponse)!.statusCode >= 400 {
+            NSLog("Request failed with connection error \((response! as? NSHTTPURLResponse)!.statusCode)")
+            self.delegate?.didReceiveAPIResults(["response": false, "errorCode": -3])
+            return
+        }
         var err: NSError?
         
         var jsonResult:NSDictionary? = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary

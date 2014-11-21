@@ -7,6 +7,11 @@ class Connections: APIControllerDelegateProtocol/*, DebugPrintable*/ {
     init() {}
     
     func didReceiveAPIResults(results: NSDictionary) {
+        if (results["errorCode"] as Int) != 0 {
+            NSLog("API request came back with error:")
+            println(results["errorCode"])
+            return
+        }
         var error:NSError?     = nil
         var jsonString:String? = results["response"] as? String
         var jsonData:NSData?   = jsonString?.dataUsingEncoding(NSUTF8StringEncoding)
