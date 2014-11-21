@@ -1,7 +1,8 @@
 import UIKit
 
 class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol {
-    var contractId: Int?
+    var initConnectionId: Int?
+    var connectionId: Int?
     var plainCode:  String?
     var qrCodeGenerator: CodeGeneratorProtocol!
     var api: ApiController!
@@ -13,24 +14,52 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
         qrCodeGenerator = args[0] as CodeGeneratorProtocol
         api = args[1] as ApiController
         url = args[2] as String
+        api.delegate = self
     }
     
     func didReceiveAPIResults(results: NSDictionary) {
         if results["errorCode"] as Int == 0 {
-            contractId  = results["response"]?["connectionId"] as? Int
-            plainCode   = results["response"]?["plainCode"]    as? String
-            generateQrCode()
+            if initConnectionId == nil {
+                initConnectionId  = results["response"]?["connectionId"] as? Int
+                plainCode   = results["response"]?["plainCode"]    as? String
+                generateQrCode()
+            } else {
+                // A code has already been generated, which means this api result is coming from checkIfResponded closure
+                let testId:Int? = results["response"] as? Int
+                if testId != nil && testId > 0 {
+                    connectionId  = testId
+                    performSegueWithIdentifier("ViewInitiateResultSegue", sender: nil)
+                } else {
+                    checkIfResponded()
+                }
+            }
         } else {
-            NSLog("Error creating qr code. The web request responded with error code " + (results["errorCode"] as String))
+            let errorCode:String? = results["errorCode"] as? String
+            NSLog("Error initiating connection. The web request responded with error code:")
+            println(errorCode)
         }
     }
     
     func generateQrCode() {
-        if qrCodeImage != nil && plainCode != nil {
-            println("Generating Qr Code with id \(String(contractId!)) and string \(plainCode!)")
-            let qrString      = "\(plainCode!)\(String(contractId!))"
+        if qrCodeImage != nil && plainCode != nil && initConnectionId != nil {
+            println("Generating Qr Code with id \(String(initConnectionId!)) and string \(plainCode!)")
+            let qrString      = "\(plainCode!)\(String(initConnectionId!))"
             qrCodeImage.image = qrCodeGenerator.getImageFromString(qrString)
+            checkIfResponded()
         }
+    }
+    
+    func checkIfResponded() {
+        let sec = 1.0
+        let delay = dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(sec * Double(NSEC_PER_SEC))
+        )
+        dispatch_after(delay, dispatch_get_main_queue(), {
+            println("delayed block called")
+            let args:[String: String] = ["initConnectionId": String(self.initConnectionId!)]
+            self.api!.postRequest(self.url + "/connection/check_init_response", arguments: args)
+        })
     }
     
     override func viewDidLoad() {
@@ -42,14 +71,23 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier? == "DeleteInitContractsSegue" {
-            _deleteInitContractsSegue(segue)
+            _deleteInitConnectionSegue(segue)
+        } else if segue.identifier? == "ViewInitiateResultSegue" {
+            _viewInitiateResultSegue(segue)
         } else {
             println("unknown segue: \(segue.identifier?)")
         }
     }
     
-    func _deleteInitContractsSegue(segue: UIStoryboardSegue) {
-        //api!.delegae = ?????
+    func _deleteInitConnectionSegue(segue: UIStoryboardSegue) {
+        api!.delegate = nil
         api!.request(url + "/connection/deleteinitiated")
+    }
+    
+    func _viewInitiateResultSegue(segue: UIStoryboardSegue) {
+        let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
+        if vc != nil && connectionId != nil {
+            vc!.connectionId = connectionId!
+        }
     }
 }

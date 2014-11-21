@@ -41,7 +41,6 @@
 		973B77EF1A082CB5007E8726 /* ConfirmRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */; };
 		973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F01A082D04007E8726 /* SettingsViewController.swift */; };
 		973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F21A082D41007E8726 /* NotificationsViewController.swift */; };
-		973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F41A082DF7007E8726 /* NewContactViewController.swift */; };
 		973F5DE91A048839007DAC82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DE81A048839007DAC82 /* AppDelegate.swift */; };
 		973F5DEE1A048839007DAC82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEC1A048839007DAC82 /* Main.storyboard */; };
 		973F5DF01A048839007DAC82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEF1A048839007DAC82 /* Images.xcassets */; };
@@ -126,7 +125,6 @@
 		97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F21A082D41007E8726 /* NotificationsViewController.swift */; };
 		97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E21A082A5B007E8726 /* InitiateViewController.swift */; };
 		97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */; };
-		97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77F41A082DF7007E8726 /* NewContactViewController.swift */; };
 		97D7C68A1A0873D0000F6BA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
 		97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DE81A048839007DAC82 /* AppDelegate.swift */; };
@@ -173,7 +171,6 @@
 		973B77EE1A082CB5007E8726 /* ConfirmRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmRegistrationViewController.swift; sourceTree = "<group>"; };
 		973B77F01A082D04007E8726 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		973B77F21A082D41007E8726 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		973B77F41A082DF7007E8726 /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		973F5DE31A048839007DAC82 /* TrustMe4Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrustMe4Good.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		973F5DE71A048839007DAC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973F5DE81A048839007DAC82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -260,7 +257,6 @@
 				97BD02961A1136EA0045F3D1 /* IdentitySharingViewController.swift */,
 				978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */,
 				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
-				973B77F41A082DF7007E8726 /* NewContactViewController.swift */,
 				97BA3DC41A12E8F10063940A /* ReciprocateNavigationController.swift */,
 				97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */,
 				97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */,
@@ -632,7 +628,6 @@
 				97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */,
 				973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */,
 				973B77ED1A082C7C007E8726 /* CreateRegisteredViewController.swift in Sources */,
-				973B77F51A082DF7007E8726 /* NewContactViewController.swift in Sources */,
 				974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */,
 				971004B41A0AC2280088D66B /* DICViewController.swift in Sources */,
 				97ACFD651A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */,
@@ -713,7 +708,6 @@
 				97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */,
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				978FBBEE1A11B33D0059DA70 /* SharingSettingsTest.swift in Sources */,
-				97D7C6881A0873C7000F6BA5 /* NewContactViewController.swift in Sources */,
 				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
 				978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
