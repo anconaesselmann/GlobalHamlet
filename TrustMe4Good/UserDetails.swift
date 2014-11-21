@@ -20,25 +20,28 @@ class UserDetails: APIControllerDelegateProtocol, DebugPrintable {
         var json:AnyObject?    = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error);
         if json is [String: AnyObject] {
             details = json as? [String: AnyObject]
+            set(details!)
             if (delegate == nil) {
                 NSLog("Delegate of UserDetails is nil")
                 return
             }
-            if let _can_be_messaged = details!["can_be_messaged"] as? Bool {
-                can_be_messaged = _can_be_messaged
-            }
-            if let _name = details!["name"] as? String {
-                name = _name
-            }
-            if let _email = details!["email"] as? String {
-                email = _email
-            }
-            if let _connection_id = details!["connection_id"] as? Int {
-                connection_id = _connection_id
-            }
             delegate!.updateDelegate()
         } else {
             NSLog("User Details could not be initiated")
+        }
+    }
+    func set(dict:[String:AnyObject]) {
+        if let _can_be_messaged = dict["can_be_messaged"] as? Bool {
+            can_be_messaged = _can_be_messaged
+        }
+        if let _name = dict["name"] as? String {
+            name = _name
+        }
+        if let _email = dict["email"] as? String {
+            email = _email
+        }
+        if let _connection_id = dict["connection_id"] as? Int {
+            connection_id = _connection_id
         }
     }
     
@@ -50,5 +53,9 @@ class UserDetails: APIControllerDelegateProtocol, DebugPrintable {
         var result = "UserDetails:\n\tcan_be_messaged = \(can_be_messaged)\n\tname = \(name)\n\temail = \(email)\n\tconnection_id = \(connection_id)"
         
         return result;
+    }
+    func displayString() -> String {
+        let mail = (email.isEmpty) ? "" : ", \(email)"
+        return "\(name)\(mail)"
     }
 }

@@ -54,6 +54,9 @@
 		974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
 		974E6B571A1E862500C71DF4 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B561A1E862500C71DF4 /* Connections.swift */; };
 		974E6B591A1E8D1200C71DF4 /* ConnectionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B581A1E8D1200C71DF4 /* ConnectionsTest.swift */; };
+		974E6B5A1A1EB32A00C71DF4 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B561A1E862500C71DF4 /* Connections.swift */; };
+		974E6B5C1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */; };
+		974E6B5D1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */; };
 		974F41B31A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
 		974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
 		9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
@@ -185,6 +188,7 @@
 		974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactoryTest.swift; sourceTree = "<group>"; };
 		974E6B561A1E862500C71DF4 /* Connections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
 		974E6B581A1E8D1200C71DF4 /* ConnectionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTest.swift; sourceTree = "<group>"; };
+		974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		974F41B21A1C12C7003226B9 /* QrReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrReader.swift; sourceTree = "<group>"; };
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 				971004B81A0AC5000088D66B /* MainTabBarController.swift */,
 				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
 				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
+				974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */,
 				973B77F21A082D41007E8726 /* NotificationsViewController.swift */,
 				9707AB791A113B2300935F33 /* InitiateNavigationController.swift */,
 				97BA3DC71A12EB030063940A /* CreatorWithSettingsProtocol.swift */,
@@ -602,6 +607,7 @@
 				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
 				978FBBE41A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
+				974E6B5C1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */,
 				977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
@@ -691,6 +697,7 @@
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
 				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
+				974E6B5A1A1EB32A00C71DF4 /* Connections.swift in Sources */,
 				977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */,
@@ -719,6 +726,7 @@
 				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,
 				977B350B1A17D10200A90F72 /* ApiController.swift in Sources */,
 				97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */,
+				974E6B5D1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

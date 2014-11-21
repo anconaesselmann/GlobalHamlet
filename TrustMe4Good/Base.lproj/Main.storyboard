@@ -669,7 +669,7 @@
                                 <items>
                                     <barButtonItem systemItem="trash" id="5dG-Q4-QVU">
                                         <connections>
-                                            <segue destination="Qt0-PN-BgX" kind="presentation" identifier="DeleteInitContractsSegue" id="TGB-Xv-xQb"/>
+                                            <segue destination="Qt0-PN-BgX" kind="presentation" identifier="DeleteInitContractsSegue" animates="NO" id="TGB-Xv-xQb"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eLS-cH-Jvl"/>
@@ -681,7 +681,7 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="jOz-D1-kni"/>
                                     <barButtonItem systemItem="done" id="BS1-qp-0ND">
                                         <connections>
-                                            <segue destination="Qt0-PN-BgX" kind="presentation" id="hEm-9t-fXB"/>
+                                            <segue destination="Qt0-PN-BgX" kind="presentation" animates="NO" id="hEm-9t-fXB"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -736,13 +736,13 @@
                                 <items>
                                     <barButtonItem systemItem="trash" id="6zU-IU-40C">
                                         <connections>
-                                            <segue destination="Qt0-PN-BgX" kind="presentation" id="qZJ-nS-URL"/>
+                                            <segue destination="Qt0-PN-BgX" kind="presentation" animates="NO" id="qZJ-nS-URL"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QiA-Qf-UMP"/>
                                     <barButtonItem systemItem="done" id="jLW-g1-yOG">
                                         <connections>
-                                            <segue destination="Qt0-PN-BgX" kind="presentation" id="JF1-I8-KMf"/>
+                                            <segue destination="Qt0-PN-BgX" kind="presentation" animates="NO" id="JF1-I8-KMf"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -840,6 +840,11 @@
                                             <segue destination="SLq-zN-6DF" kind="show" id="Pg8-Xv-LME"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="bookmarks" id="o3A-lm-wUm">
+                                        <connections>
+                                            <segue destination="P0K-0I-iPS" kind="show" id="cbh-tn-UPP"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="!" id="0pQ-tP-KNE">
                                         <connections>
                                             <segue destination="x3k-b4-5gX" kind="show" id="XIi-2r-wrp"/>
@@ -870,6 +875,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URg-xa-FX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4144" y="2494"/>
+        </scene>
+        <!--Connections Table View Controller-->
+        <scene sceneID="5Zd-nm-1Nk">
+            <objects>
+                <tableViewController storyboardIdentifier="ConnectionsTableViewController" id="P0K-0I-iPS" customClass="ConnectionsTableViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="caw-jw-S4q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConnectionPrototypeCell" id="UTJ-dS-47M">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UTJ-dS-47M" id="go1-uo-D3i">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P0K-0I-iPS" id="BJP-vG-gXy"/>
+                            <outlet property="delegate" destination="P0K-0I-iPS" id="OpP-5l-rMB"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="gzR-sl-eCb" kind="show" identifier="SegueToSendMessage" id="aEh-Cf-OJx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8je-vi-Ob9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5151" y="3361"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FP6-7j-bhc">
@@ -1411,9 +1446,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hEm-9t-fXB"/>
+        <segue reference="Jql-WY-4cj"/>
         <segue reference="Amr-Ey-9sf"/>
         <segue reference="jeH-QX-BGy"/>
         <segue reference="Pg8-Xv-LME"/>
+        <segue reference="aEh-Cf-OJx"/>
     </inferredMetricsTieBreakers>
 </document>
