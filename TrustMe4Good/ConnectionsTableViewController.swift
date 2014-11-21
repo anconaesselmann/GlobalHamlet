@@ -54,11 +54,15 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier? == "SegueToSendMessage" {
             var tappedItem: UserDetails = sender as UserDetails
-            let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
+            let vc:ViewOtherDetailViewController? = (segue.destinationViewController as? UINavigationController)?.viewControllers[0] as? ViewOtherDetailViewController
+            if vc != nil {
+                vc!.connectionId = tappedItem.connection_id
+            }
+            /*let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
             if vc != nil {
                 vc!.connectionId = tappedItem.connection_id
                 vc!.toString     = tappedItem.name
-            }
+            }*/
         }
     }
 }

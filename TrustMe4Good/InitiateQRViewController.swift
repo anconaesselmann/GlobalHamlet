@@ -85,7 +85,7 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     }
     
     func _viewInitiateResultSegue(segue: UIStoryboardSegue) {
-        let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
+        let vc:ViewOtherDetailViewController? = (segue.destinationViewController as? UINavigationController)?.viewControllers[0] as? ViewOtherDetailViewController
         if vc != nil && connectionId != nil {
             vc!.connectionId = connectionId!
         }

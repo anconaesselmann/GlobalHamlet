@@ -110,7 +110,7 @@ class InitiateViewController: DICTableViewController {
         
         let id:Int?      = delegate!.codeAndIdTuple.id
         let code:String? = delegate!.codeAndIdTuple.code
-        let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
+        let vc:ViewOtherDetailViewController? = (segue.destinationViewController as? UINavigationController)?.viewControllers[0] as? ViewOtherDetailViewController
         if id != nil && code != nil && vc != nil {
             let arguments:[String: String] = ["connectionId": String(id!), "plainCode": code!, "details": detailsString]
             
