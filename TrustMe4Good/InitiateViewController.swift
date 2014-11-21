@@ -144,5 +144,12 @@ class InitiateViewController: DICTableViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillDisappear(animated)
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch(indexPath.row) {
+            case 0: return 94
+            default: return 44
+        }
+    }
 }
 

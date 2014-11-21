@@ -254,7 +254,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iu-oV-ZWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6134" y="1505"/>
+            <point key="canvasLocation" x="7350" y="1665"/>
         </scene>
         <!--Identity Sharing View Controller-->
         <scene sceneID="cVY-34-1HE">
@@ -391,7 +391,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oah-a9-Ke2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6510" y="2355"/>
+            <point key="canvasLocation" x="8502" y="1347"/>
         </scene>
         <!--View Other Detail View Controller-->
         <scene sceneID="zdK-vw-pzC">
@@ -461,7 +461,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho0-xP-wBS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho0-xP-wBS">
                                 <rect key="frame" x="16" y="72" width="568" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="m4B-j7-kz8"/>
@@ -470,7 +470,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="subject" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-Y9-IGz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="subject" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-Y9-IGz">
                                 <rect key="frame" x="16" y="101" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EMv-SE-CpR"/>
@@ -478,7 +478,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="message" translatesAutoresizingMaskIntoConstraints="NO" id="UHy-3C-Ug2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="message" translatesAutoresizingMaskIntoConstraints="NO" id="UHy-3C-Ug2">
                                 <rect key="frame" x="16" y="139" width="568" height="441"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -497,7 +497,7 @@
                             <constraint firstItem="2Qi-Y9-IGz" firstAttribute="leading" secondItem="BsH-CH-m5m" secondAttribute="leadingMargin" id="SEf-Ca-V9V"/>
                             <constraint firstItem="ho0-xP-wBS" firstAttribute="top" secondItem="tQh-nX-OPf" secondAttribute="bottom" constant="8" id="dm9-S9-0ji"/>
                             <constraint firstItem="UHy-3C-Ug2" firstAttribute="leading" secondItem="BsH-CH-m5m" secondAttribute="leadingMargin" id="ehA-74-TPT"/>
-                            <constraint firstItem="ho0-xP-wBS" firstAttribute="top" secondItem="tQh-nX-OPf" secondAttribute="bottom" constant="52" id="fCo-XR-T0A"/>
+                            <constraint firstItem="ho0-xP-wBS" firstAttribute="top" secondItem="tQh-nX-OPf" secondAttribute="bottom" constant="8" id="fCo-XR-T0A"/>
                             <constraint firstItem="2Qi-Y9-IGz" firstAttribute="top" secondItem="ho0-xP-wBS" secondAttribute="bottom" constant="8" id="gIs-OV-AMk"/>
                             <constraint firstItem="2Qi-Y9-IGz" firstAttribute="trailing" secondItem="BsH-CH-m5m" secondAttribute="trailingMargin" id="wji-8W-fyu"/>
                             <constraint firstItem="ho0-xP-wBS" firstAttribute="trailing" secondItem="BsH-CH-m5m" secondAttribute="trailingMargin" id="xzh-ny-2Tt"/>
@@ -644,7 +644,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVN-dB-4eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5774" y="2355"/>
+            <point key="canvasLocation" x="8494" y="2115"/>
         </scene>
         <!--InitiateQR View Controller-->
         <scene sceneID="8na-Xa-Wua">
@@ -701,7 +701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nu-UD-vqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6134" y="3250"/>
+            <point key="canvasLocation" x="7350" y="3330"/>
         </scene>
         <!--Reciprocate View Controller-->
         <scene sceneID="XuA-ed-dpF">
@@ -756,7 +756,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nU9-z2-1FB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6969" y="1505"/>
+            <point key="canvasLocation" x="9145" y="321"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Z8y-My-0O6">
@@ -867,7 +867,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c31-8C-U50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5322" y="599"/>
+            <point key="canvasLocation" x="6578" y="239"/>
         </scene>
         <!--Notificaitons View Controller-->
         <scene sceneID="Qpt-dc-fkb">
@@ -1366,7 +1366,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jn9-pd-lXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5322" y="1510"/>
+            <point key="canvasLocation" x="6538" y="1670"/>
         </scene>
         <!--reciprocate-->
         <scene sceneID="p7H-65-lTW">
@@ -1385,7 +1385,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tab-w8-h2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6969" y="730"/>
+            <point key="canvasLocation" x="9145" y="-454"/>
         </scene>
         <!--Connection Navigation Controller-->
         <scene sceneID="Cr5-gv-u6b">
@@ -1407,10 +1407,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jeH-QX-BGy"/>
-        <segue reference="Bxd-NR-yQQ"/>
-        <segue reference="ucJ-T1-mPc"/>
+        <segue reference="Jql-WY-4cj"/>
         <segue reference="Amr-Ey-9sf"/>
+        <segue reference="ucJ-T1-mPc"/>
+        <segue reference="jeH-QX-BGy"/>
         <segue reference="Pg8-Xv-LME"/>
     </inferredMetricsTieBreakers>
 </document>
