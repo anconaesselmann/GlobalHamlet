@@ -433,13 +433,7 @@
                             <constraint firstItem="6JO-Iu-CUp" firstAttribute="leading" secondItem="6Rd-jy-zVT" secondAttribute="leadingMargin" id="yhi-Fw-kID"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hQY-fU-VyE">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6eL-Oc-UAl">
-                            <connections>
-                                <segue destination="Qt0-PN-BgX" kind="presentation" animates="NO" id="bYj-L1-6Nt"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="hQY-fU-VyE"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="viewOtherDataLabel" destination="6JO-Iu-CUp" id="27i-Sh-M2u"/>
@@ -842,7 +836,7 @@
                     </tableView>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="W1G-E6-SAU" kind="presentation" identifier="SegueToSendMessage" animates="NO" id="sS9-sL-UFf"/>
+                        <segue destination="5C7-kJ-Tjp" kind="show" identifier="SegueToSendMessage" id="c8s-mr-n8r"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8je-vi-Ob9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1399,18 +1393,20 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="5C7-kJ-Tjp" kind="relationship" relationship="rootViewController" id="SBw-96-dOE"/>
+                        <segue destination="Qt0-PN-BgX" kind="presentation" identifier="BackFromNavigationControllerSegue" animates="NO" id="zPE-Kg-AlB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhl-OX-ytR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5151" y="4527"/>
+            <point key="canvasLocation" x="5895" y="4435"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Jql-WY-4cj"/>
-        <segue reference="Amr-Ey-9sf"/>
+        <segue reference="zPE-Kg-AlB"/>
         <segue reference="ucJ-T1-mPc"/>
-        <segue reference="jeH-QX-BGy"/>
+        <segue reference="Amr-Ey-9sf"/>
+        <segue reference="SBw-96-dOE"/>
         <segue reference="Pg8-Xv-LME"/>
+        <segue reference="jeH-QX-BGy"/>
     </inferredMetricsTieBreakers>
 </document>

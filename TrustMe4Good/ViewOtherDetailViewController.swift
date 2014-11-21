@@ -7,6 +7,7 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
     var userDetails:UserDetails!
     var api: ApiController!
     var url: String!
+    var from = ""
     
     @IBOutlet weak var viewOtherDataLabel: UILabel!
     

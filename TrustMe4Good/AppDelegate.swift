@@ -19,6 +19,7 @@ class AppDelegate: DICAppDelegate, UIApplicationDelegate, APIControllerDelegateP
     }
     
     func didReceiveAPIResults(results: NSDictionary) {
+        
         let response:Bool? = results["response"] as? Bool
         let errorCode:Int? = results["errorCode"] as? Int
         if response != nil && errorCode != nil {
