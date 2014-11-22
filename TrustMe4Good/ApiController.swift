@@ -44,7 +44,7 @@ import Foundation
         var request     = NSMutableURLRequest(
             URL: url!,
             cachePolicy: cachePolicy,
-            timeoutInterval: 2.0
+            timeoutInterval: 15.0
         )
         return request
     }
@@ -91,7 +91,7 @@ import Foundation
         var request     = NSMutableURLRequest(
             URL: url!,
             cachePolicy: cachePolicy,
-            timeoutInterval: 2.0
+            timeoutInterval: 15.0
         )
         request.HTTPMethod = "POST"
         
