@@ -3,6 +3,7 @@ import Foundation
 @objc(ApiController) class ApiController: NSObject, InitArgsInterface {
     var delegate: APIControllerDelegateProtocol?
     var displayDebugOutput:Bool = true
+    var timeout:Double = 2.0
 
     func request(urlString:String) {
         request(urlString, handler: _delegateCaller)
@@ -13,6 +14,7 @@ import Foundation
     
     func initWithArgs(args:[AnyObject]) {
         displayDebugOutput = args[0] as Bool
+        timeout = args[1] as Double
     }
     
     func request(urlString:String, handler:(NSDictionary)->Void) {
@@ -64,7 +66,7 @@ import Foundation
         var request     = NSMutableURLRequest(
             URL: url!,
             cachePolicy: cachePolicy,
-            timeoutInterval: 15.0
+            timeoutInterval: timeout
         )
         return request
     }
@@ -122,7 +124,7 @@ import Foundation
         var request     = NSMutableURLRequest(
             URL: url!,
             cachePolicy: cachePolicy,
-            timeoutInterval: 15.0
+            timeoutInterval: timeout
         )
         request.HTTPMethod = "POST"
         

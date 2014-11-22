@@ -44,6 +44,10 @@
 				<key>const</key>
 				<string>apiDebugOn</string>
 			</dict>
+			<dict>
+				<key>const</key>
+				<string>apiTimeout</string>
+			</dict>
 		</array>
 	</dict>
 	<key>SendMessageViewController</key>
@@ -125,6 +129,8 @@
 	<string>http://www.api.anconaesselmann.com</string>
 	<key>apiDebugOn</key>
 	<true/>
+	<key>apiTimeout</key>
+	<integer>15</integer>
 	<key>LoginViewController</key>
 	<dict>
 		<key>class</key>
