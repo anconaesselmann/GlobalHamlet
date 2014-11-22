@@ -39,7 +39,12 @@
 		<key>class</key>
 		<string>ApiController</string>
 		<key>args</key>
-		<dict/>
+		<array>
+			<dict>
+				<key>const</key>
+				<string>apiDebugOn</string>
+			</dict>
+		</array>
 	</dict>
 	<key>SendMessageViewController</key>
 	<dict>
@@ -118,6 +123,8 @@
 	</dict>
 	<key>url</key>
 	<string>http://www.api.anconaesselmann.com</string>
+	<key>apiDebugOn</key>
+	<true/>
 	<key>LoginViewController</key>
 	<dict>
 		<key>class</key>
@@ -133,13 +140,6 @@
 				<string>url</string>
 			</dict>
 		</array>
-	</dict>
-	<key>web</key>
-	<dict>
-		<key>class</key>
-		<string>Web</string>
-		<key>args</key>
-		<array/>
 	</dict>
 </dict>
 </plist>

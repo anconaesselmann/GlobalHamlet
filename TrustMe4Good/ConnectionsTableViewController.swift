@@ -73,6 +73,18 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             // handle delete (by removing the data from your array and updating the tableview)
+            var tappedItem = connections.connections[indexPath.row] as UserDetails
+            
+            func deleteConnection(alert: UIAlertAction!) -> Void {
+                println(tappedItem.name)
+                
+            }
+            
+            var alert = UIAlertController(title: "Deleging \(tappedItem.name)", message: "Are you sure you would like to remove your connecton to \(tappedItem.name)? This action can not be undone and you won't be able to recieve messages from \(tappedItem.name) any more.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "delete", style: UIAlertActionStyle.Default, handler: deleteConnection))
+            alert.addAction(UIAlertAction(title: "cancel", style: UIAlertActionStyle.Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
         }
     }
+
 }
