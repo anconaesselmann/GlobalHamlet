@@ -70,6 +70,8 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
         return true
     }
     
+
+    
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             // handle delete (by removing the data from your array and updating the tableview)
@@ -77,7 +79,20 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
             
             func deleteConnection(alert: UIAlertAction!) -> Void {
                 println(tappedItem.name)
-                
+                let args = ["connectionId": String(tappedItem.connection_id)]
+                func _deleteConnectionApiResponseHandler(results: NSDictionary) {
+                    if !(results["response"] as Bool) {
+                        NSLog("Error deleting Connection")
+                    }
+                    self.connections.connections.removeAtIndex(indexPath.row)
+                    self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+                    //tableView.reloadData()
+                }
+                api.postRequest(
+                    url + "/connection/delete_connection",
+                    arguments: args,
+                    handler: _deleteConnectionApiResponseHandler
+                )
             }
             
             var alert = UIAlertController(title: "Deleging \(tappedItem.name)", message: "Are you sure you would like to remove your connecton to \(tappedItem.name)? This action can not be undone and you won't be able to recieve messages from \(tappedItem.name) any more.", preferredStyle: UIAlertControllerStyle.Alert)
