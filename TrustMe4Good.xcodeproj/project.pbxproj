@@ -60,6 +60,8 @@
 		974E6B631A1FBBBA00C71DF4 /* ConnectionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */; };
 		974E6B651A1FBC4C00C71DF4 /* DICNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B61A0AC3750088D66B /* DICNavigationController.swift */; };
 		974E6B661A1FBC5400C71DF4 /* DICTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004BA1A0AC5580088D66B /* DICTabBarController.swift */; };
+		974E6B681A2208F000C71DF4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B671A2208F000C71DF4 /* SignUpViewController.swift */; };
+		974E6B691A2208F000C71DF4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B671A2208F000C71DF4 /* SignUpViewController.swift */; };
 		974F41B31A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
 		974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
 		9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
@@ -191,6 +193,7 @@
 		974E6B581A1E8D1200C71DF4 /* ConnectionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTest.swift; sourceTree = "<group>"; };
 		974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionNavigationController.swift; sourceTree = "<group>"; };
+		974E6B671A2208F000C71DF4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		974F41B21A1C12C7003226B9 /* QrReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrReader.swift; sourceTree = "<group>"; };
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
@@ -494,6 +497,7 @@
 				97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */,
 				973B77DA1A07FF5F007E8726 /* FirstLaunchViewController.swift */,
 				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
+				974E6B671A2208F000C71DF4 /* SignUpViewController.swift */,
 			);
 			name = "App initializiation";
 			sourceTree = "<group>";
@@ -656,6 +660,7 @@
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				978FBBEA1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
+				974E6B681A2208F000C71DF4 /* SignUpViewController.swift in Sources */,
 				97BD02911A109E810045F3D1 /* DICTableViewController.swift in Sources */,
 				97BD02971A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */,
 				978FBBE11A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
@@ -674,6 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974E6B691A2208F000C71DF4 /* SignUpViewController.swift in Sources */,
 				97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */,
 				97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */,
 				971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */,

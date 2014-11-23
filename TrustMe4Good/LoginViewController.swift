@@ -4,6 +4,7 @@ class LoginViewController: DICViewController, APIControllerDelegateProtocol {
     var api: ApiController!
     var loggedIn: Bool = false
     var url: String!
+    var email:String?
     
     @IBOutlet weak var signInButton:  UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -14,6 +15,13 @@ class LoginViewController: DICViewController, APIControllerDelegateProtocol {
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if email != nil {
+            emailTextField.text = email!
+        }
     }
     
 
