@@ -150,6 +150,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="j3x-ke-w3L">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <sections>
                             <tableViewSection id="cGB-rC-ubA">
                                 <cells>
@@ -158,7 +163,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsf-vS-lIt" id="Q0t-fw-BOG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-0c-kf0">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-0c-kf0">
                                                     <rect key="frame" x="64" y="8" width="472" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="WDM-Ks-9u8"/>
@@ -316,6 +321,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="YvA-Fs-dCt">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <sections>
                             <tableViewSection id="QMT-9M-KvZ">
                                 <cells>
@@ -558,6 +568,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="JMo-w7-Jdk">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <sections>
                             <tableViewSection id="XTU-1N-iPo">
                                 <cells>
@@ -1300,11 +1315,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="sKL-NR-Zdn">
-                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen3D" translatesAutoresizingMaskIntoConstraints="NO" id="sKL-NR-Zdn">
+                                <rect key="frame" x="140" y="60" width="320" height="480"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCN-MV-Jvy">
-                                <rect key="frame" x="262" y="468" width="77" height="21"/>
+                                <rect key="frame" x="262" y="559" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1312,10 +1327,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="bCN-MV-Jvy" secondAttribute="centerX" id="Hu1-jY-KaY"/>
-                            <constraint firstAttribute="centerX" secondItem="sKL-NR-Zdn" secondAttribute="centerX" id="QGZ-U3-MZL"/>
-                            <constraint firstAttribute="centerY" secondItem="sKL-NR-Zdn" secondAttribute="centerY" id="k5o-P5-0mj"/>
-                            <constraint firstItem="bCN-MV-Jvy" firstAttribute="top" secondItem="sKL-NR-Zdn" secondAttribute="bottom" constant="8" id="zEx-PX-fmJ"/>
+                            <constraint firstAttribute="centerX" secondItem="bCN-MV-Jvy" secondAttribute="centerX" id="Cen-1a-ilG"/>
+                            <constraint firstAttribute="centerY" secondItem="sKL-NR-Zdn" secondAttribute="centerY" id="bob-OE-AxA"/>
+                            <constraint firstItem="k0s-JR-tcG" firstAttribute="top" secondItem="bCN-MV-Jvy" secondAttribute="bottom" constant="20" id="lJr-zg-P1B"/>
+                            <constraint firstAttribute="centerX" secondItem="sKL-NR-Zdn" secondAttribute="centerX" id="uB8-4f-Erz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1423,14 +1438,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch Screen" width="320" height="320"/>
+        <image name="LaunchScreen3D" width="320" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Saj-ek-y7v"/>
-        <segue reference="Yh4-ag-loU"/>
-        <segue reference="bJ7-J8-pbV"/>
         <segue reference="jeH-QX-BGy"/>
-        <segue reference="hAP-Pn-Q6Z"/>
+        <segue reference="CvU-xV-J9K"/>
+        <segue reference="Yh4-ag-loU"/>
+        <segue reference="ucJ-T1-mPc"/>
         <segue reference="c8s-mr-n8r"/>
+        <segue reference="hAP-Pn-Q6Z"/>
     </inferredMetricsTieBreakers>
 </document>

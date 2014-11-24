@@ -1,5 +1,5 @@
 import UIKit
 
-class InitialViewController: DICNavigationController {    
-
+class InitialViewController: DICNavigationController {
+    
 }
