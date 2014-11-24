@@ -466,22 +466,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpP-Xi-QnW">
-                                <rect key="frame" x="522" y="550" width="62" height="30"/>
-                                <state key="normal" title="message">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="gzR-sl-eCb" kind="show" identifier="ComposeEmailSegue" id="xfE-vh-BjL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6JO-Iu-CUp" firstAttribute="trailing" secondItem="6Rd-jy-zVT" secondAttribute="trailingMargin" id="Yi6-pf-4Wl"/>
                             <constraint firstItem="6JO-Iu-CUp" firstAttribute="top" secondItem="dtC-IM-jHz" secondAttribute="bottom" constant="8" id="fZi-gx-usE"/>
-                            <constraint firstItem="TpP-Xi-QnW" firstAttribute="trailing" secondItem="6Rd-jy-zVT" secondAttribute="trailingMargin" id="jkD-5p-l8W"/>
-                            <constraint firstItem="xgp-GS-KTR" firstAttribute="top" secondItem="TpP-Xi-QnW" secondAttribute="bottom" constant="20" id="x5d-ge-2te"/>
                             <constraint firstItem="6JO-Iu-CUp" firstAttribute="leading" secondItem="6Rd-jy-zVT" secondAttribute="leadingMargin" id="yhi-Fw-kID"/>
                         </constraints>
                     </view>
@@ -489,6 +478,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="viewOtherDataLabel" destination="6JO-Iu-CUp" id="27i-Sh-M2u"/>
+                        <segue destination="gzR-sl-eCb" kind="show" identifier="ComposeEmailSegue" id="0ZY-i7-Xad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TL2-4y-Mz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1310,8 +1300,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="sKL-NR-Zdn">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCN-MV-Jvy">
-                                <rect key="frame" x="262" y="289" width="77" height="21"/>
+                                <rect key="frame" x="262" y="468" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1319,8 +1312,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="bCN-MV-Jvy" secondAttribute="centerY" id="CzR-l1-H6A"/>
-                            <constraint firstAttribute="centerX" secondItem="bCN-MV-Jvy" secondAttribute="centerX" id="gnI-Lf-Wzz"/>
+                            <constraint firstAttribute="centerX" secondItem="bCN-MV-Jvy" secondAttribute="centerX" id="Hu1-jY-KaY"/>
+                            <constraint firstAttribute="centerX" secondItem="sKL-NR-Zdn" secondAttribute="centerX" id="QGZ-U3-MZL"/>
+                            <constraint firstAttribute="centerY" secondItem="sKL-NR-Zdn" secondAttribute="centerY" id="k5o-P5-0mj"/>
+                            <constraint firstItem="bCN-MV-Jvy" firstAttribute="top" secondItem="sKL-NR-Zdn" secondAttribute="bottom" constant="8" id="zEx-PX-fmJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1427,12 +1422,15 @@
             <point key="canvasLocation" x="5895" y="4435"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Launch Screen" width="320" height="320"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bxd-NR-yQQ"/>
-        <segue reference="c8s-mr-n8r"/>
-        <segue reference="jeH-QX-BGy"/>
-        <segue reference="hAP-Pn-Q6Z"/>
+        <segue reference="Saj-ek-y7v"/>
         <segue reference="Yh4-ag-loU"/>
         <segue reference="bJ7-J8-pbV"/>
+        <segue reference="jeH-QX-BGy"/>
+        <segue reference="hAP-Pn-Q6Z"/>
+        <segue reference="c8s-mr-n8r"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,16 +14,16 @@ class QrReader: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func startReading() -> Bool {
-        var error:NSError?
+        var error:NSError? = NSError()
         
-        let captureDevice:AVCaptureDevice! = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        let captureDevice:AVCaptureDevice? = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         
         if captureDevice == nil {
             NSLog("Could not initiate camera.")
             return false;
         }
         
-        var input:AVCaptureDeviceInput! = AVCaptureDeviceInput.deviceInputWithDevice(captureDevice, error: &error) as AVCaptureDeviceInput
+        var input:AVCaptureDeviceInput? = AVCaptureDeviceInput.deviceInputWithDevice(captureDevice, error: &error) as? AVCaptureDeviceInput
         
         if (input == nil) {
             NSLog(error!.localizedDescription)

@@ -24,9 +24,26 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
         
         getOtherData()
     }
+
+    func addSendMessageButton() {
+        let sendMessageButton:UIBarButtonItem = UIBarButtonItem(
+            title: "send message",
+            style: .Plain,
+            target: self,
+            action: "composeMessageAction"
+        )
+        navigationItem.rightBarButtonItem = sendMessageButton;
+    }
+    
+    func composeMessageAction() {
+        performSegueWithIdentifier("ComposeEmailSegue", sender: nil)
+    }
+    
     func updateDelegate() {
         viewOtherDataLabel.text = userDetails!.getName()
-        
+        if userDetails!.can_be_messaged {
+            addSendMessageButton()
+        }
         println("Printing userDetails:")
         println(userDetails!)
     }
