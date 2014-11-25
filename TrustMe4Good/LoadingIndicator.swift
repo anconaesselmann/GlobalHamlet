@@ -3,14 +3,11 @@ import UIKit
 
 class LoadingIndicator: UIImageView {
     var loadingImages = [UIImage]()
-    var delegateView:UIView!
+    var delegate:UIViewController!
     
-    init(view:UIView) {
-        delegateView = view
+    init(del:UIViewController?) {
+        delegate = del
         super.init(frame:CGRectMake(0, 0, 100, 100))
-        
-        view.addSubview(self)
-        center = CGPointMake(view.frame.size.width / 2, view.frame.size.height / 2);
         
         for i in 0...7 {
             let imageName = "loading_\(i)"
@@ -18,20 +15,29 @@ class LoadingIndicator: UIImageView {
         }
         animationImages = loadingImages
         animationDuration = 1.2
-        self.alpha = 0
-        UIView.animateWithDuration(2.0, animations: { () -> Void in
-            self.alpha = 1.0
-            
-        })
-        startAnimating()
+    }
+    func start() {
+        if !isAnimating() {
+            delegate.view.addSubview(self)
+            center = CGPointMake(delegate.view.frame.size.width / 2, delegate.view.frame.size.height / 2);
+            startAnimating()
+            self.alpha = 0
+            UIView.animateWithDuration(2.0, animations: { () -> Void in
+                self.alpha = 1.0
+                
+            })
+        }
+    }
+    func stop() {
+        if isAnimating() {
+            stopAnimating()
+            removeFromSuperview()
+        }
     }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func stop() {
-        stopAnimating()
-        removeFromSuperview()
-    }
+    
 }

@@ -10,9 +10,12 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
+        
+        loadingView = LoadingIndicator(del: self)
         connections = Connections()
         api.delegate = connections
         connections.delegate = self
+        
     }
     
     override func viewDidLoad() {
@@ -21,8 +24,8 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
         loadConnections()
     }
     func loadConnections() {
+        loadingView.start()
         api.request(url + "/connection/get_all")
-        loadingView = LoadingIndicator(view: self.view)
     }
     func updateDelegate() {
         loadingView.stop()
