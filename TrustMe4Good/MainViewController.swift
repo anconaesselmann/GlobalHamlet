@@ -1,4 +1,5 @@
 import UIKit
+import SpriteKit
 
 class MainViewController: DICViewController, APIControllerDelegateProtocol {
     var api: ApiController!
@@ -17,14 +18,9 @@ class MainViewController: DICViewController, APIControllerDelegateProtocol {
         performSegueWithIdentifier("SegueToFirstLaunchView", sender: self)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        super.viewWillDisappear(animated)
-    }
 }
 

@@ -1,5 +1,5 @@
 import UIKit
 
-class ReciprocateNavigationController: DICNavigationController {
+class ReciprocateNavigationController: ProjectNavigationController {
     
 }

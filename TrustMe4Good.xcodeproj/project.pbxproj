@@ -112,6 +112,9 @@
 		97BA3E3E1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */; };
 		97BB75671A23F3AD005954AC /* ProjectNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB75661A23F3AD005954AC /* ProjectNavigationController.swift */; };
 		97BB75681A23F3AD005954AC /* ProjectNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB75661A23F3AD005954AC /* ProjectNavigationController.swift */; };
+		97BB75741A24660E005954AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DEF1A048839007DAC82 /* Images.xcassets */; };
+		97BB75761A24811F005954AC /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB75751A24811F005954AC /* LoadingIndicator.swift */; };
+		97BB75771A24811F005954AC /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB75751A24811F005954AC /* LoadingIndicator.swift */; };
 		97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
 		97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */; };
 		97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */; };
@@ -140,6 +143,18 @@
 		97D83DE21A15F60500F008F2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */; };
 		97D83DE31A15F60500F008F2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		97BB75701A245AE1005954AC /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.skatlas;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "$(DEVELOPER_TOOLS_DIR)/../usr/bin/TextureAtlas";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		973F5DF91A048839007DAC82 /* PBXContainerItemProxy */ = {
@@ -225,6 +240,7 @@
 		97BA3DC71A12EB030063940A /* CreatorWithSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorWithSettingsProtocol.swift; sourceTree = "<group>"; };
 		97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOtherDetailViewController.swift; sourceTree = "<group>"; };
 		97BB75661A23F3AD005954AC /* ProjectNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectNavigationController.swift; sourceTree = "<group>"; };
+		97BB75751A24811F005954AC /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewController.swift; sourceTree = "<group>"; };
 		97BD025F1A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciprocateViewControllerTest.swift; sourceTree = "<group>"; };
 		97BD02901A109E810045F3D1 /* DICTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTableViewController.swift; sourceTree = "<group>"; };
@@ -457,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				978FBBD81A1189080059DA70 /* NamedSwitch.swift */,
+				97BB75751A24811F005954AC /* LoadingIndicator.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -534,6 +551,7 @@
 				973F5DE11A048839007DAC82 /* Resources */,
 			);
 			buildRules = (
+				97BB75701A245AE1005954AC /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -615,6 +633,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BB75741A24660E005954AC /* Images.xcassets in Resources */,
 				97D7C68A1A0873D0000F6BA5 /* LaunchScreen.xib in Resources */,
 				97D7C67C1A087280000F6BA5 /* Main.storyboard in Resources */,
 			);
@@ -632,6 +651,7 @@
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
 				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
 				978FBBE41A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
+				97BB75761A24811F005954AC /* LoadingIndicator.swift in Sources */,
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				974E6B5C1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */,
 				977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
@@ -748,6 +768,7 @@
 				97BB75681A23F3AD005954AC /* ProjectNavigationController.swift in Sources */,
 				978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
+				97BB75771A24811F005954AC /* LoadingIndicator.swift in Sources */,
 				974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */,
 				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,

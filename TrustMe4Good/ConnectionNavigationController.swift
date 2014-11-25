@@ -1,6 +1,6 @@
 import UIKit
 
-class ConnectionNavigationController: DICNavigationController {
+class ConnectionNavigationController: ProjectNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         

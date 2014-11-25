@@ -1,8 +1,8 @@
-/*import UIKit
+import UIKit
 
-class ProjectNavigationItem: UINavigationBar {
-    
-    override init(coder) {
-        tintColor = UIColor(red: 255, green: 0, blue: 0, alpha: 50)
+class ProjectNavigationController: DICNavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.barTintColor = UIColor(red: 116/255.0, green: 145/255.0, blue: 202/255.0, alpha: 1.0)
     }
-}*/
+}
