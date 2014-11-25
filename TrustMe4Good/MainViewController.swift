@@ -20,6 +20,8 @@ class MainViewController: DICViewController, APIControllerDelegateProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let loadingView = LoadingIndicator(view: self.view)
     }
     
 }

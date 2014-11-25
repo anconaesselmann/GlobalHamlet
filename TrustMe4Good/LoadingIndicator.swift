@@ -18,6 +18,11 @@ class LoadingIndicator: UIImageView {
         }
         animationImages = loadingImages
         animationDuration = 1.2
+        self.alpha = 0
+        UIView.animateWithDuration(2.0, animations: { () -> Void in
+            self.alpha = 1.0
+            
+        })
         startAnimating()
     }
     
