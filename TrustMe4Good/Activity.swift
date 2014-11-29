@@ -8,6 +8,8 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
     var actor = ""
     var action = ""
     var activity_id = 0
+    var category = ""
+    var category_id = 0
     
     init() {}
     
@@ -45,8 +47,14 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
         if let _action = dict["action"] as? String {
             action = _action
         }
-        if let _activity_id = dict["activity_id"] as? Int {
-            activity_id = _activity_id
+        if let _activity_id = dict["activity_id"] as? String {
+            activity_id = _activity_id.toInt()!
+        }
+        if let _category = dict["category"] as? String {
+            category = _category
+        }
+        if let _category_id = dict["category_id"] as? String {
+            category_id = _category_id.toInt()!
         }
     }
     
@@ -60,7 +68,23 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
         return result;
     }
     func displayString() -> String {
-        let mail = (action.isEmpty) ? "" : ", \(action)"
-        return "\(actor)\(mail)"
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.timeZone = NSTimeZone(name: "UTC")
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        var dateFromString:NSDate! = dateFormatter.dateFromString(time)
+        
+        dateFormatter.dateFormat = "MMM d, H:mm"
+        dateFormatter.timeZone = NSTimeZone()
+        let stringDate: String = dateFormatter.stringFromDate(dateFromString)
+        
+        var result:String!
+        if category == "connections" {
+            let type = (action == "initiated") ? "Initiated" : "Accepted"
+            result = "\(type) connection with \(actor)"
+        } else if category == "messages" {
+            let type = (action == "sent") ? "sent to" : "recieved from"
+            result = "Message \(type) \(actor)"
+        }
+        return "\(stringDate): \(result)"
     }
 }

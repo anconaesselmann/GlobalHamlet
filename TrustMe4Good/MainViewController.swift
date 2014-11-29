@@ -53,68 +53,31 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
         var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ActivityPrototypeCell") as UITableViewCell
         var connection: Activity = activities.activities[indexPath.row] as Activity
         cell.textLabel.text = connection.displayString()
-        /*if toDoItem.completed {
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryType.None;
-        }*/
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         var tappedItem = activities.activities[indexPath.row] as Activity
-        performSegueWithIdentifier("SegueToSendMessage", sender: tappedItem)
+        if tappedItem.category == "connections" {
+            performSegueWithIdentifier("ActivityToViewDetailsSegue", sender: tappedItem)
+        } else if tappedItem.category == "messages" {
+            println("2")
+        }
+        //performSegueWithIdentifier("SegueToSendMessage", sender: tappedItem)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "SegueToSendMessage" {
-            var tappedItem: UserDetails = sender as UserDetails
+        if segue.identifier? == "ActivityToViewDetailsSegue" {
+            var tappedItem: Activity = sender as Activity
             let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
             if vc != nil {
-                vc!.connectionId = tappedItem.connection_id
+                vc!.connectionId = tappedItem.category_id
             }
-            /*let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
-            if vc != nil {
-                vc!.connectionId = tappedItem.connection_id
-                vc!.toString     = tappedItem.name
-            }*/
         }
     }
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
-    }
-    
-
-    
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
-            var tappedItem = activities.activities[indexPath.row] as Activity
-            
-            /*func deleteConnection(alert: UIAlertAction!) -> Void {
-                println(tappedItem.name)
-                let args = ["connectionId": String(tappedItem.connection_id)]
-                func _deleteConnectionApiResponseHandler(results: NSDictionary) {
-                    if !(results["response"] as Bool) {
-                        NSLog("Error deleting Connection")
-                    }
-                    self.activities.activities.removeAtIndex(indexPath.row)
-                    self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-                    //tableView.reloadData()
-                }
-                api.postRequest(
-                    url + "/connection/delete_connection",
-                    arguments: args,
-                    handler: _deleteConnectionApiResponseHandler
-                )
-            }
-            
-            var alert = UIAlertController(title: "Deleging \(tappedItem.name)", message: "Are you sure you would like to remove your connecton to \(tappedItem.name)? This action can not be undone and you won't be able to recieve messages from \(tappedItem.name) any more.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "delete", style: UIAlertActionStyle.Default, handler: deleteConnection))
-            alert.addAction(UIAlertAction(title: "cancel", style: UIAlertActionStyle.Default, handler: nil))
-            presentViewController(alert, animated: true, completion: nil)*/
-        }
     }
 
 }

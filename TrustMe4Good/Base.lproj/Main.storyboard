@@ -793,6 +793,49 @@
             </objects>
             <point key="canvasLocation" x="9145" y="321"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eTz-zJ-qxw">
+            <objects>
+                <viewController id="N6e-R0-TJF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="70g-ND-mI3"/>
+                        <viewControllerLayoutGuide type="bottom" id="iSL-ql-Kqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P5D-XD-hYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT3-MZ-kTw">
+                                <rect key="frame" x="16" y="72" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qf-qi-Aw7">
+                                <rect key="frame" x="16" y="100.5" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="0da-iV-tyu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fT3-MZ-kTw" firstAttribute="top" secondItem="70g-ND-mI3" secondAttribute="bottom" constant="8" id="7Mc-Nb-wxT"/>
+                            <constraint firstItem="8Qf-qi-Aw7" firstAttribute="trailing" secondItem="P5D-XD-hYJ" secondAttribute="trailingMargin" id="AUe-9n-XzV"/>
+                            <constraint firstItem="fT3-MZ-kTw" firstAttribute="leading" secondItem="P5D-XD-hYJ" secondAttribute="leadingMargin" id="cy8-2h-rXR"/>
+                            <constraint firstItem="8Qf-qi-Aw7" firstAttribute="top" secondItem="fT3-MZ-kTw" secondAttribute="bottom" constant="8" id="gJt-M9-et5"/>
+                            <constraint firstItem="fT3-MZ-kTw" firstAttribute="trailing" secondItem="P5D-XD-hYJ" secondAttribute="trailingMargin" id="iHP-3L-MUJ"/>
+                            <constraint firstItem="8Qf-qi-Aw7" firstAttribute="leading" secondItem="P5D-XD-hYJ" secondAttribute="leadingMargin" id="smm-jN-v8e"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tE3-vD-ZzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4774" y="3367"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="dvK-In-0oQ">
             <objects>
@@ -831,6 +874,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5C7-kJ-Tjp" kind="show" identifier="ActivityToViewDetailsSegue" id="png-4n-Zsr"/>
+                        <segue destination="N6e-R0-TJF" kind="show" identifier="ViewMessage" id="Xtv-d8-Y5N"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0IK-nr-HkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1438,10 +1485,10 @@
         <image name="LaunchScreen3D" width="320" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c8s-mr-n8r"/>
         <segue reference="CPC-Dj-lnM"/>
         <segue reference="wvW-bS-b3b"/>
         <segue reference="ucJ-T1-mPc"/>
+        <segue reference="png-4n-Zsr"/>
         <segue reference="hAP-Pn-Q6Z"/>
     </inferredMetricsTieBreakers>
 </document>
