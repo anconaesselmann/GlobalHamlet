@@ -6,6 +6,7 @@ class ViewMessageViewController: DICViewController, UpdateDelegateProtocol {
     var message:Message!
     var api: ApiController!
     var url: String!
+    var loadingView:LoadingIndicator!
     
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -13,6 +14,7 @@ class ViewMessageViewController: DICViewController, UpdateDelegateProtocol {
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
+        loadingView = LoadingIndicator(del: self)
     }
     
     override func viewDidLoad() {
@@ -30,6 +32,7 @@ class ViewMessageViewController: DICViewController, UpdateDelegateProtocol {
         
         println("Printing message:")
         println(message!)
+        loadingView.stop()
     }
     
     func getMessage() {
@@ -40,6 +43,7 @@ class ViewMessageViewController: DICViewController, UpdateDelegateProtocol {
                 url + "/message/get",
                 arguments: arguments
             )
+            loadingView.start()
         }
     }
 }
