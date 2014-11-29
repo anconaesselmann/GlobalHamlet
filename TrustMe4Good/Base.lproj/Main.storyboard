@@ -305,7 +305,7 @@
                     <connections>
                         <outlet property="categorySelector" destination="xuC-0c-kf0" id="E8z-5O-SLS"/>
                         <outlet property="identityTextField" destination="cUT-b9-avi" id="KSI-f1-ESa"/>
-                        <segue destination="om7-QS-Tpp" kind="presentation" identifier="InitiateQRSegue" id="Odw-no-yaG"/>
+                        <segue destination="om7-QS-Tpp" kind="presentation" identifier="InitiateQRSegue" animates="NO" id="Odw-no-yaG"/>
                         <segue destination="W1G-E6-SAU" kind="presentation" identifier="ViewReciprocationResultSegue" id="ucJ-T1-mPc"/>
                     </connections>
                 </tableViewController>
@@ -1465,11 +1465,11 @@
             </objects>
             <point key="canvasLocation" x="5895" y="4435"/>
         </scene>
-        <!--Item-->
+        <!--me-->
         <scene sceneID="Wr6-pK-e78">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r0T-W1-Wwh" customClass="ProjectNavigationController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6qO-mH-GDf"/>
+                    <tabBarItem key="tabBarItem" title="me" id="6qO-mH-GDf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pTb-U7-uUJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1489,10 +1489,10 @@
         <image name="LaunchScreen3D" width="320" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CPC-Dj-lnM"/>
+        <segue reference="Bxd-NR-yQQ"/>
+        <segue reference="png-4n-Zsr"/>
         <segue reference="wvW-bS-b3b"/>
         <segue reference="ucJ-T1-mPc"/>
-        <segue reference="png-4n-Zsr"/>
         <segue reference="hAP-Pn-Q6Z"/>
     </inferredMetricsTieBreakers>
 </document>
