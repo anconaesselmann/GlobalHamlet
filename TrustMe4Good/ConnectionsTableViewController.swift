@@ -41,14 +41,9 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ConnectionPrototypeCell") as UITableViewCell
+        var cell:ConnectionPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ConnectionPrototypeCell") as ConnectionPrototypeCell
         var connection: UserDetails = connections.connections[indexPath.row] as UserDetails
-        cell.textLabel.text = connection.displayString()
-        /*if toDoItem.completed {
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryType.None;
-        }*/
+        cell.bodyLabel.text = connection.displayString()
         return cell
     }
     
@@ -65,11 +60,6 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
             if vc != nil {
                 vc!.connectionId = tappedItem.connection_id
             }
-            /*let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
-            if vc != nil {
-                vc!.connectionId = tappedItem.connection_id
-                vc!.toString     = tappedItem.name
-            }*/
         }
     }
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

@@ -50,9 +50,10 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ActivityPrototypeCell") as UITableViewCell
-        var connection: Activity = activities.activities[indexPath.row] as Activity
-        cell.textLabel.text = connection.displayString()
+        var cell:ActivityPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ActivityPrototypeCell") as ActivityPrototypeCell
+        var activity: Activity = activities.activities[indexPath.row] as Activity
+        cell.bodyLabel.text = activity.displayString()
+        cell.dateLabel.text = activity.dateString()
         return cell
     }
     

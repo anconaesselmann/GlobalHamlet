@@ -67,7 +67,7 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
         
         return result;
     }
-    func displayString() -> String {
+    func dateString() -> String {
         var dateFormatter = NSDateFormatter()
         dateFormatter.timeZone = NSTimeZone(name: "UTC")
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -77,6 +77,11 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
         dateFormatter.timeZone = NSTimeZone()
         let stringDate: String = dateFormatter.stringFromDate(dateFromString)
         
+        return stringDate
+    }
+    func displayString() -> String {
+       
+        
         var result:String!
         if category == "connections" {
             let type = (action == "initiated") ? "Initiated" : "Accepted"
@@ -85,6 +90,6 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
             let type = (action == "sent") ? "sent to" : "recieved from"
             result = "Message \(type) \(actor)"
         }
-        return "\(stringDate): \(result)"
+        return "\(result)"
     }
 }

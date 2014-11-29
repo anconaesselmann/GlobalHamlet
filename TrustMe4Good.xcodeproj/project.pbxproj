@@ -99,6 +99,10 @@
 		979952CD1A297157006CD02C /* ViewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CB1A297157006CD02C /* ViewMessageViewController.swift */; };
 		979952CF1A297888006CD02C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CE1A297888006CD02C /* Message.swift */; };
 		979952D01A297888006CD02C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CE1A297888006CD02C /* Message.swift */; };
+		979952D21A29C249006CD02C /* ConnectionPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952D11A29C249006CD02C /* ConnectionPrototypeCell.swift */; };
+		979952D31A29C249006CD02C /* ConnectionPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952D11A29C249006CD02C /* ConnectionPrototypeCell.swift */; };
+		979952D51A29C4E4006CD02C /* ActivityPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952D41A29C4E4006CD02C /* ActivityPrototypeCell.swift */; };
+		979952D61A29C4E4006CD02C /* ActivityPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952D41A29C4E4006CD02C /* ActivityPrototypeCell.swift */; };
 		97ACFD651A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
 		97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
 		97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */; };
@@ -241,6 +245,8 @@
 		978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationSharingViewController.swift; sourceTree = "<group>"; };
 		979952CB1A297157006CD02C /* ViewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMessageViewController.swift; sourceTree = "<group>"; };
 		979952CE1A297888006CD02C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		979952D11A29C249006CD02C /* ConnectionPrototypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionPrototypeCell.swift; sourceTree = "<group>"; };
+		979952D41A29C4E4006CD02C /* ActivityPrototypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityPrototypeCell.swift; sourceTree = "<group>"; };
 		97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatableDelegateProtocol.swift; sourceTree = "<group>"; };
@@ -290,6 +296,7 @@
 				97ACFD671A1D4286006B55BE /* Create User */,
 				971004B81A0AC5000088D66B /* MainTabBarController.swift */,
 				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
+				979952D41A29C4E4006CD02C /* ActivityPrototypeCell.swift */,
 				973B77F01A082D04007E8726 /* SettingsViewController.swift */,
 				973B77F21A082D41007E8726 /* NotificationsViewController.swift */,
 				9707AB791A113B2300935F33 /* InitiateNavigationController.swift */,
@@ -434,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */,
+				979952D11A29C249006CD02C /* ConnectionPrototypeCell.swift */,
 				974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */,
 				97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */,
 				97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */,
@@ -695,6 +703,7 @@
 				973B77E31A082A5B007E8726 /* InitiateViewController.swift in Sources */,
 				972EF6551A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				973F5DE91A048839007DAC82 /* AppDelegate.swift in Sources */,
+				979952D21A29C249006CD02C /* ConnectionPrototypeCell.swift in Sources */,
 				97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */,
 				9750DA4B1A27983B0086F319 /* Activities.swift in Sources */,
 				973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */,
@@ -725,6 +734,7 @@
 				974E6B621A1FBBBA00C71DF4 /* ConnectionNavigationController.swift in Sources */,
 				97ACFD731A1D75CD006B55BE /* UpdatableDelegateProtocol.swift in Sources */,
 				9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */,
+				979952D51A29C4E4006CD02C /* ActivityPrototypeCell.swift in Sources */,
 				978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				9750DA4E1A27990E0086F319 /* Activity.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
@@ -775,11 +785,13 @@
 				974E6B5A1A1EB32A00C71DF4 /* Connections.swift in Sources */,
 				977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
+				979952D31A29C249006CD02C /* ConnectionPrototypeCell.swift in Sources */,
 				97BD02921A109E810045F3D1 /* DICTableViewController.swift in Sources */,
 				974E6B631A1FBBBA00C71DF4 /* ConnectionNavigationController.swift in Sources */,
 				97BA3DC01A12E08A0063940A /* SettingsProtocol.swift in Sources */,
 				978FBBDF1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */,
 				97D7C6831A0873BA000F6BA5 /* MainViewController.swift in Sources */,
+				979952D61A29C4E4006CD02C /* ActivityPrototypeCell.swift in Sources */,
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,
 				972EF6591A0976C400BEE2C1 /* DIFactoryTest.swift in Sources */,
 				97BA3DC91A12EB030063940A /* CreatorWithSettingsProtocol.swift in Sources */,
