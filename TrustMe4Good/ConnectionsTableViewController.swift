@@ -43,7 +43,8 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:ConnectionPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ConnectionPrototypeCell") as ConnectionPrototypeCell
         var connection: UserDetails = connections.connections[indexPath.row] as UserDetails
-        cell.bodyLabel.text = connection.displayString()
+        cell.nameLabel.text = connection.name
+        cell.emailLabel.text = connection.email
         return cell
     }
     
