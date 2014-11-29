@@ -64,6 +64,11 @@
 		974E6B691A2208F000C71DF4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B671A2208F000C71DF4 /* SignUpViewController.swift */; };
 		974F41B31A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
 		974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
+		9750DA4B1A27983B0086F319 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4A1A27983B0086F319 /* Activities.swift */; };
+		9750DA4C1A27983B0086F319 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4A1A27983B0086F319 /* Activities.swift */; };
+		9750DA4E1A27990E0086F319 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4D1A27990E0086F319 /* Activity.swift */; };
+		9750DA4F1A27990E0086F319 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4D1A27990E0086F319 /* Activity.swift */; };
+		9750DA511A279A270086F319 /* ActivitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA501A279A270086F319 /* ActivitiesTest.swift */; };
 		9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		976091621A0AE71800C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
@@ -212,6 +217,9 @@
 		974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionNavigationController.swift; sourceTree = "<group>"; };
 		974E6B671A2208F000C71DF4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		974F41B21A1C12C7003226B9 /* QrReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrReader.swift; sourceTree = "<group>"; };
+		9750DA4A1A27983B0086F319 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		9750DA4D1A27990E0086F319 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		9750DA501A279A270086F319 /* ActivitiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTest.swift; sourceTree = "<group>"; };
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
@@ -296,6 +304,8 @@
 			children = (
 				97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */,
 				974E6B561A1E862500C71DF4 /* Connections.swift */,
+				9750DA4A1A27983B0086F319 /* Activities.swift */,
+				9750DA4D1A27990E0086F319 /* Activity.swift */,
 				97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */,
 				978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */,
 				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
@@ -495,6 +505,7 @@
 			children = (
 				978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */,
 				974E6B581A1E8D1200C71DF4 /* ConnectionsTest.swift */,
+				9750DA501A279A270086F319 /* ActivitiesTest.swift */,
 			);
 			name = ModelTests;
 			sourceTree = "<group>";
@@ -676,6 +687,7 @@
 				972EF6551A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				973F5DE91A048839007DAC82 /* AppDelegate.swift in Sources */,
 				97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */,
+				9750DA4B1A27983B0086F319 /* Activities.swift in Sources */,
 				973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */,
 				973B77ED1A082C7C007E8726 /* CreateRegisteredViewController.swift in Sources */,
 				974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */,
@@ -704,6 +716,7 @@
 				97ACFD731A1D75CD006B55BE /* UpdatableDelegateProtocol.swift in Sources */,
 				9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */,
 				978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */,
+				9750DA4E1A27990E0086F319 /* Activity.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +755,8 @@
 				974E6B591A1E8D1200C71DF4 /* ConnectionsTest.swift in Sources */,
 				97ACFD741A1D75CD006B55BE /* UpdatableDelegateProtocol.swift in Sources */,
 				978FBBD71A1181FD0059DA70 /* SettingsTest.swift in Sources */,
+				9750DA4F1A27990E0086F319 /* Activity.swift in Sources */,
+				9750DA511A279A270086F319 /* ActivitiesTest.swift in Sources */,
 				978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */,
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
 				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
@@ -757,6 +772,7 @@
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,
 				972EF6591A0976C400BEE2C1 /* DIFactoryTest.swift in Sources */,
 				97BA3DC91A12EB030063940A /* CreatorWithSettingsProtocol.swift in Sources */,
+				9750DA4C1A27983B0086F319 /* Activities.swift in Sources */,
 				9707AB7D1A11632400935F33 /* JSON.swift in Sources */,
 				978FBBE21A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
 				972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
