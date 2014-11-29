@@ -7,6 +7,7 @@ class Activities: APIControllerDelegateProtocol/*, DebugPrintable*/ {
     init() {}
     
     func didReceiveAPIResults(results: NSDictionary) {
+        activities = []
         if (results["errorCode"] as Int) != 0 {
             NSLog("API request came back with error:")
             println(results["errorCode"])

@@ -30,6 +30,11 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.title = "activities"
+        //loadActivities()
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        println("\n\n\n\n\n\ncalled\n\n\n\n\n\n\n")
         loadActivities()
     }
     func loadActivities() {
