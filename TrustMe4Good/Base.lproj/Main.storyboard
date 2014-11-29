@@ -912,6 +912,7 @@
                         <barButtonItem key="leftBarButtonItem" title="logout" id="RlR-6o-YMq">
                             <connections>
                                 <action selector="logoutAction:" destination="jaK-Dc-EYH" id="fmz-HC-eYE"/>
+                                <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SegueToFirstLaunchView" animates="NO" id="Qno-hU-rBu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="ZPz-Zf-WeJ">
@@ -920,6 +921,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="5C7-kJ-Tjp" kind="show" identifier="ActivityToViewDetailsSegue" id="png-4n-Zsr"/>
                         <segue destination="N6e-R0-TJF" kind="show" identifier="ViewMessageSegue" id="Xtv-d8-Y5N"/>
@@ -1564,11 +1566,12 @@
         <image name="LaunchScreen3D" width="320" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hAP-Pn-Q6Z"/>
         <segue reference="ucJ-T1-mPc"/>
         <segue reference="wvW-bS-b3b"/>
         <segue reference="Bxd-NR-yQQ"/>
-        <segue reference="HqO-Xn-UN5"/>
-        <segue reference="c8s-mr-n8r"/>
+        <segue reference="0ZY-i7-Xad"/>
+        <segue reference="png-4n-Zsr"/>
+        <segue reference="Qno-hU-rBu"/>
+        <segue reference="hAP-Pn-Q6Z"/>
     </inferredMetricsTieBreakers>
 </document>

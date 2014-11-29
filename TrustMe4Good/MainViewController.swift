@@ -34,7 +34,6 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        println("\n\n\n\n\n\ncalled\n\n\n\n\n\n\n")
         loadActivities()
     }
     func loadActivities() {
