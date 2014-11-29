@@ -51,15 +51,23 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         var tappedItem = connections.connections[indexPath.row] as UserDetails
-        performSegueWithIdentifier("SegueToSendMessage", sender: tappedItem)
+        performSegueWithIdentifier("ComposeEmailSegue", sender: tappedItem)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier? == "SegueToSendMessage" {
+            // Currently this segue is not called.
             var tappedItem: UserDetails = sender as UserDetails
             let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
             if vc != nil {
                 vc!.connectionId = tappedItem.connection_id
+            }
+        } else if segue.identifier? == "ComposeEmailSegue" {
+            var tappedItem: UserDetails = sender as UserDetails
+            let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
+            if vc != nil {
+                vc!.connectionId = tappedItem.connection_id
+                vc!.toString = tappedItem.name
             }
         }
     }

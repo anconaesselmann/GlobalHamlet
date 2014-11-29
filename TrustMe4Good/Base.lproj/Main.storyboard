@@ -493,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TL2-4y-Mz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5531" y="5243"/>
+            <point key="canvasLocation" x="5895" y="5183"/>
         </scene>
         <!--Send Message View Controller-->
         <scene sceneID="aUS-gN-WIq">
@@ -980,6 +980,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="5C7-kJ-Tjp" kind="show" identifier="SegueToSendMessage" id="c8s-mr-n8r"/>
+                        <segue destination="gzR-sl-eCb" kind="show" identifier="ComposeEmailSegue" id="HqO-Xn-UN5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8je-vi-Ob9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1557,6 +1558,7 @@
         <segue reference="ucJ-T1-mPc"/>
         <segue reference="wvW-bS-b3b"/>
         <segue reference="Bxd-NR-yQQ"/>
+        <segue reference="HqO-Xn-UN5"/>
         <segue reference="c8s-mr-n8r"/>
     </inferredMetricsTieBreakers>
 </document>
