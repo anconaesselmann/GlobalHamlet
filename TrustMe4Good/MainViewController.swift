@@ -62,7 +62,7 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
         if tappedItem.category == "connections" {
             performSegueWithIdentifier("ActivityToViewDetailsSegue", sender: tappedItem)
         } else if tappedItem.category == "messages" {
-            println("2")
+            performSegueWithIdentifier("ViewMessageSegue", sender: tappedItem)
         }
         //performSegueWithIdentifier("SegueToSendMessage", sender: tappedItem)
     }
@@ -73,6 +73,12 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
             let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
             if vc != nil {
                 vc!.connectionId = tappedItem.category_id
+            }
+        } else if segue.identifier? == "ViewMessageSegue" {
+            var tappedItem: Activity = sender as Activity
+            let vc:ViewMessageViewController? = segue.destinationViewController as? ViewMessageViewController
+            if vc != nil {
+                vc!.messageId = tappedItem.category_id
             }
         }
     }

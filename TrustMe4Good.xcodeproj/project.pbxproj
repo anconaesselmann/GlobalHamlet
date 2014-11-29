@@ -95,6 +95,10 @@
 		978FBBEE1A11B33D0059DA70 /* SharingSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */; };
 		978FBBF01A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */; };
 		978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */; };
+		979952CC1A297157006CD02C /* ViewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CB1A297157006CD02C /* ViewMessageViewController.swift */; };
+		979952CD1A297157006CD02C /* ViewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CB1A297157006CD02C /* ViewMessageViewController.swift */; };
+		979952CF1A297888006CD02C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CE1A297888006CD02C /* Message.swift */; };
+		979952D01A297888006CD02C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CE1A297888006CD02C /* Message.swift */; };
 		97ACFD651A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
 		97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
 		97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */; };
@@ -235,6 +239,8 @@
 		978FBBE91A11B2FF0059DA70 /* SharingSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettings.swift; sourceTree = "<group>"; };
 		978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingSettingsTest.swift; sourceTree = "<group>"; };
 		978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationSharingViewController.swift; sourceTree = "<group>"; };
+		979952CB1A297157006CD02C /* ViewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMessageViewController.swift; sourceTree = "<group>"; };
+		979952CE1A297888006CD02C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatableDelegateProtocol.swift; sourceTree = "<group>"; };
@@ -303,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */,
+				979952CE1A297888006CD02C /* Message.swift */,
 				974E6B561A1E862500C71DF4 /* Connections.swift */,
 				9750DA4A1A27983B0086F319 /* Activities.swift */,
 				9750DA4D1A27990E0086F319 /* Activity.swift */,
@@ -430,6 +437,7 @@
 				974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */,
 				97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */,
 				97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */,
+				979952CB1A297157006CD02C /* ViewMessageViewController.swift */,
 			);
 			name = Connections;
 			sourceTree = "<group>";
@@ -657,6 +665,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979952CC1A297157006CD02C /* ViewMessageViewController.swift in Sources */,
 				97BA3DC51A12E8F10063940A /* ReciprocateNavigationController.swift in Sources */,
 				978FBBDE1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */,
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
@@ -704,6 +713,7 @@
 				97BA3E3D1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */,
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
+				979952CF1A297888006CD02C /* Message.swift in Sources */,
 				978FBBEA1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
 				974E6B681A2208F000C71DF4 /* SignUpViewController.swift in Sources */,
 				97BD02911A109E810045F3D1 /* DICTableViewController.swift in Sources */,
@@ -747,6 +757,7 @@
 				971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */,
 				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
 				97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
+				979952D01A297888006CD02C /* Message.swift in Sources */,
 				97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */,
 				97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */,
 				978FBBD31A11814B0059DA70 /* Settings.swift in Sources */,
@@ -785,6 +796,7 @@
 				978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
 				97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
 				97BB75771A24811F005954AC /* LoadingIndicator.swift in Sources */,
+				979952CD1A297157006CD02C /* ViewMessageViewController.swift in Sources */,
 				974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */,
 				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,

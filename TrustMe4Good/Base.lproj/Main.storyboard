@@ -793,10 +793,10 @@
             </objects>
             <point key="canvasLocation" x="9145" y="321"/>
         </scene>
-        <!--View Controller-->
+        <!--View Message View Controller-->
         <scene sceneID="eTz-zJ-qxw">
             <objects>
-                <viewController id="N6e-R0-TJF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewMessageViewController" id="N6e-R0-TJF" customClass="ViewMessageViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="70g-ND-mI3"/>
                         <viewControllerLayoutGuide type="bottom" id="iSL-ql-Kqh"/>
@@ -831,6 +831,10 @@
                             <constraint firstItem="8Qf-qi-Aw7" firstAttribute="leading" secondItem="P5D-XD-hYJ" secondAttribute="leadingMargin" id="smm-jN-v8e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="8Qf-qi-Aw7" id="qfJ-XW-thS"/>
+                        <outlet property="subjectLabel" destination="fT3-MZ-kTw" id="cVG-S6-yVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tE3-vD-ZzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -876,7 +880,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="5C7-kJ-Tjp" kind="show" identifier="ActivityToViewDetailsSegue" id="png-4n-Zsr"/>
-                        <segue destination="N6e-R0-TJF" kind="show" identifier="ViewMessage" id="Xtv-d8-Y5N"/>
+                        <segue destination="N6e-R0-TJF" kind="show" identifier="ViewMessageSegue" id="Xtv-d8-Y5N"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0IK-nr-HkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
