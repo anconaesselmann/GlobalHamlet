@@ -58,6 +58,14 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
         var activity: Activity = activities.activities[indexPath.row] as Activity
         cell.bodyLabel.text = activity.displayString()
         cell.dateLabel.text = activity.dateString()
+        switch activity.action {
+            case "received": cell.actionImage.image = UIImage(named: "message_in")
+            case "sent": cell.actionImage.image = UIImage(named: "message_out")
+            case "initiated": cell.actionImage.image = UIImage(named: "connection")
+            case "reciprocated": cell.actionImage.image = UIImage(named: "connection")
+            default: println("unknown action")
+        }
+        
         return cell
     }
     
