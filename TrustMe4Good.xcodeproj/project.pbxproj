@@ -78,6 +78,8 @@
 		977B350B1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
 		977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
 		977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
+		978F47F91A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
+		978F47FA1A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
 		978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */; };
 		978FBBD21A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
 		978FBBD31A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
@@ -157,18 +159,6 @@
 		97D83DE31A15F60500F008F2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-		97BB75701A245AE1005954AC /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			fileType = folder.skatlas;
-			isEditable = 1;
-			outputFiles = (
-			);
-			script = "$(DEVELOPER_TOOLS_DIR)/../usr/bin/TextureAtlas";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXContainerItemProxy section */
 		973F5DF91A048839007DAC82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -233,6 +223,7 @@
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		977B35091A17D10200A90F72 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIControllerDelegateProtocol.swift; sourceTree = "<group>"; };
+		978F47F81A2B16240006D349 /* MoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveViewController.swift; sourceTree = "<group>"; };
 		978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewControllerTest.swift; sourceTree = "<group>"; };
 		978FBBD11A11814B0059DA70 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		978FBBD51A1181FD0059DA70 /* SettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTest.swift; sourceTree = "<group>"; };
@@ -307,6 +298,7 @@
 				973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */,
 				97BA3DC41A12E8F10063940A /* ReciprocateNavigationController.swift */,
 				97BD025C1A0F6C4F0045F3D1 /* ReciprocateViewController.swift */,
+				978F47F81A2B16240006D349 /* MoveViewController.swift */,
 				974E6B641A1FBC1800C71DF4 /* Connections */,
 			);
 			name = ViewControllers;
@@ -578,7 +570,6 @@
 				973F5DE11A048839007DAC82 /* Resources */,
 			);
 			buildRules = (
-				97BB75701A245AE1005954AC /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -726,6 +717,7 @@
 				978FBBEA1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
 				974E6B681A2208F000C71DF4 /* SignUpViewController.swift in Sources */,
 				97BD02911A109E810045F3D1 /* DICTableViewController.swift in Sources */,
+				978F47F91A2B16240006D349 /* MoveViewController.swift in Sources */,
 				97BD02971A1136EA0045F3D1 /* IdentitySharingViewController.swift in Sources */,
 				978FBBE11A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
 				97B3D49D1A0EE9F50019628B /* Error.swift in Sources */,
@@ -746,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				974E6B691A2208F000C71DF4 /* SignUpViewController.swift in Sources */,
+				978F47FA1A2B16240006D349 /* MoveViewController.swift in Sources */,
 				97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */,
 				97D7C67F1A0873AD000F6BA5 /* CreatePreliminaryViewController.swift in Sources */,
 				971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */,
