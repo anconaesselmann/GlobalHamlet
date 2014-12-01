@@ -1,6 +1,6 @@
 import Foundation
 
-class Message: APIControllerDelegateProtocol/*, DebugPrintable*/ {
+class Message: APIControllerDelegateProtocol, DebugPrintable {
     var delegate:UpdateDelegateProtocol?
     
     var subject = ""
@@ -42,15 +42,9 @@ class Message: APIControllerDelegateProtocol/*, DebugPrintable*/ {
         if let _connection_id = dict["connection_id"] as? Int {
             connection_id = _connection_id
         }
-    }
+    } 
     
-    /*var debugDescription: String {
-        var result = "UserDetails:\n\tcan_be_messaged = \(can_be_messaged)\n\tname = \(name)\n\temail = \(email)\n\tconnection_id = \(connection_id)"
-        
-        return result;
+    var debugDescription: String {
+        return "connection_id: \(connection_id)\nsubject: \(subject)\nmessage: \(message)"
     }
-    func displayString() -> String {
-        let mail = (email.isEmpty) ? "" : ", \(email)"
-        return "\(name)\(mail)"
-    }*/
 }

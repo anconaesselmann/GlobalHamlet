@@ -7,7 +7,6 @@ class Activities: APIControllerDelegateProtocol/*, DebugPrintable*/ {
     init() {}
     
     func didReceiveAPIResults(results: NSDictionary) {
-        activities = []
         if (results["errorCode"] as Int) != 0 {
             NSLog("API request came back with error:")
             println(results["errorCode"])
@@ -37,6 +36,7 @@ class Activities: APIControllerDelegateProtocol/*, DebugPrintable*/ {
     
     func set(array: [[String: AnyObject]]?) {
         if array != nil {
+            activities = []
             for connection in array! {
                 var ud = Activity()
                 ud.set(connection)

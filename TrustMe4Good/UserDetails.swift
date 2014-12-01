@@ -1,7 +1,6 @@
 import Foundation
 
 class UserDetails: APIControllerDelegateProtocol, DebugPrintable {
-    var details:[String: AnyObject]?
     var delegate:UpdateDelegateProtocol?
     
     var can_be_messaged = false
@@ -24,8 +23,7 @@ class UserDetails: APIControllerDelegateProtocol, DebugPrintable {
         var jsonData:NSData?   = jsonString?.dataUsingEncoding(NSUTF8StringEncoding)
         var json:AnyObject?    = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error);
         if json is [String: AnyObject] {
-            details = json as? [String: AnyObject]
-            set(details!)
+            set(json as [String: AnyObject])
             if (delegate == nil) {
                 NSLog("Delegate of UserDetails is nil")
                 return

@@ -1077,10 +1077,10 @@
             </objects>
             <point key="canvasLocation" x="6127" y="2494"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="FP6-7j-bhc">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="Qt0-PN-BgX" customClass="DICTabBarController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="Qt0-PN-BgX" customClass="MainTabBarController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="f5D-l9-8aa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -1559,11 +1559,11 @@
             </objects>
             <point key="canvasLocation" x="6839" y="2494"/>
         </scene>
-        <!--me-->
+        <!--Project Navigation Controller-->
         <scene sceneID="Wr6-pK-e78">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r0T-W1-Wwh" customClass="ProjectNavigationController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="me" image="temp" id="6qO-mH-GDf"/>
+                    <tabBarItem key="tabBarItem" title="" id="6qO-mH-GDf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pTb-U7-uUJ">
