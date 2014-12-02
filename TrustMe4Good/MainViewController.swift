@@ -79,13 +79,16 @@ class MainViewController: DICTableViewController, APIControllerDelegateProtocol 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        var tappedItem = activities[indexPath.row] as Activity
-        if tappedItem.category == "connections" {
-            performSegueWithIdentifier("ActivityToViewDetailsSegue", sender: tappedItem)
-        } else if tappedItem.category == "messages" {
-            performSegueWithIdentifier("ViewMessageSegue", sender: tappedItem)
+        if activities.count > 0 {
+            var tappedItem = activities[indexPath.row] as Activity
+            if tappedItem.category == "connections" {
+                performSegueWithIdentifier("ActivityToViewDetailsSegue", sender: tappedItem)
+            } else if tappedItem.category == "messages" {
+                performSegueWithIdentifier("ViewMessageSegue", sender: tappedItem)
+            }
+            //performSegueWithIdentifier("SegueToSendMessage", sender: tappedItem)
         }
-        //performSegueWithIdentifier("SegueToSendMessage", sender: tappedItem)
+        
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
