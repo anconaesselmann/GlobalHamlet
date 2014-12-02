@@ -15,15 +15,15 @@ class ViewMessageViewController: DICViewController {
         api = args[0] as ApiController
         url = args[1] as String
         loadingView = LoadingIndicator(del: self)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
         message = Message()
         
         let ari = AsynchronousResourceInstantiator(target: message, callback: updateViewAfterAsynchronousRequestResults)
         api.delegate = ari
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         getMessage()
     }
@@ -32,8 +32,6 @@ class ViewMessageViewController: DICViewController {
         subjectLabel.text = message!.subject
         messageLabel.text = message!.message
         
-        println("Printing message:")
-        println(message!)
         loadingView.stop()
     }
     
