@@ -1,42 +1,13 @@
 import Foundation
 
-class Activity: APIControllerDelegateProtocol, DebugPrintable {
-    var details:[String: AnyObject]?
-    var delegate:UpdateDelegateProtocol?
-    
-    var time = ""
-    var actor = ""
-    var action = ""
+class Activity: DebugPrintable {
+    var time        = ""
+    var actor       = ""
+    var action      = ""
     var activity_id = 0
-    var category = ""
+    var category    = ""
     var category_id = 0
     
-    init() {}
-    
-    func didReceiveAPIResults(results: NSDictionary) {
-        println("Connection details:")
-        println(results)
-        if (results["errorCode"] as Int) != 0 {
-            NSLog("API request came back with error:")
-            println(results["errorCode"])
-            return
-        }
-        var error:NSError?     = nil
-        var jsonString:String? = results["response"] as? String
-        var jsonData:NSData?   = jsonString?.dataUsingEncoding(NSUTF8StringEncoding)
-        var json:AnyObject?    = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error);
-        if json is [String: AnyObject] {
-            details = json as? [String: AnyObject]
-            set(details!)
-            if (delegate == nil) {
-                NSLog("Delegate of Activity is nil")
-                return
-            }
-            delegate!.updateDelegate()
-        } else {
-            NSLog("User Details could not be initiated")
-        }
-    }
     func set(dict:[String:AnyObject]) {
         if let _time = dict["time"] as? String {
             time = _time
@@ -64,7 +35,6 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
     
     var debugDescription: String {
         var result = "Activity:\n\ttime = \(time)\n\tactor = \(actor)\n\taction = \(action)\n\tactivity_id = \(activity_id)"
-        
         return result;
     }
     func dateString() -> String {
@@ -80,8 +50,6 @@ class Activity: APIControllerDelegateProtocol, DebugPrintable {
         return stringDate
     }
     func displayString() -> String {
-       
-        
         var result:String!
         if category == "connections" {
             let type = (action == "initiated") ? "Initiated" : "Accepted"

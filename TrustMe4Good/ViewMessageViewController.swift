@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class ViewMessageViewController: DICViewController, UpdateDelegateProtocol {
+class ViewMessageViewController: DICViewController {
     var messageId:Int?;
     var message:Message!
     var api: ApiController!
@@ -21,12 +21,14 @@ class ViewMessageViewController: DICViewController, UpdateDelegateProtocol {
         super.viewDidLoad()
         
         message = Message()
-        message!.delegate = self
+        
+        let ari = AsynchronousResourceInstantiator(target: message, callback: updateViewAfterAsynchronousRequestResults)
+        api.delegate = ari
         
         getMessage()
     }
     
-    func updateDelegate() {
+    func updateViewAfterAsynchronousRequestResults() {
         subjectLabel.text = message!.subject
         messageLabel.text = message!.message
         
@@ -38,7 +40,6 @@ class ViewMessageViewController: DICViewController, UpdateDelegateProtocol {
     func getMessage() {
         if messageId != nil && message != nil {
             let arguments:[String: String] = ["id": String(messageId!)]
-            api.delegate = message!
             api.postRequest(
                 url + "/message/get",
                 arguments: arguments

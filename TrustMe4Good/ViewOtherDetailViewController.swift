@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class ViewOtherDetailViewController: DICViewController, APIControllerDelegateProtocol, UpdateDelegateProtocol {
+class ViewOtherDetailViewController: DICViewController, APIControllerDelegateProtocol {
     var connectionId:Int?;
     var dataJsonString:String = ""
     var userDetails:UserDetails!
@@ -14,14 +14,16 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
+        
+        userDetails = UserDetails()
+        
+        let ari = AsynchronousResourceInstantiator(target: userDetails, callback: updateViewAfterAsynchronousRequestResults)
+        api.delegate = ari
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userDetails = UserDetails()
-        userDetails!.delegate = self
-        
         getOtherData()
     }
 
@@ -39,8 +41,8 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
         performSegueWithIdentifier("ComposeEmailSegue", sender: nil)
     }
     
-    func updateDelegate() {
-        viewOtherDataLabel.text = userDetails!.getName()
+    func updateViewAfterAsynchronousRequestResults() {
+        viewOtherDataLabel.text = userDetails!.name
         if userDetails!.can_be_messaged {
             addSendMessageButton()
         }
@@ -61,7 +63,7 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
         let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
         if vc != nil {
             vc!.connectionId = connectionId!
-            vc!.toString = userDetails!.getName()
+            vc!.toString = userDetails!.name
             
             println("connectionId used for email:")
             println(connectionId!)
@@ -70,7 +72,6 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
     func getOtherData() {
         if connectionId != nil && userDetails != nil {
             let arguments:[String: String] = ["id": String(connectionId!)]
-            api.delegate = userDetails!
             api.postRequest(
                 url + "/connection/other_details",
                 arguments: arguments

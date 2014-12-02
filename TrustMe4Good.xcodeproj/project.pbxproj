@@ -80,6 +80,9 @@
 		977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
 		978F47F91A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
 		978F47FA1A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
+		978F47FC1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */; };
+		978F47FD1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */; };
+		978F47FF1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47FE1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift */; };
 		978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */; };
 		978FBBD21A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
 		978FBBD31A11814B0059DA70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBD11A11814B0059DA70 /* Settings.swift */; };
@@ -224,6 +227,8 @@
 		977B35091A17D10200A90F72 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIControllerDelegateProtocol.swift; sourceTree = "<group>"; };
 		978F47F81A2B16240006D349 /* MoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveViewController.swift; sourceTree = "<group>"; };
+		978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousResourceInstantiator.swift; sourceTree = "<group>"; };
+		978F47FE1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousResourceInstantiatorTest.swift; sourceTree = "<group>"; };
 		978FBBCF1A117F230059DA70 /* IdentitySharingViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewControllerTest.swift; sourceTree = "<group>"; };
 		978FBBD11A11814B0059DA70 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		978FBBD51A1181FD0059DA70 /* SettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTest.swift; sourceTree = "<group>"; };
@@ -307,11 +312,11 @@
 		971382D31A08442E008A39FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */,
 				979952CE1A297888006CD02C /* Message.swift */,
+				97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */,
+				9750DA4D1A27990E0086F319 /* Activity.swift */,
 				974E6B561A1E862500C71DF4 /* Connections.swift */,
 				9750DA4A1A27983B0086F319 /* Activities.swift */,
-				9750DA4D1A27990E0086F319 /* Activity.swift */,
 				97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */,
 				978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */,
 				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
@@ -473,6 +478,7 @@
 				97B3D49C1A0EE9F50019628B /* Error.swift */,
 				97BA3DBE1A12E08A0063940A /* SettingsProtocol.swift */,
 				978FBBD11A11814B0059DA70 /* Settings.swift */,
+				978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */,
 			);
 			name = std;
 			sourceTree = "<group>";
@@ -483,6 +489,7 @@
 				974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */,
 				972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */,
 				978FBBD51A1181FD0059DA70 /* SettingsTest.swift */,
+				978F47FE1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift */,
 			);
 			name = std;
 			sourceTree = "<group>";
@@ -730,6 +737,7 @@
 				978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				9750DA4E1A27990E0086F319 /* Activity.swift in Sources */,
 				971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */,
+				978F47FC1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +767,7 @@
 				971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */,
 				971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */,
 				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
+				978F47FD1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift in Sources */,
 				97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				979952D01A297888006CD02C /* Message.swift in Sources */,
 				97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */,
@@ -775,6 +784,7 @@
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
 				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
+				978F47FF1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift in Sources */,
 				974E6B5A1A1EB32A00C71DF4 /* Connections.swift in Sources */,
 				977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,

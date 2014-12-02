@@ -15,10 +15,14 @@ class Connections: APIControllerDelegateProtocol/*, DebugPrintable*/ {
         var error:NSError?     = nil
         var jsonString:String? = results["response"] as? String
         var jsonData:NSData?   = jsonString?.dataUsingEncoding(NSUTF8StringEncoding)
+        if jsonData == nil {
+            NSLog("Error decoding json for response:")
+            println(results)
+            return
+        }
         var json:AnyObject?    = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error);
         if json is [[String: AnyObject]] {
-            let connectionsArray:[[String:AnyObject]]? = json as? [[String: AnyObject]]
-            set(connectionsArray)
+            set(json as? [[String: AnyObject]])
             if (delegate == nil) {
                 NSLog("Delegate of Connections is nil")
                 return

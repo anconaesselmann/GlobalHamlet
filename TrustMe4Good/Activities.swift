@@ -22,8 +22,7 @@ class Activities: APIControllerDelegateProtocol/*, DebugPrintable*/ {
         }
         var json:AnyObject?    = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error);
         if json is [[String: AnyObject]] {
-            let activitiesArray:[[String:AnyObject]]? = json as? [[String: AnyObject]]
-            set(activitiesArray)
+            set(json as? [[String: AnyObject]])
             if (delegate == nil) {
                 NSLog("Delegate of Connections is nil")
                 return
@@ -41,6 +40,7 @@ class Activities: APIControllerDelegateProtocol/*, DebugPrintable*/ {
                 var ud = Activity()
                 ud.set(connection)
                 activities.append(ud)
+                println(ud)
             }
         }
     }

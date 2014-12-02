@@ -30,8 +30,8 @@ class ConnectionsTest: XCTestCase {
         let results:NSDictionary = NSDictionary(dictionary: ["response": response, "errorCode": 0]) as NSDictionary*/
         let results:NSDictionary = NSDictionary(dictionary: ["response": "[{\"name\":\"axel1\",\"email\":\"axel@gmail.com\",\"connection_id\": 5,\"can_be_messaged\": true},{\"name\":\"axel2\",\"email\":\"axel2@gmail.com\",\"connection_id\": 9,\"can_be_messaged\": false}]", "errorCode": 0]) as NSDictionary
         sut.didReceiveAPIResults(results)
-        XCTAssertEqual("axel1, axel@gmail.com", sut.connections[0].displayString())
-        XCTAssertEqual("axel2, axel2@gmail.com", sut.connections[1].displayString())
+        XCTAssertEqual("axel1, axel@gmail.com", sut.connections[0].name + ", " + sut.connections[0].email)
+        XCTAssertEqual("axel2, axel2@gmail.com", sut.connections[1].name + ", " + sut.connections[1].email)
     }
 }
 

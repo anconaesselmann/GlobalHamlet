@@ -174,7 +174,7 @@
 		<string>MainViewController</string>
 	</dict>
 	<key>url</key>
-	<string>http://www.api.anconaesselmann.dev</string>
+	<string>http://www.api.anconaesselmann.com</string>
 	<key>apiDebugOn</key>
 	<false/>
 	<key>apiTimeout</key>
