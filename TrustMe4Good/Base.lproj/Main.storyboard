@@ -1584,7 +1584,7 @@
         <scene sceneID="990-cZ-x7S">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B4n-5x-tOI" customClass="ProjectNavigationController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Wlf-Sj-E7v"/>
+                    <tabBarItem key="tabBarItem" id="Wlf-Sj-E7v"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

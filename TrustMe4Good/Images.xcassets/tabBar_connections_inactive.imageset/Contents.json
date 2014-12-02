@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "tabBar_puzzleMan_circle_inactive-x1.png"
+      "filename" : "connections_inactive-x1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "tabBar_puzzleMan_circle_inactive-x2.png"
+      "filename" : "connections_inactive-x2.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "tabBar_puzzleMan_circle_inactive-x3.png"
+      "filename" : "connections_inactive-x3.png"
     }
   ],
   "info" : {
