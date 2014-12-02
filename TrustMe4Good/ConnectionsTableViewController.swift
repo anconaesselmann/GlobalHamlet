@@ -1,8 +1,8 @@
 import UIKit
 import Foundation
 
-class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProtocol {
-    var connections:Connections!
+class ConnectionsTableViewController: DICTableViewController {
+    var connections:[UserDetails]!
     var api:ApiController!
     var url:String!
     var loadingView:LoadingIndicator!
@@ -12,10 +12,17 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
         url = args[1] as String
         
         loadingView = LoadingIndicator(del: self)
-        connections = Connections()
-        api.delegate = connections
-        connections.delegate = self
         
+        connections = []
+        let ari = AsynchronousArrayResourceInstantiator(
+            addInstanceClosure: {(dict:[String: AnyObject]) -> Void in
+                var inst = UserDetails()
+                inst.set(dict)
+                self.connections.append(inst)
+            },
+            callback: updateViewAfterAsynchronousRequestResults
+        )
+        api.delegate = ari
     }
     
     override func viewDidLoad() {
@@ -27,7 +34,7 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
         loadingView.start()
         api.request(url + "/connection/get_all")
     }
-    func updateDelegate() {
+    func updateViewAfterAsynchronousRequestResults() {
         loadingView.stop()
         tableView.reloadData()
     }
@@ -37,12 +44,12 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return connections.connections.count
+        return connections.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:ConnectionPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ConnectionPrototypeCell") as ConnectionPrototypeCell
-        var connection: UserDetails = connections.connections[indexPath.row] as UserDetails
+        var connection: UserDetails = connections[indexPath.row] as UserDetails
         cell.nameLabel.text = connection.name
         cell.emailLabel.text = connection.email
         return cell
@@ -50,7 +57,7 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        var tappedItem = connections.connections[indexPath.row] as UserDetails
+        var tappedItem = connections[indexPath.row] as UserDetails
         performSegueWithIdentifier("ComposeEmailSegue", sender: tappedItem)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -80,7 +87,7 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             // handle delete (by removing the data from your array and updating the tableview)
-            var tappedItem = connections.connections[indexPath.row] as UserDetails
+            var tappedItem = connections[indexPath.row] as UserDetails
             
             func deleteConnection(alert: UIAlertAction!) -> Void {
                 println(tappedItem.name)
@@ -89,7 +96,7 @@ class ConnectionsTableViewController: DICTableViewController, UpdateDelegateProt
                     if !(results["response"] as Bool) {
                         NSLog("Error deleting Connection")
                     }
-                    self.connections.connections.removeAtIndex(indexPath.row)
+                    self.connections.removeAtIndex(indexPath.row)
                     self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
                     //tableView.reloadData()
                 }

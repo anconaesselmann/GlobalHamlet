@@ -20,7 +20,6 @@ class AsynchronousResourceInstantiatorTest: XCTestCase {
         func callback() {
             called = true
         }
-        
         sut = AsynchronousResourceInstantiator(target: targetInstance, callback: callback)
         
         let response = "{\"var1\":\"works1\",\"var2\":\"works2\"}"

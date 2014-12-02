@@ -1,6 +1,6 @@
 import Foundation
 
-class Activity: DebugPrintable {
+class Activity: DictionarySettable, DebugPrintable {
     var time        = ""
     var actor       = ""
     var action      = ""
@@ -38,14 +38,14 @@ class Activity: DebugPrintable {
         return result;
     }
     func dateString() -> String {
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.timeZone = NSTimeZone(name: "UTC")
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        var dateFormatter          = NSDateFormatter()
+        dateFormatter.timeZone     = NSTimeZone(name: "UTC")
+        dateFormatter.dateFormat   = "yyyy-MM-dd HH:mm:ss"
         var dateFromString:NSDate! = dateFormatter.dateFromString(time)
         
         dateFormatter.dateFormat = "MMM d, H:mm"
-        dateFormatter.timeZone = NSTimeZone()
-        let stringDate: String = dateFormatter.stringFromDate(dateFromString)
+        dateFormatter.timeZone   = NSTimeZone()
+        let stringDate: String   = dateFormatter.stringFromDate(dateFromString)
         
         return stringDate
     }

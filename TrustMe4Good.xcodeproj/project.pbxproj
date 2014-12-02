@@ -51,9 +51,6 @@
 		974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
 		974C06C61A0953BA00192CCB /* SimpleFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */; };
 		974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C06C31A093BDD00192CCB /* SimpleFactory.swift */; };
-		974E6B571A1E862500C71DF4 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B561A1E862500C71DF4 /* Connections.swift */; };
-		974E6B591A1E8D1200C71DF4 /* ConnectionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B581A1E8D1200C71DF4 /* ConnectionsTest.swift */; };
-		974E6B5A1A1EB32A00C71DF4 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B561A1E862500C71DF4 /* Connections.swift */; };
 		974E6B5C1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */; };
 		974E6B5D1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */; };
 		974E6B621A1FBBBA00C71DF4 /* ConnectionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */; };
@@ -64,11 +61,8 @@
 		974E6B691A2208F000C71DF4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E6B671A2208F000C71DF4 /* SignUpViewController.swift */; };
 		974F41B31A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
 		974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F41B21A1C12C7003226B9 /* QrReader.swift */; };
-		9750DA4B1A27983B0086F319 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4A1A27983B0086F319 /* Activities.swift */; };
-		9750DA4C1A27983B0086F319 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4A1A27983B0086F319 /* Activities.swift */; };
 		9750DA4E1A27990E0086F319 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4D1A27990E0086F319 /* Activity.swift */; };
 		9750DA4F1A27990E0086F319 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA4D1A27990E0086F319 /* Activity.swift */; };
-		9750DA511A279A270086F319 /* ActivitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750DA501A279A270086F319 /* ActivitiesTest.swift */; };
 		9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9760915C1A0AD28400C49248 /* DICAppDelegate.swift */; };
 		976091621A0AE71800C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
@@ -78,6 +72,9 @@
 		977B350B1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
 		977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
 		977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
+		977C573C1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */; };
+		977C573D1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */; };
+		977C573F1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C573E1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift */; };
 		978F47F91A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
 		978F47FA1A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
 		978F47FC1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */; };
@@ -112,8 +109,6 @@
 		97ACFD661A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */; };
 		97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */; };
 		97ACFD721A1D75CD006B55BE /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */; };
-		97ACFD731A1D75CD006B55BE /* UpdatableDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */; };
-		97ACFD741A1D75CD006B55BE /* UpdatableDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */; };
 		97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D4981A0EAE7F0019628B /* UIMocks.swift */; };
 		97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */; };
 		97B3D49D1A0EE9F50019628B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3D49C1A0EE9F50019628B /* Error.swift */; };
@@ -212,20 +207,18 @@
 		974C06C01A093AAD00192CCB /* configTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configTest.plist; path = ../TrustMe4Good/configTest.plist; sourceTree = "<group>"; };
 		974C06C31A093BDD00192CCB /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactory.swift; sourceTree = "<group>"; };
 		974C06C51A0953BA00192CCB /* SimpleFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFactoryTest.swift; sourceTree = "<group>"; };
-		974E6B561A1E862500C71DF4 /* Connections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
-		974E6B581A1E8D1200C71DF4 /* ConnectionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTest.swift; sourceTree = "<group>"; };
 		974E6B5B1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionNavigationController.swift; sourceTree = "<group>"; };
 		974E6B671A2208F000C71DF4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		974F41B21A1C12C7003226B9 /* QrReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrReader.swift; sourceTree = "<group>"; };
-		9750DA4A1A27983B0086F319 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		9750DA4D1A27990E0086F319 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		9750DA501A279A270086F319 /* ActivitiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTest.swift; sourceTree = "<group>"; };
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		977B35091A17D10200A90F72 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIControllerDelegateProtocol.swift; sourceTree = "<group>"; };
+		977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousArrayResourceInstantiator.swift; sourceTree = "<group>"; };
+		977C573E1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousArrayResourceInstantiatorTest.swift; sourceTree = "<group>"; };
 		978F47F81A2B16240006D349 /* MoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveViewController.swift; sourceTree = "<group>"; };
 		978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousResourceInstantiator.swift; sourceTree = "<group>"; };
 		978F47FE1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousResourceInstantiatorTest.swift; sourceTree = "<group>"; };
@@ -245,7 +238,6 @@
 		979952D41A29C4E4006CD02C /* ActivityPrototypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityPrototypeCell.swift; sourceTree = "<group>"; };
 		97ACFD641A1D159E006B55BE /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
-		97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatableDelegateProtocol.swift; sourceTree = "<group>"; };
 		97B3D4981A0EAE7F0019628B /* UIMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMocks.swift; sourceTree = "<group>"; };
 		97B3D49A1A0EAFC70019628B /* InitiateQRViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateQRViewControllerTest.swift; sourceTree = "<group>"; };
 		97B3D49C1A0EE9F50019628B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -315,9 +307,6 @@
 				979952CE1A297888006CD02C /* Message.swift */,
 				97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */,
 				9750DA4D1A27990E0086F319 /* Activity.swift */,
-				974E6B561A1E862500C71DF4 /* Connections.swift */,
-				9750DA4A1A27983B0086F319 /* Activities.swift */,
-				97ACFD701A1D75CD006B55BE /* UpdatableDelegateProtocol.swift */,
 				978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */,
 				97BD02931A1129710045F3D1 /* ConnectionDetails.swift */,
 			);
@@ -479,6 +468,7 @@
 				97BA3DBE1A12E08A0063940A /* SettingsProtocol.swift */,
 				978FBBD11A11814B0059DA70 /* Settings.swift */,
 				978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */,
+				977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */,
 			);
 			name = std;
 			sourceTree = "<group>";
@@ -490,6 +480,7 @@
 				972EF6571A0976C400BEE2C1 /* DIFactoryTest.swift */,
 				978FBBD51A1181FD0059DA70 /* SettingsTest.swift */,
 				978F47FE1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift */,
+				977C573E1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift */,
 			);
 			name = std;
 			sourceTree = "<group>";
@@ -519,8 +510,6 @@
 			isa = PBXGroup;
 			children = (
 				978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */,
-				974E6B581A1E8D1200C71DF4 /* ConnectionsTest.swift */,
-				9750DA501A279A270086F319 /* ActivitiesTest.swift */,
 			);
 			name = ModelTests;
 			sourceTree = "<group>";
@@ -680,6 +669,7 @@
 				97BB75761A24811F005954AC /* LoadingIndicator.swift in Sources */,
 				972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
 				974E6B5C1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */,
+				977C573C1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift in Sources */,
 				977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				973B77EB1A082C0D007E8726 /* LoginViewController.swift in Sources */,
 				971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */,
@@ -703,7 +693,6 @@
 				973F5DE91A048839007DAC82 /* AppDelegate.swift in Sources */,
 				979952D21A29C249006CD02C /* ConnectionPrototypeCell.swift in Sources */,
 				97ACFD711A1D75CD006B55BE /* UserDetails.swift in Sources */,
-				9750DA4B1A27983B0086F319 /* Activities.swift in Sources */,
 				973B77E71A082AC3007E8726 /* InitiateQRViewController.swift in Sources */,
 				973B77ED1A082C7C007E8726 /* CreateRegisteredViewController.swift in Sources */,
 				974C06C41A093BDD00192CCB /* SimpleFactory.swift in Sources */,
@@ -712,7 +701,6 @@
 				972E35B51A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
 				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
-				974E6B571A1E862500C71DF4 /* Connections.swift in Sources */,
 				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
 				976091621A0AE71800C49248 /* DIHelper.swift in Sources */,
 				97BA3DBF1A12E08A0063940A /* SettingsProtocol.swift in Sources */,
@@ -731,7 +719,6 @@
 				97D83DE21A15F60500F008F2 /* SendMessageViewController.swift in Sources */,
 				97BD025D1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				974E6B621A1FBBBA00C71DF4 /* ConnectionNavigationController.swift in Sources */,
-				97ACFD731A1D75CD006B55BE /* UpdatableDelegateProtocol.swift in Sources */,
 				9707AB7A1A113B2300935F33 /* InitiateNavigationController.swift in Sources */,
 				979952D51A29C4E4006CD02C /* ActivityPrototypeCell.swift in Sources */,
 				978FBBD91A1189080059DA70 /* NamedSwitch.swift in Sources */,
@@ -767,6 +754,7 @@
 				971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */,
 				971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */,
 				97D7C67D1A0872D2000F6BA5 /* FirstLaunchViewController.swift in Sources */,
+				977C573D1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift in Sources */,
 				978F47FD1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift in Sources */,
 				97BD025E1A0F6C4F0045F3D1 /* ReciprocateViewController.swift in Sources */,
 				979952D01A297888006CD02C /* Message.swift in Sources */,
@@ -775,17 +763,13 @@
 				978FBBD31A11814B0059DA70 /* Settings.swift in Sources */,
 				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
 				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
-				974E6B591A1E8D1200C71DF4 /* ConnectionsTest.swift in Sources */,
-				97ACFD741A1D75CD006B55BE /* UpdatableDelegateProtocol.swift in Sources */,
 				978FBBD71A1181FD0059DA70 /* SettingsTest.swift in Sources */,
 				9750DA4F1A27990E0086F319 /* Activity.swift in Sources */,
-				9750DA511A279A270086F319 /* ActivitiesTest.swift in Sources */,
 				978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */,
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
 				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
 				978F47FF1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift in Sources */,
-				974E6B5A1A1EB32A00C71DF4 /* Connections.swift in Sources */,
 				977B350E1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */,
 				974C06C71A0953EF00192CCB /* SimpleFactory.swift in Sources */,
 				979952D31A29C249006CD02C /* ConnectionPrototypeCell.swift in Sources */,
@@ -798,7 +782,6 @@
 				97D7C6851A0873BF000F6BA5 /* NotificationsViewController.swift in Sources */,
 				972EF6591A0976C400BEE2C1 /* DIFactoryTest.swift in Sources */,
 				97BA3DC91A12EB030063940A /* CreatorWithSettingsProtocol.swift in Sources */,
-				9750DA4C1A27983B0086F319 /* Activities.swift in Sources */,
 				9707AB7D1A11632400935F33 /* JSON.swift in Sources */,
 				978FBBE21A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
 				972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
@@ -821,6 +804,7 @@
 				97D7C6811A0873B4000F6BA5 /* CreateRegisteredViewController.swift in Sources */,
 				974E6B651A1FBC4C00C71DF4 /* DICNavigationController.swift in Sources */,
 				977B350B1A17D10200A90F72 /* ApiController.swift in Sources */,
+				977C573F1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift in Sources */,
 				97B3D4A01A0F5D110019628B /* MainViewControllerTest.swift in Sources */,
 				974E6B5D1A1EE4D300C71DF4 /* ConnectionsTableViewController.swift in Sources */,
 			);

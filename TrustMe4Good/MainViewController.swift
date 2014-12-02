@@ -1,8 +1,8 @@
 import UIKit
 import SpriteKit
 
-class MainViewController: DICTableViewController, UpdateDelegateProtocol, APIControllerDelegateProtocol {
-    var activities:Activities!
+class MainViewController: DICTableViewController, APIControllerDelegateProtocol {
+    var activities:[Activity]!
     var api:ApiController!
     var url:String!
     var loadingView:LoadingIndicator!
@@ -12,10 +12,17 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
         url = args[1] as String
         
         loadingView = LoadingIndicator(del: self)
-        activities = Activities()
-        api.delegate = activities
-        activities.delegate = self
         
+        activities = []
+        let ari = AsynchronousArrayResourceInstantiator(
+            addInstanceClosure: {(dict:[String: AnyObject]) -> Void in
+                var inst = Activity()
+                inst.set(dict)
+                self.activities.append(inst)
+            },
+            callback: updateViewAfterAsynchronousRequestResults
+        )
+        api.delegate = ari
     }
     
     @IBAction func logoutAction(sender: AnyObject) {
@@ -34,13 +41,14 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        activities = []
         loadActivities()
     }
     func loadActivities() {
         loadingView.start()
         api.request(url + "/activity/get_activity")
     }
-    func updateDelegate() {
+    func updateViewAfterAsynchronousRequestResults() {
         loadingView.stop()
         tableView.reloadData()
     }
@@ -50,12 +58,12 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activities.activities.count
+        return activities.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:ActivityPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ActivityPrototypeCell") as ActivityPrototypeCell
-        var activity: Activity = activities.activities[indexPath.row] as Activity
+        var activity: Activity = activities[indexPath.row] as Activity
         cell.bodyLabel.text = activity.displayString()
         cell.dateLabel.text = activity.dateString()
         switch activity.action {
@@ -71,7 +79,7 @@ class MainViewController: DICTableViewController, UpdateDelegateProtocol, APICon
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        var tappedItem = activities.activities[indexPath.row] as Activity
+        var tappedItem = activities[indexPath.row] as Activity
         if tappedItem.category == "connections" {
             performSegueWithIdentifier("ActivityToViewDetailsSegue", sender: tappedItem)
         } else if tappedItem.category == "messages" {
