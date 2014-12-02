@@ -63,15 +63,17 @@ class MainViewController: DICTableViewController, APIControllerDelegateProtocol 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:ActivityPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ActivityPrototypeCell") as ActivityPrototypeCell
-        var activity: Activity = activities[indexPath.row] as Activity
-        cell.bodyLabel.text = activity.displayString()
-        cell.dateLabel.text = activity.dateString()
-        switch activity.action {
-            case "received": cell.actionImage.image = UIImage(named: "message_in")
-            case "sent": cell.actionImage.image = UIImage(named: "message_out")
-            case "initiated": cell.actionImage.image = UIImage(named: "connection")
-            case "reciprocated": cell.actionImage.image = UIImage(named: "connection")
-            default: println("unknown action")
+        if activities.count > 0 {
+            var activity: Activity = activities[indexPath.row] as Activity
+            cell.bodyLabel.text = activity.displayString()
+            cell.dateLabel.text = activity.dateString()
+            switch activity.action {
+                case "received": cell.actionImage.image = UIImage(named: "message_in")
+                case "sent": cell.actionImage.image = UIImage(named: "message_out")
+                case "initiated": cell.actionImage.image = UIImage(named: "connection")
+                case "reciprocated": cell.actionImage.image = UIImage(named: "connection")
+                default: println("unknown action")
+            }
         }
         
         return cell

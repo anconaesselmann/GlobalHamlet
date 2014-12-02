@@ -542,7 +542,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="mBv-dd-39Q">
-                        <barButtonItem key="rightBarButtonItem" title="send" id="MJ2-ws-7er">
+                        <barButtonItem key="rightBarButtonItem" image="navBar_send" id="MJ2-ws-7er">
                             <connections>
                                 <action selector="sendAction:" destination="gzR-sl-eCb" id="Qx9-TQ-jOR"/>
                             </connections>
@@ -1605,15 +1605,16 @@
     <resources>
         <image name="LaunchScreen3D" width="320" height="480"/>
         <image name="message_in" width="70" height="70"/>
+        <image name="navBar_send" width="22" height="22"/>
         <image name="temp" width="48" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bxa-Sj-cpn"/>
-        <segue reference="CvU-xV-J9K"/>
+        <segue reference="Bxd-NR-yQQ"/>
+        <segue reference="HqO-Xn-UN5"/>
         <segue reference="wvW-bS-b3b"/>
         <segue reference="ucJ-T1-mPc"/>
-        <segue reference="HqO-Xn-UN5"/>
-        <segue reference="png-4n-Zsr"/>
+        <segue reference="bxa-Sj-cpn"/>
         <segue reference="hAP-Pn-Q6Z"/>
+        <segue reference="png-4n-Zsr"/>
     </inferredMetricsTieBreakers>
 </document>
