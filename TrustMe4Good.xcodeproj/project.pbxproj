@@ -13,15 +13,12 @@
 		971004AC1A09CDC10088D66B /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004AB1A09CDC10088D66B /* DICProtocol.swift */; };
 		971004AD1A09CE480088D66B /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004AB1A09CDC10088D66B /* DICProtocol.swift */; };
 		971004AF1A09D20D0088D66B /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 971004AE1A09D20D0088D66B /* config.plist */; };
-		971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B01A09D42D0088D66B /* WebProtocol.swift */; };
-		971004B21A09D6140088D66B /* WebProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B01A09D42D0088D66B /* WebProtocol.swift */; };
 		971004B41A0AC2280088D66B /* DICViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B31A0AC2280088D66B /* DICViewController.swift */; };
 		971004B51A0AC2EA0088D66B /* DICViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B31A0AC2280088D66B /* DICViewController.swift */; };
 		971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B61A0AC3750088D66B /* DICNavigationController.swift */; };
 		971004B91A0AC5000088D66B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004B81A0AC5000088D66B /* MainTabBarController.swift */; };
 		971004BB1A0AC5580088D66B /* DICTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971004BA1A0AC5580088D66B /* DICTabBarController.swift */; };
 		971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */; };
-		971382D61A0844AA008A39FD /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		971382D91A085908008A39FD /* FirstLaunchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */; };
 		972E35B21A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */; };
 		972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */; };
@@ -150,9 +147,10 @@
 		97D7C6861A0873C1000F6BA5 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E21A082A5B007E8726 /* InitiateViewController.swift */; };
 		97D7C6871A0873C4000F6BA5 /* InitiateQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B77E61A082AC3007E8726 /* InitiateQRViewController.swift */; };
 		97D7C68A1A0873D0000F6BA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973F5DF11A048839007DAC82 /* LaunchScreen.xib */; };
-		97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971382D51A0844AA008A39FD /* Web.swift */; };
 		97D7C68C1A0873DA000F6BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F5DE81A048839007DAC82 /* AppDelegate.swift */; };
 		97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */; };
+		97D7CFFB1A3A49B800053268 /* OwnDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D7CFFA1A3A49B800053268 /* OwnDetails.swift */; };
+		97D7CFFC1A3A49B800053268 /* OwnDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D7CFFA1A3A49B800053268 /* OwnDetails.swift */; };
 		97D83DE21A15F60500F008F2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */; };
 		97D83DE31A15F60500F008F2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -172,13 +170,11 @@
 		9707AB7B1A1162AB00935F33 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		971004AB1A09CDC10088D66B /* DICProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICProtocol.swift; sourceTree = "<group>"; };
 		971004AE1A09D20D0088D66B /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
-		971004B01A09D42D0088D66B /* WebProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebProtocol.swift; sourceTree = "<group>"; };
 		971004B31A0AC2280088D66B /* DICViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICViewController.swift; sourceTree = "<group>"; };
 		971004B61A0AC3750088D66B /* DICNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICNavigationController.swift; sourceTree = "<group>"; };
 		971004B81A0AC5000088D66B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		971004BA1A0AC5580088D66B /* DICTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICTabBarController.swift; sourceTree = "<group>"; };
 		971218A21A0D962300D0C81A /* InitiateViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiateViewControllerTest.swift; sourceTree = "<group>"; };
-		971382D51A0844AA008A39FD /* Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		971382D81A085908008A39FD /* FirstLaunchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewControllerTests.swift; sourceTree = "<group>"; };
 		972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeGenerator.swift; sourceTree = "<group>"; };
 		972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeGeneratorProtocol.swift; sourceTree = "<group>"; };
@@ -255,6 +251,7 @@
 		97BD02931A1129710045F3D1 /* ConnectionDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDetails.swift; sourceTree = "<group>"; };
 		97BD02961A1136EA0045F3D1 /* IdentitySharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentitySharingViewController.swift; sourceTree = "<group>"; };
 		97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		97D7CFFA1A3A49B800053268 /* OwnDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnDetails.swift; sourceTree = "<group>"; };
 		97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				979952CE1A297888006CD02C /* Message.swift */,
+				97D7CFFA1A3A49B800053268 /* OwnDetails.swift */,
 				97ACFD6F1A1D75CD006B55BE /* UserDetails.swift */,
 				9750DA4D1A27990E0086F319 /* Activity.swift */,
 				978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */,
@@ -458,8 +456,6 @@
 				972E35B41A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift */,
 				972E35B11A0E069700F9EF52 /* QrCodeGenerator.swift */,
 				974F41B21A1C12C7003226B9 /* QrReader.swift */,
-				971004B01A09D42D0088D66B /* WebProtocol.swift */,
-				971382D51A0844AA008A39FD /* Web.swift */,
 				977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */,
 				977B35091A17D10200A90F72 /* ApiController.swift */,
 				9707AB7B1A1162AB00935F33 /* JSON.swift */,
@@ -677,12 +673,10 @@
 				9760915D1A0AD28400C49248 /* DICAppDelegate.swift in Sources */,
 				978FBBD21A11814B0059DA70 /* Settings.swift in Sources */,
 				973B77DF1A080218007E8726 /* CreatedPreliminaryViewController.swift in Sources */,
-				971004B11A09D42D0088D66B /* WebProtocol.swift in Sources */,
 				973B77DB1A07FF5F007E8726 /* FirstLaunchViewController.swift in Sources */,
 				97BD02941A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
 				974F41B31A1C12C7003226B9 /* QrReader.swift in Sources */,
 				97BA3DC81A12EB030063940A /* CreatorWithSettingsProtocol.swift in Sources */,
-				971382D61A0844AA008A39FD /* Web.swift in Sources */,
 				973B77F31A082D41007E8726 /* NotificationsViewController.swift in Sources */,
 				971004AC1A09CDC10088D66B /* DICProtocol.swift in Sources */,
 				977B350A1A17D10200A90F72 /* ApiController.swift in Sources */,
@@ -699,6 +693,7 @@
 				971004B41A0AC2280088D66B /* DICViewController.swift in Sources */,
 				97ACFD651A1D159E006B55BE /* LoadingScreenViewController.swift in Sources */,
 				972E35B51A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
+				97D7CFFB1A3A49B800053268 /* OwnDetails.swift in Sources */,
 				973B77DD1A07FF6C007E8726 /* MainViewController.swift in Sources */,
 				973B77E91A082BDC007E8726 /* CreatePreliminaryViewController.swift in Sources */,
 				973B77F11A082D04007E8726 /* SettingsViewController.swift in Sources */,
@@ -741,7 +736,6 @@
 				97B3D4991A0EAE7F0019628B /* UIMocks.swift in Sources */,
 				9760915E1A0AD28600C49248 /* DICAppDelegate.swift in Sources */,
 				97BA3E3E1A145C140063940A /* ViewOtherDetailViewController.swift in Sources */,
-				97D7C68B1A0873D7000F6BA5 /* Web.swift in Sources */,
 				97D83DE31A15F60500F008F2 /* SendMessageViewController.swift in Sources */,
 				97D7C67E1A0873AB000F6BA5 /* LoginViewController.swift in Sources */,
 				978FBBD01A117F230059DA70 /* IdentitySharingViewControllerTest.swift in Sources */,
@@ -761,7 +755,6 @@
 				97B3D49B1A0EAFC70019628B /* InitiateQRViewControllerTest.swift in Sources */,
 				97D7C6801A0873B0000F6BA5 /* CreatedPreliminaryViewController.swift in Sources */,
 				978FBBD31A11814B0059DA70 /* Settings.swift in Sources */,
-				971004B21A09D6140088D66B /* WebProtocol.swift in Sources */,
 				974C06BF1A08D16300192CCB /* DICControllerProtocol.swift in Sources */,
 				978FBBD71A1181FD0059DA70 /* SettingsTest.swift in Sources */,
 				9750DA4F1A27990E0086F319 /* Activity.swift in Sources */,
@@ -785,6 +778,7 @@
 				9707AB7D1A11632400935F33 /* JSON.swift in Sources */,
 				978FBBE21A118BF80059DA70 /* SharingSettingsCasual.swift in Sources */,
 				972E35B31A0E069700F9EF52 /* QrCodeGenerator.swift in Sources */,
+				97D7CFFC1A3A49B800053268 /* OwnDetails.swift in Sources */,
 				97B3D49E1A0EEA5E0019628B /* Error.swift in Sources */,
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				974E6B661A1FBC5400C71DF4 /* DICTabBarController.swift in Sources */,

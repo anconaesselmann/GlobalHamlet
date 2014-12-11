@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 @objc(ApiController) class ApiController: NSObject, InitArgsInterface {
     var delegate: APIControllerDelegateProtocol?
@@ -40,6 +41,17 @@ import Foundation
         task.resume()
     }
     
+    func imageRequest(urlString:String, handler:(UIImage)->Void) {
+        let session = _getSession()
+        let request = _getRequestRequest(urlString)
+        
+        let task = session.dataTaskWithRequest(
+            request,
+            completionHandler: _getImageCompletionHandler(handler)
+        )
+        task.resume()
+    }
+    
     func _delegateCaller(dict:NSDictionary) {
         if delegate == nil {
             NSLog("ERROR: Delegate is nil.")
@@ -69,6 +81,22 @@ import Foundation
             timeoutInterval: timeout
         )
         return request
+    }
+    func _getImageCompletionHandler(handler:(UIImage)->Void) -> (NSData?, NSURLResponse?, NSError?) -> Void{
+        var h = { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            let url:String? = response?.URL?.absoluteString?
+            var image:UIImage!;
+            if error == nil {
+                image = UIImage(data: data!)
+            }
+            else {
+                println("Error: \(error!.localizedDescription)")
+                image = UIImage(named: "connection")
+            }
+            self._debugDisplay(url, jsonResult: data!, response:response)
+            handler(image)
+        }
+        return h
     }
     func _getCompletionHandler(handler:(NSDictionary)->Void) -> (NSData?, NSURLResponse?, NSError?) -> Void{
         var h = { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
@@ -104,7 +132,7 @@ import Foundation
         }
         return h
     }
-    func _debugDisplay(url:String?, jsonResult:NSDictionary, response:NSURLResponse?) {
+    func _debugDisplay(url:String?, jsonResult:NSObject, response:NSURLResponse?) {
         if displayDebugOutput {
             if url != nil {
                 println("---- response for: " + url! + " ----")
