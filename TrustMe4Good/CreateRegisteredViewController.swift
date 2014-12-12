@@ -24,6 +24,10 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
+        loadUserData()
+    }
+    
+    func loadUserData() {
         loadingView = LoadingIndicator(del: self)
         
         ownDetails = OwnDetails()
@@ -83,6 +87,7 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     }
     func uploadCompleted(result: NSDictionary) {
         println(result)
+        loadUserData()
     }
     func uploadChanges() {
         let arguments = [
