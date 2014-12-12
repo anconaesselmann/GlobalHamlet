@@ -91,6 +91,7 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
         loadUserData()
     }
     func uploadChanges() {
+        loadingView.start()
         let arguments = [
             "firstName": firstNameLabel.text!,
             "lastName": lastNameLabel.text!,
