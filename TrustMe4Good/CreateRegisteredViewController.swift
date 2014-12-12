@@ -1,10 +1,12 @@
 import UIKit
+import MobileCoreServices
 
-class CreateRegisteredViewController: DICViewController {
+class CreateRegisteredViewController: DICViewController, UINavigationControllerDelegate,    UIImagePickerControllerDelegate {
     var api:ApiController!
     var url:String!
     var loadingView:LoadingIndicator!
     var ownDetails:OwnDetails!
+    var imageData:NSData?
     
     @IBOutlet weak var firstNameLabel: UITextField!
     @IBOutlet weak var lastNameLabel: UITextField!
@@ -16,6 +18,9 @@ class CreateRegisteredViewController: DICViewController {
     @IBOutlet weak var countryLabel: UITextField!
     @IBOutlet weak var profilePicture: UIImageView!
     
+    @IBAction func saveAction(sender: AnyObject) {
+        uploadChanges()
+    }
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
@@ -51,6 +56,62 @@ class CreateRegisteredViewController: DICViewController {
     func imageReceived(image:UIImage) {
         self.profilePicture!.image = image
         loadingView.stop()
+    }
+    
+    @IBAction func imageButton(sender: AnyObject) {
+        takePhoto(sender)
+    }
+    func takePhoto(sender: AnyObject) {
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+            var picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.cameraDevice = UIImagePickerControllerCameraDevice.Front
+            var mediaTypes: Array<AnyObject> = [kUTTypeImage]
+            picker.mediaTypes = mediaTypes
+            picker.allowsEditing = true
+            self.presentViewController(picker, animated: true, completion: nil)
+        }
+        else{
+            NSLog("No Camera.")
+        }
+    }
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        imageData = UIImageJPEGRepresentation(image, 0.6);
+        self.profilePicture!.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    func uploadCompleted(result: NSDictionary) {
+        println(result)
+    }
+    func uploadChanges() {
+        let arguments = [
+            "firstName": firstNameLabel.text!,
+            "lastName": lastNameLabel.text!,
+            "phoneNbr": phoneNbrLabel.text!,
+            "address": addressLabel.text!,
+            "city": cityLabel.text!,
+            "zip": zipLabel.text!,
+            "state": stateLabel.text!,
+            "country": countryLabel.text!
+        ]
+        var fileData:[String: NSData]?
+        var fileNames:[String]?
+        var mimeTypes:[String]?
+        if imageData != nil {
+            println("image data not nil")
+            fileData = ["fileToUpload": imageData!]
+            fileNames = ["profilePicture.jpg"]
+            mimeTypes = ["image/jpeg"]
+        }
+        api.multiPartFormDataRequest(
+            url + "/user/submit_edit",
+            arguments: arguments,
+            fileData: fileData,
+            fileNames: fileNames,
+            mimeTypes: mimeTypes,
+            handler: uploadCompleted
+        )
     }
 }
 

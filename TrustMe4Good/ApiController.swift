@@ -40,6 +40,31 @@ import UIKit
         )
         task.resume()
     }
+    func multiPartFormDataRequest(
+        urlString:String,
+        arguments: Dictionary<String, String>,
+        fileData: [String: NSData]?,
+        fileNames: [String]?,
+        mimeTypes: [String]?,
+        handler:(NSDictionary)->Void
+    ) {
+        let session = _getSession()
+        let request = _getMultipartFormDataRequest(
+            urlString,
+            arguments: arguments,
+            fileData: fileData,
+            fileNames: fileNames,
+            mimeTypes: mimeTypes
+        )
+        
+        let resolvedHandler = _getCompletionHandler(handler)
+        
+        let task = session.dataTaskWithRequest(
+            request,
+            completionHandler: resolvedHandler
+        )
+        task.resume()
+    }
     
     func imageRequest(urlString:String, handler:(UIImage)->Void) {
         let session = _getSession()
@@ -172,6 +197,74 @@ import UIKit
         request.HTTPBody    = requestBodyData
         
         return request
+    }
+    
+    func _getMultipartFormDataRequest(
+        urlString:String,
+        arguments: Dictionary<String, String>,
+        fileData: [String: NSData]?,
+        fileNames: [String]?,
+        mimeTypes: [String]?
+    ) -> NSMutableURLRequest {
+        
+        let boundary = generateBoundaryString()
+        let url      = NSURL(string: urlString)
+        let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
+        var request     = NSMutableURLRequest(
+            URL: url!,
+            cachePolicy: cachePolicy,
+            timeoutInterval: timeout
+        )
+        request.HTTPMethod = "POST"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.HTTPBody = createBodyWithParameters(arguments, fileData: fileData, fileNames: fileNames, mimeTypes: mimeTypes, boundary: boundary)
+        return request
+    }
+    
+    func createBodyWithParameters(
+        arguments: [String: String]?,
+        fileData: [String: NSData]?,
+        fileNames: [String]?,
+        mimeTypes: [String]?,
+        boundary: String
+    ) -> NSData {
+        
+        let body = NSMutableData()
+        
+        let boundaryData   = "--\(boundary)\r\n".dataUsingEncoding(NSISOLatin1StringEncoding)!
+        
+        if arguments != nil {
+            for (key, value) in arguments! {
+                body.appendData(boundaryData)
+                body.appendData("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".dataUsingEncoding(NSISOLatin1StringEncoding)!)
+                body.appendData("\(value)\r\n".dataUsingEncoding(NSISOLatin1StringEncoding)!)
+            }
+        }
+        
+        if fileData != nil {
+            var i = 0
+            for (argumentName, data) in fileData! {
+                let filename = fileNames![i]
+                let mimetype = mimeTypes![i]
+                
+                let cdString = "Content-Disposition: form-data; name=\"\(argumentName)\"; filename=\"\(filename)\"\r\n"
+                
+                body.appendData(boundaryData)
+                body.appendData(cdString.dataUsingEncoding(NSISOLatin1StringEncoding)!)
+                body.appendData("Content-Type: \(mimetype)\r\n\r\n".dataUsingEncoding(NSISOLatin1StringEncoding)!)
+                body.appendData(data)
+                body.appendData("\r\n".dataUsingEncoding(NSISOLatin1StringEncoding)!)
+                
+                i++
+            }
+        }
+        
+        body.appendData("--\(boundary)--\r\n".dataUsingEncoding(NSISOLatin1StringEncoding)!)
+        return body
+    }
+    
+    func generateBoundaryString() -> String {
+        return "Boundary-\(NSUUID().UUIDString)"
     }
     
 }

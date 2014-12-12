@@ -1178,13 +1178,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-rO-GUv">
+                                <rect key="frame" x="201" y="300" width="199" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="O5q-tK-7uJ"/>
+                                    <constraint firstAttribute="width" constant="199" id="glf-mm-Oec"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imageButton:" destination="SLq-zN-6DF" eventType="touchUpInside" id="DZj-BI-UF2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pZI-0N-y4Q" firstAttribute="top" secondItem="1AY-ub-onq" secondAttribute="bottom" constant="8" id="2Sz-4J-hsJ"/>
                             <constraint firstItem="bqa-Ul-srP" firstAttribute="top" secondItem="l6i-eo-VVD" secondAttribute="bottom" constant="8" id="4ch-IU-fCo"/>
                             <constraint firstItem="axu-6V-Tmc" firstAttribute="leading" secondItem="7vc-Je-3XB" secondAttribute="leadingMargin" id="7oz-bR-9hI"/>
+                            <constraint firstItem="JO8-rO-GUv" firstAttribute="top" secondItem="l6i-eo-VVD" secondAttribute="bottom" constant="8" id="EXZ-YG-VmQ"/>
                             <constraint firstAttribute="centerX" secondItem="bqa-Ul-srP" secondAttribute="centerX" id="GD8-E8-YSd"/>
+                            <constraint firstAttribute="centerX" secondItem="JO8-rO-GUv" secondAttribute="centerX" id="HV5-Uy-jY9"/>
                             <constraint firstItem="pf7-hg-MM9" firstAttribute="top" secondItem="IAa-gn-EBD" secondAttribute="bottom" constant="8" id="INJ-KF-Ggm"/>
                             <constraint firstItem="l6i-eo-VVD" firstAttribute="top" secondItem="pZI-0N-y4Q" secondAttribute="bottom" constant="8" id="Jgr-Vc-5Zu"/>
                             <constraint firstItem="l6i-eo-VVD" firstAttribute="leading" secondItem="axu-6V-Tmc" secondAttribute="trailing" constant="8" id="OJc-zq-Dj1"/>
@@ -1208,7 +1223,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Update User Info" id="gUa-Yg-5GW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EU4-EQ-2i6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EU4-EQ-2i6">
+                            <connections>
+                                <action selector="saveAction:" destination="SLq-zN-6DF" id="Wff-hI-Uct"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
