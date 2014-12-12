@@ -1,7 +1,7 @@
 import UIKit
 import MobileCoreServices
 
-class CreateRegisteredViewController: DICViewController, UINavigationControllerDelegate,    UIImagePickerControllerDelegate {
+class CreateRegisteredViewController: DICViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     var api:ApiController!
     var url:String!
     var loadingView:LoadingIndicator!
@@ -34,8 +34,22 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstNameLabel.delegate = self
+        lastNameLabel.delegate  = self
+        phoneNbrLabel.delegate  = self
+        addressLabel.delegate   = self
+        cityLabel.delegate      = self
+        zipLabel.delegate       = self
+        stateLabel.delegate     = self
+        countryLabel.delegate   = self
         
         loadUserData()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true;
     }
     
     func loadUserData() {
