@@ -11,7 +11,6 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     
     @IBOutlet weak var scrollView: UIScrollView!
 
-    
     @IBOutlet weak var firstNameLabel: UITextField!
     @IBOutlet weak var lastNameLabel: UITextField!
     @IBOutlet weak var phoneNbrLabel: UITextField!
@@ -24,7 +23,9 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     
     @IBAction func saveAction(sender: AnyObject) {
         uploadChanges()
+        dismissKeyboard()
     }
+    
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
@@ -40,10 +41,12 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
         super.viewDidLoad()
         
         loadUserData()
+        
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        self.view.addGestureRecognizer(tap)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool
-    {
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder()
         return true;
     }
@@ -130,19 +133,32 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
             handler: uploadCompleted
         )
     }
+    
+    func dismissKeyboard() {
+        firstNameLabel.resignFirstResponder()
+        lastNameLabel.resignFirstResponder()
+        phoneNbrLabel.resignFirstResponder()
+        addressLabel.resignFirstResponder()
+        cityLabel.resignFirstResponder()
+        zipLabel.resignFirstResponder()
+        stateLabel.resignFirstResponder()
+        countryLabel.resignFirstResponder()
+    }
 
     func textFieldDidBeginEditing(textField: UITextField!) {
-        var scrollPoint:CGPoint = CGPointMake(0, textField.frame.origin.y - (firstNameLabel.frame.origin.y + self.navigationController!.navigationBar.frame.origin.y + self.navigationController!.navigationBar.bounds.height))
-        scrollView.setContentOffset(scrollPoint, animated:true)
-//        navigationController?.setNavigationBarHidden(true, animated: true)
-//        scrollView.scrollEnabled = false
+        let nc = self.navigationController?
+        if nc != nil {
+            var scrollPoint:CGPoint = CGPointMake(0, textField.frame.origin.y - (firstNameLabel.frame.origin.y + nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
+            scrollView.setContentOffset(scrollPoint, animated:true)
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField!) {
-        var scrollPoint:CGPoint = CGPointMake(0, -(self.navigationController!.navigationBar.frame.origin.y + self.navigationController!.navigationBar.bounds.height))
-        scrollView.setContentOffset(scrollPoint, animated:true)
-//        navigationController?.setNavigationBarHidden(false, animated: true)
-//        scrollView.scrollEnabled = true
+        let nc = self.navigationController?
+        if nc != nil {
+            var scrollPoint:CGPoint = CGPointMake(0, -(nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
+            scrollView.setContentOffset(scrollPoint, animated:true)
+        }
     }
 
 
