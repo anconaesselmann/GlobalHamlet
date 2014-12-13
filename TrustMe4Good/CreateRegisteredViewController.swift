@@ -7,6 +7,10 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     var loadingView:LoadingIndicator!
     var ownDetails:OwnDetails!
     var imageData:NSData?
+    var activeTextField:UITextField!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+
     
     @IBOutlet weak var firstNameLabel: UITextField!
     @IBOutlet weak var lastNameLabel: UITextField!
@@ -34,14 +38,6 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstNameLabel.delegate = self
-        lastNameLabel.delegate  = self
-        phoneNbrLabel.delegate  = self
-        addressLabel.delegate   = self
-        cityLabel.delegate      = self
-        zipLabel.delegate       = self
-        stateLabel.delegate     = self
-        countryLabel.delegate   = self
         
         loadUserData()
     }
@@ -71,7 +67,7 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
         api.imageRequest(imageUrlString, handler: imageReceived);
     }
     
-
+    
     func imageReceived(image:UIImage) {
         self.profilePicture!.image = image
         loadingView.stop()
@@ -134,5 +130,22 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
             handler: uploadCompleted
         )
     }
+
+    func textFieldDidBeginEditing(textField: UITextField!) {
+        var scrollPoint:CGPoint = CGPointMake(0, textField.frame.origin.y - (firstNameLabel.frame.origin.y + self.navigationController!.navigationBar.frame.origin.y + self.navigationController!.navigationBar.bounds.height))
+        scrollView.setContentOffset(scrollPoint, animated:true)
+//        navigationController?.setNavigationBarHidden(true, animated: true)
+//        scrollView.scrollEnabled = false
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField!) {
+        var scrollPoint:CGPoint = CGPointMake(0, -(self.navigationController!.navigationBar.frame.origin.y + self.navigationController!.navigationBar.bounds.height))
+        scrollView.setContentOffset(scrollPoint, animated:true)
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//        scrollView.scrollEnabled = true
+    }
+
+
+
 }
 
