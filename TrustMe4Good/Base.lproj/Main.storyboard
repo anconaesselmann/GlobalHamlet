@@ -495,6 +495,69 @@
             </objects>
             <point key="canvasLocation" x="6839" y="3330"/>
         </scene>
+        <!--Contact Options Table View Controller-->
+        <scene sceneID="7tn-XB-qRg">
+            <objects>
+                <tableViewController id="Ju8-Lx-h7B" customClass="ContactOptionsTableViewController" customModule="TrustMe4Good" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Utg-r7-TTW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="DGW-Pm-hdx">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="JLz-S4-iKK">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="saveToContacts" id="9jQ-LK-vA7">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9jQ-LK-vA7" id="pyL-AK-fu6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save to contacts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9N-4N-Hwd">
+                                                    <rect key="frame" x="8" y="11" width="130" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YB1-JX-MYn">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YB1-JX-MYn" id="jli-rl-UV4">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send facebook fried request" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL3-Gs-TMm">
+                                                    <rect key="frame" x="8" y="11" width="218" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jWk-iC-CtX">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jWk-iC-CtX" id="Ug4-U2-5F7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Ju8-Lx-h7B" id="N31-AH-WGN"/>
+                            <outlet property="delegate" destination="Ju8-Lx-h7B" id="ndR-jX-pGP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pC-b6-wUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7118" y="4120"/>
+        </scene>
         <!--Send Message View Controller-->
         <scene sceneID="aUS-gN-WIq">
             <objects>
@@ -541,19 +604,14 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="mBv-dd-39Q">
-                        <barButtonItem key="rightBarButtonItem" image="navBar_send" id="MJ2-ws-7er">
-                            <connections>
-                                <action selector="sendAction:" destination="gzR-sl-eCb" id="Qx9-TQ-jOR"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="mBv-dd-39Q"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="messageBodyTextView" destination="UHy-3C-Ug2" id="3wZ-r5-thH"/>
                         <outlet property="subjectTextField" destination="2Qi-Y9-IGz" id="UOP-Ch-6ho"/>
                         <segue destination="Qt0-PN-BgX" kind="presentation" identifier="EmailToMainSegue" animates="NO" id="Bxd-NR-yQQ"/>
+                        <segue destination="Ju8-Lx-h7B" kind="show" identifier="contactOptionsSegue" id="hrD-Fi-BS1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhQ-Uu-nlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1559,16 +1617,15 @@
     <resources>
         <image name="LaunchScreen3D" width="320" height="480"/>
         <image name="message_in" width="70" height="70"/>
-        <image name="navBar_send" width="22" height="22"/>
         <image name="temp" width="48" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zPE-Kg-AlB"/>
-        <segue reference="ucJ-T1-mPc"/>
+        <segue reference="CvU-xV-J9K"/>
         <segue reference="wvW-bS-b3b"/>
+        <segue reference="ucJ-T1-mPc"/>
         <segue reference="SBw-96-dOE"/>
-        <segue reference="HqO-Xn-UN5"/>
         <segue reference="bxa-Sj-cpn"/>
         <segue reference="2xV-Ix-J28"/>
+        <segue reference="HqO-Xn-UN5"/>
     </inferredMetricsTieBreakers>
 </document>

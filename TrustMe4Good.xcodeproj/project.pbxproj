@@ -65,6 +65,8 @@
 		976091621A0AE71800C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091631A0AE84000C49248 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091611A0AE71800C49248 /* DIHelper.swift */; };
 		976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976091641A0C461500C49248 /* LoginViewControllerTest.swift */; };
+		9765B7A51A654BAC0006A902 /* ContactOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765B7A41A654BAC0006A902 /* ContactOptionsTableViewController.swift */; };
+		9765B7A61A654BAC0006A902 /* ContactOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765B7A41A654BAC0006A902 /* ContactOptionsTableViewController.swift */; };
 		977B350A1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
 		977B350B1A17D10200A90F72 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B35091A17D10200A90F72 /* ApiController.swift */; };
 		977B350D1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */; };
@@ -211,6 +213,7 @@
 		9760915C1A0AD28400C49248 /* DICAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DICAppDelegate.swift; sourceTree = "<group>"; };
 		976091611A0AE71800C49248 /* DIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		976091641A0C461500C49248 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		9765B7A41A654BAC0006A902 /* ContactOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactOptionsTableViewController.swift; sourceTree = "<group>"; };
 		977B35091A17D10200A90F72 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIControllerDelegateProtocol.swift; sourceTree = "<group>"; };
 		977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousArrayResourceInstantiator.swift; sourceTree = "<group>"; };
@@ -429,6 +432,7 @@
 				974E6B611A1FBBBA00C71DF4 /* ConnectionNavigationController.swift */,
 				97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */,
 				97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */,
+				9765B7A41A654BAC0006A902 /* ContactOptionsTableViewController.swift */,
 				979952CB1A297157006CD02C /* ViewMessageViewController.swift */,
 			);
 			name = Connections;
@@ -658,6 +662,7 @@
 			files = (
 				979952CC1A297157006CD02C /* ViewMessageViewController.swift in Sources */,
 				97BA3DC51A12E8F10063940A /* ReciprocateNavigationController.swift in Sources */,
+				9765B7A51A654BAC0006A902 /* ContactOptionsTableViewController.swift in Sources */,
 				978FBBDE1A118BD50059DA70 /* SharingSettingsRestricted.swift in Sources */,
 				974C06BE1A08D01300192CCB /* DICControllerProtocol.swift in Sources */,
 				9707AB7C1A1162AB00935F33 /* JSON.swift in Sources */,
@@ -789,6 +794,7 @@
 				97BD02951A1129710045F3D1 /* ConnectionDetails.swift in Sources */,
 				97BB75771A24811F005954AC /* LoadingIndicator.swift in Sources */,
 				979952CD1A297157006CD02C /* ViewMessageViewController.swift in Sources */,
+				9765B7A61A654BAC0006A902 /* ContactOptionsTableViewController.swift in Sources */,
 				974F41B41A1C12C7003226B9 /* QrReader.swift in Sources */,
 				972E35B61A0E07EC00F9EF52 /* CodeGeneratorProtocol.swift in Sources */,
 				97BD02611A0F6CF00045F3D1 /* ReciprocateViewControllerTest.swift in Sources */,

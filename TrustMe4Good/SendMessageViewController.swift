@@ -11,14 +11,6 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
     @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var messageBodyTextView: UITextView!
     
-    @IBAction func sendAction(sender: AnyObject) {
-        sendEmail(
-            connectionId,
-            subject: subjectTextField!.text,
-            messageBody: messageBodyTextView.text
-        )
-    }
-    @IBOutlet weak var sendAction: UIBarButtonItem!
     override func initWithArgs(args:[AnyObject]) {
         api = args[0] as ApiController
         url = args[1] as String
@@ -27,7 +19,23 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let sendButton = UIBarButtonItem(image: UIImage(named: "navBar_send.png"), style: .Plain, target: self, action: "sendAction")
+        let contactOptionsButton = UIBarButtonItem(image: UIImage(named: "navBar_options.png"), style: .Plain, target: self, action: "contactOptionsAction")
+        navigationItem.setRightBarButtonItems([sendButton, contactOptionsButton], animated: true)
+        
         self.navigationItem.title = toString
+    }
+    
+    func sendAction() {
+        sendEmail(
+            connectionId,
+            subject: subjectTextField!.text,
+            messageBody: messageBodyTextView.text
+        )
+    }
+    
+    func contactOptionsAction() {
+        performSegueWithIdentifier("contactOptionsSegue", sender: nil)
     }
     
     func sendEmail(id:Int, subject:String, messageBody:String) -> Bool {
