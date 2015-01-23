@@ -10,12 +10,14 @@ class MoreViewController: DICTableViewController, APIControllerDelegateProtocol 
         url = args[1] as String
     }
     
-    @IBAction func logoutAction(sender: AnyObject) {
-        api.delegate = self
-        api.request(url + "/login/logout")
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if self.tableView.cellForRowAtIndexPath(indexPath)?.reuseIdentifier? == "logoutTableViewCell" {
+            api.delegate = self
+            api.request(url + "/login/logout")
+        }
     }
     
     func didReceiveAPIResults(results: NSDictionary) {
-        performSegueWithIdentifier("SegueToFirstLaunchView", sender: self)
+        performSegueWithIdentifier("segueToFirstLaunchView", sender: self)
     }
 }

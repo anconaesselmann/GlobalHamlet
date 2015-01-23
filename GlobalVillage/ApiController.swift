@@ -165,7 +165,11 @@ import UIKit
             println(jsonResult)
             println("cookies:")
             let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
-            println(cookies.cookiesForURL(NSURL(string: response!.URL!.absoluteString!)!)!)
+            if response?.URL?.absoluteString? != nil {
+                println(cookies.cookiesForURL(NSURL(string: response!.URL!.absoluteString!)!)!)
+            } else {
+                println("Error unwrapping cookies")
+            }
             println("---- end response ----")
         }
     }

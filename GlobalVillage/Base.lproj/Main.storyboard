@@ -1007,48 +1007,35 @@
                         <sections>
                             <tableViewSection id="FP9-54-BI5">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Stq-Em-gR4">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Stq-Em-gR4" id="riI-E5-nlo">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iQN-uh-Bl0">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iQN-uh-Bl0" id="RzQ-BA-FoD">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7f-Po-oP3">
-                                                    <rect key="frame" x="20" y="7" width="88" height="30"/>
-                                                    <state key="normal" title="user settings">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="SLq-zN-6DF" kind="show" id="1YV-Mi-biZ"/>
-                                                    </connections>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mS-KQ-k97">
+                                                    <rect key="frame" x="8" y="11" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SLq-zN-6DF" kind="show" id="d4R-D8-2ni"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QF3-2j-cg7">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="logoutTableViewCell" id="QF3-2j-cg7">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QF3-2j-cg7" id="X1i-OH-DlP">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irg-yz-5Cv">
-                                                    <rect key="frame" x="20" y="7" width="44" height="30"/>
-                                                    <state key="normal" title="logout">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="logoutAction:" destination="uqg-NF-WaW" eventType="touchUpInside" id="CRj-8k-T2d"/>
-                                                    </connections>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o6-5n-TIx">
+                                                    <rect key="frame" x="8" y="11" width="49" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="irg-yz-5Cv" firstAttribute="leading" secondItem="X1i-OH-DlP" secondAttribute="leadingMargin" constant="12" id="5g2-iy-L21"/>
-                                                <constraint firstAttribute="centerY" secondItem="irg-yz-5Cv" secondAttribute="centerY" id="v8t-F7-7yx"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1063,7 +1050,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SegueToFirstLaunchView" id="bxa-Sj-cpn"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="segueToFirstLaunchView" id="ULl-SE-mt0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSF-DA-deS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1564,7 +1551,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRf-1D-Tyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11045" y="-2194"/>
+            <point key="canvasLocation" x="11057" y="-2046"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="zHC-ov-CVv">
@@ -1689,11 +1676,11 @@
             </objects>
             <point key="canvasLocation" x="1976" y="-2193"/>
         </scene>
-        <!--initiate-->
+        <!--Initiate Navigation Controller-->
         <scene sceneID="Caj-l7-JEd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lJH-3s-qUk" customClass="InitiateNavigationController" customModule="GlobalVillage" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="initiate" image="temp" id="lug-Sp-YVG"/>
+                    <tabBarItem key="tabBarItem" title="" id="lug-Sp-YVG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6p-pz-F2t">
@@ -1815,12 +1802,12 @@
         <image name="temp" width="48" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HqO-Xn-UN5"/>
         <segue reference="zPE-Kg-AlB"/>
         <segue reference="bJ7-J8-pbV"/>
         <segue reference="wvW-bS-b3b"/>
         <segue reference="SBw-96-dOE"/>
-        <segue reference="bxa-Sj-cpn"/>
+        <segue reference="ULl-SE-mt0"/>
         <segue reference="2xV-Ix-J28"/>
+        <segue reference="HqO-Xn-UN5"/>
     </inferredMetricsTieBreakers>
 </document>
