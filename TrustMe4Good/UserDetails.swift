@@ -4,6 +4,7 @@ class UserDetails: DictionarySettable, DebugPrintable {
     var can_be_messaged = false
     var name            = ""
     var email           = ""
+    var phone           = ""
     var connection_id   = 0
     
     func set(dict:[String:AnyObject]) {
@@ -15,6 +16,9 @@ class UserDetails: DictionarySettable, DebugPrintable {
         }
         if let _email = dict["email"] as? String {
             email = _email
+        }
+        if let _phone = dict["phone"]? as? String {
+            phone = _phone
         }
         if let _connection_id = dict["connection_id"] as? Int {
             connection_id = _connection_id

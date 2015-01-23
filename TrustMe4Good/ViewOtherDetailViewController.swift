@@ -2,7 +2,7 @@ import UIKit
 import Foundation
 
 class ViewOtherDetailViewController: DICViewController, APIControllerDelegateProtocol {
-    var connectionId:Int?;
+    var connectionId:Int?
     var dataJsonString:String = ""
     var userDetails:UserDetails!
     var api: ApiController!

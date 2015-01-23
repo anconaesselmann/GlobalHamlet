@@ -74,6 +74,8 @@
 		977C573C1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */; };
 		977C573D1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */; };
 		977C573F1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C573E1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift */; };
+		977E313A1A71A50D003F1DB1 /* SaveToContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E31391A71A50D003F1DB1 /* SaveToContactsViewController.swift */; };
+		977E313B1A71A50D003F1DB1 /* SaveToContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E31391A71A50D003F1DB1 /* SaveToContactsViewController.swift */; };
 		978F47F91A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
 		978F47FA1A2B16240006D349 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47F81A2B16240006D349 /* MoveViewController.swift */; };
 		978F47FC1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */; };
@@ -218,6 +220,7 @@
 		977B350C1A17D2D500A90F72 /* APIControllerDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIControllerDelegateProtocol.swift; sourceTree = "<group>"; };
 		977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousArrayResourceInstantiator.swift; sourceTree = "<group>"; };
 		977C573E1A2D567E0007E8D1 /* AsynchronousArrayResourceInstantiatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousArrayResourceInstantiatorTest.swift; sourceTree = "<group>"; };
+		977E31391A71A50D003F1DB1 /* SaveToContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveToContactsViewController.swift; sourceTree = "<group>"; };
 		978F47F81A2B16240006D349 /* MoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveViewController.swift; sourceTree = "<group>"; };
 		978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousResourceInstantiator.swift; sourceTree = "<group>"; };
 		978F47FE1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousResourceInstantiatorTest.swift; sourceTree = "<group>"; };
@@ -433,6 +436,7 @@
 				97BA3E3C1A145C140063940A /* ViewOtherDetailViewController.swift */,
 				97D83DE11A15F60500F008F2 /* SendMessageViewController.swift */,
 				9765B7A41A654BAC0006A902 /* ContactOptionsTableViewController.swift */,
+				977E31391A71A50D003F1DB1 /* SaveToContactsViewController.swift */,
 				979952CB1A297157006CD02C /* ViewMessageViewController.swift */,
 			);
 			name = Connections;
@@ -709,6 +713,7 @@
 				97D7C68E1A08AE56000F6BA5 /* InitialViewController.swift in Sources */,
 				971004B71A0AC3750088D66B /* DICNavigationController.swift in Sources */,
 				979952CF1A297888006CD02C /* Message.swift in Sources */,
+				977E313A1A71A50D003F1DB1 /* SaveToContactsViewController.swift in Sources */,
 				978FBBEA1A11B2FF0059DA70 /* SharingSettings.swift in Sources */,
 				974E6B681A2208F000C71DF4 /* SignUpViewController.swift in Sources */,
 				97BD02911A109E810045F3D1 /* DICTableViewController.swift in Sources */,
@@ -765,6 +770,7 @@
 				9750DA4F1A27990E0086F319 /* Activity.swift in Sources */,
 				978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */,
 				976091651A0C461500C49248 /* LoginViewControllerTest.swift in Sources */,
+				977E313B1A71A50D003F1DB1 /* SaveToContactsViewController.swift in Sources */,
 				978FBBDA1A1189080059DA70 /* NamedSwitch.swift in Sources */,
 				971218A31A0D962300D0C81A /* InitiateViewControllerTest.swift in Sources */,
 				978F47FF1A2D2E240006D349 /* AsynchronousResourceInstantiatorTest.swift in Sources */,

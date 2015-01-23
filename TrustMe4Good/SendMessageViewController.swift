@@ -35,7 +35,7 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
     }
     
     func contactOptionsAction() {
-        performSegueWithIdentifier("contactOptionsSegue", sender: nil)
+        performSegueWithIdentifier("contactOptionsSegue", sender: self)
     }
     
     func sendEmail(id:Int, subject:String, messageBody:String) -> Bool {
@@ -51,5 +51,22 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
         println("Email sending response:")
         println(results)
         performSegueWithIdentifier("EmailToMainSegue", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        super.prepareForSegue(segue, sender: sender)
+        if segue.identifier? == "contactOptionsSegue" {
+            _contactOptionsSegue(segue)
+        } else {
+            println("unknown segue: \(segue.identifier?)")
+        }
+    }
+    
+    func _contactOptionsSegue(segue: UIStoryboardSegue) {
+        let vc:ContactOptionsTableViewController? = segue.destinationViewController as? ContactOptionsTableViewController
+        if vc != nil {
+            vc!.connectionId = connectionId
+            println(connectionId)
+        }
     }
 }
