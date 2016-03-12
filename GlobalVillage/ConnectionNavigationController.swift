@@ -10,7 +10,7 @@ class ConnectionNavigationController: ProjectNavigationController {
             target: self,
             action: "backAction"
         )
-        topViewController.navigationItem.leftBarButtonItem = doneButton;
+        topViewController!.navigationItem.leftBarButtonItem = doneButton;
     }
     func backAction() {
         performSegueWithIdentifier("BackFromNavigationControllerSegue", sender: nil)

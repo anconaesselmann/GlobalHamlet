@@ -8,7 +8,7 @@ class MainViewControllerTest: XCTestCase {
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-        sut = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as MainViewController
+        sut = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
         sut.loadView()
     }
     

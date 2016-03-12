@@ -8,7 +8,7 @@ class InitiateViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-        sut = storyboard.instantiateViewControllerWithIdentifier("InitiateViewController") as InitiateViewController
+        sut = storyboard.instantiateViewControllerWithIdentifier("InitiateViewController") as! InitiateViewController
         sut.connectionDetails = settings
         sut.loadView()
     }

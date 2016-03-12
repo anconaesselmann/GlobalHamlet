@@ -11,17 +11,17 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     @IBOutlet weak var qrCodeImage: UIImageView!
     
     override func initWithArgs(args:[AnyObject]) {
-        qrCodeGenerator = args[0] as CodeGeneratorProtocol
-        api = args[1] as ApiController
-        url = args[2] as String
+        qrCodeGenerator = args[0] as! CodeGeneratorProtocol
+        api = args[1] as! ApiController
+        url = args[2] as! String
         api.delegate = self
     }
     
     func didReceiveAPIResults(results: NSDictionary) {
-        if results["errorCode"] as Int == 0 {
+        if results["errorCode"] as! Int == 0 {
             if initConnectionId == nil {
-                initConnectionId  = results["response"]?["connectionId"] as? Int
-                plainCode   = results["response"]?["plainCode"]    as? String
+                initConnectionId  = results["response"]?.objectForKey("connectionId") as? Int
+                plainCode   = results["response"]?.objectForKey("plainCode") as? String
                 generateQrCode()
             } else {
                 // A code has already been generated, which means this api result is coming from checkIfResponded closure
@@ -36,13 +36,13 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
         } else {
             let errorCode:String? = results["errorCode"] as? String
             NSLog("Error initiating connection. The web request responded with error code:")
-            println(errorCode)
+            print(errorCode)
         }
     }
     
     func generateQrCode() {
         if qrCodeImage != nil && plainCode != nil && initConnectionId != nil {
-            println("Generating Qr Code with id \(String(initConnectionId!)) and string \(plainCode!)")
+            print("Generating Qr Code with id \(String(initConnectionId!)) and string \(plainCode!)")
             let qrString      = "\(plainCode!)\(String(initConnectionId!))"
             qrCodeImage.image = qrCodeGenerator.getImageFromString(qrString)
             checkIfResponded()
@@ -56,7 +56,7 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
             Int64(sec * Double(NSEC_PER_SEC))
         )
         dispatch_after(delay, dispatch_get_main_queue(), {
-            println("delayed block called")
+            print("delayed block called")
             let args:[String: String] = ["initConnectionId": String(self.initConnectionId!)]
             self.api!.postRequest(self.url + "/connection/check_init_response", arguments: args)
         })
@@ -70,12 +70,12 @@ class InitiateQRViewController: DICViewController, APIControllerDelegateProtocol
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "DeleteInitContractsSegue" {
+        if segue.identifier == "DeleteInitContractsSegue" {
             _deleteInitConnectionSegue(segue)
-        } else if segue.identifier? == "ViewInitiateResultSegue" {
+        } else if segue.identifier == "ViewInitiateResultSegue" {
             _viewInitiateResultSegue(segue)
         } else {
-            println("unknown segue: \(segue.identifier?)")
+            print("unknown segue: \(segue.identifier)")
         }
     }
     

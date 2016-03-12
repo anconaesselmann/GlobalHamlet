@@ -34,13 +34,13 @@ class Mock_Settings: SettingsProtocol {
     var s:Bool = false
     var string:String = ""
     var json:String = ""
-    func setSwitches(dict: [String: Bool]) {}
-    func getSwitches() -> [String: Bool] {return switches}
-    func setSwitch(key: String, value: Bool) {}
-    func getSwitch(key: String) -> Bool {return s}
-    func setString(key: String, value: String) {}
-    func getString(key: String) -> String {return string}
-    func getJson() -> String {return json}
-    func linkSwitches(namedSwitches: [NamedSwitch]) {}
-    func updateNamedSwitch(name: String) {}
+    @objc func setSettingsSwitches(dict: [String: Bool]) {}
+    @objc func getSwitches() -> [String: Bool] {return switches}
+    @objc func setSwitch(key: String, value: Bool) {}
+    @objc func getSwitch(key: String) -> Bool {return s}
+    @objc func setString(key: String, value: String) {}
+    @objc func getString(key: String) -> String {return string}
+    @objc func getJson() -> String {return json}
+    @objc func linkSwitches(namedSwitches: [NamedSwitch]) {}
+    @objc func updateNamedSwitch(name: String) {}
 }

@@ -7,7 +7,7 @@ class ReciprocateViewControllerTest: XCTestCase {
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-        sut = storyboard.instantiateViewControllerWithIdentifier("ReciprocateViewController") as ReciprocateViewController
+        sut = storyboard.instantiateViewControllerWithIdentifier("ReciprocateViewController") as! ReciprocateViewController
         sut.loadView()
     }
     

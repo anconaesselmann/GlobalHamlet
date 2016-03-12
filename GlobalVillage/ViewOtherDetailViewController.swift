@@ -12,8 +12,8 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
     @IBOutlet weak var viewOtherDataLabel: UILabel!
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
         
         userDetails = UserDetails()
         
@@ -46,16 +46,16 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
         if userDetails!.can_be_messaged {
             addSendMessageButton()
         }
-        println("Printing userDetails:")
-        println(userDetails!)
+        print("Printing userDetails:")
+        print(userDetails!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "ComposeEmailSegue" {
+        if segue.identifier == "ComposeEmailSegue" {
             _composeEmailSegue(segue)
         } else {
-            println("unknown segue: \(segue.identifier?)")
+            print("unknown segue: \(segue.identifier)")
         }
     }
     
@@ -65,8 +65,8 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
             vc!.connectionId = connectionId!
             vc!.toString = userDetails!.name
             
-            println("connectionId used for email:")
-            println(connectionId!)
+            print("connectionId used for email:")
+            print(connectionId!)
         }
     }
     func getOtherData() {
@@ -80,13 +80,13 @@ class ViewOtherDetailViewController: DICViewController, APIControllerDelegatePro
     }
 
     func didReceiveAPIResults(results: NSDictionary) {
-        println("ViewOtherDeails api result:")
-        println(results)
+        print("ViewOtherDeails api result:")
+        print(results)
         // TODO: Figure out why it crashes casting to int
         if let id:String = results["response"] as? String {
-            println("Id recieved from api request")
-            println(id)
-            connectionId = id.toInt()
+            print("Id recieved from api request")
+            print(id)
+            connectionId = Int(id)
             getOtherData()
         }
     }

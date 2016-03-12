@@ -29,13 +29,13 @@ class SaveToContactsViewController: DICViewController, UINavigationControllerDel
     @IBOutlet weak var profilePicture: UIImageView!
     
     func saveAction() {
-        var success = addToContacts(adbk, newFirstName: firstNameLabel!.text, newLastName: "", newPhone: phoneNbrLabel!.text, newEmail: emailLabel!.text)
+        let success = addToContacts(adbk, newFirstName: firstNameLabel!.text!, newLastName: "", newPhone: phoneNbrLabel!.text, newEmail: emailLabel!.text)
         dismissKeyboard()
         if success {
             self.navigationController?.popViewControllerAnimated(true)
         } else {
             adbk = nil
-            var alert = UIAlertController(title: "Error", message: "An error occured saving the contact. Make sure the application has access to the address book.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Error", message: "An error occured saving the contact. Make sure the application has access to the address book.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Cancel) { (action) in
                     self.openSettings()
                 })
@@ -48,8 +48,8 @@ class SaveToContactsViewController: DICViewController, UINavigationControllerDel
     }
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
         loadingView = LoadingIndicator(del: self)
         
         ownDetails = OwnDetails()
@@ -77,7 +77,7 @@ class SaveToContactsViewController: DICViewController, UINavigationControllerDel
         checkAuthorization()
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
     }
@@ -92,12 +92,12 @@ class SaveToContactsViewController: DICViewController, UINavigationControllerDel
                 arguments: arguments
             )
         } else {
-            println("ERROR: userId is nill")
+            print("ERROR: userId is nill")
         }
     }
     
     func updateViewAfterAsynchronousRequestResults() {
-        println(userDetails)
+        print(userDetails)
         
         firstNameLabel.text = userDetails?.name
         emailLabel.text     = userDetails?.email
@@ -193,18 +193,18 @@ class SaveToContactsViewController: DICViewController, UINavigationControllerDel
         countryLabel.resignFirstResponder()
     }
     
-    func textFieldDidBeginEditing(textField: UITextField!) {
-        let nc = self.navigationController?
+    func textFieldDidBeginEditing(textField: UITextField) {
+        let nc = self.navigationController
         if nc != nil {
-            var scrollPoint:CGPoint = CGPointMake(0, textField.frame.origin.y - (firstNameLabel.frame.origin.y + nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
+            let scrollPoint:CGPoint = CGPointMake(0, textField.frame.origin.y - (firstNameLabel.frame.origin.y + nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
             scrollView.setContentOffset(scrollPoint, animated:true)
         }
     }
     
-    func textFieldDidEndEditing(textField: UITextField!) {
-        let nc = self.navigationController?
+    func textFieldDidEndEditing(textField: UITextField) {
+        let nc = self.navigationController
         if nc != nil {
-            var scrollPoint:CGPoint = CGPointMake(0, -(nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
+            let scrollPoint:CGPoint = CGPointMake(0, -(nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
             scrollView.setContentOffset(scrollPoint, animated:true)
         }
     }
@@ -221,20 +221,20 @@ class SaveToContactsViewController: DICViewController, UINavigationControllerDel
         let stat = ABAddressBookGetAuthorizationStatus()
         switch stat {
         case .Denied, .Restricted:
-            println("no access")
+            print("no access")
             return
         case .Authorized, .NotDetermined:
             var err : Unmanaged<CFError>? = nil
-            var adbk : ABAddressBook? = ABAddressBookCreateWithOptions(nil, &err).takeRetainedValue()
+            let adbk : ABAddressBook? = ABAddressBookCreateWithOptions(nil, &err).takeRetainedValue()
             if adbk == nil {
-                println(err)
+                print(err)
                 return            }
             self.adbk = adbk
             ABAddressBookRequestAccessWithCompletion(adbk) {
                 (granted:Bool, err:CFError!) in
                 if granted {
                 } else {
-                    println(err)
+                    print(err)
                 }
             }
         }
@@ -247,42 +247,42 @@ class SaveToContactsViewController: DICViewController, UINavigationControllerDel
     
     func addToContacts(adbk:ABAddressBook?, newFirstName:String, newLastName:String?, newPhone:String?, newEmail:String?) -> Bool {
         if adbk != nil {
-            var newContact:ABRecordRef! = ABPersonCreate().takeRetainedValue()
+            let newContact:ABRecordRef! = ABPersonCreate().takeRetainedValue()
             var success:Bool = false
             
             var error: Unmanaged<CFErrorRef>? = nil
             success = ABRecordSetValue(newContact, kABPersonFirstNameProperty, newFirstName, &error)
-            println("setting first name was successful? \(success)")
+            print("setting first name was successful? \(success)")
             
             if newLastName != nil {
                 success = ABRecordSetValue(newContact, kABPersonLastNameProperty, newLastName!, &error)
             }
             
             if newPhone != nil {
-                var multiPhone:ABMutableMultiValueRef  = createMultiStringRef()
+                let multiPhone:ABMutableMultiValueRef  = createMultiStringRef()
                 
                 ABMultiValueAddValueAndLabel(multiPhone, newPhone!, kABPersonPhoneMobileLabel, nil);
                 ABRecordSetValue(newContact, kABPersonPhoneProperty, multiPhone,nil);
             }
             
             if newEmail != nil {
-                var multiEmail:ABMutableMultiValueRef = createMultiStringRef()
+                let multiEmail:ABMutableMultiValueRef = createMultiStringRef()
                 
                 ABMultiValueAddValueAndLabel(multiEmail, newEmail!, kABHomeLabel, nil);
                 ABRecordSetValue(newContact, kABPersonEmailProperty, multiEmail, nil);
             }
             
-            println("setting last name was successful? \(success)")
+            print("setting last name was successful? \(success)")
             success = ABAddressBookAddRecord(adbk, newContact, &error)
-            println("Adbk addRecord successful? \(success)")
+            print("Adbk addRecord successful? \(success)")
             success = ABAddressBookSave(adbk, &error)
-            println("Adbk Save successful? \(success)")
-            println("added to contacts")
+            print("Adbk Save successful? \(success)")
+            print("added to contacts")
             if success {
                 return true
             }
         } else {
-            println("not authorized")
+            print("not authorized")
         }
         return false
     }

@@ -98,6 +98,7 @@
 		978FBBEE1A11B33D0059DA70 /* SharingSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBED1A11B33D0059DA70 /* SharingSettingsTest.swift */; };
 		978FBBF01A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */; };
 		978FBBF11A1221AB0059DA70 /* CommunicationSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBBEF1A1221AB0059DA70 /* CommunicationSharingViewController.swift */; };
+		979238041C923FC8009B850D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D7C68D1A08AE56000F6BA5 /* InitialViewController.swift */; };
 		979952CC1A297157006CD02C /* ViewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CB1A297157006CD02C /* ViewMessageViewController.swift */; };
 		979952CD1A297157006CD02C /* ViewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CB1A297157006CD02C /* ViewMessageViewController.swift */; };
 		979952CF1A297888006CD02C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979952CE1A297888006CD02C /* Message.swift */; };
@@ -283,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				97BB75651A23F369005954AC /* UICustomization */,
-				97ACFD681A1D42A9006B55BE /* App initializiation */,
+				97ACFD681A1D42A9006B55BE /* App Initializiation */,
 				97ACFD671A1D4286006B55BE /* Create User */,
 				971004B81A0AC5000088D66B /* MainTabBarController.swift */,
 				973B77DC1A07FF6C007E8726 /* MainViewController.swift */,
@@ -424,7 +425,7 @@
 				9760915F1A0AD3FD00C49248 /* di */,
 				978FBBDB1A1189130059DA70 /* ui */,
 			);
-			name = aae;
+			path = aae;
 			sourceTree = "<group>";
 		};
 		974E6B641A1FBC1800C71DF4 /* Connections */ = {
@@ -455,7 +456,7 @@
 				97BD02901A109E810045F3D1 /* DICTableViewController.swift */,
 				9760915C1A0AD28400C49248 /* DICAppDelegate.swift */,
 			);
-			name = di;
+			path = di;
 			sourceTree = "<group>";
 		};
 		976091601A0AD41000C49248 /* std */ = {
@@ -474,7 +475,7 @@
 				978F47FB1A2D2DAC0006D349 /* AsynchronousResourceInstantiator.swift */,
 				977C573B1A2D56510007E8D1 /* AsynchronousArrayResourceInstantiator.swift */,
 			);
-			name = std;
+			path = std;
 			sourceTree = "<group>";
 		};
 		978FBBD41A1181E80059DA70 /* std */ = {
@@ -495,7 +496,7 @@
 				978FBBD81A1189080059DA70 /* NamedSwitch.swift */,
 				97BB75751A24811F005954AC /* LoadingIndicator.swift */,
 			);
-			name = ui;
+			path = ui;
 			sourceTree = "<group>";
 		};
 		978FBBDC1A118B9C0059DA70 /* InitiateSharingSettings */ = {
@@ -529,7 +530,7 @@
 			name = "Create User";
 			sourceTree = "<group>";
 		};
-		97ACFD681A1D42A9006B55BE /* App initializiation */ = {
+		97ACFD681A1D42A9006B55BE /* App Initializiation */ = {
 			isa = PBXGroup;
 			children = (
 				973F5DE81A048839007DAC82 /* AppDelegate.swift */,
@@ -539,7 +540,8 @@
 				973B77EA1A082C0D007E8726 /* LoginViewController.swift */,
 				974E6B671A2208F000C71DF4 /* SignUpViewController.swift */,
 			);
-			name = "App initializiation";
+			name = "App Initializiation";
+			path = AppInitialization;
 			sourceTree = "<group>";
 		};
 		97B3D4971A0EAE5B0019628B /* Mocks */ = {
@@ -602,8 +604,9 @@
 		973F5DDB1A048839007DAC82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Axel Ancona Esselmann";
 				TargetAttributes = {
 					973F5DE21A048839007DAC82 = {
@@ -795,6 +798,7 @@
 				972EF6561A0976B100BEE2C1 /* DIFactory.swift in Sources */,
 				974E6B661A1FBC5400C71DF4 /* DICTabBarController.swift in Sources */,
 				978FBBEE1A11B33D0059DA70 /* SharingSettingsTest.swift in Sources */,
+				979238041C923FC8009B850D /* InitialViewController.swift in Sources */,
 				976091631A0AE84000C49248 /* DIHelper.swift in Sources */,
 				97BB75681A23F3AD005954AC /* ProjectNavigationController.swift in Sources */,
 				978FBBE51A118C040059DA70 /* SharingSettingsFriend.swift in Sources */,
@@ -867,6 +871,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -931,6 +936,7 @@
 				INFOPLIST_FILE = GlobalVillage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anconaesselmann.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = GlobalVillage;
 				STRIP_INSTALLED_PRODUCT = NO;
 			};
@@ -949,6 +955,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anconaesselmann.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = GlobalVillage;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -969,6 +976,7 @@
 				);
 				INFOPLIST_FILE = GlobalVillageTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anconaesselmann.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = GlobalVillageTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlobalVillage.app/GlobalVillage";
 			};
@@ -984,6 +992,7 @@
 				);
 				INFOPLIST_FILE = GlobalVillageTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anconaesselmann.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = GlobalVillageTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlobalVillage.app/GlobalVillage";
 			};

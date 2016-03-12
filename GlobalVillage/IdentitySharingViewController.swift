@@ -7,7 +7,7 @@ class IdentitySharingViewController: DICTableViewController {
     @IBOutlet var switches: [NamedSwitch]!
     
     @IBAction func aliasUdatedAction(sender: AnyObject) {
-        delegate!.connectionDetails.setString("alias", value: aliasTextField.text)
+        delegate!.connectionDetails.setString("alias", value: aliasTextField.text!)
         if delegate!.connectionDetails.getSwitch("show_alias") {
             delegate!.identityTextField.text = aliasTextField.text
         }
@@ -15,7 +15,7 @@ class IdentitySharingViewController: DICTableViewController {
     
     @IBAction func switchValueChangedAction(sender: AnyObject) {
         delegate!.connectionDetails.setSwitch(
-            (sender as NamedSwitch).name,
+            (sender as! NamedSwitch).name,
             value: sender.isOn
         )
         setAliasTextField()

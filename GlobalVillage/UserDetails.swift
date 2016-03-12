@@ -1,13 +1,13 @@
 import Foundation
 
-class UserDetails: DictionarySettable, DebugPrintable {
+class UserDetails: DictionarySettable, CustomDebugStringConvertible {
     var can_be_messaged = false
     var name            = ""
     var email           = ""
     var phone           = ""
     var connection_id   = 0
     
-    func set(dict:[String:AnyObject]) {
+    @objc func set(dict:[String:AnyObject]) {
         if let _can_be_messaged = dict["can_be_messaged"] as? Bool {
             can_be_messaged = _can_be_messaged
         }
@@ -17,7 +17,7 @@ class UserDetails: DictionarySettable, DebugPrintable {
         if let _email = dict["email"] as? String {
             email = _email
         }
-        if let _phone = dict["phone"]? as? String {
+        if let _phone = dict["phone"] as? String {
             phone = _phone
         }
         if let _connection_id = dict["connection_id"] as? Int {
@@ -26,7 +26,7 @@ class UserDetails: DictionarySettable, DebugPrintable {
     }
     
     var debugDescription: String {
-        var result = "UserDetails:\n\tcan_be_messaged = \(can_be_messaged)\n\tname = \(name)\n\temail = \(email)\n\tconnection_id = \(connection_id)"
+        let result = "UserDetails:\n\tcan_be_messaged = \(can_be_messaged)\n\tname = \(name)\n\temail = \(email)\n\tconnection_id = \(connection_id)"
         
         return result;
     }

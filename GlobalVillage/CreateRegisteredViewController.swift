@@ -27,8 +27,8 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     }
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
         loadingView = LoadingIndicator(del: self)
         
         ownDetails = OwnDetails()
@@ -46,7 +46,7 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
         self.view.addGestureRecognizer(tap)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
     }
@@ -81,12 +81,12 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
     }
     func takePhoto(sender: AnyObject) {
         if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
-            var picker = UIImagePickerController()
+            let picker = UIImagePickerController()
             picker.delegate = self
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.cameraDevice = UIImagePickerControllerCameraDevice.Front
-            var mediaTypes: Array<AnyObject> = [kUTTypeImage]
-            picker.mediaTypes = mediaTypes
+            let mediaTypes: Array<AnyObject> = [kUTTypeImage]
+            picker.mediaTypes = mediaTypes as! [String]
             picker.allowsEditing = true
             self.presentViewController(picker, animated: true, completion: nil)
         }
@@ -100,7 +100,7 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     func uploadCompleted(result: NSDictionary) {
-        println(result)
+        print(result)
         loadUserData()
     }
     func uploadChanges() {
@@ -119,7 +119,7 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
         var fileNames:[String]?
         var mimeTypes:[String]?
         if imageData != nil {
-            println("image data not nil")
+            print("image data not nil")
             fileData = ["fileToUpload": imageData!]
             fileNames = ["profilePicture.jpg"]
             mimeTypes = ["image/jpeg"]
@@ -145,18 +145,18 @@ class CreateRegisteredViewController: DICViewController, UINavigationControllerD
         countryLabel.resignFirstResponder()
     }
 
-    func textFieldDidBeginEditing(textField: UITextField!) {
-        let nc = self.navigationController?
+    func textFieldDidBeginEditing(textField: UITextField) {
+        let nc = self.navigationController
         if nc != nil {
-            var scrollPoint:CGPoint = CGPointMake(0, textField.frame.origin.y - (firstNameLabel.frame.origin.y + nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
+            let scrollPoint:CGPoint = CGPointMake(0, textField.frame.origin.y - (firstNameLabel.frame.origin.y + nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
             scrollView.setContentOffset(scrollPoint, animated:true)
         }
     }
     
-    func textFieldDidEndEditing(textField: UITextField!) {
-        let nc = self.navigationController?
+    func textFieldDidEndEditing(textField: UITextField) {
+        let nc = self.navigationController
         if nc != nil {
-            var scrollPoint:CGPoint = CGPointMake(0, -(nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
+            let scrollPoint:CGPoint = CGPointMake(0, -(nc!.navigationBar.frame.origin.y + nc!.navigationBar.bounds.height))
             scrollView.setContentOffset(scrollPoint, animated:true)
         }
     }

@@ -12,8 +12,8 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
     @IBOutlet weak var messageBodyTextView: UITextView!
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
     }
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
     func sendAction() {
         sendEmail(
             connectionId,
-            subject: subjectTextField!.text,
+            subject: subjectTextField!.text!,
             messageBody: messageBodyTextView.text
         )
     }
@@ -48,17 +48,17 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
         return false
     }
     func didReceiveAPIResults(results: NSDictionary) {
-        println("Email sending response:")
-        println(results)
+        print("Email sending response:")
+        print(results)
         performSegueWithIdentifier("EmailToMainSegue", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "contactOptionsSegue" {
+        if segue.identifier == "contactOptionsSegue" {
             _contactOptionsSegue(segue)
         } else {
-            println("unknown segue: \(segue.identifier?)")
+            print("unknown segue: \(segue.identifier)")
         }
     }
     
@@ -66,7 +66,7 @@ class SendMessageViewController: DICViewController, APIControllerDelegateProtoco
         let vc:ContactOptionsTableViewController? = segue.destinationViewController as? ContactOptionsTableViewController
         if vc != nil {
             vc!.connectionId = connectionId
-            println(connectionId)
+            print(connectionId)
         }
     }
 }

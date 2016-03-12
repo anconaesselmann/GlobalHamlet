@@ -16,7 +16,7 @@ class SettingsTest: XCTestCase {
     
     func test_initSwitches() {
         let initDict = ["s1": true, "s2": false, "s3": false, "s4": true]
-        sut.setSwitches(initDict)
+        sut.setSettingsSwitches(initDict)
         XCTAssertEqual(initDict, sut.getSwitches())
     }
     func test_setSwitch() {
@@ -24,14 +24,14 @@ class SettingsTest: XCTestCase {
         let expected = ["s1": true, "s2": true, "s3": false, "s4": true]
         let key = "s2"
         let value = true
-        sut.setSwitches(initDict)
+        sut.setSettingsSwitches(initDict)
         sut.setSwitch(key, value: value)
         XCTAssertEqual(expected, sut.getSwitches())
     }
     func test_getSwitch() {
         let initDict = ["s1": true, "s2": false, "s3": false, "s4": true]
         let key = "s2"
-        sut.setSwitches(initDict)
+        sut.setSettingsSwitches(initDict)
         XCTAssertFalse(sut.getSwitch(key))
     }
     func test_setString() {
@@ -44,10 +44,10 @@ class SettingsTest: XCTestCase {
         let initDict = ["s1": true, "s2": false, "s3": false, "s4": true]
         let value = "aString"
         let key   = "aKey"
-        sut.setSwitches(initDict)
+        sut.setSettingsSwitches(initDict)
         sut.setString(key, value: value)
-        println(sut.getJson())
-        println("\n\n\n\n\n\n\n\n\n")
+        print(sut.getJson())
+        print("\n\n\n\n\n\n\n\n\n")
         XCTAssertEqual("{\"s2\":false,\"s1\":true,\"s4\":true,\"aKey\":\"aString\",\"s3\":false}", sut.getJson())
     }
     

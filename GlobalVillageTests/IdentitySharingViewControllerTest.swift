@@ -9,11 +9,11 @@ class IdentitySharingViewControllerTest: XCTestCase {
         super.setUp()
         
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-        delegate = storyboard.instantiateViewControllerWithIdentifier("InitiateViewController") as InitiateViewController
+        delegate = storyboard.instantiateViewControllerWithIdentifier("InitiateViewController") as! InitiateViewController
         delegate.loadView()
         delegate.viewDidLoad()
 
-        sut = storyboard.instantiateViewControllerWithIdentifier("IdentitySharingViewController") as IdentitySharingViewController
+        sut = storyboard.instantiateViewControllerWithIdentifier("IdentitySharingViewController") as! IdentitySharingViewController
         sut.delegate = delegate
         sut.loadView()
         sut.viewDidLoad()
@@ -27,7 +27,7 @@ class IdentitySharingViewControllerTest: XCTestCase {
             switchNames.append(s.name)
         }
         for n in expectedSwitchNames {
-            XCTAssertTrue(contains(switchNames, n))
+            XCTAssertTrue(switchNames.contains(n))
         }
     }
 }

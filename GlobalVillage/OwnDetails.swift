@@ -1,6 +1,6 @@
 import Foundation
 
-class OwnDetails: DictionarySettable, DebugPrintable {
+class OwnDetails: DictionarySettable, CustomDebugStringConvertible {
     var firstName = ""
     var lastName = ""
     var phoneNbr = ""
@@ -11,7 +11,7 @@ class OwnDetails: DictionarySettable, DebugPrintable {
     var country = ""
     var imageUrl = ""
     
-    func set(dict:[String:AnyObject]) {
+    @objc func set(dict:[String:AnyObject]) {
         if let _imageUrl = dict["imageUrl"] as? String {
             imageUrl = _imageUrl
         }

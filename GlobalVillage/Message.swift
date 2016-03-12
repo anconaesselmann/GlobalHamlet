@@ -1,11 +1,11 @@
 import Foundation
 
-class Message: DictionarySettable, DebugPrintable {
+class Message: DictionarySettable, CustomDebugStringConvertible {
     var subject       = ""
     var message       = ""
     var connection_id = 0
     
-    func set(dict:[String:AnyObject]) {
+    @objc func set(dict:[String:AnyObject]) {
         if let _subject = dict["subject"] as? String {
             subject = _subject
         }

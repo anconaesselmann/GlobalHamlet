@@ -3,7 +3,7 @@ import UIKit
 class MainTabBarController: DICTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tabItems = tabBar.items as [UITabBarItem]
+        let tabItems = tabBar.items! as [UITabBarItem]
         
         let tabBarImage0_selected = UIImage(named: "tabBar_puzzleMan_active")
         let tabBarImage0 = UIImage(named: "tabBar_puzzleMan_inActive")
@@ -13,7 +13,7 @@ class MainTabBarController: DICTabBarController {
         let tabBarImage2 = UIImage(named: "tabBar_connect_inactive")
         let tabBarImage3_selected = UIImage(named: "tabBar_scan_active")
         let tabBarImage3 = UIImage(named: "tabBar_scan_inActive")
-        println("loaded")
+        print("loaded")
         tabItems[0].title = "me"
         tabItems[0].image = tabBarImage0
         tabItems[0].selectedImage = tabBarImage0_selected

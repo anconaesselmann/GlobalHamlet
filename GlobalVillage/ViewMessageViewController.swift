@@ -12,8 +12,8 @@ class ViewMessageViewController: DICViewController {
     @IBOutlet weak var messageLabel: UILabel!
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
         loadingView = LoadingIndicator(del: self)
         
         message = Message()

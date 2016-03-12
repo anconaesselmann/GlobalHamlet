@@ -11,12 +11,12 @@ class InitiateViewController: DICTableViewController {
     
     @IBAction func aliasUdatedAction(sender: AnyObject) {
         if connectionDetails.getSwitch("show_alias") {
-            connectionDetails.setString("alias", value: identityTextField.text)
+            connectionDetails.setString("alias", value: identityTextField.text!)
         }
     }
 
     @IBAction func saveAction(sender: AnyObject) {
-        if delegate?.codeAndIdTuple? != nil {
+        if delegate?.codeAndIdTuple != nil {
             performSegueWithIdentifier("ViewReciprocationResultSegue", sender: nil)
         } else {
             performSegueWithIdentifier("InitiateQRSegue", sender: nil)
@@ -28,19 +28,19 @@ class InitiateViewController: DICTableViewController {
     }
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
     }
     
     func initSwitches(animated: Bool) {
         switch categorySelector.selectedSegmentIndex {
-        case 0: connectionDetails.setSwitches(
+        case 0: connectionDetails.setSettingsSwitches(
             SharingSettingsRestricted().getButtons("identity")
         )
-        case 1: connectionDetails.setSwitches(
+        case 1: connectionDetails.setSettingsSwitches(
             SharingSettingsCasual().getButtons("identity")
             )
-        case 2: connectionDetails.setSwitches(
+        case 2: connectionDetails.setSettingsSwitches(
             SharingSettingsFriend().getButtons("identity")
             )
         default: break
@@ -75,18 +75,18 @@ class InitiateViewController: DICTableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "InitiateQRSegue" {
+        if segue.identifier == "InitiateQRSegue" {
             _initiateQRSegue(segue)
-            println(connectionDetails?.getJson())
-        } else if segue.identifier? == "ViewReciprocationResultSegue" {
+            print(connectionDetails?.getJson())
+        } else if segue.identifier == "ViewReciprocationResultSegue" {
             _submitReciprocate(segue)
-            println(connectionDetails?.getJson())
-        } else if segue.identifier?  == "IdentitySharingSegue" {
+            print(connectionDetails?.getJson())
+        } else if segue.identifier == "IdentitySharingSegue" {
             _identitySharingSegue(segue)
-        } else if segue.identifier? == "CommunicationSharingSegue" {
+        } else if segue.identifier == "CommunicationSharingSegue" {
             _communicationSharingSegue(segue)
         } else {
-            println("unknown segue: \(segue.identifier?)")
+            print("unknown segue: \(segue.identifier)")
         }
     }
     
@@ -105,8 +105,8 @@ class InitiateViewController: DICTableViewController {
     
     func _submitReciprocate(segue: UIStoryboardSegue) {
         let detailsString:String = connectionDetails!.getJson()
-        println("in segue:\n\n")
-        println(detailsString)
+        print("in segue:\n\n")
+        print(detailsString)
         
         let id:Int?      = delegate!.codeAndIdTuple.id
         let code:String? = delegate!.codeAndIdTuple.code
@@ -123,8 +123,8 @@ class InitiateViewController: DICTableViewController {
     
     func _initiateQRSegue(segue: UIStoryboardSegue) {
         let detailsString:String = connectionDetails!.getJson()
-        println("in segue:\n\n")
-        println(detailsString)
+        print("in segue:\n\n")
+        print(detailsString)
         let arguments:[String: String] = ["details": detailsString]
         
         let vc:InitiateQRViewController? = segue.destinationViewController as? InitiateQRViewController

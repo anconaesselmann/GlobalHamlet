@@ -10,10 +10,10 @@ class ReciprocateViewController: DICViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "ReciprocateSharingSegue" {
+        if segue.identifier == "ReciprocateSharingSegue" {
             _reciprocateSharingSegue(segue)
         } else {
-            println("unknown segue: \(segue.identifier?)")
+            print("unknown segue: \(segue.identifier)")
         }
     }
     
@@ -35,12 +35,12 @@ class ReciprocateViewController: DICViewController {
     
     func getIdAndCodeFromString(codeString: String) {
         let code:String = (codeString as NSString).substringToIndex(20)
-        var id:Int?     = (codeString as NSString).substringFromIndex(20).toInt()
+        var id:Int?     = Int((codeString as NSString).substringFromIndex(20))
         if id == nil {
             id = -1
         }
         codeAndIdTuple = (id: id!, code: code)
-        println("id" + String(id!) + " code: " + code)
+        print("id" + String(id!) + " code: " + code)
         performSegueWithIdentifier("ReciprocateSharingSegue", sender: nil)
     }
     override func viewWillAppear(animated: Bool) {

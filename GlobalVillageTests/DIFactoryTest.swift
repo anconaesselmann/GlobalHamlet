@@ -46,7 +46,7 @@ class DIFactoryTest: XCTestCase {
     }
     
     func test_init() {
-        let sut = DIFactory(fileName: "configTest")
+        _ = DIFactory(fileName: "configTest")
     }
     
     func test_getClassName() {
@@ -76,7 +76,7 @@ class DIFactoryTest: XCTestCase {
         }
     }
     func test_decorate() {
-        var obj = MockObject_B_11_04_2014()
+        let obj = MockObject_B_11_04_2014()
         XCTAssertEqual("FAIL!!", obj.sayHello(), "Funcion call does not return aString 123.")
         sut.decorate(obj, idString: "testObject2")
         XCTAssertEqual("aString 123", obj.sayHello(), "Funcion call does not return aString 123.")

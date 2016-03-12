@@ -1,6 +1,6 @@
 import Foundation
 
-class Activity: DictionarySettable, DebugPrintable {
+class Activity: DictionarySettable, CustomDebugStringConvertible {
     var time        = ""
     var actor       = ""
     var action      = ""
@@ -8,7 +8,7 @@ class Activity: DictionarySettable, DebugPrintable {
     var category    = ""
     var category_id = 0
     
-    func set(dict:[String:AnyObject]) {
+    @objc func set(dict:[String:AnyObject]) {
         if let _time = dict["time"] as? String {
             time = _time
         }
@@ -19,13 +19,13 @@ class Activity: DictionarySettable, DebugPrintable {
             action = _action
         }
         if let _activity_id = dict["activity_id"] as? String {
-            activity_id = _activity_id.toInt()!
+            activity_id = Int(_activity_id)!
         }
         if let _category = dict["category"] as? String {
             category = _category
         }
         if let _category_id = dict["category_id"] as? String {
-            category_id = _category_id.toInt()!
+            category_id = Int(_category_id)!
         }
     }
     
@@ -34,14 +34,14 @@ class Activity: DictionarySettable, DebugPrintable {
     }
     
     var debugDescription: String {
-        var result = "Activity:\n\ttime = \(time)\n\tactor = \(actor)\n\taction = \(action)\n\tactivity_id = \(activity_id)"
+        let result = "Activity:\n\ttime = \(time)\n\tactor = \(actor)\n\taction = \(action)\n\tactivity_id = \(activity_id)"
         return result;
     }
     func dateString() -> String {
-        var dateFormatter          = NSDateFormatter()
+        let dateFormatter          = NSDateFormatter()
         dateFormatter.timeZone     = NSTimeZone(name: "UTC")
         dateFormatter.dateFormat   = "yyyy-MM-dd HH:mm:ss"
-        var dateFromString:NSDate! = dateFormatter.dateFromString(time)
+        let dateFromString:NSDate! = dateFormatter.dateFromString(time)
         
         dateFormatter.dateFormat = "MMM d, H:mm"
         dateFormatter.timeZone   = NSTimeZone()

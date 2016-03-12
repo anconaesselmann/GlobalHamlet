@@ -15,10 +15,10 @@ class ContactOptionsTableViewController: DICTableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "editContactSegue" {
+        if segue.identifier == "editContactSegue" {
             _contactOptionsSegue(segue)
         } else {
-            println("unknown segue: \(segue.identifier?)")
+            print("unknown segue: \(segue.identifier)")
         }
     }
     
@@ -26,7 +26,7 @@ class ContactOptionsTableViewController: DICTableViewController {
         let vc:SaveToContactsViewController? = segue.destinationViewController as? SaveToContactsViewController
         if vc != nil {
             vc!.connectionId = connectionId
-            println(connectionId)
+            print(connectionId)
         }
     }
 }

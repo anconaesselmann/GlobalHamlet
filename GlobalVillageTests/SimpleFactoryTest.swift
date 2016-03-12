@@ -20,7 +20,7 @@ import Foundation
     
     func initWithArgs(args:[AnyObject]) {
         _var1 = args[0] as? String
-        _var2 = Int32(args[1] as NSInteger)
+        _var2 = Int32(args[1] as! NSInteger)
 
     }
 
@@ -48,7 +48,7 @@ class SimpleFactoryTest: XCTestCase {
     }
     
     func test_init() {
-        let sut = SimpleFactory()
+        _ = SimpleFactory()
     }
     
     func test_build() {
@@ -60,7 +60,7 @@ class SimpleFactoryTest: XCTestCase {
     }
     func test_build_with_args() {
         let args = ["aString", 123] as NSArray
-        if let obj = sut.buildWithArgs("MockObject_B_11_04_2014", args: args) as? CanSayHello {
+        if let obj = sut.buildWithArgs("MockObject_B_11_04_2014", args: args as [AnyObject]) as? CanSayHello {
             XCTAssertEqual("aString 123", obj.sayHello(), "Funcion call does not return aString 123.")
         } else {
             XCTFail("Object could not be instanciated.")

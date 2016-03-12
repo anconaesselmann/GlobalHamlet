@@ -8,15 +8,15 @@ class MainViewController: DICTableViewController, APIControllerDelegateProtocol 
     var loadingView:LoadingIndicator!
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
         
         loadingView = LoadingIndicator(del: self)
         
         activities = []
         let ari = AsynchronousArrayResourceInstantiator(
             addInstanceClosure: {(dict:[String: AnyObject]) -> Void in
-                var inst = Activity()
+                let inst = Activity()
                 inst.set(dict)
                 self.activities.append(inst)
             },
@@ -62,9 +62,9 @@ class MainViewController: DICTableViewController, APIControllerDelegateProtocol 
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:ActivityPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ActivityPrototypeCell") as ActivityPrototypeCell
+        let cell:ActivityPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ActivityPrototypeCell") as! ActivityPrototypeCell
         if activities.count > 0 {
-            var activity: Activity = activities[indexPath.row] as Activity
+            let activity: Activity = activities[indexPath.row] as Activity
             cell.bodyLabel.text = activity.displayString()
             cell.dateLabel.text = activity.dateString()
             switch activity.action {
@@ -72,7 +72,7 @@ class MainViewController: DICTableViewController, APIControllerDelegateProtocol 
                 case "sent": cell.actionImage.image = UIImage(named: "message_out")
                 case "initiated": cell.actionImage.image = UIImage(named: "connection")
                 case "reciprocated": cell.actionImage.image = UIImage(named: "connection")
-                default: println("unknown action")
+                default: print("unknown action")
             }
         }
         
@@ -82,7 +82,7 @@ class MainViewController: DICTableViewController, APIControllerDelegateProtocol 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         if activities.count > 0 {
-            var tappedItem = activities[indexPath.row] as Activity
+            let tappedItem = activities[indexPath.row] as Activity
             if tappedItem.category == "connections" {
                 performSegueWithIdentifier("ActivityToViewDetailsSegue", sender: tappedItem)
             } else if tappedItem.category == "messages" {
@@ -94,14 +94,14 @@ class MainViewController: DICTableViewController, APIControllerDelegateProtocol 
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "ActivityToViewDetailsSegue" {
-            var tappedItem: Activity = sender as Activity
+        if segue.identifier == "ActivityToViewDetailsSegue" {
+            let tappedItem: Activity = sender as! Activity
             let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
             if vc != nil {
                 vc!.connectionId = tappedItem.category_id
             }
-        } else if segue.identifier? == "ViewMessageSegue" {
-            var tappedItem: Activity = sender as Activity
+        } else if segue.identifier == "ViewMessageSegue" {
+            let tappedItem: Activity = sender as! Activity
             let vc:ViewMessageViewController? = segue.destinationViewController as? ViewMessageViewController
             if vc != nil {
                 vc!.messageId = tappedItem.category_id

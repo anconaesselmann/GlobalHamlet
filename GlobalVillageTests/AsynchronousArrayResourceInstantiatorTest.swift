@@ -22,7 +22,7 @@ class AsynchronousArrayResourceInstantiatorTest: XCTestCase {
         }
         sut = AsynchronousArrayResourceInstantiator(
             addInstanceClosure: {(dict:[String: AnyObject]) -> Void in
-                var inst = Mock_dummy_class_12_01_14()
+                let inst = Mock_dummy_class_12_01_14()
                 inst.set(dict)
                 targetInstances.append(inst)
             },

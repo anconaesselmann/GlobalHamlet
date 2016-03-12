@@ -8,15 +8,15 @@ class ConnectionsTableViewController: DICTableViewController {
     var loadingView:LoadingIndicator!
     
     override func initWithArgs(args:[AnyObject]) {
-        api = args[0] as ApiController
-        url = args[1] as String
+        api = args[0] as! ApiController
+        url = args[1] as! String
         
         loadingView = LoadingIndicator(del: self)
         
         connections = []
         let ari = AsynchronousArrayResourceInstantiator(
             addInstanceClosure: {(dict:[String: AnyObject]) -> Void in
-                var inst = UserDetails()
+                let inst = UserDetails()
                 inst.set(dict)
                 self.connections.append(inst)
             },
@@ -48,8 +48,8 @@ class ConnectionsTableViewController: DICTableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:ConnectionPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ConnectionPrototypeCell") as ConnectionPrototypeCell
-        var connection: UserDetails = connections[indexPath.row] as UserDetails
+        let cell:ConnectionPrototypeCell = tableView.dequeueReusableCellWithIdentifier("ConnectionPrototypeCell") as! ConnectionPrototypeCell
+        let connection: UserDetails = connections[indexPath.row] as UserDetails
         cell.nameLabel.text = connection.name
         cell.emailLabel.text = connection.email
         return cell
@@ -57,20 +57,20 @@ class ConnectionsTableViewController: DICTableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        var tappedItem = connections[indexPath.row] as UserDetails
+        let tappedItem = connections[indexPath.row] as UserDetails
         performSegueWithIdentifier("ComposeEmailSegue", sender: tappedItem)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         super.prepareForSegue(segue, sender: sender)
-        if segue.identifier? == "SegueToSendMessage" {
+        if segue.identifier == "SegueToSendMessage" {
             // Currently this segue is not called.
-            var tappedItem: UserDetails = sender as UserDetails
+            let tappedItem: UserDetails = sender as! UserDetails
             let vc:ViewOtherDetailViewController? = segue.destinationViewController as? ViewOtherDetailViewController
             if vc != nil {
                 vc!.connectionId = tappedItem.connection_id
             }
-        } else if segue.identifier? == "ComposeEmailSegue" {
-            var tappedItem: UserDetails = sender as UserDetails
+        } else if segue.identifier == "ComposeEmailSegue" {
+            let tappedItem: UserDetails = sender as! UserDetails
             let vc:SendMessageViewController? = segue.destinationViewController as? SendMessageViewController
             if vc != nil {
                 vc!.connectionId = tappedItem.connection_id
@@ -90,10 +90,10 @@ class ConnectionsTableViewController: DICTableViewController {
             var tappedItem = connections[indexPath.row] as UserDetails
             
             func deleteConnection(alert: UIAlertAction!) -> Void {
-                println(tappedItem.name)
+                print(tappedItem.name)
                 let args = ["connectionId": String(tappedItem.connection_id)]
                 func _deleteConnectionApiResponseHandler(results: NSDictionary) {
-                    if !(results["response"] as Bool) {
+                    if !(results["response"] as! Bool) {
                         NSLog("Error deleting Connection")
                     }
                     self.connections.removeAtIndex(indexPath.row)
@@ -107,7 +107,7 @@ class ConnectionsTableViewController: DICTableViewController {
                 )
             }
             
-            var alert = UIAlertController(title: "Deleging \(tappedItem.name)", message: "Are you sure you would like to remove your connecton to \(tappedItem.name)? This action can not be undone and you won't be able to recieve messages from \(tappedItem.name) any more.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Deleging \(tappedItem.name)", message: "Are you sure you would like to remove your connecton to \(tappedItem.name)? This action can not be undone and you won't be able to recieve messages from \(tappedItem.name) any more.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "delete", style: UIAlertActionStyle.Default, handler: deleteConnection))
             alert.addAction(UIAlertAction(title: "cancel", style: UIAlertActionStyle.Default, handler: nil))
             presentViewController(alert, animated: true, completion: nil)

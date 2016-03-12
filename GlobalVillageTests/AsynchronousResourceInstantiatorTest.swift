@@ -36,7 +36,7 @@ class Mock_dummy_class_12_01_14: DictionarySettable {
     var var1:String = ""
     var var2:String = ""
     
-    func set(dict:[String:AnyObject]) {
+    @objc func set(dict:[String:AnyObject]) {
         if let var1 = dict["var1"] as? String {
             self.var1 = var1
         }

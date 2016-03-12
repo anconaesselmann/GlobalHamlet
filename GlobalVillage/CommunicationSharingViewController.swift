@@ -7,10 +7,10 @@ class CommunicationSharingViewController: DICTableViewController {
     
     @IBAction func switchValueChangedAction(sender: AnyObject) {
         delegate!.connectionDetails.setSwitch(
-            (sender as NamedSwitch).name,
+            (sender as! NamedSwitch).name,
             value: sender.isOn
         )
-        println(delegate!.connectionDetails.getJson())
+        print(delegate!.connectionDetails.getJson())
     }
     
     override func viewDidLoad() {
