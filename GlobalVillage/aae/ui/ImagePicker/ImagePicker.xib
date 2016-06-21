@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImagePicker" customModule="ImagePicker" customModuleProvider="target">
+            <connections>
+                <outlet property="image" destination="9Qe-pt-dah" id="vFe-qM-hKD"/>
+                <outlet property="imageView" destination="9Qe-pt-dah" id="aJ8-za-F4p"/>
+                <outlet property="noImageLabel" destination="85C-gv-NIA" id="eI0-Am-k95"/>
+                <outlet property="removeImageButton" destination="JXj-x3-gRH" id="7CA-dE-uLh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85C-gv-NIA">
+                    <rect key="frame" x="300" y="300.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-pt-dah">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXj-x3-gRH">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="BOS-G6-Hkx"/>
+                        <constraint firstAttribute="width" constant="50" id="cXL-Lc-8BM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="40"/>
+                    <state key="normal" title="x">
+                        <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="removeImageButton:" destination="-1" eventType="touchUpInside" id="zY3-Yh-ujS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9Qe-pt-dah" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2pd-fi-CgI"/>
+                <constraint firstAttribute="trailing" secondItem="9Qe-pt-dah" secondAttribute="trailing" id="R5G-HG-Lhi"/>
+                <constraint firstItem="85C-gv-NIA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WTk-lz-b8e"/>
+                <constraint firstItem="JXj-x3-gRH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YTy-7z-Dz1"/>
+                <constraint firstItem="9Qe-pt-dah" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ywh-zK-O37"/>
+                <constraint firstItem="85C-gv-NIA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aUB-Uj-kAK"/>
+                <constraint firstAttribute="bottom" secondItem="9Qe-pt-dah" secondAttribute="bottom" id="luv-Xk-2zk"/>
+                <constraint firstItem="JXj-x3-gRH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xRh-kB-rdN"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="noImageLabelText" value="Select an image"/>
+            </userDefinedRuntimeAttributes>
+        </view>
+    </objects>
+</document>

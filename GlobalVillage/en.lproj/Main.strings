@@ -1,0 +1,93 @@
+
+/* Class = "IBUIBarButtonItem"; title = "!"; ObjectID = "0pQ-tP-KNE"; */
+"0pQ-tP-KNE.title" = "!";
+
+/* Class = "IBUITextField"; text = "email"; ObjectID = "1AY-ub-onq"; */
+"1AY-ub-onq.text" = "email";
+
+/* Class = "IBUIButton"; normalTitle = "let's do it!"; ObjectID = "2oe-rQ-8MT"; */
+"2oe-rQ-8MT.normalTitle" = "let's do it!";
+
+/* Class = "IBUILabel"; text = "Hi! Looks like this is your fist time using TrustMe4Good. Please either sign in or create an identity!"; ObjectID = "39h-KY-9KW"; */
+"39h-KY-9KW.text" = "Hi! Looks like this is your fist time using TrustMe4Good. Please either sign in or create an identity!";
+
+/* Class = "IBUIButton"; normalTitle = "cool, thanks!"; ObjectID = "8fq-FB-RhC"; */
+"8fq-FB-RhC.normalTitle" = "cool, thanks!";
+
+/* Class = "IBUIButton"; normalTitle = "Submit"; ObjectID = "AJx-el-Ogj"; */
+"AJx-el-Ogj.normalTitle" = "Submit";
+
+/* Class = "IBUITextField"; text = "password"; ObjectID = "EDT-5A-c52"; */
+"EDT-5A-c52.text" = "password";
+
+/* Class = "IBUILabel"; text = "Congratulations! You can now reciprocate a request for a connection. Would you like to share a little bit more about yourself, to be able to initiate connections?"; ObjectID = "G1Z-Tn-ZLa"; */
+"G1Z-Tn-ZLa.text" = "Congratulations! You can now reciprocate a request for a connection. Would you like to share a little bit more about yourself, to be able to initiate connections?";
+
+/* Class = "IBUIButton"; normalTitle = "sign in"; ObjectID = "Goy-UG-Wbi"; */
+"Goy-UG-Wbi.normalTitle" = "sign in";
+
+/* Class = "IBUIButton"; normalTitle = "Select Photo"; ObjectID = "Ncp-e1-njm"; */
+"Ncp-e1-njm.normalTitle" = "Select Photo";
+
+/* Class = "IBUITextField"; text = "email"; ObjectID = "Omu-ak-f1v"; */
+"Omu-ak-f1v.text" = "email";
+
+/* Class = "IBUILabel"; text = "|"; ObjectID = "Qb8-0u-Ycl"; */
+"Qb8-0u-Ycl.text" = "|";
+
+/* Class = "IBUITextField"; text = "Last Name"; ObjectID = "UAy-go-h8M"; */
+"UAy-go-h8M.text" = "Last Name";
+
+/* Class = "IBUIBarButtonItem"; title = "complete"; ObjectID = "f5C-lP-VFV"; */
+"f5C-lP-VFV.title" = "complete";
+
+/* Class = "IBUILabel"; text = "To get started, please select a username and a password."; ObjectID = "frA-ic-igM"; */
+"frA-ic-igM.text" = "To get started, please select a username and a password.";
+
+/* Class = "IBUIButton"; normalTitle = "no thanks."; ObjectID = "ft1-75-wCR"; */
+"ft1-75-wCR.normalTitle" = "no thanks.";
+
+/* Class = "IBUILabel"; text = "Create a registered identity:"; ObjectID = "g4g-nS-FC4"; */
+"g4g-nS-FC4.text" = "Create a registered identity:";
+
+/* Class = "IBUIButton"; normalTitle = "sign in"; ObjectID = "gDz-wp-AaE"; */
+"gDz-wp-AaE.normalTitle" = "sign in";
+
+/* Class = "IBUITabBarItem"; title = "Item 1"; ObjectID = "gR6-UL-Ljn"; */
+"gR6-UL-Ljn.title" = "Item 1";
+
+/* Class = "IBUIButton"; normalTitle = "get started"; ObjectID = "ha3-Nc-LS6"; */
+"ha3-Nc-LS6.normalTitle" = "get started";
+
+/* Class = "IBUITextField"; text = "password"; ObjectID = "hqa-Jz-pqv"; */
+"hqa-Jz-pqv.text" = "password";
+
+/* Class = "IBUILabel"; text = "|"; ObjectID = "imh-ru-7LX"; */
+"imh-ru-7LX.text" = "|";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "jl3-z6-STS"; */
+"jl3-z6-STS.title" = "Item";
+
+/* Class = "IBUIBarButtonItem"; title = "settings"; ObjectID = "kYV-uL-ZZ9"; */
+"kYV-uL-ZZ9.title" = "settings";
+
+/* Class = "IBUIButton"; normalTitle = "create"; ObjectID = "ntd-UM-w41"; */
+"ntd-UM-w41.normalTitle" = "create";
+
+/* Class = "IBUITextField"; text = "Middle Name(s)"; ObjectID = "oav-3s-Cis"; */
+"oav-3s-Cis.text" = "Middle Name(s)";
+
+/* Class = "IBUITextField"; text = "First Name"; ObjectID = "pf7-hg-MM9"; */
+"pf7-hg-MM9.text" = "First Name";
+
+/* Class = "IBUIBarButtonItem"; title = "logout"; ObjectID = "q9y-7k-mPc"; */
+"q9y-7k-mPc.title" = "logout";
+
+/* Class = "IBUITabBarItem"; title = "Item 2"; ObjectID = "vPH-Ek-vv0"; */
+"vPH-Ek-vv0.title" = "Item 2";
+
+/* Class = "IBUIViewController"; title = "FirstLaunchViewController"; ObjectID = "vXZ-lx-hvc"; */
+"vXZ-lx-hvc.title" = "FirstLaunchViewController";
+
+/* Class = "IBUITextField"; text = "username"; ObjectID = "xwI-C1-Fwm"; */
+"xwI-C1-Fwm.text" = "username";

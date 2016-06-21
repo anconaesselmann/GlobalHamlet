@@ -3,6 +3,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: DICAppDelegate {
+    
+    // remove this again!
+    var dataController = DataController()
 
     override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -12,44 +15,8 @@ class AppDelegate: DICAppDelegate {
         let loadingScreenViewController : LoadingScreenViewController = mainView.instantiateViewControllerWithIdentifier("LoadingScreenViewController") as! LoadingScreenViewController
         self.window!.rootViewController = loadingScreenViewController
         
-        if let url = (dic.get("url") as? String) {
-            print("using \(url)")
-            if let api = (dic.build("api") as? ApiController) {
-                let loginUrl = url + "/login"
-                print("logging in with \(loginUrl)")
-                api.request(loginUrl) {response in
-                    print("received login results \(response)")
-                    if let errorCode = response["errorCode"] as? Int {
-                        print("error code: \(errorCode)")
-                        if errorCode != 0 {
-                            if let errorMessage = response["errorMessage"] as? String {print("Error \(errorCode) logging in: \(errorMessage)")}
-                            else {print("Error \(errorCode) logging in. No error message received")}
-                        } else {
-                            if let response = response["response"] as? String {
-                                if let booleanResponse = response.toBool() {
-                                    if booleanResponse == true {
-                                        print("successfully logged in with cookie")
-                                        let targetStoryboardName = self.dic.get("loginSegueStoryboardName") as! String
-                                        let targetStoryboard     = UIStoryboard(name: targetStoryboardName, bundle: nil)
-                                        if let targetViewController = targetStoryboard.instantiateInitialViewController() {
-                                            loadingScreenViewController.presentViewController(targetViewController, animated: false, completion: nil)
-                                        }
-                                    }
-                                }
-                            }
-                            if let loggedIn = response["response"] as? Bool {
-                                if loggedIn {
-
-                                } else {
-                                    print("cookie login did not work")
-                                }
-                            }
-                        }
-                    }
-                    loadingScreenViewController.perfomrSegue(false)
-                };
-            }
-        }
+        loadingScreenViewController.api = (dic.build("api") as? ApiController)
+        loadingScreenViewController.url = (dic.get("url") as? String)
         return true
     }
 

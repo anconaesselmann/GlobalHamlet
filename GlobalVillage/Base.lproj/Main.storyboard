@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1811,12 +1811,12 @@
         <image name="temp" width="48" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Saj-ek-y7v"/>
-        <segue reference="wvW-bS-b3b"/>
+        <segue reference="Yh4-ag-loU"/>
+        <segue reference="TGB-Xv-xQb"/>
         <segue reference="bJ7-J8-pbV"/>
         <segue reference="SBw-96-dOE"/>
         <segue reference="HqO-Xn-UN5"/>
         <segue reference="Suy-Vg-taA"/>
-        <segue reference="hAP-Pn-Q6Z"/>
+        <segue reference="2xV-Ix-J28"/>
     </inferredMetricsTieBreakers>
 </document>

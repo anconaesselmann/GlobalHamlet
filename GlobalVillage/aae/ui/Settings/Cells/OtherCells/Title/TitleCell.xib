@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TitleCell" customModule="socipelago" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHj-LW-lZl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwx-iE-pF8">
+                                <rect key="frame" x="4" y="4" width="312" height="35.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="titleTextFieldAction:" destination="KGk-i7-Jjw" eventType="editingChanged" id="mLU-hl-bNL"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iwx-iE-pF8" firstAttribute="leading" secondItem="AHj-LW-lZl" secondAttribute="leading" constant="4" id="4Ne-dt-4cq"/>
+                            <constraint firstItem="iwx-iE-pF8" firstAttribute="top" secondItem="AHj-LW-lZl" secondAttribute="top" constant="4" id="NvO-oB-AeT"/>
+                            <constraint firstAttribute="bottom" secondItem="iwx-iE-pF8" secondAttribute="bottom" constant="4" id="Ub2-0P-c3h"/>
+                            <constraint firstAttribute="trailing" secondItem="iwx-iE-pF8" secondAttribute="trailing" constant="4" id="Xp9-CX-nLH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AHj-LW-lZl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="G3a-dH-jEf"/>
+                    <constraint firstAttribute="bottom" secondItem="AHj-LW-lZl" secondAttribute="bottom" id="HrE-Fz-4K0"/>
+                    <constraint firstAttribute="trailing" secondItem="AHj-LW-lZl" secondAttribute="trailing" id="OqJ-08-dVN"/>
+                    <constraint firstItem="AHj-LW-lZl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="P5C-ZC-fR6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mainCellView" destination="AHj-LW-lZl" id="Ppq-a1-fOI"/>
+                <outlet property="titleTextField" destination="iwx-iE-pF8" id="6cZ-ME-d9b"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
